@@ -1,0 +1,13 @@
+{
+  "name": "exiled-exchange-2-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root workspace runner for Exiled Exchange 2",
+  "scripts": {
+    "install:all": "npm install --prefix renderer && npm install --prefix main",
+    "dev:renderer": "npm run dev --prefix renderer",
+    "dev:main": "npm run dev --prefix main",
+    "dev:standalone": "npm run dev --prefix main -- -- --standalone",
+    "make-index-files": "npm run make-index-files --prefix renderer"
+  }
+}
