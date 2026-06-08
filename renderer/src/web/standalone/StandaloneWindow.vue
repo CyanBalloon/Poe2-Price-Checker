@@ -287,6 +287,7 @@ export default defineComponent({
     }
 
     Host.onEvent("MAIN->CLIENT::item-text", (e) => {
+      if (e.isManual) return;
       if (e.target === "price-check") {
         manualItemText.value = e.clipboard;
         handleManualPaste();

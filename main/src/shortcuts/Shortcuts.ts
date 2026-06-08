@@ -76,6 +76,9 @@ export class Shortcuts {
                 focusOverlay: false,
               },
             });
+            if (process.argv.includes("--standalone")) {
+              this.overlay.showWindow();
+            }
           }
         }
       } catch (err) {

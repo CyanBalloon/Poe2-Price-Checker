@@ -137,6 +137,7 @@ export const usePoeninja = createGlobalState(() => {
    * core/div
    */
   const xchgRate = shallowRef<number | undefined>(undefined);
+  const exaltedRate = shallowRef<number | undefined>(undefined);
   /**
    * Current core currency
    */
@@ -205,6 +206,10 @@ export const usePoeninja = createGlobalState(() => {
       // TODO: update to search for requested currency instead of divine
       const divineRates = ninjaXchg.rates;
       const preferred = selectedCoreCurrency.value;
+
+      if (divineRates && divineRates.exalted) {
+        exaltedRate.value = divineRates.exalted;
+      }
 
       if (divineRates && Object.values(divineRates).some((v) => v >= 10)) {
         if (
@@ -290,7 +295,23 @@ export const usePoeninja = createGlobalState(() => {
   function autoCurrency(
     value: number | [number, number],
     coreOnly: boolean = false,
+    forceCurrency?: "exalted" | "chaos" | "div",
   ): CurrencyValue {
+    if (forceCurrency === "exalted") {
+      const rate = exaltedRate.value || 9999;
+      if (Array.isArray(value)) {
+        return {
+          min: value[0] * rate,
+          max: value[1] * rate,
+          currency: "exalted",
+        };
+      }
+      return {
+        min: value * rate,
+        max: value * rate,
+        currency: "exalted",
+      };
+    }
     if (Array.isArray(value)) {
       const coreValue = value.map(divineToCore);
       if (coreValue[0] > (xchgRate.value || 9999) && !coreOnly) {
@@ -442,10 +463,9 @@ export function displayRounding(
   fraction: boolean = false,
   truncateLargeNumbers: boolean = false,
 ): string {
-  if (fraction && Math.abs(value) < 1) {
+  if (Math.abs(value) < 1) {
     if (value === 0) return "0";
-    const r = `1\u200A/\u200A${displayRounding(1 / value)}`;
-    return r === "1\u200A/\u200A1" ? "1" : r;
+    return Number(value.toFixed(2)).toString().replace(".", "\u200A.\u200A");
   }
   if (Math.abs(value) < 10) {
     return Number(value.toFixed(1)).toString().replace(".", "\u200A.\u200A");

@@ -74,9 +74,10 @@ export function createFilters(
     return filters;
   }
   if (item.stackSize || tradeTag(item)) {
+    const isCurrency = item.category === ItemCategory.Currency;
     filters.stackSize = {
-      value: item.stackSize?.value || 1,
-      disabled: !(
+      value: isCurrency ? 1 : (item.stackSize?.value || 1),
+      disabled: isCurrency ? false : !(
         item.stackSize &&
         item.stackSize.value > 1 &&
         opts.activateStockFilter
@@ -135,7 +136,7 @@ export function createFilters(
   }
 
   // "endgame" items (map-like items) (also uniques??)
-  if (item.category === ItemCategory.Map) {
+  if (item.category === ItemCategory.Map || item.category === ItemCategory.Tablet) {
     if (item.rarity === ItemRarity.Unique && item.info.unique) {
       filters.searchExact = {
         name: item.info.name,
@@ -565,10 +566,12 @@ function createGemFilters(
   };
 
   if (item.info.gem!.awakened) {
-    filters.gemLevel = {
-      value: item.gemLevel!,
-      disabled: item.gemLevel! < 5,
-    };
+    if (item.gemLevel != null) {
+      filters.gemLevel = {
+        value: item.gemLevel!,
+        disabled: item.gemLevel! < 5,
+      };
+    }
 
     if (item.isCorrupted && item.quality) {
       filters.quality = {
@@ -581,10 +584,12 @@ function createGemFilters(
   }
 
   if (SPECIAL_SUPPORT_GEM.includes(item.info.refName)) {
-    filters.gemLevel = {
-      value: item.gemLevel!,
-      disabled: item.gemLevel! < 3,
-    };
+    if (item.gemLevel != null) {
+      filters.gemLevel = {
+        value: item.gemLevel!,
+        disabled: item.gemLevel! < 3,
+      };
+    }
 
     if (item.isCorrupted && item.quality) {
       filters.quality = {
@@ -610,10 +615,12 @@ function createGemFilters(
     };
   }
 
-  filters.gemLevel = {
-    value: item.gemLevel!,
-    disabled: item.gemLevel! < 19,
-  };
+  if (item.gemLevel != null) {
+    filters.gemLevel = {
+      value: item.gemLevel!,
+      disabled: item.gemLevel! < 19,
+    };
+  }
 
   return filters;
 }

@@ -215,6 +215,11 @@ function normalizeName(item: ParserState) {
       item.name = "Metamorph Liver";
     }
   }
+
+  // Workaround for an encoding bug in the upstream items database
+  if (item.name === "Oisín's Oath") {
+    item.name = "Oisn's Oath";
+  }
 }
 
 function findInDatabase(item: ParserState) {
@@ -282,7 +287,7 @@ function findInDatabase(item: ParserState) {
   // choose 1st variant, correct one will be picked at the end of parsing
   item.info = info[0];
   // same for every variant
-  if (!item.category) {
+  if (!item.category || item.category === ItemCategory.Currency) {
     if (item.info.craftable) {
       item.category = item.info.craftable.category;
     } else if (item.info.unique) {
@@ -1133,18 +1138,16 @@ function parseModifiers(section: string[], item: ParsedItem) {
       }
     }
   } else {
-    for (const line of section) {
-      const { lines, modType } = parseModType([line]);
-      const modInfo: ModifierInfo = {
-        type: line.endsWith(ENCHANT_LINE)
-          ? ModifierType.Enchant
-          : line.startsWith(_$.GRANTS_SKILL)
-            ? ModifierType.Skill
-            : modType,
-        tags: [],
-      };
-      parseStatsFromMod(lines, item, { info: modInfo, stats: [] });
-    }
+    const { lines } = parseModType(section);
+    const modInfo: ModifierInfo = {
+      type: recognizedLine.endsWith(ENCHANT_LINE)
+        ? ModifierType.Enchant
+        : recognizedLine.startsWith(_$.GRANTS_SKILL)
+          ? ModifierType.Skill
+          : ModifierType.Augment,
+      tags: [],
+    };
+    parseStatsFromMod(lines, item, { info: modInfo, stats: [] });
   }
 
   return "SECTION_PARSED";

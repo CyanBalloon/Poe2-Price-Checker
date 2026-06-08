@@ -25,7 +25,7 @@ import { defineComponent, PropType, computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { usePoeninja, displayRounding } from "@/web/background/Prices";
 import { getDetailsId } from "../trends/getDetailsId";
-import { ParsedItem } from "@/parser";
+import { ParsedItem, ItemCategory } from "@/parser";
 import { ItemFilters } from "../filters/interfaces";
 
 export default defineComponent({
@@ -44,8 +44,12 @@ export default defineComponent({
 
     function getPriceFor(n: number) {
       const one = findPriceByQuery(getDetailsId(props.item)!)!;
-
-      const price = autoCurrency(n * one.primaryValue);
+      const isCurrency = props.item.category === ItemCategory.Currency;
+      const price = autoCurrency(
+        n * one.primaryValue,
+        isCurrency,
+        isCurrency ? "exalted" : undefined,
+      );
 
       return `${displayRounding(price.min)} ${price.currency}`;
     }

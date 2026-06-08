@@ -118,8 +118,12 @@ export class OverlayWindow {
         if (this.window.isVisible()) {
           this.window.hide();
         } else {
+          this.window.setAlwaysOnTop(true);
           this.window.show();
           this.window.focus();
+          setTimeout(() => {
+            this.window?.setAlwaysOnTop(false);
+          }, 50);
         }
       }
       return;
@@ -140,9 +144,18 @@ export class OverlayWindow {
 
   showWindow() {
     if (this.window) {
-      if (this.window.isMinimized()) this.window.restore();
+      if (this.window.isMinimized()) {
+        this.window.restore();
+      } else {
+        this.window.minimize();
+        this.window.restore();
+      }
+      this.window.setAlwaysOnTop(true);
       this.window.show();
       this.window.focus();
+      setTimeout(() => {
+        this.window?.setAlwaysOnTop(false);
+      }, 500);
     }
   }
 

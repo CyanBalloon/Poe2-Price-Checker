@@ -66,7 +66,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const item = ref<ParsedItem | null>(null);
+    const item = shallowRef<ParsedItem | null>(null);
     const itemModsDiff = ref<{
       added: ParsedModifier[];
       removed: ParsedModifier[];

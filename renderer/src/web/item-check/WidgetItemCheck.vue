@@ -58,7 +58,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { computed, inject, ref } from "vue";
+import { computed, inject, ref, shallowRef } from "vue";
 import { MainProcess } from "@/web/background/IPC";
 import { ItemCategory, ItemRarity, parseClipboard, ParsedItem } from "@/parser";
 import { registerActions } from "./hotkeyable-actions";
@@ -75,7 +75,7 @@ const props = defineProps<{
 const wm = inject<WidgetManager>("wm")!;
 
 const checkPosition = ref({ x: 1, y: 1 });
-const item = ref<ParsedItem | null>(null);
+const item = shallowRef<ParsedItem | null>(null);
 
 registerActions();
 

@@ -13,7 +13,7 @@
       <div class="flex-1 bg-[#0e1017] border border-[#191b22] rounded-2xl p-5 flex flex-col gap-4 shadow-lg shadow-black/45 overflow-hidden min-h-0">
         <div class="flex items-center justify-between border-b border-[#1d202e]/60 pb-3 shrink-0">
           <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Stat Filters</span>
-          <div class="flex gap-2" v-if="presets.length > 1">
+          <div class="flex gap-2" v-if="presets.length > 1 && !isListingsDisabled">
             <button 
               v-for="preset in presets" 
               :key="preset.id"
@@ -30,7 +30,17 @@
           </div>
         </div>
         
-        <div class="flex-1 overflow-y-auto pr-1">
+        <div v-if="isListingsDisabled" class="flex-1 flex flex-col items-center justify-center p-8 text-center select-none">
+          <div class="w-14 h-14 rounded-full bg-violet-500/5 flex items-center justify-center mb-4 border border-violet-500/10">
+            <i class="fas fa-filter text-[#8b5cf6] text-xl" v-if="item.category === ItemCategory.Currency"></i>
+            <i class="fas fa-gem text-[#8b5cf6] text-xl" v-else></i>
+          </div>
+          <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">Stat Filters Disabled</h4>
+          <p class="text-xs text-gray-500 max-w-xs mt-1.5 leading-relaxed">
+            Stat filters are disabled for {{ item.category === ItemCategory.Currency ? 'currency' : 'lineage supports' }}.
+          </p>
+        </div>
+        <div v-else class="flex-1 overflow-y-auto pr-1">
           <filters-block
             ref="filtersComponent"
             :filters="itemFilters"
@@ -45,7 +55,7 @@
       </div>
 
       <!-- Search CTA Button -->
-      <div v-if="!doSearch" class="bg-[#0e1017] border border-[#191b22] rounded-2xl p-4 flex justify-center shadow-lg shadow-black/45 shrink-0">
+      <div v-if="!doSearch && !isListingsDisabled" class="bg-[#0e1017] border border-[#191b22] rounded-2xl p-4 flex justify-center shadow-lg shadow-black/45 shrink-0">
         <button 
           @click="doSearch = true" 
           class="w-full py-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 rounded-xl text-xs font-semibold text-white tracking-wide transition-all shadow-md shadow-violet-950/20"
@@ -77,31 +87,43 @@
 
       <!-- Trade Listings content -->
       <div class="flex-1 overflow-y-auto p-5 relative min-h-0">
-        <trade-listing
-          v-slot="listingsProps"
-          v-if="tradeAPI === 'trade' && doSearch"
-          ref="tradeService"
-          :filters="itemFilters"
-          :stats="itemStats"
-          :item="item"
-        />
-        <trade-bulk
-          v-slot="bulkProps"
-          v-if="tradeAPI === 'bulk' && doSearch"
-          ref="tradeService"
-          :filters="itemFilters"
-          :item="item"
-        />
-
-        <div v-if="!doSearch" class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center select-none">
+        <div v-if="isListingsDisabled" class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center select-none">
           <div class="w-14 h-14 rounded-full bg-violet-500/5 flex items-center justify-center mb-4 border border-violet-500/10">
-            <i class="fas fa-search text-[#8b5cf6] text-xl"></i>
+            <i class="fas fa-coins text-[#8b5cf6] text-xl" v-if="item.category === ItemCategory.Currency"></i>
+            <i class="fas fa-gem text-[#8b5cf6] text-xl" v-else></i>
           </div>
-          <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">Ready to Search</h4>
+          <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">{{ item.category === ItemCategory.Currency ? 'Currency' : 'Lineage Support' }} Listings Disabled</h4>
           <p class="text-xs text-gray-500 max-w-xs mt-1.5 leading-relaxed">
-            Click search to view current active trade database listings for this item.
+            Live listings are disabled for this item type.
           </p>
         </div>
+        <template v-else>
+          <trade-listing
+            v-slot="listingsProps"
+            v-if="tradeAPI === 'trade' && doSearch"
+            ref="tradeService"
+            :filters="itemFilters"
+            :stats="itemStats"
+            :item="item"
+          />
+          <trade-bulk
+            v-slot="bulkProps"
+            v-if="tradeAPI === 'bulk' && doSearch"
+            ref="tradeService"
+            :filters="itemFilters"
+            :item="item"
+          />
+
+          <div v-if="!doSearch" class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center select-none">
+            <div class="w-14 h-14 rounded-full bg-violet-500/5 flex items-center justify-center mb-4 border border-violet-500/10">
+              <i class="fas fa-search text-[#8b5cf6] text-xl"></i>
+            </div>
+            <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">Ready to Search</h4>
+            <p class="text-xs text-gray-500 max-w-xs mt-1.5 leading-relaxed">
+              Click search to view current active trade database listings for this item.
+            </p>
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -112,6 +134,7 @@
     <!-- <price-trend v-else :item="item" :filters="itemFilters" /> -->
     <price-trend :item="item" :filters="itemFilters" />
     <filters-block
+      v-if="!isListingsDisabled"
       ref="filtersComponent"
       :filters="itemFilters"
       :stats="itemStats"
@@ -121,29 +144,34 @@
       @submit="doSearch = true"
       :rebuild-key="rebuildKey"
     />
-    <trade-listing
-      v-if="tradeAPI === 'trade' && doSearch"
-      ref="tradeService"
-      :filters="itemFilters"
-      :stats="itemStats"
-      :item="item"
-    />
-    <trade-bulk
-      v-if="tradeAPI === 'bulk' && doSearch"
-      ref="tradeService"
-      :filters="itemFilters"
-      :item="item"
-    />
-    <div v-if="!doSearch" class="flex justify-between items-center">
-      <div class="flex w-40" @mouseenter="handleSearchMouseenter">
-        <button class="btn" @click="doSearch = true" style="min-width: 5rem">
-          {{ t("Search") }}
-        </button>
-      </div>
-      <div class="flex flex-row gap-1">
-        <trade-links v-if="tradeAPI === 'trade'" :get-link="makeTradeLink" />
-      </div>
+    <div v-if="item.category === ItemCategory.Currency" class="p-4 text-center text-xs text-gray-500">
+      Live listings are disabled for currency. Exalt worth is shown above.
     </div>
+    <template v-else>
+      <trade-listing
+        v-if="tradeAPI === 'trade' && doSearch"
+        ref="tradeService"
+        :filters="itemFilters"
+        :stats="itemStats"
+        :item="item"
+      />
+      <trade-bulk
+        v-if="tradeAPI === 'bulk' && doSearch"
+        ref="tradeService"
+        :filters="itemFilters"
+        :item="item"
+      />
+      <div v-if="!doSearch" class="flex justify-between items-center">
+        <div class="flex w-40" @mouseenter="handleSearchMouseenter">
+          <button class="btn" @click="doSearch = true" style="min-width: 5rem">
+            {{ t("Search") }}
+          </button>
+        </div>
+        <div class="flex flex-row gap-1">
+          <trade-links v-if="tradeAPI === 'trade'" :get-link="makeTradeLink" />
+        </div>
+      </div>
+    </template>
     <stack-value :filters="itemFilters" :item="item" />
     <div v-if="showSupportLinks" class="mt-auto border border-dashed p-2">
       <!-- <div class="mb-1">
@@ -274,6 +302,14 @@ export default defineComponent({
     function handleResize() {
       screenHeight.value = window.innerHeight;
     }
+    const isLineageSupport = computed(() => {
+      return props.item.category === ItemCategory.Gem && (props.item.info.icon?.includes('/Lineage') ?? false);
+    });
+
+    const isListingsDisabled = computed(() => {
+      return props.item.category === ItemCategory.Currency || isLineageSupport.value;
+    });
+
     onMounted(() => {
       window.addEventListener("resize", handleResize);
     });
@@ -519,6 +555,8 @@ export default defineComponent({
     return {
       t,
       isStandalone,
+      isListingsDisabled,
+      ItemCategory,
       itemFilters,
       itemStats,
       doSearch,

@@ -4,6 +4,7 @@
     <div class="flex items-center gap-1.5 flex-wrap justify-between">
       <div class="flex items-center gap-1.5 flex-wrap">
         <span 
+          v-if="!isListingsDisabled"
           class="px-2 py-0.5 rounded-md text-[9px] font-bold tracking-wider uppercase bg-[#14151b] border border-[#222538]/60"
           :style="{ color: rarityColor }"
         >
@@ -18,7 +19,7 @@
       </div>
 
       <!-- Search Rarity Filter Dropdown -->
-      <div class="flex items-center gap-1.5 bg-[#101116] border border-[#1b1d2a] rounded-lg px-2 py-0.5 text-[10px] text-gray-300 shadow-sm">
+      <div v-if="!isListingsDisabled" class="flex items-center gap-1.5 bg-[#101116] border border-[#1b1d2a] rounded-lg px-2 py-0.5 text-[10px] text-gray-300 shadow-sm">
         <span class="text-[9px] text-gray-500 font-semibold uppercase tracking-wider">Search:</span>
         <select 
           v-model="currentRarity"
@@ -56,7 +57,7 @@
     </div>
 
     <!-- Properties: Item Level, Quality, Sockets, Requirements -->
-    <div class="flex flex-wrap items-center gap-2 mt-2 pt-2.5 border-t border-[#1d202e]/30">
+    <div v-if="!isListingsDisabled" class="flex flex-wrap items-center gap-2 mt-2 pt-2.5 border-t border-[#1d202e]/30">
       <!-- Item Level -->
       <div 
         v-if="filters.itemLevel"
@@ -208,6 +209,7 @@
 
     <!-- Accuracy/Base Toggle -->
     <button
+      v-if="!isListingsDisabled"
       class="w-full mt-3 py-2 px-3 rounded-xl text-left text-xs transition-all duration-200 border bg-[#141620]/80 border-[#222538]/60 text-gray-300 hover:bg-[#1a1d2a] flex items-center justify-between shadow-sm"
       @click="toggleAccuracy"
     >
@@ -221,6 +223,7 @@
   
   <div v-else class="filter-name">
     <button
+      v-if="!isListingsDisabled"
       class="px-2 rounded border overflow-hidden text-ellipsis"
       :class="{
         'border-gray-500': showAsActive,
@@ -246,7 +249,7 @@
 <script lang="ts">
 import { defineComponent, PropType, computed } from "vue";
 import { useI18n } from "vue-i18n";
-import type { ParsedItem } from "@/parser";
+import { ParsedItem, ItemCategory } from "@/parser";
 import type { ItemFilters } from "./interfaces";
 import { CATEGORY_TO_TRADE_ID } from "../trade/pathofexile-trade";
 
@@ -268,6 +271,14 @@ export default defineComponent({
     const isStandalone = computed(() => {
       const params = new URLSearchParams(window.location.search);
       return params.get("mode") === "standalone";
+    });
+
+    const isLineageSupport = computed(() => {
+      return props.item.category === ItemCategory.Gem && (props.item.info.icon?.includes('/Lineage') ?? false);
+    });
+
+    const isListingsDisabled = computed(() => {
+      return props.item.category === ItemCategory.Currency || isLineageSupport.value;
     });
 
     const rarityColor = computed(() => {
@@ -350,6 +361,7 @@ export default defineComponent({
     return {
       t,
       isStandalone,
+      isListingsDisabled,
       rarityColor,
       socketsString,
       currentRarity,
@@ -357,6 +369,7 @@ export default defineComponent({
       showAsActive,
       toggleAccuracy,
       corrupted,
+      ItemCategory,
     };
   },
 });

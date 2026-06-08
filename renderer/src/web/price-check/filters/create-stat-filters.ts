@@ -327,30 +327,6 @@ export function shortRollToFilter(
   return filterRoll;
 }
 
-function resolveTradeId(stat: any, type: ModifierType): string[] {
-  if (!stat.trade || !stat.trade.ids) return [];
-  const realType = type === ModifierType.AddedAugment ? ModifierType.Augment : type;
-
-  const specificTypes = [
-    ModifierType.Crafted,
-    ModifierType.Desecrated,
-    ModifierType.Fractured,
-    ModifierType.Augment,
-    ModifierType.Enchant,
-  ];
-
-  if (specificTypes.includes(realType)) {
-    if (stat.trade.ids[ModifierType.Pseudo]) {
-      return stat.trade.ids[ModifierType.Pseudo];
-    }
-    if (stat.trade.ids[ModifierType.Explicit]) {
-      return stat.trade.ids[ModifierType.Explicit];
-    }
-  }
-
-  return stat.trade.ids[realType] || stat.trade.ids[ModifierType.Explicit] || [];
-}
-
 export function calculatedStatToFilter(
   calc: StatCalculated,
   percent: number,
@@ -368,7 +344,10 @@ export function calculatedStatToFilter(
 
   if (stat.trade.option) {
     filter = {
-      tradeId: resolveTradeId(stat, type),
+      tradeId:
+        stat.trade.ids[
+        type === ModifierType.AddedAugment ? ModifierType.Augment : type
+        ],
       statRef: stat.ref,
       text:
         roll?.option === roll?.value
@@ -386,7 +365,10 @@ export function calculatedStatToFilter(
   }
 
   filter ??= {
-    tradeId: resolveTradeId(stat, type),
+    tradeId:
+      stat.trade.ids[
+      type === ModifierType.AddedAugment ? ModifierType.Augment : type
+      ],
     statRef: stat.ref,
     text: translation.string,
     tag: type as unknown as FilterTag,
@@ -448,16 +430,6 @@ export function calculatedStatToFilter(
   }
 
   if (roll && (!filter.option || roll.option !== roll.value)) {
-    let usedBetter = calc.stat.better;
-    if (translation.negate) {
-      usedBetter = StatBetter.NegativeRoll;
-    } else if (
-      stat.trade.ids.pseudo?.length === 1 &&
-      stat.trade.ids.pseudo[0] === "item.reload_time"
-    ) {
-      usedBetter = StatBetter.NegativeRoll;
-    }
-
     // Determine goodness first
     let goodness: number | undefined;
     if (calc.stat.better !== StatBetter.NotComparable) {
@@ -514,29 +486,29 @@ export function calculatedStatToFilter(
         ? { min: roll.value, max: roll.value }
         : item.rarity === ItemRarity.Unique
           ? {
-              min: usedBetter === StatBetter.PositiveRoll
-                ? roll.value
-                : percentRollDelta(
-                    roll.value,
-                    roll.max - roll.min,
-                    -percent,
-                    Math.floor,
-                    dp,
-                  ),
-              max: usedBetter === StatBetter.NegativeRoll
-                ? roll.value
-                : percentRollDelta(
-                    roll.value,
-                    roll.max - roll.min,
-                    +percent,
-                    Math.ceil,
-                    dp,
-                  ),
-            }
+            min: calc.stat.better === StatBetter.PositiveRoll
+              ? roll.value
+              : percentRollDelta(
+                roll.value,
+                roll.max - roll.min,
+                -percent,
+                Math.floor,
+                dp,
+              ),
+            max: calc.stat.better === StatBetter.NegativeRoll
+              ? roll.value
+              : percentRollDelta(
+                roll.value,
+                roll.max - roll.min,
+                +percent,
+                Math.ceil,
+                dp,
+              ),
+          }
           : {
-              min: percentRoll(roll.value, -percent, Math.floor, dp),
-              max: percentRoll(roll.value, +percent, Math.ceil, dp),
-            };
+            min: percentRoll(roll.value, -percent, Math.floor, dp),
+            max: percentRoll(roll.value, +percent, Math.ceil, dp),
+          };
 
     filterDefault.min = Math.max(filterDefault.min, filterBounds.min);
     filterDefault.max = Math.min(filterDefault.max, filterBounds.max);
@@ -548,8 +520,8 @@ export function calculatedStatToFilter(
       default: filterDefault,
       bounds:
         item.rarity === ItemRarity.Unique &&
-        roll.min !== roll.max &&
-        calc.stat.better !== StatBetter.NotComparable
+          roll.min !== roll.max &&
+          calc.stat.better !== StatBetter.NotComparable
           ? filterBounds
           : undefined,
       dp,
@@ -557,6 +529,14 @@ export function calculatedStatToFilter(
       tradeInvert: calc.stat.trade.inverted,
       goodness,
     };
+
+    let usedBetter = calc.stat.better;
+    if (
+      stat.trade.ids.pseudo?.length === 1 &&
+      stat.trade.ids.pseudo[0] === "item.reload_time"
+    ) {
+      usedBetter = StatBetter.NegativeRoll;
+    }
 
     filterFillMinMax(filter.roll, usedBetter);
 
@@ -810,9 +790,9 @@ function hideAllAugments(filters: StatFilter[]) {
 // -1 Suffix Modifier allowed
 function showHasEmptyModifier(ctx: FiltersCreationContext):
   | {
-      empty: ItemHasEmptyModifier;
-      counts: Record<ItemHasEmptyModifier, number>;
-    }
+    empty: ItemHasEmptyModifier;
+    counts: Record<ItemHasEmptyModifier, number>;
+  }
   | false {
   const { item } = ctx;
 
