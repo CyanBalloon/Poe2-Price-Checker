@@ -41,16 +41,19 @@ export function typeInChat(
       }
     }
 
-    uIOhook.keyTap(Key.V, modifiers);
+    // Wait 50ms to allow the chat window time to open and focus in game
+    setTimeout(() => {
+      uIOhook.keyTap(Key.V, modifiers);
 
-    if (send) {
-      uIOhook.keyTap(Key.Enter);
-      // restore the last chat
-      uIOhook.keyTap(Key.Enter);
-      uIOhook.keyTap(Key.ArrowUp);
-      uIOhook.keyTap(Key.ArrowUp);
-      uIOhook.keyTap(Key.Escape);
-    }
+      if (send) {
+        uIOhook.keyTap(Key.Enter);
+        // restore the last chat
+        uIOhook.keyTap(Key.Enter);
+        uIOhook.keyTap(Key.ArrowUp);
+        uIOhook.keyTap(Key.ArrowUp);
+        uIOhook.keyTap(Key.Escape);
+      }
+    }, 50);
   });
 }
 

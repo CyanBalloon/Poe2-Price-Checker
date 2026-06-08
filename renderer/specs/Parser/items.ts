@@ -330,7 +330,7 @@ Creates a Skill Gem or Level an existing gem to level 19
 --------
 Right Click to engrave a Skill Gem.
 `);
-UncutSkillGem.category = ItemCategory.Currency;
+UncutSkillGem.category = ItemCategory.UncutGem;
 UncutSkillGem.gemLevel = 19;
 UncutSkillGem.info = {
   name: "Uncut Skill Gem",
@@ -338,7 +338,7 @@ UncutSkillGem.info = {
   namespace: "ITEM",
   icon: "test",
   tags: [],
-  craftable: { category: ItemCategory.Currency },
+  craftable: { category: ItemCategory.UncutGem },
 };
 
 UncutSkillGem.sectionCount = 3;
@@ -353,7 +353,7 @@ Creates a Persistent Buff Skill Gem or Level an existing gem to Level 16
 --------
 Right Click to engrave a Persistent Buff Skill Gem.
 `);
-UncutSpiritGem.category = ItemCategory.Currency;
+UncutSpiritGem.category = ItemCategory.UncutGem;
 UncutSpiritGem.gemLevel = 16;
 UncutSpiritGem.info = {
   name: "Uncut Spirit Gem",
@@ -361,7 +361,7 @@ UncutSpiritGem.info = {
   namespace: "ITEM",
   icon: "test",
   tags: [],
-  craftable: { category: ItemCategory.Currency },
+  craftable: { category: ItemCategory.UncutGem },
 };
 
 UncutSpiritGem.sectionCount = 3;
@@ -376,7 +376,7 @@ Creates a Support Gem
 --------
 Right Click to engrave a Support Gem.
 `);
-UncutSupportGem.category = ItemCategory.Currency;
+UncutSupportGem.category = ItemCategory.UncutGem;
 UncutSupportGem.gemLevel = 5;
 UncutSupportGem.info = {
   name: "Uncut Spirit Gem",
@@ -384,7 +384,7 @@ UncutSupportGem.info = {
   namespace: "ITEM",
   icon: "test",
   tags: [],
-  craftable: { category: ItemCategory.Currency },
+  craftable: { category: ItemCategory.UncutGem },
 };
 
 UncutSupportGem.sectionCount = 3;

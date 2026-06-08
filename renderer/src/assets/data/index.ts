@@ -12,6 +12,7 @@ import { loadClientStrings } from "../client-string-loader";
 import { useTradeData } from "@/web/background/TradeData";
 import { ItemCategory } from "@/parser/meta";
 import { ItemRarity } from "@/parser/ParsedItem";
+import { Host } from "@/web/background/IPC";
 
 export * from "./interfaces";
 
@@ -174,6 +175,9 @@ async function loadItems(language: string) {
         const end = ndjson.indexOf("\n", start);
         const record = JSON.parse(ndjson.slice(start, end)) as BaseType;
         if (record.namespace === ns && record[prop] === name) {
+          if (CUSTOM_ICONS[record.refName]) {
+            record.icon = CUSTOM_ICONS[record.refName];
+          }
           out.push(record);
           if (!record.disc && !record.unique) break;
         } else {
@@ -263,6 +267,8 @@ export function stat(text: string) {
   return text;
 }
 
+export let CUSTOM_ICONS: Record<string, string> = {};
+
 export async function init(lang: string) {
   CLIENT_STRINGS_REF = await loadClientStrings("en");
   ITEM_DROP = await (
@@ -271,6 +277,17 @@ export async function init(lang: string) {
   APP_PATRONS = await (
     await fetch(`${import.meta.env.BASE_URL}data/patrons.json`)
   ).json();
+
+  try {
+    const response = await fetch("/custom-icons");
+    CUSTOM_ICONS = await response.json();
+  } catch (e) {
+    console.error("Failed to load custom icons:", e);
+  }
+
+  Host.onEvent("MAIN->CLIENT::custom-icon-added", (payload) => {
+    CUSTOM_ICONS[payload.refName] = payload.iconUrl;
+  });
 
   await loadForLang(lang);
 
@@ -456,6 +473,12 @@ async function loadTradeData() {
           tags: [],
           craftable: { category: ItemCategory.Unknown },
         };
+      }
+    }
+
+    if (base) {
+      if (CUSTOM_ICONS[base.refName]) {
+        base.icon = CUSTOM_ICONS[base.refName];
       }
     }
 

@@ -11,7 +11,7 @@ import type { GameWindow } from "./GameWindow";
 export class OverlayWindow {
   public isInteractable = false;
   public wasUsedRecently = true;
-  private window?: BrowserWindow;
+  public window?: BrowserWindow;
   private overlayKey: string = "Shift + Space";
   private isOverlayKeyUsed = false;
 

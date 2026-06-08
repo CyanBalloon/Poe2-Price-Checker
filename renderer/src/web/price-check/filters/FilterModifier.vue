@@ -248,7 +248,7 @@ export default defineComponent({
     const showTag = computed(
       () =>
         props.filter.tag !== FilterTag.Property &&
-        props.filter.tradeId[0] !== "item.has_empty_modifier" &&
+        props.filter.tradeId?.[0] !== "item.has_empty_modifier" &&
         props.item.info.refName !== "Chronicle of Atzoatl" &&
         props.item.info.refName !== "Mirrored Tablet" &&
         props.item.info.refName !== "Filled Coffin" &&
@@ -274,7 +274,7 @@ export default defineComponent({
           "item.energy_shield",
           "item.total_dps",
           "item.physical_dps",
-        ].includes(props.filter.tradeId[0]) && itemIsModifiable(props.item)
+        ].includes(props.filter.tradeId?.[0]) && itemIsModifiable(props.item)
       );
     });
 
@@ -331,6 +331,7 @@ export default defineComponent({
 
     const text = computed(() => {
       if (
+        !props.filter.tradeId?.[0] ||
         !(INTERNAL_TRADE_IDS as readonly string[]).includes(
           props.filter.tradeId[0],
         )
@@ -453,7 +454,7 @@ export default defineComponent({
           text.value.startsWith(_$.GRANTS_SKILL),
       ),
       tradeId: computed(() => {
-        if (props.filter.tradeId.length > 0) {
+        if (props.filter.tradeId && props.filter.tradeId.length > 0) {
           return props.filter.tradeId[0];
         }
       }),

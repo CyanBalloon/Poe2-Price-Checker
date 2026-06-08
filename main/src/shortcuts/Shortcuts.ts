@@ -1,4 +1,6 @@
-import { screen, globalShortcut, clipboard } from "electron";
+import { screen, globalShortcut, clipboard, app } from "electron";
+import path from "path";
+import child_process from "child_process";
 import { uIOhook, UiohookKey, UiohookWheelEvent } from "uiohook-napi";
 import {
   isModKey,
@@ -27,6 +29,10 @@ export class Shortcuts {
   private logKeys = false;
   private areaTracker: WidgetAreaTracker;
   private clipboard: HostClipboard;
+  private clickerProcess: any = null;
+  private isCtrlPressed = false;
+  private isGameWindowActive = false;
+  private gameBounds: { x: number; y: number; width: number; height: number } | null = null;
 
   static async create(
     logger: Logger,
@@ -57,6 +63,63 @@ export class Shortcuts {
   ) {
     this.areaTracker = new WidgetAreaTracker(server, overlay);
     this.clipboard = new HostClipboard(logger);
+
+    const updateActiveState = () => {
+      const isFocused = this.isGameWindowActive || this.poeWindow.isActive || (process.argv.includes("--standalone") && this.overlay.window?.isFocused());
+      if (this.clickerProcess && this.clickerProcess.stdin.writable) {
+        this.clickerProcess.stdin.write(isFocused ? "active 1\n" : "active 0\n");
+      }
+    };
+
+    if (process.platform === "win32") {
+      const clickerPath = path.join(__dirname, "clicker.exe");
+      try {
+        this.clickerProcess = child_process.spawn(clickerPath, [], { stdio: ["pipe", "pipe", "ignore"] });
+        
+        this.clickerProcess.stdout.on("data", (data: Buffer) => {
+          const lines = data.toString().split("\n");
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (trimmed.startsWith("focus 1")) {
+              this.isGameWindowActive = true;
+              
+              const parts = trimmed.split(" ");
+              if (parts.length >= 6) {
+                const x = parseInt(parts[2], 10);
+                const y = parseInt(parts[3], 10);
+                const width = parseInt(parts[4], 10);
+                const height = parseInt(parts[5], 10);
+                this.gameBounds = { x, y, width, height };
+              }
+
+              if (process.argv.includes("--standalone")) {
+                this.register();
+              }
+              updateActiveState();
+            } else if (trimmed === "focus 0") {
+              this.isGameWindowActive = false;
+              if (process.argv.includes("--standalone") && !this.overlay.window?.isFocused()) {
+                this.unregister();
+              }
+              updateActiveState();
+            }
+          }
+        });
+
+        setTimeout(() => {
+          updateActiveState();
+        }, 100);
+
+        app.on("will-quit", () => {
+          if (this.clickerProcess) {
+            this.clickerProcess.stdin.write("exit\n");
+            this.clickerProcess.kill();
+          }
+        });
+      } catch (err) {
+        this.logger.write(`error [Clicker] Failed to start clicker process: ${err}`);
+      }
+    }
 
     // Clipboard watcher for standalone auto-paste
     let lastClipboardText = "";
@@ -94,9 +157,25 @@ export class Shortcuts {
           } else {
             this.unregister();
           }
+          updateActiveState();
         }
       });
     });
+
+    if (process.argv.includes("--standalone") && this.overlay.window) {
+      this.overlay.window.on("focus", () => {
+        this.register();
+        updateActiveState();
+      });
+      this.overlay.window.on("blur", () => {
+        this.unregister();
+        updateActiveState();
+      });
+
+      if (this.overlay.window.isFocused()) {
+        this.register();
+      }
+    }
 
     this.server.onEventAnyClient("CLIENT->MAIN::user-action", (e) => {
       if (e.action === "stash-search") {
@@ -105,11 +184,54 @@ export class Shortcuts {
     });
 
     uIOhook.on("keydown", (e) => {
+      if (e.ctrlKey) {
+        this.isCtrlPressed = true;
+      }
+      const name = UiohookToName[e.keycode];
+      if (name === "Ctrl" || name === "CtrlRight") {
+        this.isCtrlPressed = true;
+      }
+
+      const isCtrlC = e.ctrlKey && !e.altKey && !e.shiftKey && UiohookToName[e.keycode] === "C";
+      if (isCtrlC) {
+        setTimeout(() => {
+          try {
+            const text = clipboard.readText();
+            const trimmed = text.trim();
+            if (trimmed && (trimmed.startsWith("Item Class:") || trimmed.startsWith("Rarity:"))) {
+              lastClipboardText = trimmed;
+              this.server.sendEventTo("broadcast", {
+                name: "MAIN->CLIENT::item-text",
+                payload: {
+                  target: "price-check",
+                  clipboard: trimmed,
+                  position: { x: 0, y: 0 },
+                  focusOverlay: false,
+                },
+              });
+              if (process.argv.includes("--standalone")) {
+                this.overlay.showWindow();
+              }
+            }
+          } catch (err) {
+            // ignore
+          }
+        }, 150);
+      }
+
       if (!this.logKeys) return;
       const pressed = eventToString(e);
       this.logger.write(`debug [Shortcuts] Keydown ${pressed}`);
     });
     uIOhook.on("keyup", (e) => {
+      const name = UiohookToName[e.keycode];
+      if (name === "Ctrl" || name === "CtrlRight") {
+        this.isCtrlPressed = false;
+      }
+      if (!e.ctrlKey) {
+        this.isCtrlPressed = false;
+      }
+
       if (!this.logKeys) return;
       this.logger.write(
         `debug [Shortcuts] Keyup ${
@@ -119,14 +241,15 @@ export class Shortcuts {
     });
 
     uIOhook.on("wheel", (e) => {
-      if (!e.ctrlKey || !this.poeWindow.isActive || !this.stashScroll) return;
+      const isActive = this.isGameWindowActive || this.poeWindow.isActive || (process.argv.includes("--standalone") && this.overlay.window?.isFocused());
+      if (!this.isCtrlPressed || !isActive) return;
 
-      if (!isStashArea(e, this.poeWindow)) {
-        if (e.rotation > 0) {
-          uIOhook.keyTap(UiohookKey.ArrowRight);
-        } else if (e.rotation < 0) {
-          uIOhook.keyTap(UiohookKey.ArrowLeft);
-        }
+      if (isMouseOverStash(e, this)) return;
+
+      if (e.rotation > 0) {
+        uIOhook.keyTap(UiohookKey.ArrowRight);
+      } else if (e.rotation < 0) {
+        uIOhook.keyTap(UiohookKey.ArrowLeft);
       }
     });
   }
@@ -200,7 +323,16 @@ export class Shortcuts {
   }
 
   private register() {
+    this.logger.write("info [Shortcuts] Registering hotkeys");
+    if (!globalShortcut.isRegistered("F5")) {
+      globalShortcut.register("F5", () => {
+        this.logger.write("info [Shortcuts] F5 pressed, executing /hideout macro");
+        typeInChat("/hideout", true, this.clipboard);
+      });
+    }
+
     for (const entry of this.actions) {
+      if (entry.shortcut === "F5") continue;
       const isOk = globalShortcut.register(
         shortcutToElectron(entry.shortcut),
         () => {
@@ -313,7 +445,21 @@ export class Shortcuts {
     }
   }
 
+  getGameBounds() {
+    if (this.gameBounds) return this.gameBounds;
+    if (this.poeWindow.bounds) {
+      return {
+        x: this.poeWindow.bounds.x,
+        y: this.poeWindow.bounds.y,
+        width: this.poeWindow.bounds.width,
+        height: this.poeWindow.bounds.height,
+      };
+    }
+    return null;
+  }
+
   private unregister() {
+    this.logger.write("info [Shortcuts] Unregistering hotkeys");
     globalShortcut.unregisterAll();
   }
 }
@@ -351,16 +497,16 @@ function pressKeysToCopyItemText(
   }, 10);
 }
 
-function isStashArea(mouse: UiohookWheelEvent, poeWindow: GameWindow): boolean {
-  if (
-    !poeWindow.bounds ||
-    mouse.x > poeWindow.bounds.x + poeWindow.uiSidebarWidth
-  )
-    return false;
+function isMouseOverStash(mouse: UiohookWheelEvent, shortcuts: Shortcuts): boolean {
+  const bounds = shortcuts.getGameBounds();
+  if (!bounds) return false;
 
+  const sidebarWidth = Math.round(bounds.height * (370 / 600));
   return (
-    mouse.y > poeWindow.bounds.y + (poeWindow.bounds.height * 154) / 1600 &&
-    mouse.y < poeWindow.bounds.y + (poeWindow.bounds.height * 1192) / 1600
+    mouse.x >= bounds.x &&
+    mouse.x <= bounds.x + sidebarWidth &&
+    mouse.y >= bounds.y &&
+    mouse.y <= bounds.y + bounds.height
   );
 }
 

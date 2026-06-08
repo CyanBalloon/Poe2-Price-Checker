@@ -32,12 +32,12 @@
         
         <div v-if="isListingsDisabled" class="flex-1 flex flex-col items-center justify-center p-8 text-center select-none">
           <div class="w-14 h-14 rounded-full bg-violet-500/5 flex items-center justify-center mb-4 border border-violet-500/10">
-            <i class="fas fa-filter text-[#8b5cf6] text-xl" v-if="item.category === ItemCategory.Currency"></i>
+            <i class="fas fa-filter text-[#8b5cf6] text-xl" v-if="item.category !== ItemCategory.Gem"></i>
             <i class="fas fa-gem text-[#8b5cf6] text-xl" v-else></i>
           </div>
           <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">Stat Filters Disabled</h4>
           <p class="text-xs text-gray-500 max-w-xs mt-1.5 leading-relaxed">
-            Stat filters are disabled for {{ item.category === ItemCategory.Currency ? 'currency' : 'lineage supports' }}.
+            Stat filters are disabled for {{ item.category === ItemCategory.Currency ? 'currency' : (item.info.tradeTag ? 'commodity items' : 'lineage supports') }}.
           </p>
         </div>
         <div v-else class="flex-1 overflow-y-auto pr-1">
@@ -89,10 +89,10 @@
       <div class="flex-1 overflow-y-auto p-5 relative min-h-0">
         <div v-if="isListingsDisabled" class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center select-none">
           <div class="w-14 h-14 rounded-full bg-violet-500/5 flex items-center justify-center mb-4 border border-violet-500/10">
-            <i class="fas fa-coins text-[#8b5cf6] text-xl" v-if="item.category === ItemCategory.Currency"></i>
+            <i class="fas fa-coins text-[#8b5cf6] text-xl" v-if="item.category !== ItemCategory.Gem"></i>
             <i class="fas fa-gem text-[#8b5cf6] text-xl" v-else></i>
           </div>
-          <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">{{ item.category === ItemCategory.Currency ? 'Currency' : 'Lineage Support' }} Listings Disabled</h4>
+          <h4 class="text-xs font-semibold text-gray-300 uppercase tracking-wider">Listings Disabled</h4>
           <p class="text-xs text-gray-500 max-w-xs mt-1.5 leading-relaxed">
             Live listings are disabled for this item type.
           </p>
@@ -144,8 +144,8 @@
       @submit="doSearch = true"
       :rebuild-key="rebuildKey"
     />
-    <div v-if="item.category === ItemCategory.Currency" class="p-4 text-center text-xs text-gray-500">
-      Live listings are disabled for currency. Exalt worth is shown above.
+    <div v-if="isListingsDisabled" class="p-4 text-center text-xs text-gray-500">
+      Live listings are disabled for this item type. Worth is shown above.
     </div>
     <template v-else>
       <trade-listing
@@ -254,8 +254,11 @@ import {
   CATEGORY_TO_TRADE_ID,
   createTradeRequest,
   PricingResult,
+  requestTradeResultList,
+  requestResults,
 } from "./trade/pathofexile-trade";
 import { AppConfig, TipsFrequency } from "@/web/Config";
+import { Host } from "@/web/background/IPC";
 import { FilterPreset } from "./filters/interfaces";
 import { PriceCheckWidget } from "../overlay/interfaces";
 import { useLeagues } from "@/web/background/Leagues";
@@ -307,7 +310,11 @@ export default defineComponent({
     });
 
     const isListingsDisabled = computed(() => {
-      return props.item.category === ItemCategory.Currency || isLineageSupport.value;
+      return (
+        props.item.category === ItemCategory.Currency ||
+        isLineageSupport.value ||
+        props.item.info.tradeTag != null
+      );
     });
 
     onMounted(() => {
@@ -405,6 +412,37 @@ export default defineComponent({
         if (tradeAPI.value === "bulk") {
           itemFilters.value.trade.listingType = "online";
         }
+
+        if (item.info && (item.info.icon === "%NOT_FOUND%" || !item.info.icon)) {
+          void (async () => {
+            try {
+              const request = createTradeRequest(itemFilters.value, itemStats.value, item);
+              const searchResult = await requestTradeResultList(request, itemFilters.value.trade.league);
+              if (searchResult.result.length > 0) {
+                const results = await requestResults(
+                  searchResult.id,
+                  searchResult.result.slice(0, 1),
+                  { accountName: AppConfig().accountName }
+                );
+                const firstResult = results[0];
+                const iconUrl = firstResult?.rawResult?.item?.icon;
+                if (iconUrl && iconUrl !== "%NOT_FOUND%") {
+                  item.info.icon = iconUrl;
+                  Host.sendEvent({
+                    name: "CLIENT->MAIN::save-custom-icon",
+                    payload: {
+                      refName: item.info.refName,
+                      iconUrl,
+                    },
+                  });
+                }
+              }
+            } catch (e) {
+              console.error("Failed to auto-fetch missing icon in background:", e);
+            }
+          })();
+        }
+
         performance.mark("checked-item-switch-item-end");
       },
       { immediate: true, deep: true },

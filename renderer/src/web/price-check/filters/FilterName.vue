@@ -278,7 +278,11 @@ export default defineComponent({
     });
 
     const isListingsDisabled = computed(() => {
-      return props.item.category === ItemCategory.Currency || isLineageSupport.value;
+      return (
+        props.item.category === ItemCategory.Currency ||
+        isLineageSupport.value ||
+        props.item.info.tradeTag != null
+      );
     });
 
     const rarityColor = computed(() => {

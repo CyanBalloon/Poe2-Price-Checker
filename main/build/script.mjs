@@ -1,8 +1,29 @@
 import child_process from 'child_process'
 import electron from 'electron'
 import esbuild from 'esbuild'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 const isDev = !process.argv.includes('--prod')
+
+if (process.platform === 'win32') {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url))
+  const distDir = path.resolve(__dirname, '../dist')
+  const csFile = path.resolve(__dirname, '../src/shortcuts/clicker.cs')
+  const exeFile = path.resolve(__dirname, '../dist/clicker.exe')
+
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true })
+  }
+  try {
+    console.info('Compiling clicker.cs...')
+    child_process.execSync(`C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe /nologo /out:"${exeFile}" "${csFile}"`)
+    console.info('clicker.cs compiled successfully.')
+  } catch (err) {
+    console.error('Failed to compile clicker.cs:', err.toString())
+  }
+}
 
 const electronRunner = (() => {
   let handle = null

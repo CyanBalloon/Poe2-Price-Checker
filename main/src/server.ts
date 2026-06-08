@@ -7,6 +7,7 @@ import * as path from "path";
 import { app } from "electron";
 import { IpcEvent, IpcEventPayload, HostState } from "../../ipc/types";
 import { ConfigStore } from "./host-files/ConfigStore";
+import { CustomIconsStore } from "./host-files/CustomIconsStore";
 import { addFileUploadRoutes } from "./host-files/file-uploads";
 import type { AppUpdater } from "./AppUpdater";
 import type { Logger } from "./RemoteLogger";
@@ -92,6 +93,7 @@ export async function startServer(
   logger: Logger,
 ): Promise<number> {
   const configStore = new ConfigStore(eventPipe);
+  const customIconsStore = new CustomIconsStore(eventPipe);
 
   websocketServer.on("connection", (socket) => {
     lastActiveClient = socket;
@@ -125,6 +127,9 @@ export async function startServer(
         contents: await configStore.load(),
       };
       res.end(JSON.stringify(resBody));
+    } else if (req.url === "/custom-icons") {
+      res.setHeader("content-type", "application/json");
+      res.end(await customIconsStore.load());
     }
   });
 

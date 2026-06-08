@@ -347,7 +347,7 @@ export function calculatedStatToFilter(
       tradeId:
         stat.trade.ids[
         type === ModifierType.AddedAugment ? ModifierType.Augment : type
-        ],
+        ] ?? [],
       statRef: stat.ref,
       text:
         roll?.option === roll?.value
@@ -368,7 +368,7 @@ export function calculatedStatToFilter(
     tradeId:
       stat.trade.ids[
       type === ModifierType.AddedAugment ? ModifierType.Augment : type
-      ],
+      ] ?? [],
     statRef: stat.ref,
     text: translation.string,
     tag: type as unknown as FilterTag,

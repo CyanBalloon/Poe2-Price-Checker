@@ -92,7 +92,9 @@ export type IpcEvent =
   | IpcConfigChanged
   | IpcUserAction
   | IpcWriteToFile
-  | IpcReparseLog;
+  | IpcReparseLog
+  | IpcSaveCustomIcon
+  | IpcCustomIconAdded;
 
 export type IpcEventPayload<
   Name extends IpcEvent["name"],
@@ -341,3 +343,20 @@ interface Event<TName extends string, TPayload = undefined> {
   name: TName;
   payload: TPayload;
 }
+
+type IpcSaveCustomIcon = Event<
+  "CLIENT->MAIN::save-custom-icon",
+  {
+    refName: string;
+    iconUrl: string;
+  }
+>;
+
+type IpcCustomIconAdded = Event<
+  "MAIN->CLIENT::custom-icon-added",
+  {
+    refName: string;
+    iconUrl: string;
+  }
+>;
+

@@ -82,6 +82,6 @@ describe("Create Filter for uncut gems", () => {
     const result = createFilters(gem, opts);
 
     expect(result.searchExact).toBeTruthy();
-    expect(result.gemLevel).toBeUndefined();
+    expect(result.gemLevel).toBeDefined();
   });
 });

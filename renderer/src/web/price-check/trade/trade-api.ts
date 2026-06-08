@@ -1,5 +1,6 @@
 import { ParsedItem } from "@/parser";
 import { AppConfig } from "@/web/Config";
+import { Host } from "@/web/background/IPC";
 import { shallowRef, computed, shallowReactive } from "vue";
 import { ItemFilters, StatFilter } from "../filters/interfaces";
 import {
@@ -96,6 +97,23 @@ export function useTradeApi() {
               })
             : Promise.resolve();
         await Promise.all([r1, r2]);
+      }
+
+      if (item.info && (item.info.icon === "%NOT_FOUND%" || !item.info.icon)) {
+        const firstWithIcon = _fetchResults.find(
+          (res) => res.rawResult?.item?.icon && res.rawResult.item.icon !== "%NOT_FOUND%",
+        );
+        if (firstWithIcon) {
+          const iconUrl = firstWithIcon.rawResult.item.icon;
+          item.info.icon = iconUrl;
+          Host.sendEvent({
+            name: "CLIENT->MAIN::save-custom-icon",
+            payload: {
+              refName: item.info.refName,
+              iconUrl,
+            },
+          });
+        }
       }
 
       let fetched = 20;

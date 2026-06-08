@@ -61,6 +61,10 @@ export const setupFetchMock = () => {
       },
     });
 
+    if (url === "/custom-icons" || url.endsWith("/custom-icons")) {
+      return createResponse("{}", 200);
+    }
+
     try {
       if (filePath.endsWith(".ndjson")) {
         const data = fs.readFileSync(filePath, "utf8");

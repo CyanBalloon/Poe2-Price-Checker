@@ -1117,7 +1117,7 @@ function parseModifiers(section: string[], item: ParsedItem) {
   );
 
   if (!recognizedLine) {
-    return "SECTION_SKIPPED";
+    return parseModifiersPoe2(section, item);
   }
 
   if (isModInfoLine(recognizedLine)) {

@@ -21,6 +21,7 @@ class TradeApiProvider:
         self.output_dir: str = os.path.join(
             os.path.dirname(__file__), "../../data/json", self.lang
         )
+        os.makedirs(self.output_dir, exist_ok=True)
 
     def pull(self):
         base_url = LANG_URLS[self.lang]

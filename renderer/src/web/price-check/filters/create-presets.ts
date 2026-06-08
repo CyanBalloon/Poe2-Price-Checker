@@ -89,7 +89,7 @@ export function createPresets(
     };
 
     return {
-      active: pseudoPreset.id,
+      active: item.rarity === ItemRarity.Magic ? baseItemPreset.id : pseudoPreset.id,
       presets: [pseudoPreset, baseItemPreset],
     };
   })();
