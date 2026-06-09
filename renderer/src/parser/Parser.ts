@@ -216,10 +216,7 @@ function normalizeName(item: ParserState) {
     }
   }
 
-  // Workaround for an encoding bug in the upstream items database
-  if (item.name === "Oisín's Oath") {
-    item.name = "Oisn's Oath";
-  }
+
 }
 
 function findInDatabase(item: ParserState) {

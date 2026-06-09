@@ -83,12 +83,30 @@
             v-if="activeTab === 'price-check' && xchgRate" 
             class="flex items-center gap-2 bg-[#0e1017] border border-[#202334] rounded-xl px-2.5 py-1 text-xs text-gray-300 shadow-sm"
           >
-            <div class="flex items-center gap-1 select-none">
+            <div class="flex items-center gap-1 select-none border-r border-[#202334]/50 pr-2 mr-0.5">
               <span>1</span>
               <img src="/images/divine.png" class="w-4 h-4 object-contain" alt="Divine" />
               <span class="text-gray-500">=</span>
               <span class="font-bold text-teal-400 font-mono">{{ xchgRate }}</span>
               <img :src="xchgRateCurrency?.icon" class="w-4 h-4 object-contain" :alt="xchgRateCurrency?.text" />
+            </div>
+
+            <!-- Chaos to Exalt ratio -->
+            <div v-if="chaosToExalt" class="flex items-center gap-1 select-none border-r border-[#202334]/50 pr-2 mr-0.5" title="Chaos to Exalt ratio">
+              <span>1</span>
+              <img src="/images/chaos.png" class="w-4 h-4 object-contain" alt="Chaos" />
+              <span class="text-gray-500">=</span>
+              <span class="font-bold text-teal-400 font-mono">{{ chaosToExalt.toFixed(1) }}</span>
+              <img src="/images/exa.png" class="w-4 h-4 object-contain" alt="Exalted" />
+            </div>
+
+            <!-- Annulment to Exalt ratio -->
+            <div v-if="annulToExalt" class="flex items-center gap-1 select-none pr-1" title="Annulment to Exalt ratio">
+              <span>1</span>
+              <img src="/images/annul.png" class="w-4 h-4 object-contain" alt="Annulment" />
+              <span class="text-gray-500">=</span>
+              <span class="font-bold text-teal-400 font-mono">{{ annulToExalt.toFixed(1) }}</span>
+              <img src="/images/exa.png" class="w-4 h-4 object-contain" alt="Exalted" />
             </div>
             
             <button 
@@ -257,7 +275,14 @@ import type { WidgetManager } from "../overlay/interfaces";
 export default defineComponent({
   setup() {
     // Run core background services
-    const { xchgRate, xchgRateCurrency, forceLoad, isLoading: isNinjaLoading } = usePoeninja();
+    const {
+      xchgRate,
+      xchgRateCurrency,
+      forceLoad,
+      isLoading: isNinjaLoading,
+      chaosToExalt,
+      annulToExalt,
+    } = usePoeninja();
     const leagues = useLeagues();
     leagues.load();
     const { handleLine } = useClientLog();
@@ -462,6 +487,8 @@ export default defineComponent({
       openLeagueSelection,
       xchgRate,
       xchgRateCurrency,
+      chaosToExalt,
+      annulToExalt,
       forceLoad,
       isNinjaLoading,
       isLeagueDropdownOpen,

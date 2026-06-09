@@ -1,5 +1,5 @@
 import path from "path";
-import { BrowserWindow, dialog, shell, Menu } from "electron";
+import { BrowserWindow, dialog, shell, Menu, app } from "electron";
 import {
   OverlayController,
   OVERLAY_WINDOW_OPTS,
@@ -146,16 +146,16 @@ export class OverlayWindow {
     if (this.window) {
       if (this.window.isMinimized()) {
         this.window.restore();
-      } else {
-        this.window.minimize();
-        this.window.restore();
       }
       this.window.setAlwaysOnTop(true);
       this.window.show();
       this.window.focus();
+      app.focus();
       setTimeout(() => {
         this.window?.setAlwaysOnTop(false);
       }, 500);
+
+      this.poeWindow.emit("focus-overlay");
     }
   }
 

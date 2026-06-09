@@ -19,27 +19,31 @@ for (const lang of LANGUAGES) {
       encoding: "utf-8",
     });
     let start = 0;
-    while (start !== ndjson.length) {
+    while (start < ndjson.length) {
       const end = ndjson.indexOf("\n", start);
-      /** @type {import('./data/interfaces').Stat} */
-      const stat = JSON.parse(ndjson.slice(start, end));
-      lineStarts.statsByRef.push({
-        start,
-        hash: Number(fnv1a(stat.ref, { size: 32 })),
-      });
-      for (const matcher of stat.matchers) {
-        lineStarts.matchers.push({
+      const sliceEnd = end === -1 ? ndjson.length : end;
+      const line = ndjson.slice(start, sliceEnd).trim();
+      if (line) {
+        /** @type {import('./data/interfaces').Stat} */
+        const stat = JSON.parse(line);
+        lineStarts.statsByRef.push({
           start,
-          hash: Number(fnv1a(matcher.string, { size: 32 })),
+          hash: Number(fnv1a(stat.ref, { size: 32 })),
         });
-        if (matcher.advanced) {
+        for (const matcher of stat.matchers) {
           lineStarts.matchers.push({
             start,
-            hash: Number(fnv1a(matcher.advanced, { size: 32 })),
+            hash: Number(fnv1a(matcher.string, { size: 32 })),
           });
+          if (matcher.advanced) {
+            lineStarts.matchers.push({
+              start,
+              hash: Number(fnv1a(matcher.advanced, { size: 32 })),
+            });
+          }
         }
       }
-      start = end + 1;
+      start = end === -1 ? ndjson.length : end + 1;
     }
   }
 
@@ -80,23 +84,27 @@ for (const lang of LANGUAGES) {
     let start = 0;
     /** @type{Map<string, typeof lineStarts[number]>} */
     const startsByName = new Map();
-    while (start !== ndjson.length) {
+    while (start < ndjson.length) {
       const end = ndjson.indexOf("\n", start);
-      /** @type {import('./data/interfaces').BaseType} */
-      const item = JSON.parse(ndjson.slice(start, end));
-      const key = `${item.namespace}::${item.refName}`;
-      if (!startsByName.has(key)) {
-        startsByName.set(key, {
-          hashName: Number(
-            fnv1a(`${item.namespace}::${item.name}`, { size: 32 }),
-          ),
-          hashRefName: Number(
-            fnv1a(`${item.namespace}::${item.refName}`, { size: 32 }),
-          ),
-          start: start,
-        });
+      const sliceEnd = end === -1 ? ndjson.length : end;
+      const line = ndjson.slice(start, sliceEnd).trim();
+      if (line) {
+        /** @type {import('./data/interfaces').BaseType} */
+        const item = JSON.parse(line);
+        const key = `${item.namespace}::${item.refName}`;
+        if (!startsByName.has(key)) {
+          startsByName.set(key, {
+            hashName: Number(
+              fnv1a(`${item.namespace}::${item.name}`, { size: 32 }),
+            ),
+            hashRefName: Number(
+              fnv1a(`${item.namespace}::${item.refName}`, { size: 32 }),
+            ),
+            start: start,
+          });
+        }
       }
-      start = end + 1;
+      start = end === -1 ? ndjson.length : end + 1;
     }
     lineStarts = Array.from(startsByName.values());
   }

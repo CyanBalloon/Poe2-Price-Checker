@@ -183,6 +183,12 @@ export class Shortcuts {
       }
     });
 
+    this.poeWindow.on("focus-overlay", () => {
+      if (this.clickerProcess && this.clickerProcess.stdin.writable) {
+        this.clickerProcess.stdin.write("focus-overlay\n");
+      }
+    });
+
     uIOhook.on("keydown", (e) => {
       if (e.ctrlKey) {
         this.isCtrlPressed = true;

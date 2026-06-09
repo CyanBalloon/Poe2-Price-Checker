@@ -46,9 +46,57 @@ class Clicker {
                 active = true;
             } else if (line == "active 0") {
                 active = false;
+            } else if (line == "focus-overlay") {
+                FocusOverlayWindow();
             } else if (line == "exit") {
                 break;
             }
+        }
+    }
+
+    [DllImport("user32.dll")]
+    private static extern uint GetWindowThreadProcessId(IntPtr hWnd, IntPtr ProcessId);
+
+    [DllImport("kernel32.dll")]
+    private static extern uint GetCurrentThreadId();
+
+    [DllImport("user32.dll")]
+    private static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool fAttach);
+
+    [DllImport("user32.dll")]
+    private static extern bool SetForegroundWindow(IntPtr hWnd);
+
+    [DllImport("user32.dll")]
+    private static extern bool BringWindowToTop(IntPtr hWnd);
+
+    [DllImport("user32.dll", SetLastError = true)]
+    private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+    [DllImport("user32.dll")]
+    private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+    private const int SW_SHOW = 5;
+
+    static void FocusOverlayWindow() {
+        IntPtr targetWindow = FindWindow(null, "Exiled Exchange 2");
+        if (targetWindow == IntPtr.Zero) return;
+
+        IntPtr foregroundWindow = GetForegroundWindow();
+        if (foregroundWindow == targetWindow) return;
+
+        uint foregroundThreadId = GetWindowThreadProcessId(foregroundWindow, IntPtr.Zero);
+        uint currentThreadId = GetCurrentThreadId();
+
+        if (foregroundThreadId != currentThreadId && foregroundThreadId != 0) {
+            AttachThreadInput(currentThreadId, foregroundThreadId, true);
+            BringWindowToTop(targetWindow);
+            ShowWindow(targetWindow, SW_SHOW);
+            SetForegroundWindow(targetWindow);
+            AttachThreadInput(currentThreadId, foregroundThreadId, false);
+        } else {
+            BringWindowToTop(targetWindow);
+            ShowWindow(targetWindow, SW_SHOW);
+            SetForegroundWindow(targetWindow);
         }
     }
 

@@ -19,7 +19,7 @@ MODE = Literal["noLookup", "missing", "new", "all"]
 
 logger = logging.getLogger(__name__)
 
-SEARCH_URL = "https://www.pathofexile.com/api/trade2/search/Fate%20of%20the%20Vaal"
+SEARCH_URL = "https://www.pathofexile.com/api/trade2/search/poe2/Standard"
 SEARCH_HEADERS = {"content-type": "application/json"}
 FETCH_URL = "https://www.pathofexile.com/api/trade2/fetch/"
 NOT_FOUND = "%NOT_FOUND%"

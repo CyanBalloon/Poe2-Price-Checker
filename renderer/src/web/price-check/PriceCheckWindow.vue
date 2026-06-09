@@ -77,36 +77,52 @@
         @click="openLeagueSelection"
         :title="title"
       >
-        <ui-popover
-          v-if="stableOrbCost && xchgRateCurrency?.id"
-          trigger="click"
-          boundary="#price-window"
-        >
-          <template #target>
-            <button>
-              <i class="fas fa-exchange-alt" /> {{ stableOrbCost }}
-            </button>
-          </template>
-          <template #content>
-            <item-quick-price
-              class="text-base"
-              :price="{
-                min: stableOrbCost,
-                max: stableOrbCost,
-                currency: xchgRateCurrency.id,
-              }"
-              item-img="/images/divine.png"
-            />
-            <div v-for="i in 9" :key="i">
-              <div class="pl-1">
-                {{ i / 10 }} div ⇒ {{ Math.round((stableOrbCost * i) / 10) }}
-                {{ xchgRateCurrency.abbrev }}
+        <div class="flex items-center gap-x-2 pl-2">
+          <ui-popover
+            v-if="stableOrbCost && xchgRateCurrency?.id"
+            trigger="click"
+            boundary="#price-window"
+          >
+            <template #target>
+              <button class="flex items-center gap-x-1">
+                <i class="fas fa-exchange-alt text-gray-500" /> {{ stableOrbCost }}
+              </button>
+            </template>
+            <template #content>
+              <item-quick-price
+                class="text-base"
+                :price="{
+                  min: stableOrbCost,
+                  max: stableOrbCost,
+                  currency: xchgRateCurrency.id,
+                }"
+                item-img="/images/divine.png"
+              />
+              <div v-for="i in 9" :key="i">
+                <div class="pl-1">
+                  {{ i / 10 }} div ⇒ {{ Math.round((stableOrbCost * i) / 10) }}
+                  {{ xchgRateCurrency.abbrev }}
+                </div>
               </div>
-            </div>
-          </template>
-        </ui-popover>
-        <i v-else-if="xchgRateLoading()" class="fas fa-dna fa-spin px-2" />
-        <div v-else class="w-8" />
+            </template>
+          </ui-popover>
+
+          <div v-if="chaosToExalt" class="flex items-center gap-x-1 text-gray-500 text-[11px] cursor-default" title="Chaos to Exalt ratio">
+            <img src="/images/chaos.png" class="w-3.5 h-3.5 object-contain" />
+            <i class="fas fa-arrow-right text-[8px] text-gray-600" />
+            <span class="text-gray-400 font-semibold">{{ chaosToExalt.toFixed(1) }}</span>
+            <img src="/images/exa.png" class="w-3.5 h-3.5 object-contain" />
+          </div>
+
+          <div v-if="annulToExalt" class="flex items-center gap-x-1 text-gray-500 text-[11px] cursor-default" title="Annulment to Exalt ratio">
+            <img src="/images/annul.png" class="w-3.5 h-3.5 object-contain" />
+            <i class="fas fa-arrow-right text-[8px] text-gray-600" />
+            <span class="text-gray-400 font-semibold">{{ annulToExalt.toFixed(1) }}</span>
+            <img src="/images/exa.png" class="w-3.5 h-3.5 object-contain" />
+          </div>
+
+          <i v-else-if="xchgRateLoading()" class="fas fa-dna fa-spin px-2 text-xs" />
+        </div>
       </AppTitleBar>
       <div class="grow layout-column min-h-0 bg-gray-800">
         <background-info />
@@ -313,6 +329,8 @@ export default defineComponent({
       xchgRateCurrency,
       initialLoading: xchgRateLoading,
       queuePricesFetch,
+      chaosToExalt,
+      annulToExalt,
     } = usePoeninja();
 
     nextTick(() => {
@@ -507,6 +525,8 @@ export default defineComponent({
       stableOrbCost,
       xchgRateCurrency,
       xchgRateLoading,
+      chaosToExalt,
+      annulToExalt,
       showCheckPos,
       checkPosition,
       item,

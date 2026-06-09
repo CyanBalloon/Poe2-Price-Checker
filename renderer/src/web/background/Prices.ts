@@ -138,6 +138,8 @@ export const usePoeninja = createGlobalState(() => {
    */
   const xchgRate = shallowRef<number | undefined>(undefined);
   const exaltedRate = shallowRef<number | undefined>(undefined);
+  const chaosToExalt = shallowRef<number | undefined>(undefined);
+  const annulToExalt = shallowRef<number | undefined>(undefined);
   /**
    * Current core currency
    */
@@ -223,6 +225,19 @@ export const usePoeninja = createGlobalState(() => {
           xchgRate.value = divineRates.exalted;
           xchgRateCurrency.value = "exalted";
         }
+      }
+
+      if (divineRates && divineRates.exalted && divineRates.chaos) {
+        chaosToExalt.value = divineRates.exalted / divineRates.chaos;
+      } else {
+        chaosToExalt.value = undefined;
+      }
+
+      const annulPrice = findPriceByQuery({ ns: "ITEM", name: "Orb of Annulment" });
+      if (annulPrice && divineRates && divineRates.exalted) {
+        annulToExalt.value = annulPrice.primaryValue * divineRates.exalted;
+      } else {
+        annulToExalt.value = undefined;
       }
 
       // Clear cache
@@ -379,6 +394,8 @@ export const usePoeninja = createGlobalState(() => {
 
   watch(leagues.selectedId, () => {
     xchgRate.value = undefined;
+    chaosToExalt.value = undefined;
+    annulToExalt.value = undefined;
     PRICES_DB = [];
     load(true);
   });
@@ -387,6 +404,8 @@ export const usePoeninja = createGlobalState(() => {
     if (curr === prev) return;
     xchgRateCurrency.value = curr ?? "exalted";
     xchgRate.value = undefined;
+    chaosToExalt.value = undefined;
+    annulToExalt.value = undefined;
     PRICES_DB = [];
     load(true);
   });
@@ -402,6 +421,8 @@ export const usePoeninja = createGlobalState(() => {
     isLoading: readonly(isLoading),
     initialLoading: () => isLoading.value && !PRICES_DB.length,
     availableCoreCurrencies: readonly(availableCoreCurrencies),
+    chaosToExalt: readonly(chaosToExalt),
+    annulToExalt: readonly(annulToExalt),
   };
 });
 

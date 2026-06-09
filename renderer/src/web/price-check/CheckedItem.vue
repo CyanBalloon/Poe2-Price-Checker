@@ -399,7 +399,8 @@ export default defineComponent({
               item.category === ItemCategory.Charm ||
               !CATEGORY_TO_TRADE_ID.has(item.category!) ||
               item.isUnidentified ||
-              item.isVeiled,
+              item.isVeiled ||
+              (item.rarity === ItemRarity.Magic && presets.value.active === "filters.preset_base_item")
           );
         }
 
@@ -416,8 +417,11 @@ export default defineComponent({
         if (item.info && (item.info.icon === "%NOT_FOUND%" || !item.info.icon)) {
           void (async () => {
             try {
+              const league = itemFilters.value?.trade?.league;
+              if (!league) return;
               const request = createTradeRequest(itemFilters.value, itemStats.value, item);
-              const searchResult = await requestTradeResultList(request, itemFilters.value.trade.league);
+              request.query.status.option = "any";
+              const searchResult = await requestTradeResultList(request, league);
               if (searchResult.result.length > 0) {
                 const results = await requestResults(
                   searchResult.id,
