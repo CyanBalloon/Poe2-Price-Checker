@@ -1,5 +1,6 @@
 import path from "path";
-import { BrowserWindow, dialog, shell, Menu, app } from "electron";
+import { BrowserWindow, dialog, shell, Menu, app, screen } from "electron";
+import fs from "fs";
 import {
   OverlayController,
   OVERLAY_WINDOW_OPTS,
@@ -35,12 +36,54 @@ export class OverlayWindow {
 
     const isStandalone = process.argv.includes("--standalone");
 
+    const windowState = {
+      width: 1280,
+      height: 800,
+      x: undefined as number | undefined,
+      y: undefined as number | undefined,
+    };
+
+    const statePath = path.join(
+      app.getPath("userData"),
+      "apt-data",
+      "standalone-window-state.json",
+    );
+
+    if (isStandalone) {
+      try {
+        const data = fs.readFileSync(statePath, "utf8");
+        const parsed = JSON.parse(data);
+        if (typeof parsed.width === "number" && typeof parsed.height === "number") {
+          windowState.width = parsed.width;
+          windowState.height = parsed.height;
+        }
+        if (typeof parsed.x === "number" && typeof parsed.y === "number") {
+          const displays = screen.getAllDisplays();
+          const isVisible = displays.some((display) => {
+            const bounds = display.bounds;
+            return (
+              parsed.x >= bounds.x &&
+              parsed.x < bounds.x + bounds.width &&
+              parsed.y >= bounds.y &&
+              parsed.y < bounds.y + bounds.height
+            );
+          });
+          if (isVisible) {
+            windowState.x = parsed.x;
+            windowState.y = parsed.y;
+          }
+        }
+      } catch {}
+    }
+
     this.window = new BrowserWindow({
       icon: path.join(__dirname, process.env.STATIC!, "icon.png"),
       ...(isStandalone ? {} : OVERLAY_WINDOW_OPTS),
-      width: isStandalone ? 1280 : 800,
-      height: isStandalone ? 800 : 600,
-      frame: isStandalone ? true : false,
+      width: isStandalone ? windowState.width : 800,
+      height: isStandalone ? windowState.height : 600,
+      x: isStandalone ? windowState.x : undefined,
+      y: isStandalone ? windowState.y : undefined,
+      frame: isStandalone,
       title: "Exiled Exchange 2",
       show: true,
       webPreferences: {
@@ -49,6 +92,41 @@ export class OverlayWindow {
         spellcheck: false,
       },
     });
+
+    if (isStandalone) {
+      let saveTimeout: NodeJS.Timeout | undefined;
+      const saveState = () => {
+        if (saveTimeout) clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(() => {
+          if (!this.window) return;
+          try {
+            const bounds = this.window.getBounds();
+            fs.writeFileSync(statePath, JSON.stringify({
+              width: bounds.width,
+              height: bounds.height,
+              x: bounds.x,
+              y: bounds.y,
+            }), "utf8");
+          } catch {}
+        }, 500);
+      };
+
+      this.window.on("resize", saveState);
+      this.window.on("move", saveState);
+      this.window.on("close", () => {
+        if (saveTimeout) clearTimeout(saveTimeout);
+        if (!this.window) return;
+        try {
+          const bounds = this.window.getBounds();
+          fs.writeFileSync(statePath, JSON.stringify({
+            width: bounds.width,
+            height: bounds.height,
+            x: bounds.x,
+            y: bounds.y,
+          }), "utf8");
+        } catch {}
+      });
+    }
 
     this.window.setMenu(
       Menu.buildFromTemplate([

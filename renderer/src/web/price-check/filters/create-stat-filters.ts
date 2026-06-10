@@ -635,7 +635,6 @@ export function finalFilterTweaks(ctx: FiltersCreationContext) {
       text: "# Empty Modifier",
       statRef: "# Empty Modifier",
       disabled: true,
-      hidden: "filters.hide_empty_mod",
       tag: FilterTag.Pseudo,
       sources: [],
       option: {

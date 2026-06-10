@@ -14,7 +14,7 @@ import {
   UniqueItem,
   WandRareItem,
 } from "./items";
-import { ParsedItem } from "@/parser";
+import { ParsedItem, parseClipboard } from "@/parser";
 
 describe("itemTextToSections", () => {
   beforeEach(async () => {
@@ -219,4 +219,51 @@ describe("parseRequirements", () => {
       expect(parsedItem.requires).toEqual(expectedResult);
     },
   );
+});
+
+describe("Geofri's Sanctuary test", () => {
+  beforeEach(async () => {
+    setupTests();
+    await init("en");
+  });
+  it("should parse Geofri's Sanctuary successfully", () => {
+    const text = `Item Class: Body Armours
+Rarity: Unique
+Geofri's Sanctuary
+Revered Vestments
+--------
+Armour: 702 (augmented)
+--------
+Requires: Level 65, 67 Str, 67 Int
+--------
+Item Level: 80
+--------
+{ Implicit Modifier — Elemental, Fire, Cold, Lightning, Resistance }
++1% to all Maximum Elemental Resistances
+--------
+{ Unique Modifier — Armour }
+157(150-200)% increased Armour
+{ Unique Modifier — Elemental, Fire, Cold, Lightning, Resistance }
++11(10-20)% to all Elemental Resistances
+{ Unique Modifier — Energy Shield }
+Your maximum Energy Shield is equal to 268(200-300)% of your Strength
+{ Unique Modifier — Energy Shield }
+Maximum Energy Shield cannot be Converted — Unscalable Value
+{ Unique Modifier — Life }
+Regenerate 2 Life per second for every 10 Intelligence
+{ Unique Modifier — Life, Energy Shield }
+Zealot's Oath — Unscalable Value
+--------
+Faith does not make us invulnerable.
+It makes us immortal.`;
+    const sections = __testExports.itemTextToSections(text);
+    console.log("Parsed sections:", JSON.stringify(sections, null, 2));
+    const parsed = parseClipboard(text);
+    if (parsed.isOk()) {
+      console.log("Parsed Ok:", parsed.value);
+    } else {
+      console.log("Parsed Error:", parsed.error);
+    }
+    expect(parsed.isOk()).toBe(true);
+  });
 });

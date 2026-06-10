@@ -380,11 +380,20 @@ class NdBuilderService:
         }
         unique_items["name"] = unique_items["name"].replace(outdated_names)
 
+        # Create normalized columns for merging
+        unique_items["name_norm"] = unique_items["name"].fillna("").astype(str).str.replace("’", "'")
+        words_copy = words[["Text", "Text2"]].copy()
+        words_copy["Text_norm"] = words_copy["Text"].fillna("").astype(str).str.replace("’", "'")
+
         named_unique_items = unique_items.merge(
-            words[["Text", "Text2"]], left_on="name", right_on="Text", how="left"
+            words_copy, left_on="name_norm", right_on="Text_norm", how="left"
         )[["type", "namespace", "Text2", "Text"]].rename(
             {"Text2": "name", "Text": "refName"}, axis=1
         )
+
+        # Ensure both English refName and localized name use straight apostrophes
+        named_unique_items["name"] = named_unique_items["name"].fillna("").astype(str).str.replace("’", "'")
+        named_unique_items["refName"] = named_unique_items["refName"].fillna("").astype(str).str.replace("’", "'")
 
         named_unique_items["unique"] = named_unique_items.apply(
             lambda row: {"base": row["type"]}
