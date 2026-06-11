@@ -5144,6 +5144,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|10169",
+                    "text": "Attribue Unfettered",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|10265",
                     "text": "Attribue Javelot",
                     "type": "explicit"
@@ -5434,6 +5439,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|14265",
+                    "text": "Attribue Arsonist",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|14294",
                     "text": "Attribue Sang sacrificiel",
                     "type": "explicit"
@@ -5451,6 +5461,11 @@
                 {
                     "id": "explicit.stat_2954116742|14383",
                     "text": "Attribue Suffusion",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|1448",
+                    "text": "Attribue Bond of the Cat",
                     "type": "explicit"
                 },
                 {
@@ -6044,6 +6059,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|23907",
+                    "text": "Attribue Ice Storm",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|23939",
                     "text": "Attribue Chair émaillée",
                     "type": "explicit"
@@ -6336,6 +6356,11 @@
                 {
                     "id": "explicit.stat_2954116742|27761",
                     "text": "Attribue Contrebalancement",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|27779",
+                    "text": "Attribue Seigneur de la bourrasque",
                     "type": "explicit"
                 },
                 {
@@ -6719,6 +6744,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|33400",
+                    "text": "Attribue Parade retentissante",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|3348",
                     "text": "Attribue Esprit du Loup",
                     "type": "explicit"
@@ -6906,6 +6936,11 @@
                 {
                     "id": "explicit.stat_2954116742|35739",
                     "text": "Attribue Jugement écrasant",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|35743",
+                    "text": "Attribue Peau de Saqawal",
                     "type": "explicit"
                 },
                 {
@@ -8034,6 +8069,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|50239",
+                    "text": "Attribue Agilité des Ventmuet",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|50253",
                     "text": "Attribue Répliques",
                     "type": "explicit"
@@ -8164,6 +8204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|5191",
+                    "text": "Attribue Bond of the Wolf",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|51934",
                     "text": "Attribue Efficacité évoquée",
                     "type": "explicit"
@@ -8226,6 +8271,11 @@
                 {
                     "id": "explicit.stat_2954116742|52618",
                     "text": "Attribue Bénédiction de la Bête",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|52669",
+                    "text": "Attribue Flamekeeper",
                     "type": "explicit"
                 },
                 {
@@ -8831,6 +8881,11 @@
                 {
                     "id": "explicit.stat_2954116742|60764",
                     "text": "Attribue Empennage plumeux",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|60878",
+                    "text": "Attribue Lightning Storm",
                     "type": "explicit"
                 },
                 {
@@ -15179,6 +15234,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_853326030",
+                    "text": "Vous pouvez uniquement Enchâsser # Joyau de type Rubis dans cet objet",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_85367160",
                     "text": "Les Talents éminents dans le Rayon octroient également #% des Dégâts subis sont Recouvrés sous forme de Mana",
                     "type": "explicit"
@@ -16481,6 +16541,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1058934731",
+                    "text": "Les Aptitudes de Créatures temporaires ont # de Limite de nombre de Créatures invoquées",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1060572482",
                     "text": "Les Talents mineurs situés dans le Rayon ont #% d'Augmentation d'Effet",
                     "type": "fractured"
@@ -16563,6 +16628,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "#% increased Global Armour, Evasion and Energy Shield",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1180552088",
+                    "text": "Les Effet bénéfiques d'Archonte ont #% d'Augmentation d'Effet sur vous",
                     "type": "fractured"
                 },
                 {
@@ -16946,6 +17016,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1691403182",
+                    "text": "Les Créatures ont #% d'Augmentation de Vitesse de recharge",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1692879867",
                     "text": "Augmente la durée des saignements vous affectant de # %.",
                     "type": "fractured"
@@ -17056,6 +17131,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1823942939",
+                    "text": "# au nombre maximum de Totems Baliste Invoqués",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1829102168",
                     "text": "Les Altérations infligeant des Dégâts affectant les Ennemis ont #% d'Augmentation de Durée",
                     "type": "fractured"
@@ -17073,6 +17153,11 @@
                 {
                     "id": "fractured.stat_1839076647",
                     "text": "#% d'Augmentation des Dégâts des Projectiles",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1840985759",
+                    "text": "#% d'Augmentation de la Zone d'effet des Attaques",
                     "type": "fractured"
                 },
                 {
@@ -17471,6 +17556,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2393315299",
+                    "text": "#% d'Augmentation de l'amplitude des Modificateurs Explicites de Critique",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_239367161",
                     "text": "#% d'Augmentation d'Accumulation d'Étourdissement",
                     "type": "fractured"
@@ -17606,6 +17696,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2567751411",
+                    "text": "Les Aptitudes de Cri de guerre ont #% d'Augmentation de Zone d'effet",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2570249991",
                     "text": "Les Monstres sont Évasifs",
                     "type": "fractured"
@@ -17653,6 +17748,11 @@
                 {
                     "id": "fractured.stat_2653955271",
                     "text": "Vos Dégâts ont #% de Pénétration de Résistance au feu",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2663359259",
+                    "text": "#% d'Augmentation de la Puissance totale affectant les Cris de guerre",
                     "type": "fractured"
                 },
                 {
@@ -18666,6 +18766,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|26214",
+                    "text": "Attribue Dominion",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|26291",
                     "text": "Attribue Nature électrisante",
                     "type": "fractured"
@@ -19501,6 +19606,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|42660",
+                    "text": "Attribue Rage impérieuse",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|42813",
                     "text": "Attribue Vagues du changement",
                     "type": "fractured"
@@ -19648,6 +19758,11 @@
                 {
                     "id": "fractured.stat_2954116742|46060",
                     "text": "Attribue Vorace",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2954116742|46124",
+                    "text": "Attribue Reliquats arcaniques",
                     "type": "fractured"
                 },
                 {
@@ -20926,6 +21041,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3143918757",
+                    "text": "#% d'Augmentation de génération de Gloire",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3146310524",
                     "text": "Hébète au Toucher",
                     "type": "fractured"
@@ -21016,6 +21136,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_323800555",
+                    "text": "Rajoute #% des Dégâts sous forme de Dégâts de Foudre avec les Sorts",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3243034867",
                     "text": "Les Talents éminents dans le Rayon octroient également Les Aptitudes d'Aura ont #% d'Augmentation d'Amplitude",
                     "type": "fractured"
@@ -21086,6 +21211,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3336230913",
+                    "text": "# à la Sauvegarde runique maximale",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3336890334",
                     "text": "Ajoute # à # Dégâts de Foudre",
                     "type": "fractured"
@@ -21098,6 +21228,11 @@
                 {
                     "id": "fractured.stat_3362812763",
                     "text": "#% de l'Armure s'applique également aux Dégâts élémentaires",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3368921525",
+                    "text": "Increases and Reductions to\n Fire and Lightning Damage in Radius are transformed to apply to Cold Damage",
                     "type": "fractured"
                 },
                 {
@@ -21273,6 +21408,11 @@
                 {
                     "id": "fractured.stat_3596695232",
                     "text": "Augmente les dégâts des projectiles de # % si vous avez infligé des dégâts instantanés en mêlée dans les huit dernières secondes.",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3624940721",
+                    "text": "#% d'Augmentation de l'amplitude des Modificateurs Explicites de Foudre",
                     "type": "fractured"
                 },
                 {
@@ -21546,6 +21686,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3987691524",
+                    "text": "La perte inhérente de Rage démarre 1 seconde plus tard",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3998863698",
                     "text": "Les Monstres ont #% d'Augmentation d'Accumulation de Gel",
                     "type": "fractured"
@@ -21646,6 +21791,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4147510958",
+                    "text": "Sealed Skills have # to maximum Seals",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4147897060",
                     "text": "#% d'Augmentation des chances de Bloquer",
                     "type": "fractured"
@@ -21721,8 +21871,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258524206",
+                    "text": "#% de chances de générer un cumul d'Enchaînement supplémentaire au Toucher",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4258720395",
                     "text": "Les Talents éminents dans le Rayon octroient également Les Projectiles ont #% de chances de se Scinder en un Projectile supplémentaire",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_4273473110",
+                    "text": "#% d'Augmentation de la Sauvegarde runique maximale",
                     "type": "fractured"
                 },
                 {
@@ -22118,6 +22278,11 @@
                 {
                     "id": "fractured.stat_924253255",
                     "text": "Le Ralentissement découlant des Effets néfastes vous affectant a #% d'Augmentation d'Efficacité",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_933355817",
+                    "text": "#% to gain Archon of Undeath when you create an Offering",
                     "type": "fractured"
                 },
                 {
@@ -22687,6 +22852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|10169",
+                    "text": "Attribue Unfettered",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|10265",
                     "text": "Attribue Javelot",
                     "type": "crafted"
@@ -22714,6 +22884,11 @@
                 {
                     "id": "crafted.stat_2954116742|10500",
                     "text": "Attribue Blocages hébétants",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|10602",
+                    "text": "Attribue Maraudage",
                     "type": "crafted"
                 },
                 {
@@ -22747,6 +22922,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1104",
+                    "text": "Attribue Désir de pouvoir",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|11184",
                     "text": "Attribue Zarokh's Gift",
                     "type": "crafted"
@@ -22777,6 +22957,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|116",
+                    "text": "Attribue Perspicacité",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|1169",
                     "text": "Attribue Appel urgent",
                     "type": "crafted"
@@ -22804,6 +22989,11 @@
                 {
                     "id": "crafted.stat_2954116742|12245",
                     "text": "Attribue Pyromane",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|12337",
+                    "text": "Attribue Orange éclair",
                     "type": "crafted"
                 },
                 {
@@ -22907,6 +23097,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|13895",
+                    "text": "Attribue Point précis",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|13980",
                     "text": "Attribue Fendre la terre",
                     "type": "crafted"
@@ -22924,6 +23119,11 @@
                 {
                     "id": "crafted.stat_2954116742|14258",
                     "text": "Attribue Puppet Master chance",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|14265",
+                    "text": "Attribue Arsonist",
                     "type": "crafted"
                 },
                 {
@@ -22947,6 +23147,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1448",
+                    "text": "Attribue Bond of the Cat",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14602",
                     "text": "Attribue Tirs spécialisés",
                     "type": "crafted"
@@ -22957,6 +23162,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|14934",
+                    "text": "Attribue Sombrer dans la manie",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14945",
                     "text": "Attribue Essaim grandissant",
                     "type": "crafted"
@@ -22964,6 +23174,11 @@
                 {
                     "id": "crafted.stat_2954116742|1502",
                     "text": "Attribue Purification de Draiocht",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|15030",
+                    "text": "Attribue Absorption constante",
                     "type": "crafted"
                 },
                 {
@@ -23047,6 +23262,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|16466",
+                    "text": "Attribue Alacrité mentale",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|16499",
                     "text": "Attribue Chuchotements persistants",
                     "type": "crafted"
@@ -23059,6 +23279,11 @@
                 {
                     "id": "crafted.stat_2954116742|16626",
                     "text": "Attribue Zone d'impact",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|16790",
+                    "text": "Attribue Incantation efficace",
                     "type": "crafted"
                 },
                 {
@@ -23102,6 +23327,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17330",
+                    "text": "Attribue Perforation",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17340",
                     "text": "Attribue Poussée d'adrénaline",
                     "type": "crafted"
@@ -23142,6 +23372,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17825",
+                    "text": "Attribue Repli stratégique",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17854",
                     "text": "Attribue Vitesse de fuite",
                     "type": "crafted"
@@ -23164,6 +23399,11 @@
                 {
                     "id": "crafted.stat_2954116742|18419",
                     "text": "Attribue Raccommodage ancestral",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|18485",
+                    "text": "Attribue Lien instable",
                     "type": "crafted"
                 },
                 {
@@ -23244,6 +23484,21 @@
                 {
                     "id": "crafted.stat_2954116742|2021",
                     "text": "Attribue Source",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20251",
+                    "text": "Attribue Sol fissurant",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20289",
+                    "text": "Attribue Griffe gelée",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20388",
+                    "text": "Attribue Chair régénérative",
                     "type": "crafted"
                 },
                 {
@@ -23367,8 +23622,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|22864",
+                    "text": "Attribue Frappe entachée",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|22967",
+                    "text": "Attribue Vigilance",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23078",
                     "text": "Attribue Protecteur sacré",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|23221",
+                    "text": "Attribue Tir maîtrisé",
                     "type": "crafted"
                 },
                 {
@@ -23407,6 +23677,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23736",
+                    "text": "Attribue Tirer dans le tas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23738",
                     "text": "Attribue Fou jusqu'à la moëlle",
                     "type": "crafted"
@@ -23417,8 +23692,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23907",
+                    "text": "Attribue Ice Storm",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23939",
                     "text": "Attribue Chair émaillée",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|2394",
+                    "text": "Attribue Déluge de lames",
                     "type": "crafted"
                 },
                 {
@@ -23452,8 +23737,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|24438",
+                    "text": "Attribue Bois durci",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|24483",
                     "text": "Attribue Approche directe",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|24491",
+                    "text": "Attribue Échos évoqués",
                     "type": "crafted"
                 },
                 {
@@ -23532,6 +23827,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|2575",
+                    "text": "Attribue Alacrité ancestrale",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|25753",
                     "text": "Attribue Armes enflammées",
                     "type": "crafted"
@@ -23574,6 +23874,11 @@
                 {
                     "id": "crafted.stat_2954116742|26339",
                     "text": "Attribue Artifice ancestral",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|26356",
+                    "text": "Attribue Prêt à exploser",
                     "type": "crafted"
                 },
                 {
@@ -23659,6 +23964,11 @@
                 {
                     "id": "crafted.stat_2954116742|27761",
                     "text": "Attribue Contrebalancement",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|27779",
+                    "text": "Attribue Seigneur de la bourrasque",
                     "type": "crafted"
                 },
                 {
@@ -23792,6 +24102,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30392",
+                    "text": "Attribue Secours auxiliaire",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30395",
                     "text": "Attribue Bête hurlante",
                     "type": "crafted"
@@ -23802,8 +24117,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30456",
+                    "text": "Attribue État d'alerte",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30523",
                     "text": "Attribue Les morts peuvent danser",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|30546",
+                    "text": "Attribue Griffe électrifiée",
                     "type": "crafted"
                 },
                 {
@@ -23812,8 +24137,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30720",
+                    "text": "Attribue Incarnation entropique",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|31129",
                     "text": "Attribue Ami pour la vie",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31172",
+                    "text": "Attribue Technique du faucon",
                     "type": "crafted"
                 },
                 {
@@ -23839,6 +24174,11 @@
                 {
                     "id": "crafted.stat_2954116742|31373",
                     "text": "Attribue Surpuissance vocale",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31433",
+                    "text": "Attribue Catalyse",
                     "type": "crafted"
                 },
                 {
@@ -23912,6 +24252,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32448",
+                    "text": "Attribue Électrofugation",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32507",
                     "text": "Attribue Coupé jusqu'à l'os",
                     "type": "crafted"
@@ -23922,8 +24267,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32664",
+                    "text": "Attribue Chakra de la Respiration",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32721",
                     "text": "Attribue Cible distraite",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|32799",
+                    "text": "Attribue Compagnie captivante",
                     "type": "crafted"
                 },
                 {
@@ -23977,8 +24332,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|33400",
+                    "text": "Attribue Parade retentissante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3348",
                     "text": "Attribue Esprit du Loup",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33542",
+                    "text": "Attribue Doigts rapides",
                     "type": "crafted"
                 },
                 {
@@ -23989,6 +24354,11 @@
                 {
                     "id": "crafted.stat_2954116742|336",
                     "text": "Attribue Remous de la tempête",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33730",
+                    "text": "Attribue Canalisation focalisée",
                     "type": "crafted"
                 },
                 {
@@ -24077,6 +24447,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35028",
+                    "text": "Attribue Au cœur de l'action",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35031",
                     "text": "Attribue Chakra de la Vie",
                     "type": "crafted"
@@ -24092,6 +24467,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35369",
+                    "text": "Attribue Énergies d'intérêt",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35417",
                     "text": "Attribue Souffle de la Wyverne",
                     "type": "crafted"
@@ -24102,6 +24482,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35581",
+                    "text": "Attribue À portée de main",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35618",
+                    "text": "Attribue Manteau glacial",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3567",
                     "text": "Attribue Mana brut",
                     "type": "crafted"
@@ -24109,6 +24499,11 @@
                 {
                     "id": "crafted.stat_2954116742|35739",
                     "text": "Attribue Jugement écrasant",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35743",
+                    "text": "Attribue Peau de Saqawal",
                     "type": "crafted"
                 },
                 {
@@ -24144,6 +24539,11 @@
                 {
                     "id": "crafted.stat_2954116742|36100",
                     "text": "Attribue Griffe en fusion",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|36333",
+                    "text": "Attribue Amélioration explosive",
                     "type": "crafted"
                 },
                 {
@@ -24187,8 +24587,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|36976",
+                    "text": "Attribue Marqué pour mourir",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|3698",
+                    "text": "Attribue Fosse à épines",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|372",
                     "text": "Attribue Ignifugation",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37244",
+                    "text": "Attribue Expert en bouclier",
                     "type": "crafted"
                 },
                 {
@@ -24204,6 +24619,11 @@
                 {
                     "id": "crafted.stat_2954116742|37302",
                     "text": "Attribue Tenu à distance",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37408",
+                    "text": "Attribue Désaltérant",
                     "type": "crafted"
                 },
                 {
@@ -24252,6 +24672,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38329",
+                    "text": "Attribue Givre dévorant",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|38342",
                     "text": "Attribue Stupéfait",
                     "type": "crafted"
@@ -24297,8 +24722,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38895",
+                    "text": "Attribue Élixir de cristal",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3894",
                     "text": "Attribue Volonté surnaturelle",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|38965",
+                    "text": "Attribue Limites infusées",
                     "type": "crafted"
                 },
                 {
@@ -24362,6 +24797,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40073",
+                    "text": "Attribue Trempé",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40117",
                     "text": "Attribue Armure épineuse",
                     "type": "crafted"
@@ -24369,6 +24809,16 @@
                 {
                     "id": "crafted.stat_2954116742|40166",
                     "text": "Attribue Transe profonde",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40213",
+                    "text": "Attribue Le Goût du sang",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40270",
+                    "text": "Attribue Frénétique",
                     "type": "crafted"
                 },
                 {
@@ -24412,6 +24862,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40985",
+                    "text": "Attribue Reliquats améliorants",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40990",
                     "text": "Attribue Exposé à l'orage",
                     "type": "crafted"
@@ -24447,6 +24902,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|41811",
+                    "text": "Attribue Paume fracassante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|41905",
                     "text": "Attribue Fossoyeur",
                     "type": "crafted"
@@ -24454,6 +24914,16 @@
                 {
                     "id": "crafted.stat_2954116742|41935",
                     "text": "Attribue Peau de l'Ours",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|41972",
+                    "text": "Attribue Glaciation",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42032",
+                    "text": "Attribue Escalade du désordre",
                     "type": "crafted"
                 },
                 {
@@ -24494,6 +24964,11 @@
                 {
                     "id": "crafted.stat_2954116742|42245",
                     "text": "Attribue Inscriptions efficaces",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42302",
+                    "text": "Attribue Tir scindé",
                     "type": "crafted"
                 },
                 {
@@ -24597,6 +25072,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|43939",
+                    "text": "Attribue Flammes fondantes",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|43944",
                     "text": "Attribue Instabilité",
                     "type": "crafted"
@@ -24629,6 +25109,11 @@
                 {
                     "id": "crafted.stat_2954116742|4447",
                     "text": "Attribue Verrouille leur Motivation",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|44566",
+                    "text": "Attribue Paratonnerre",
                     "type": "crafted"
                 },
                 {
@@ -24669,6 +25154,11 @@
                 {
                     "id": "crafted.stat_2954116742|45177",
                     "text": "Attribue Frapper juste",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|45244",
+                    "text": "Attribue Remplissage",
                     "type": "crafted"
                 },
                 {
@@ -24722,6 +25212,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|45751",
+                    "text": "Attribue Bouclier terrifiant",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|45777",
                     "text": "Attribue Barbelure dissimulée",
                     "type": "crafted"
@@ -24744,6 +25239,11 @@
                 {
                     "id": "crafted.stat_2954116742|46060",
                     "text": "Attribue Vorace",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46124",
+                    "text": "Attribue Reliquats arcaniques",
                     "type": "crafted"
                 },
                 {
@@ -24792,6 +25292,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|46692",
+                    "text": "Attribue Alchimie efficace",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|46696",
                     "text": "Attribue Diminution",
                     "type": "crafted"
@@ -24799,6 +25304,11 @@
                 {
                     "id": "crafted.stat_2954116742|4673",
                     "text": "Attribue Collision massive",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46972",
+                    "text": "Attribue Mixtures arcaniques",
                     "type": "crafted"
                 },
                 {
@@ -24839,6 +25349,11 @@
                 {
                     "id": "crafted.stat_2954116742|47418",
                     "text": "Attribue Potions protectrices",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|47420",
+                    "text": "Attribue Armée remplaçable",
                     "type": "crafted"
                 },
                 {
@@ -24887,6 +25402,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48215",
+                    "text": "Attribue Tir en pleine tête",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48240",
                     "text": "Attribue Récupération rapide",
                     "type": "crafted"
@@ -24917,13 +25437,28 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48658",
+                    "text": "Attribue Fracassant",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48699",
                     "text": "Attribue Marche-givre",
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48734",
+                    "text": "Attribue Le Singe hurleur",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48774",
                     "text": "Attribue Chair tendu",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|48925",
+                    "text": "Attribue Bénédiction de la Lune",
                     "type": "crafted"
                 },
                 {
@@ -24934,6 +25469,11 @@
                 {
                     "id": "crafted.stat_2954116742|49088",
                     "text": "Attribue Force éclatante",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|4931",
+                    "text": "Attribue Protection fiable",
                     "type": "crafted"
                 },
                 {
@@ -24949,6 +25489,11 @@
                 {
                     "id": "crafted.stat_2954116742|4959",
                     "text": "Attribue Fortes gelées",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|49618",
+                    "text": "Attribue Floraison mortelle",
                     "type": "crafted"
                 },
                 {
@@ -24972,6 +25517,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|50023",
+                    "text": "Attribue Grandeur revigorante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|50062",
                     "text": "Attribue Barrière de Vénarius",
                     "type": "crafted"
@@ -24979,6 +25529,11 @@
                 {
                     "id": "crafted.stat_2954116742|5009",
                     "text": "Attribue Voir des étoiles",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|50239",
+                    "text": "Attribue Agilité des Ventmuet",
                     "type": "crafted"
                 },
                 {
@@ -25032,6 +25587,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51129",
+                    "text": "Attribue Empilement",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|51169",
+                    "text": "Attribue Épanouissement de l'âme",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51213",
                     "text": "Attribue Dégénération",
                     "type": "crafted"
@@ -25082,8 +25647,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51871",
+                    "text": "Attribue Soif immortelle",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51891",
                     "text": "Attribue Lucidité",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5191",
+                    "text": "Attribue Bond of the Wolf",
                     "type": "crafted"
                 },
                 {
@@ -25152,6 +25727,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|52669",
+                    "text": "Attribue Flamekeeper",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|52684",
+                    "text": "Attribue Chaînes corrosives",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|52764",
                     "text": "Attribue Rage mystique",
                     "type": "crafted"
@@ -25159,6 +25744,11 @@
                 {
                     "id": "crafted.stat_2954116742|52803",
                     "text": "Attribue Voyageur bien portant",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5284",
+                    "text": "Attribue Force de déchiquetage",
                     "type": "crafted"
                 },
                 {
@@ -25182,8 +25772,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|53187",
+                    "text": "Attribue Seigneur de guerre berserker",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|53265",
                     "text": "Attribue Morsure de la nature",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53294",
+                    "text": "Attribue Feu consumant",
                     "type": "crafted"
                 },
                 {
@@ -25204,6 +25804,11 @@
                 {
                     "id": "crafted.stat_2954116742|53566",
                     "text": "Attribue Tir en mouvement",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53607",
+                    "text": "Attribue Emplacement fortifié",
                     "type": "crafted"
                 },
                 {
@@ -25257,6 +25862,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|54911",
+                    "text": "Attribue Embraseur",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|54990",
                     "text": "Attribue Saignée",
                     "type": "crafted"
@@ -25287,6 +25897,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|55180",
+                    "text": "Attribue Déchus implacables",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|55193",
                     "text": "Attribue Masque de subterfuge",
                     "type": "crafted"
@@ -25294,6 +25909,11 @@
                 {
                     "id": "crafted.stat_2954116742|55308",
                     "text": "Attribue Tirs projetés",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55450",
+                    "text": "Attribue Forme de ralliement",
                     "type": "crafted"
                 },
                 {
@@ -25309,6 +25929,11 @@
                 {
                     "id": "crafted.stat_2954116742|5580",
                     "text": "Attribue Tours de guet",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55817",
+                    "text": "Attribue Huile alchimique",
                     "type": "crafted"
                 },
                 {
@@ -25372,8 +25997,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|56714",
+                    "text": "Attribue Vol rapide",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|56767",
                     "text": "Attribue Hébétement électrique",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56776",
+                    "text": "Attribue Préparation minutieuse",
                     "type": "crafted"
                 },
                 {
@@ -25399,6 +26034,11 @@
                 {
                     "id": "crafted.stat_2954116742|56988",
                     "text": "Attribue Sang électrique",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56997",
+                    "text": "Attribue Contact intense",
                     "type": "crafted"
                 },
                 {
@@ -25434,6 +26074,11 @@
                 {
                     "id": "crafted.stat_2954116742|5728",
                     "text": "Attribue Égide antique",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|57379",
+                    "text": "Attribue Dans ta tronche",
                     "type": "crafted"
                 },
                 {
@@ -25474,6 +26119,11 @@
                 {
                     "id": "crafted.stat_2954116742|5802",
                     "text": "Attribue Tenir le terrain",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|58183",
+                    "text": "Attribue Déchirure du sang",
                     "type": "crafted"
                 },
                 {
@@ -25524,6 +26174,11 @@
                 {
                     "id": "crafted.stat_2954116742|59208",
                     "text": "Attribue Combattant frénétique",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|59214",
+                    "text": "Attribue Fin inéluctable",
                     "type": "crafted"
                 },
                 {
@@ -25592,6 +26247,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|60273",
+                    "text": "Attribue Obstacles entravants",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|60404",
                     "text": "Attribue Opportunité parfaite",
                     "type": "crafted"
@@ -25609,6 +26269,11 @@
                 {
                     "id": "crafted.stat_2954116742|60764",
                     "text": "Attribue Empennage plumeux",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|60878",
+                    "text": "Attribue Lightning Storm",
                     "type": "crafted"
                 },
                 {
@@ -25672,6 +26337,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|61741",
+                    "text": "Attribue Toxines durables",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|6178",
                     "text": "Attribue Tirs puissants",
                     "type": "crafted"
@@ -25679,6 +26349,11 @@
                 {
                     "id": "crafted.stat_2954116742|61921",
                     "text": "Attribue Crépitement",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62034",
+                    "text": "Attribue Résistances élémentaires maximales",
                     "type": "crafted"
                 },
                 {
@@ -25714,6 +26389,11 @@
                 {
                     "id": "crafted.stat_2954116742|62431",
                     "text": "Attribue Anticipation",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62455",
+                    "text": "Attribue Porte-étendard",
                     "type": "crafted"
                 },
                 {
@@ -25822,6 +26502,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|64415",
+                    "text": "Attribue Hébétement fracassant",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|64443",
                     "text": "Attribue Force d'impact",
                     "type": "crafted"
@@ -25834,6 +26519,11 @@
                 {
                     "id": "crafted.stat_2954116742|64543",
                     "text": "Attribue Forces déchaînées",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|64650",
+                    "text": "Attribue Esquive prudente",
                     "type": "crafted"
                 },
                 {
@@ -25854,6 +26544,16 @@
                 {
                     "id": "crafted.stat_2954116742|65016",
                     "text": "Attribue Flammes intenses",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|65023",
+                    "text": "Attribue Carapace impénétrable",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6514",
+                    "text": "Attribue Cacophonie",
                     "type": "crafted"
                 },
                 {
@@ -25887,8 +26587,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|6544",
+                    "text": "Attribue Frappes brûlantes",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|65468",
                     "text": "Attribue Explosifs  à répétition",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6655",
+                    "text": "Attribue Aggravation",
                     "type": "crafted"
                 },
                 {
@@ -25909,6 +26619,11 @@
                 {
                     "id": "crafted.stat_2954116742|7163",
                     "text": "Attribue Stimulants",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|7275",
+                    "text": "Attribue Exposition électrocutante",
                     "type": "crafted"
                 },
                 {
@@ -25997,6 +26712,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|8554",
+                    "text": "Attribue Nature brûlante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|8607",
                     "text": "Attribue Mixture de Lavianga",
                     "type": "crafted"
@@ -26009,6 +26729,11 @@
                 {
                     "id": "crafted.stat_2954116742|8782",
                     "text": "Attribue Infusions renforçantes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8791",
+                    "text": "Attribue Allié robuste",
                     "type": "crafted"
                 },
                 {
@@ -26034,6 +26759,11 @@
                 {
                     "id": "crafted.stat_2954116742|8904",
                     "text": "Attribue Mort à distance",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8916",
+                    "text": "Attribue Bête acharnée",
                     "type": "crafted"
                 },
                 {
@@ -26082,6 +26812,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|94",
+                    "text": "Attribue Élimination efficace",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|9421",
                     "text": "Attribue Transperceneige",
                     "type": "crafted"
@@ -26099,6 +26834,11 @@
                 {
                     "id": "crafted.stat_2954116742|9535",
                     "text": "Attribue Brinerot Ferocity",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|9652",
+                    "text": "Attribue Déviation guérissante",
                     "type": "crafted"
                 },
                 {
@@ -31714,6 +32454,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1122225204",
+                    "text": "Lié : # à la Sauvegarde runique maximale",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1134865274",
                     "text": "Lié : #% à la Qualité de toutes les Aptitudes",
                     "type": "augment"
@@ -31721,6 +32466,11 @@
                 {
                     "id": "rune.stat_1147690586",
                     "text": "# au Niveau de toutes les Gemmes d'Aptitude de Foudre",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1150343007",
+                    "text": "#% des Dégats au Toucher retirent la Vie de votre Compagnon endommageable avant d'affecter la vôtre",
                     "type": "augment"
                 },
                 {
@@ -31839,6 +32589,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1377764687",
+                    "text": "Lié : Gain Finality for # seconds per Combo expended when using Skills",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1381474422",
                     "text": "Les Altérations infligeant des Dégâts que vous infligez ont #% d'Augmentation d'Amplitude",
                     "type": "augment"
@@ -31906,6 +32661,11 @@
                 {
                     "id": "rune.stat_1457312571",
                     "text": "Lié : Les Aptitudes de Fracas que vous utilisez vous-même ont #% de chances de provoquer une Réplique supplémentaire",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1479161975",
+                    "text": "Lié : #% des Dégâts retirent du Mana avant de retirer de la Vie",
                     "type": "augment"
                 },
                 {
@@ -32051,6 +32811,11 @@
                 {
                     "id": "rune.stat_1678831767",
                     "text": "Vous Récupérez # de Vie lorsque vous Bloquez",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1683578560",
+                    "text": "Posture inflexible",
                     "type": "augment"
                 },
                 {
@@ -32539,6 +33304,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2443032293",
+                    "text": "Gain # Guard for 0.5 seconds per Combo expended when using Skills",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2444976134",
                     "text": "Gain Maximum Energy Shield equal to #% of total\nStrength Requirements of Equipped Armour Items",
                     "type": "augment"
@@ -32714,6 +33484,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2695354435",
+                    "text": "#% d'Augmentation du Score d'Évasion Global tant que votre Vie est Basse",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2701582946",
                     "text": "Lié : #% d'Augmentation du Score de Déviation",
                     "type": "augment"
@@ -32731,6 +33506,11 @@
                 {
                     "id": "rune.stat_2709367754",
                     "text": "Vous gagnez # de Rage en Touchant en Mêlée",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2715190555",
+                    "text": "Les Épines ont #% aux chances de Touche critique",
                     "type": "augment"
                 },
                 {
@@ -32839,6 +33619,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2905515354",
+                    "text": "Vous subissez #% des Dégâts des Touches que vous Bloquez",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2910761524",
                     "text": "Les Aptitudes de Sort ont #% de chances de tirer 2 Projectiles supplémentaires",
                     "type": "augment"
@@ -32876,6 +33661,11 @@
                 {
                     "id": "rune.stat_2942439603",
                     "text": "Les Aptitudes ont #% de chances de ne pas consommer de Charges tout en bénéficiant de l'effet de la consommation",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2957287092",
+                    "text": "Vos chances de Bloquer les Dégâts sont Favorables",
                     "type": "augment"
                 },
                 {
@@ -33249,6 +34039,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3494229254",
+                    "text": "Lié : Les Épines ont #% d'Augmentation de Bonus de Dégâts critiques",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3515226849",
                     "text": "Recover #% of maximum Runic Ward when one of your Reviving Minions is Killed",
                     "type": "augment"
@@ -33614,6 +34409,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_4108430531",
+                    "text": "Lié : #% des Dégats au Toucher retirent la Vie de votre Compagnon endommageable avant d'affecter la vôtre",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_4111152445",
                     "text": "Lié : # au Niveau de toutes les Gemmes d'Aptitude de Foudre",
                     "type": "augment"
@@ -33786,6 +34586,11 @@
                 {
                     "id": "rune.stat_55876295",
                     "text": "#% des Dégâts Physiques Drainent de la Vie",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_566086661",
+                    "text": "Les Attaques avec cette Arme ont des Dégâts de Froid supplémentaires équivalents à #% à #% de votre Mana maximal",
                     "type": "augment"
                 },
                 {
@@ -36305,6 +37110,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_3206904707",
+                    "text": "#% d'Augmentation de l'amplitude des Modificateurs Explicites de Froid",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_321970274",
                     "text": "#% des Dégâts Physiques sont subis sous forme de Dégâts de Foudre tant que votre Bouclier est levé",
                     "type": "desecrated"
@@ -36677,6 +37487,11 @@
                 {
                     "id": "desecrated.stat_3566150527",
                     "text": "Les Talents éminents dans le Rayon octroient également #% de Vie Régénérée par seconde",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3574578302",
+                    "text": "#% d'Augmentation de l'amplitude des Modificateurs Explicites de Feu",
                     "type": "desecrated"
                 },
                 {

@@ -153,6 +153,8 @@ export const usePoeninja = createGlobalState(() => {
   let downloadController: AbortController | undefined;
   let lastInterestTime = 0;
 
+  let SEARCH_INDEX: Array<{ name: string; ns: string }> = [];
+
   let priceCache = new Map<
     { ns: string; name: string; count: number },
     CurrencyValue
@@ -204,6 +206,24 @@ export const usePoeninja = createGlobalState(() => {
       const ninjaXchg = parseXchg(jsonBlob);
 
       PRICES_DB = splitJsonBlob(jsonBlob, ninjaSchema);
+
+      // Build SEARCH_INDEX
+      try {
+        const parsedBlob = JSON.parse(jsonBlob);
+        SEARCH_INDEX = [];
+        for (const overview of parsedBlob.itemOverviews) {
+          const typeMatch = ninjaSchema.map.find((m) => m.type === overview.type);
+          if (!typeMatch) continue;
+          for (const item of overview.lines) {
+            SEARCH_INDEX.push({
+              name: item.name,
+              ns: typeMatch.ns,
+            });
+          }
+        }
+      } catch (err) {
+        console.warn("Failed to parse ninja JSON for search index", err);
+      }
 
       // TODO: update to search for requested currency instead of divine
       const divineRates = ninjaXchg.rates;
@@ -300,6 +320,30 @@ export const usePoeninja = createGlobalState(() => {
       };
     }
     return null;
+  }
+
+  function searchNinjaItems(search: string) {
+    if (search.length < 3) return [];
+    const lcSearch = search
+      .toLowerCase()
+      .split(/\s+/)
+      .sort((a, b) => b.length - a.length);
+    const lcLongestWord = lcSearch[0];
+    const MAX_RESULTS = 50;
+    const out = [];
+
+    for (const item of SEARCH_INDEX) {
+      const lcName = item.name.toLowerCase();
+      if (
+        lcSearch.every((part) => lcName.includes(part)) &&
+        (AppConfig().language === "cmn-Hant" ||
+          lcName.split(/\s+/).some((part) => part.startsWith(lcLongestWord)))
+      ) {
+        out.push(item);
+        if (out.length >= MAX_RESULTS) break;
+      }
+    }
+    return out;
   }
 
   /**
@@ -414,6 +458,7 @@ export const usePoeninja = createGlobalState(() => {
     xchgRate: readonly(xchgRate),
     xchgRateCurrency: readonly(selectedCoreCurrency),
     findPriceByQuery,
+    searchNinjaItems,
     autoCurrency,
     queuePricesFetch,
     forceLoad: () => load(true),
@@ -423,6 +468,7 @@ export const usePoeninja = createGlobalState(() => {
     availableCoreCurrencies: readonly(availableCoreCurrencies),
     chaosToExalt: readonly(chaosToExalt),
     annulToExalt: readonly(annulToExalt),
+    exaltedRate: readonly(exaltedRate),
   };
 });
 

@@ -204,6 +204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_1002535626",
+                    "text": "若你在過去8秒內拾起了冰冷灌注，增加#%冰冷傷害",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_1002973905",
                     "text": "使用後恢復所有魔力",
                     "type": "explicit"
@@ -1549,6 +1554,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_1517628125",
+                    "text": "來自法術的投射物額外+#連鎖",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_1518586897",
                     "text": "你近期每施放一個不同的非瞬發法術，增加#%施放速度",
                     "type": "explicit"
@@ -1896,6 +1906,11 @@
                 {
                     "id": "explicit.stat_1686824704",
                     "text": "將#%的冰冷傷害轉換為閃電傷害",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_1688294122",
+                    "text": "可以從聖堂武僧的起點配置天賦",
                     "type": "explicit"
                 },
                 {
@@ -2536,6 +2551,11 @@
                 {
                     "id": "explicit.stat_1990472846",
                     "text": "遭敵人擊中前恢復失去生命的#%",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_1992191903",
+                    "text": "#所有印記技能等級",
                     "type": "explicit"
                 },
                 {
@@ -4266,6 +4286,11 @@
                 {
                     "id": "explicit.stat_266564538",
                     "text": "範圍內小型天賦也會賦予 變形期間增加#%傷害",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2670212285",
+                    "text": "範圍內核心天賦也會賦予 #%火焰抗性",
                     "type": "explicit"
                 },
                 {
@@ -7164,6 +7189,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_326412910",
+                    "text": "此物品僅能鑲嵌符文",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_326965591",
                     "text": "霸體",
                     "type": "explicit"
@@ -8046,6 +8076,11 @@
                 {
                     "id": "explicit.stat_3598729471",
                     "text": "你只能在這件物品上鑲嵌翡翠珠寶",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_3602667353",
+                    "text": "擊中時有#%機率造成閃電曝曬",
                     "type": "explicit"
                 },
                 {
@@ -8991,6 +9026,11 @@
                 {
                     "id": "explicit.stat_3927679277",
                     "text": "拾取元素灌注時，有#%機率獲得額外一個同類型的元素灌注",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_3929993388",
+                    "text": "配置#個不祥珠寶插槽",
                     "type": "explicit"
                 },
                 {
@@ -11619,6 +11659,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_704409219",
+                    "text": "鑲嵌的符文增加#%效果",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_704919631",
                     "text": "暴擊時觸發雷彈技能",
                     "type": "explicit"
@@ -11656,6 +11701,11 @@
                 {
                     "id": "explicit.stat_715957346",
                     "text": "範圍內核心天賦也會賦予 增加#%十字弓攻擊速度",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_718638445",
+                    "text": "允許後綴#",
                     "type": "explicit"
                 },
                 {
@@ -12209,6 +12259,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_971590056",
+                    "text": "擊中時施加缺血\n缺血允許敵人被施加#層腐化之血減益",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_980177976",
                     "text": "範圍內小型天賦也會賦予 增加#%藥劑的生命恢復",
                     "type": "explicit"
@@ -12365,6 +12420,11 @@
                     "type": "implicit"
                 },
                 {
+                    "id": "implicit.stat_1568848828",
+                    "text": "你格擋時回復#點符文保護",
+                    "type": "implicit"
+                },
+                {
                     "id": "implicit.stat_1570770415",
                     "text": "減少#%護符充能使用",
                     "type": "implicit"
@@ -12490,6 +12550,16 @@
                     "type": "implicit"
                 },
                 {
+                    "id": "implicit.stat_2103650854",
+                    "text": "增加#%你身上的秘能波動效果",
+                    "type": "implicit"
+                },
+                {
+                    "id": "implicit.stat_2153364323",
+                    "text": "#點智慧需求",
+                    "type": "implicit"
+                },
+                {
                     "id": "implicit.stat_2194114101",
                     "text": "增加#%攻擊暴擊率",
                     "type": "implicit"
@@ -12610,8 +12680,18 @@
                     "type": "implicit"
                 },
                 {
+                    "id": "implicit.stat_2910761524",
+                    "text": "法術技能有#%機率發射額外2個投射物",
+                    "type": "implicit"
+                },
+                {
                     "id": "implicit.stat_2915988346",
                     "text": "#%火焰與冰冷抗性",
+                    "type": "implicit"
+                },
+                {
+                    "id": "implicit.stat_2920970371",
+                    "text": "增加#%你身上的詛咒持續時間",
                     "type": "implicit"
                 },
                 {
@@ -12732,6 +12812,11 @@
                 {
                     "id": "implicit.stat_3398402065",
                     "text": "增加#%投射物範圍",
+                    "type": "implicit"
+                },
+                {
+                    "id": "implicit.stat_3408607858",
+                    "text": "符文保護回復可以溢出最大符文保護",
                     "type": "implicit"
                 },
                 {
@@ -13061,6 +13146,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_111835965",
+                    "text": "範圍內核心天賦也會賦予 增加#%細杖攻擊速度",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1135928777",
                     "text": "增加#%十字弓攻擊速度",
                     "type": "fractured"
@@ -13078,6 +13168,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "增加#%全域護甲、閃避、和能量護盾",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1181419800",
+                    "text": "增加#%錘傷害",
                     "type": "fractured"
                 },
                 {
@@ -13123,6 +13218,11 @@
                 {
                     "id": "fractured.stat_1266413530",
                     "text": "範圍內核心天賦也會賦予 增加#%長矛攻擊速度",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1285594161",
+                    "text": "範圍內小型天賦也會賦予 使用弓類武器時增加#%命中值",
                     "type": "fractured"
                 },
                 {
@@ -13181,6 +13281,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1412217137",
+                    "text": "增加#%藥劑魔力恢復率",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1423639565",
                     "text": "召喚物#%全部元素抗性",
                     "type": "fractured"
@@ -13203,6 +13308,11 @@
                 {
                     "id": "fractured.stat_1485480327",
                     "text": "增加#%召喚物禁錮累積",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1494950893",
+                    "text": "範圍內小型天賦也會賦予 增加#%盟友造成的傷害",
                     "type": "fractured"
                 },
                 {
@@ -13288,6 +13398,11 @@
                 {
                     "id": "fractured.stat_169946467",
                     "text": "使用弓類武器時增加#%命中值",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_174664100",
+                    "text": "增加#%召喚物移動速度",
                     "type": "fractured"
                 },
                 {
@@ -13386,6 +13501,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1980802737",
+                    "text": "擲彈技能發射額外一個投射物",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1994296038",
                     "text": "範圍內小型天賦也會賦予 增加#%閃避值",
                     "type": "fractured"
@@ -13413,6 +13533,11 @@
                 {
                     "id": "fractured.stat_2039822488",
                     "text": "#%最大品質",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2066964205",
+                    "text": "範圍內核心天賦也會賦予 增加#%藥劑充能獲取",
                     "type": "fractured"
                 },
                 {
@@ -13471,6 +13596,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2174054121",
+                    "text": "擊中時有#%機率造成流血",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2194114101",
                     "text": "增加#%攻擊暴擊率",
                     "type": "fractured"
@@ -13501,8 +13631,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2256120736",
+                    "text": "範圍內核心天賦也會賦予 你身上的減益效果加快#%失效",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2272980012",
                     "text": "範圍內核心天賦也會賦予 增加#%敵人身上的傷害型異常狀態持續時間",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2320654813",
+                    "text": "範圍內核心天賦也會賦予 增加#%護符充能獲取",
                     "type": "fractured"
                 },
                 {
@@ -13536,6 +13676,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2421151933",
+                    "text": "範圍內小型天賦也會賦予 如果你在過去8秒內以投射物攻擊擊中，增加#%近戰傷害",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2440073079",
                     "text": "變形期間增加#%傷害",
                     "type": "fractured"
@@ -13566,6 +13711,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2475221757",
+                    "text": "增加#%後綴效果",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2482852589",
                     "text": "增加#%最大能量護盾",
                     "type": "fractured"
@@ -13586,6 +13736,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2523933828",
+                    "text": "增加#%來自裝備盾牌的護甲、閃避與能量護盾",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2527686725",
                     "text": "增加#%你所施加之感電的幅度",
                     "type": "fractured"
@@ -13603,6 +13758,11 @@
                 {
                     "id": "fractured.stat_255840549",
                     "text": "範圍內小型天賦也會賦予 增加#%危險的傷害",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2580617872",
+                    "text": "範圍內核心天賦也會賦予 增加#%你身上的減益效果緩速程度",
                     "type": "fractured"
                 },
                 {
@@ -13633,6 +13793,11 @@
                 {
                     "id": "fractured.stat_2694482655",
                     "text": "#%的暴擊傷害加成",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2696027455",
+                    "text": "增加#%長矛傷害",
                     "type": "fractured"
                 },
                 {
@@ -13698,6 +13863,11 @@
                 {
                     "id": "fractured.stat_2840989393",
                     "text": "範圍內小型天賦也會賦予 擊中時有#%機率造成中毒",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2843214518",
+                    "text": "增加#%攻擊傷害",
                     "type": "fractured"
                 },
                 {
@@ -13851,6 +14021,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3003542304",
+                    "text": "投射物分岔時有#%機率發射1個額外投射物",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3015669065",
                     "text": "獲得等同於傷害#%的額外火焰傷害",
                     "type": "fractured"
@@ -13928,6 +14103,11 @@
                 {
                     "id": "fractured.stat_3225608889",
                     "text": "範圍內小型天賦也會賦予 召喚物#%全部元素抗性",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3249412463",
+                    "text": "Minions' Strikes have Melee Splash",
                     "type": "fractured"
                 },
                 {
@@ -14126,6 +14306,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3752589831",
+                    "text": "範圍內小型天賦也會賦予 當你有一個作用中的護符，增加#%傷害",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3759663284",
                     "text": "增加#%投射物速度",
                     "type": "fractured"
@@ -14133,6 +14318,16 @@
                 {
                     "id": "fractured.stat_3759735052",
                     "text": "弓增加#%攻擊速度",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3771516363",
+                    "text": "額外#%物理傷害減免",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3774951878",
+                    "text": "範圍內小型天賦也會賦予 增加#%藥劑的魔力恢復",
                     "type": "fractured"
                 },
                 {
@@ -14173,6 +14368,11 @@
                 {
                     "id": "fractured.stat_3855016469",
                     "text": "對你的擊中減少#%暴擊傷害加成",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3856744003",
+                    "text": "範圍內核心天賦也會賦予 增加#%十字弓裝填速度",
                     "type": "fractured"
                 },
                 {
@@ -14361,6 +14561,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258720395",
+                    "text": "範圍內核心天賦也會賦予 投射物分岔時有#%機率發射1個額外投射物",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_427684353",
                     "text": "增加#%十字弓傷害",
                     "type": "fractured"
@@ -14378,6 +14583,11 @@
                 {
                     "id": "fractured.stat_455816363",
                     "text": "範圍內小型天賦也會賦予 增加#%投射物傷害",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_462424929",
+                    "text": "範圍內核心天賦也會賦予 增加#%你所施加之中毒的幅度",
                     "type": "fractured"
                 },
                 {
@@ -14506,6 +14716,16 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_712554801",
+                    "text": "增加#%你的印記技能效果",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_715957346",
+                    "text": "範圍內核心天賦也會賦予 增加#%十字弓攻擊速度",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_734614379",
                     "text": "增加#%力量",
                     "type": "fractured"
@@ -14591,6 +14811,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_868556494",
+                    "text": "範圍內小型天賦也會賦予 傷害穿透#%閃電抗性",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_915769802",
                     "text": "暈眩門檻#",
                     "type": "fractured"
@@ -14603,6 +14828,16 @@
                 {
                     "id": "fractured.stat_9187492",
                     "text": "全部近戰技能的等級#",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_924253255",
+                    "text": "增加#%你身上的減益效果緩速程度",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_942519401",
+                    "text": "範圍內核心天賦也會賦予 增加#%生命藥劑充能獲取",
                     "type": "fractured"
                 },
                 {
@@ -14692,6 +14927,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_1185341308",
+                    "text": "範圍內核心天賦也會賦予 增加#%生命回復率",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_124131830",
                     "text": "全部法術技能等級#",
                     "type": "crafted"
@@ -14772,6 +15012,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_1602294220",
+                    "text": "範圍內小型天賦也會賦予 增加#%戰吼速度",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_1604736568",
                     "text": "擊殺時恢復#%魔力（珠寶）",
                     "type": "crafted"
@@ -14789,6 +15034,11 @@
                 {
                     "id": "crafted.stat_1742651309",
                     "text": "承受的#%火焰傷害補償為生命",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_1797815732",
+                    "text": "召喚物擁有#%機率發射一個額外投射物",
                     "type": "crafted"
                 },
                 {
@@ -14912,6 +15162,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2339757871",
+                    "text": "增加#%能量護盾充能率",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2392260628",
                     "text": "增加#%符文保護回復率",
                     "type": "crafted"
@@ -14954,6 +15209,11 @@
                 {
                     "id": "crafted.stat_2505884597",
                     "text": "獲得等同於傷害#%的額外冰冷傷害",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2670212285",
+                    "text": "範圍內核心天賦也會賦予 #%火焰抗性",
                     "type": "crafted"
                 },
                 {
@@ -15037,6 +15297,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|5335",
+                    "text": "配置閃亮幻象",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8531",
+                    "text": "配置跳躍伏擊",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2970621759",
                     "text": "所承受閃電傷害的#%補償為生命",
                     "type": "crafted"
@@ -15067,8 +15337,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_3175163625",
+                    "text": "增加#%殺死敵人時掉落的金幣數量",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_3182714256",
                     "text": "允許前綴#",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_3191479793",
+                    "text": "增加#%奉獻效果",
                     "type": "crafted"
                 },
                 {
@@ -15152,6 +15432,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_3399401168",
+                    "text": "火焰法術暴擊機率#%",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_3482326075",
                     "text": "痕跡可從#%更遠距離撿拾",
                     "type": "crafted"
@@ -15194,6 +15479,11 @@
                 {
                     "id": "crafted.stat_3855016469",
                     "text": "對你的擊中減少#%暴擊傷害加成",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_3858572996",
+                    "text": "若你在過去8秒內拾起了火焰灌注，增加#%火焰傷害",
                     "type": "crafted"
                 },
                 {
@@ -15282,6 +15572,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_458438597",
+                    "text": "生命值所受的#%傷害由魔力扣除",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_518292764",
                     "text": "#%暴擊率",
                     "type": "crafted"
@@ -15334,6 +15629,11 @@
                 {
                     "id": "crafted.stat_709508406",
                     "text": "附加#至#火焰傷害",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_718638445",
+                    "text": "允許後綴#",
                     "type": "crafted"
                 },
                 {
@@ -15404,6 +15704,11 @@
                 {
                     "id": "crafted.stat_953593695",
                     "text": "增加#%召喚物所施加之傷害型異常狀態的幅度",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_971590056",
+                    "text": "擊中時施加缺血\n缺血允許敵人被施加#層腐化之血減益",
                     "type": "crafted"
                 },
                 {
@@ -20434,6 +20739,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1020945697",
+                    "text": "#%更少最大生命",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1030153674",
                     "text": "擊殺時恢復#%魔力",
                     "type": "augment"
@@ -20461,6 +20771,11 @@
                 {
                     "id": "rune.stat_1050105434",
                     "text": "#最大魔力",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1073847159",
+                    "text": "你裝備中每鑲嵌一個魔偶即#精魂",
                     "type": "augment"
                 },
                 {
@@ -20569,6 +20884,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1404850498",
+                    "text": "命定: 符文保護全滿時，#%最大全元素抗性",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1416406066",
                     "text": "增加#%精魂",
                     "type": "augment"
@@ -20669,6 +20989,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1584590139",
+                    "text": "命定: 當你施放一個法術時，偷取#%最大生命",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1585886916",
                     "text": "當你閃避翻滾時，犧牲#%最大生命來獲得等量的守護",
                     "type": "augment"
@@ -20751,6 +21076,11 @@
                 {
                     "id": "rune.stat_1756854510",
                     "text": "命定: 增加#%暈眩恢復",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1770091046",
+                    "text": "可以骰出狂戰詞綴",
                     "type": "augment"
                 },
                 {
@@ -20904,6 +21234,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2012253422",
+                    "text": "命定: 增加#%精魂",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_201332984",
                     "text": "可以骰出射手詞綴",
                     "type": "augment"
@@ -20994,6 +21329,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2248594298",
+                    "text": "命定: 你身上的易爆引爆時，你會重新獲得等量的易爆",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2250533757",
                     "text": "增加#%移動速度",
                     "type": "augment"
@@ -21001,6 +21341,11 @@
                 {
                     "id": "rune.stat_2269618934",
                     "text": "命定: 獲得等同於#%最大生命的額外最大符文保護",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_226999623",
+                    "text": "盟友擊中你標記的目標時獲得猛攻，持續#秒",
                     "type": "augment"
                 },
                 {
@@ -21154,6 +21499,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_25786091",
+                    "text": "敵人在你致盲他們後#秒內沒有暴擊傷害加成",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_258119672",
                     "text": "閃避翻滾距離#公尺",
                     "type": "augment"
@@ -21216,6 +21566,11 @@
                 {
                     "id": "rune.stat_2694482655",
                     "text": "#%的暴擊傷害加成",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2701582946",
+                    "text": "命定: 增加#%偏斜值",
                     "type": "augment"
                 },
                 {
@@ -21456,6 +21811,11 @@
                 {
                     "id": "rune.stat_3175163625",
                     "text": "增加#%殺死敵人時掉落的金幣數量",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_3198163869",
+                    "text": "渡鴉所觸",
                     "type": "augment"
                 },
                 {
@@ -21749,6 +22109,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3816212813",
+                    "text": "命定: 近戰擊中時，獲得#層盛怒",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3823333703",
                     "text": "命定: 增加#%對受禁錮敵人的傷害",
                     "type": "augment"
@@ -22004,6 +22369,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_445996047",
+                    "text": "Regenerate #% of maximum Life per Second if you have used a Command Skill Recently",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_457982334",
                     "text": "命定: 增加#%全域護甲、閃避、和能量護盾",
                     "type": "augment"
@@ -22011,6 +22381,11 @@
                 {
                     "id": "rune.stat_458438597",
                     "text": "生命值所受的#%傷害由魔力扣除",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_466741396",
+                    "text": "命定: 增加#%暈眩門檻",
                     "type": "augment"
                 },
                 {
@@ -22124,6 +22499,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_678691134",
+                    "text": "命定: 增加#%致盲效果",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_681332047",
                     "text": "增加#%攻擊速度",
                     "type": "augment"
@@ -22164,6 +22544,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_736977326",
+                    "text": "命定: 增加#%盟友造成的傷害",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_737908626",
                     "text": "增加#%法術暴擊率",
                     "type": "augment"
@@ -22171,6 +22556,11 @@
                 {
                     "id": "rune.stat_750452124",
                     "text": "命定: 增加#%盟友的最大生命",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_751944209",
+                    "text": "若你近期內曾被暈眩，增加#%暈眩門檻",
                     "type": "augment"
                 },
                 {
@@ -22324,6 +22714,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_935518591",
+                    "text": "對受招架敵人的暴擊率視為帶來幸運",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_95238288",
                     "text": "命定: 每對敵人施加一種元素異常狀態，增加#%傷害",
                     "type": "augment"
@@ -22331,6 +22726,11 @@
                 {
                     "id": "rune.stat_953010920",
                     "text": "命定: #%全元素抗性",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_967155385",
+                    "text": "若你近期沒有偏斜擊中，\n避免#%來自偏斜擊中的傷害",
                     "type": "augment"
                 },
                 {
@@ -22357,6 +22757,11 @@
                 {
                     "id": "desecrated.stat_1002362373",
                     "text": "增加#%近戰傷害",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_1002535626",
+                    "text": "若你在過去8秒內拾起了冰冷灌注，增加#%冰冷傷害",
                     "type": "desecrated"
                 },
                 {
@@ -22417,6 +22822,11 @@
                 {
                     "id": "desecrated.stat_1054098949",
                     "text": "+#%怪物元素抗性",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_1058934731",
+                    "text": "暫時召喚物技能具有#召出召喚物上限",
                     "type": "desecrated"
                 },
                 {
@@ -22532,6 +22942,11 @@
                 {
                     "id": "desecrated.stat_1177404658",
                     "text": "增加#%全域護甲、閃避、和能量護盾",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_1180552088",
+                    "text": "增加#%你的統治者增益效果",
                     "type": "desecrated"
                 },
                 {
@@ -23252,6 +23667,11 @@
                 {
                     "id": "desecrated.stat_1949851472",
                     "text": "使用一個護符時，有#%機率使用另一個護符且不消耗充能",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_195270549",
+                    "text": "召喚物破壞的護甲值等同於所造成物理傷害的#%",
                     "type": "desecrated"
                 },
                 {
@@ -24252,6 +24672,11 @@
                 {
                     "id": "desecrated.stat_3106718406",
                     "text": "範圍內核心天賦也會賦予 召喚物增加#%攻擊和施放速度",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3107707789",
+                    "text": "衝刺時增加#%移動速度",
                     "type": "desecrated"
                 },
                 {
@@ -25685,6 +26110,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_818877178",
+                    "text": "增加#%受招架減益效果的幅度",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_821021828",
                     "text": "每擊中一名敵人，獲得#生命",
                     "type": "desecrated"
@@ -25697,6 +26127,11 @@
                 {
                     "id": "desecrated.stat_821948283",
                     "text": "範圍內小型天賦也會賦予 增加#%細杖傷害",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_825116955",
+                    "text": "法術獲得等同於傷害#%的額外冰冷傷害",
                     "type": "desecrated"
                 },
                 {
@@ -25770,6 +26205,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_933355817",
+                    "text": "當你創造一個奉獻時，有#%機率獲得亡靈統治者",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_941368244",
                     "text": "玩家有#%更多冷卻時間恢復速度",
                     "type": "desecrated"
@@ -25815,6 +26255,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_953593695",
+                    "text": "增加#%召喚物所施加之傷害型異常狀態的幅度",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_970213192",
                     "text": "增加#%技能速度",
                     "type": "desecrated"
@@ -25822,6 +26267,11 @@
                 {
                     "id": "desecrated.stat_970480050",
                     "text": "被征服的小型天賦也會賦予增加#%護甲值",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_971590056",
+                    "text": "擊中時施加缺血\n缺血允許敵人被施加#層腐化之血減益",
                     "type": "desecrated"
                 },
                 {
@@ -26837,6 +27287,11 @@
                     "type": "skill"
                 },
                 {
+                    "id": "skill.defiance_banner_reservation",
+                    "text": "賦予技能: 等級 # 反抗之旗",
+                    "type": "skill"
+                },
+                {
                     "id": "skill.discipline",
                     "text": "賦予技能: 等級 # 紀律",
                     "type": "skill"
@@ -26914,6 +27369,11 @@
                 {
                     "id": "skill.gemini_surge",
                     "text": "賦予技能: 等級 # 雙靈波動",
+                    "type": "skill"
+                },
+                {
+                    "id": "skill.ghost_dance",
+                    "text": "賦予技能: 等級 # 鬼魂之舞",
                     "type": "skill"
                 },
                 {
@@ -27022,6 +27482,11 @@
                     "type": "skill"
                 },
                 {
+                    "id": "skill.mana_remnants",
+                    "text": "賦予技能: 等級 # 魔力痕跡",
+                    "type": "skill"
+                },
+                {
                     "id": "skill.midnight_star",
                     "text": "賦予技能: 等級 # 午夜天頂",
                     "type": "skill"
@@ -27039,6 +27504,11 @@
                 {
                     "id": "skill.molten_crash",
                     "text": "賦予技能: 等級 # 熔岩破滅",
+                    "type": "skill"
+                },
+                {
+                    "id": "skill.new_new_arctic_armour",
+                    "text": "賦予技能: 等級 # 極地裝甲",
                     "type": "skill"
                 },
                 {
@@ -27224,6 +27694,16 @@
                 {
                     "id": "skill.summon_spiraling_conspiracy",
                     "text": "賦予技能: 等級 # 邪鴉旋纏",
+                    "type": "skill"
+                },
+                {
+                    "id": "skill.the_stars_answer",
+                    "text": "賦予技能: 等級 # 群星回應",
+                    "type": "skill"
+                },
+                {
+                    "id": "skill.time_of_need",
+                    "text": "賦予技能: 等級 # 緊急時刻",
                     "type": "skill"
                 },
                 {

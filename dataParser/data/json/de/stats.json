@@ -5144,6 +5144,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|10169",
+                    "text": "Weist zu: Ungehemmt",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|10265",
                     "text": "Weist zu: Speerwurf",
                     "type": "explicit"
@@ -5434,6 +5439,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|14265",
+                    "text": "Weist zu: Feuerschaden",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|14294",
                     "text": "Weist zu: Geopfertes Blut",
                     "type": "explicit"
@@ -5451,6 +5461,11 @@
                 {
                     "id": "explicit.stat_2954116742|14383",
                     "text": "Weist zu: Suffusion",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|1448",
+                    "text": "Weist zu: Verbindung zur Katze",
                     "type": "explicit"
                 },
                 {
@@ -6044,6 +6059,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|23907",
+                    "text": "Weist zu: Kälteschaden",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|23939",
                     "text": "Weist zu: Glänzende Haut",
                     "type": "explicit"
@@ -6336,6 +6356,11 @@
                 {
                     "id": "explicit.stat_2954116742|27761",
                     "text": "Weist zu: Gegensteuernde Maßnahmen",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|27779",
+                    "text": "Weist zu: Herr der Sturmbö",
                     "type": "explicit"
                 },
                 {
@@ -6719,6 +6744,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|33400",
+                    "text": "Weist zu: Nachwirkendes Parieren",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|3348",
                     "text": "Weist zu: Geist des Wolfs",
                     "type": "explicit"
@@ -6906,6 +6936,11 @@
                 {
                     "id": "explicit.stat_2954116742|35739",
                     "text": "Weist zu: Niederschmetterndes Urteil",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|35743",
+                    "text": "Weist zu: Saqawals Gefieder",
                     "type": "explicit"
                 },
                 {
@@ -8034,6 +8069,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|50239",
+                    "text": "Weist zu: Agilität der Stummwinde",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|50253",
                     "text": "Weist zu: Nachbeben",
                     "type": "explicit"
@@ -8164,6 +8204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|5191",
+                    "text": "Weist zu: Verbindung zum Wolf",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|51934",
                     "text": "Weist zu: Beschwörte Effizienz",
                     "type": "explicit"
@@ -8226,6 +8271,11 @@
                 {
                     "id": "explicit.stat_2954116742|52618",
                     "text": "Weist zu: Gabe der Bestie",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|52669",
+                    "text": "Weist zu: Feuerschaden",
                     "type": "explicit"
                 },
                 {
@@ -8831,6 +8881,11 @@
                 {
                     "id": "explicit.stat_2954116742|60764",
                     "text": "Weist zu: Gefiederte Pfeile",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|60878",
+                    "text": "Weist zu: Blitzschaden",
                     "type": "explicit"
                 },
                 {
@@ -15169,6 +15224,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_853326030",
+                    "text": "Ihr könnt nur # Rubin-Juwel in diesen Gegenstand einfassen",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_85367160",
                     "text": "Bedeutende Passive Fertigkeiten im Radius gewähren auch #% des erlittenen Schadens werden als Mana wiedergewonnen",
                     "type": "explicit"
@@ -16471,6 +16531,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1058934731",
+                    "text": "Temporäre Kreaturen-Fertigkeiten haben # zum Maximum von beschworenen Kreaturen",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1060572482",
                     "text": "#% erhöhte Wirkung von kleinen Passiven im Radius",
                     "type": "fractured"
@@ -16553,6 +16618,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "#% erhöhte globale Rüstung, Ausweichwert und Energieschild",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1180552088",
+                    "text": "#% erhöhte Wirkung von Archonstärkungen auf Euch",
                     "type": "fractured"
                 },
                 {
@@ -16936,6 +17006,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1691403182",
+                    "text": "Kreaturen haben #% beschleunigte Abklingzeit-Rate",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1692879867",
                     "text": "#% verlängerte Dauer von Bluten auf Euch",
                     "type": "fractured"
@@ -17046,6 +17121,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1823942939",
+                    "text": "# zu maximaler Anzahl beschworener Ballistentotems",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1829102168",
                     "text": "#% verlängerte Dauer von schädigenden Beeinträchtigungen bei Gegnern",
                     "type": "fractured"
@@ -17063,6 +17143,11 @@
                 {
                     "id": "fractured.stat_1839076647",
                     "text": "#% erhöhter Projektilschaden",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1840985759",
+                    "text": "#% vergrößerter Wirkungsbereich von Angriffen",
                     "type": "fractured"
                 },
                 {
@@ -17461,6 +17546,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2393315299",
+                    "text": "#% erhöhte Magnituden von expliziten kritischen Modifikatoren",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_239367161",
                     "text": "#% erhöhter Betäubungsaufbau",
                     "type": "fractured"
@@ -17596,6 +17686,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2567751411",
+                    "text": "Kriegsschrei-Fertigkeiten haben #% vergrößerten Wirkungsbereich",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2570249991",
                     "text": "Monster sind ausweichend",
                     "type": "fractured"
@@ -17643,6 +17738,11 @@
                 {
                     "id": "fractured.stat_2653955271",
                     "text": "Schaden durchdringt #% Feuerwiderstand",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2663359259",
+                    "text": "#% erhöhter Gesamt-Stärkegrad, der von Kriegsschreien berechnet wird",
                     "type": "fractured"
                 },
                 {
@@ -18656,6 +18756,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|26214",
+                    "text": "Weist zu: Herrschaft",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|26291",
                     "text": "Weist zu: Elektrisierende Natur",
                     "type": "fractured"
@@ -19491,6 +19596,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|42660",
+                    "text": "Weist zu: Befehlender Rausch",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|42813",
                     "text": "Weist zu: Wandel der Gezeiten",
                     "type": "fractured"
@@ -19638,6 +19748,11 @@
                 {
                     "id": "fractured.stat_2954116742|46060",
                     "text": "Weist zu: Unersättlich",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2954116742|46124",
+                    "text": "Weist zu: Arkane Überreste",
                     "type": "fractured"
                 },
                 {
@@ -20916,6 +21031,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3143918757",
+                    "text": "#% erhöhte Ruhm-Generierung",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3146310524",
                     "text": "Macht bei Treffer benommen",
                     "type": "fractured"
@@ -21006,6 +21126,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_323800555",
+                    "text": "Verursacht #% des Schadens als extra Blitzschaden mit Zaubern",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3243034867",
                     "text": "Bedeutende Passive Fertigkeiten im Radius gewähren auch Aura-Fertigkeiten haben #% erhöhte Magnituden",
                     "type": "fractured"
@@ -21076,6 +21201,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3336230913",
+                    "text": "# zu maximalem Runenschutz",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3336890334",
                     "text": "Fügt # bis # Blitzschaden hinzu",
                     "type": "fractured"
@@ -21088,6 +21218,11 @@
                 {
                     "id": "fractured.stat_3362812763",
                     "text": "#% der Rüstung werden auch auf Elementarschaden angewendet",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3368921525",
+                    "text": "Erhöhungen und Verringerungen des\nFeuer- und Blitzschadens im Radius werden in Kälteschaden umgewandelt",
                     "type": "fractured"
                 },
                 {
@@ -21263,6 +21398,11 @@
                 {
                     "id": "fractured.stat_3596695232",
                     "text": "#% erhöhter Projektilschaden, wenn Ihr in den letzten acht Sekunden einen Nahkampftreffer verursacht habt",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3624940721",
+                    "text": "#% erhöhte Magnituden von expliziten Blitz-Modifikatoren",
                     "type": "fractured"
                 },
                 {
@@ -21536,6 +21676,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3987691524",
+                    "text": "Inhärenter Verlust von Rausch startet 1 Sekunde später",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3998863698",
                     "text": "Monster haben #% erhöhten Einfrierungsaufbau",
                     "type": "fractured"
@@ -21636,6 +21781,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4147510958",
+                    "text": "Siegel-Fertigkeiten haben # zu maximalen Siegeln",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4147897060",
                     "text": "#% erhöhte Blockchance",
                     "type": "fractured"
@@ -21711,8 +21861,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258524206",
+                    "text": "#% Chance, bei Treffer eine zusätzliche Kombo aufzubauen",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4258720395",
                     "text": "Bedeutende Passive Fertigkeiten im Radius gewähren auch Projektile haben #% Chance auf ein zusätzliches Projektil bei der Aufgabelung",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_4273473110",
+                    "text": "#% erhöhter maximaler Runenschutz",
                     "type": "fractured"
                 },
                 {
@@ -22108,6 +22268,11 @@
                 {
                     "id": "fractured.stat_924253255",
                     "text": "#% erhöhte verlangsamende Wirkung von Schwächungen auf Euch",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_933355817",
+                    "text": "#% Chance, Untoter Archon zu erhalten, wenn Ihr ein Opfer erstellt",
                     "type": "fractured"
                 },
                 {
@@ -22677,6 +22842,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|10169",
+                    "text": "Weist zu: Ungehemmt",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|10265",
                     "text": "Weist zu: Speerwurf",
                     "type": "crafted"
@@ -22704,6 +22874,11 @@
                 {
                     "id": "crafted.stat_2954116742|10500",
                     "text": "Weist zu: Benommenmachendes Blocken",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|10602",
+                    "text": "Weist zu: Plündern",
                     "type": "crafted"
                 },
                 {
@@ -22737,6 +22912,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1104",
+                    "text": "Weist zu: Machtgelüste",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|11184",
                     "text": "Weist zu: Zarokhs Geschenk",
                     "type": "crafted"
@@ -22767,6 +22947,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|116",
+                    "text": "Weist zu: Durchsichtigkeit",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|1169",
                     "text": "Weist zu: Dringender Aufruf",
                     "type": "crafted"
@@ -22794,6 +22979,11 @@
                 {
                     "id": "crafted.stat_2954116742|12245",
                     "text": "Weist zu: Brandstifter",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|12337",
+                    "text": "Weist zu: Blitzgewitter",
                     "type": "crafted"
                 },
                 {
@@ -22897,6 +23087,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|13895",
+                    "text": "Weist zu: Präziser Punkt",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|13980",
                     "text": "Weist zu: Erdspaltung",
                     "type": "crafted"
@@ -22914,6 +23109,11 @@
                 {
                     "id": "crafted.stat_2954116742|14258",
                     "text": "Weist zu: Strippenzieher-Chance",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|14265",
+                    "text": "Weist zu: Feuerschaden",
                     "type": "crafted"
                 },
                 {
@@ -22937,6 +23137,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1448",
+                    "text": "Weist zu: Verbindung zur Katze",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14602",
                     "text": "Weist zu: Spezialisierte Schüsse",
                     "type": "crafted"
@@ -22947,6 +23152,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|14934",
+                    "text": "Weist zu: Spirale des Wahnsinns",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14945",
                     "text": "Weist zu: Wachsender Schwarm",
                     "type": "crafted"
@@ -22954,6 +23164,11 @@
                 {
                     "id": "crafted.stat_2954116742|1502",
                     "text": "Weist zu: Draiocht-Reinigung",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|15030",
+                    "text": "Weist zu: Konsistente Versorgung",
                     "type": "crafted"
                 },
                 {
@@ -23037,6 +23252,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|16466",
+                    "text": "Weist zu: Geistige Schärfe",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|16499",
                     "text": "Weist zu: Anhaltendes Flüstern",
                     "type": "crafted"
@@ -23049,6 +23269,11 @@
                 {
                     "id": "crafted.stat_2954116742|16626",
                     "text": "Weist zu: Aufprallbereich",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|16790",
+                    "text": "Weist zu: Effizientes Zaubern",
                     "type": "crafted"
                 },
                 {
@@ -23092,6 +23317,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17330",
+                    "text": "Weist zu: Perforation",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17340",
                     "text": "Weist zu: Adrenalinrausch",
                     "type": "crafted"
@@ -23132,6 +23362,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17825",
+                    "text": "Weist zu: Taktischer Rückzug",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17854",
                     "text": "Weist zu: Fluchtgeschwindigkeit",
                     "type": "crafted"
@@ -23154,6 +23389,11 @@
                 {
                     "id": "crafted.stat_2954116742|18419",
                     "text": "Weist zu: Geschick der Ahnen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|18485",
+                    "text": "Weist zu: Instabiles Band",
                     "type": "crafted"
                 },
                 {
@@ -23234,6 +23474,21 @@
                 {
                     "id": "crafted.stat_2954116742|2021",
                     "text": "Weist zu: Quelle",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20251",
+                    "text": "Weist zu: Bodenspaltung",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20289",
+                    "text": "Weist zu: Gefrorene Klaue",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20388",
+                    "text": "Weist zu: Regeneratives Fleisch",
                     "type": "crafted"
                 },
                 {
@@ -23357,8 +23612,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|22864",
+                    "text": "Weist zu: Verseuchter Schlag",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|22967",
+                    "text": "Weist zu: Wachsamkeit",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23078",
                     "text": "Weist zu: Heiliger Beschützer",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|23221",
+                    "text": "Weist zu: Kunstschuss",
                     "type": "crafted"
                 },
                 {
@@ -23397,6 +23667,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23736",
+                    "text": "Weist zu: Dauerfeuer",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23738",
                     "text": "Weist zu: Wahnsinn in den Knochen",
                     "type": "crafted"
@@ -23407,8 +23682,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23907",
+                    "text": "Weist zu: Kälteschaden",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23939",
                     "text": "Weist zu: Glänzende Haut",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|2394",
+                    "text": "Weist zu: Klingentanz",
                     "type": "crafted"
                 },
                 {
@@ -23442,8 +23727,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|24438",
+                    "text": "Weist zu: Gehärtetes Holz",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|24483",
                     "text": "Weist zu: Direkter Ansatz",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|24491",
+                    "text": "Weist zu: Beschworene Echos",
                     "type": "crafted"
                 },
                 {
@@ -23522,6 +23817,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|2575",
+                    "text": "Weist zu: Gewandtheit der Ahnen",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|25753",
                     "text": "Weist zu: Flammende Waffen",
                     "type": "crafted"
@@ -23564,6 +23864,11 @@
                 {
                     "id": "crafted.stat_2954116742|26339",
                     "text": "Weist zu: Kunst der Ahnen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|26356",
+                    "text": "Weist zu: Vorbereitet fürs Explodieren",
                     "type": "crafted"
                 },
                 {
@@ -23649,6 +23954,11 @@
                 {
                     "id": "crafted.stat_2954116742|27761",
                     "text": "Weist zu: Gegensteuernde Maßnahmen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|27779",
+                    "text": "Weist zu: Herr der Sturmbö",
                     "type": "crafted"
                 },
                 {
@@ -23782,6 +24092,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30392",
+                    "text": "Weist zu: Beistand",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30395",
                     "text": "Weist zu: Heulende Bestie",
                     "type": "crafted"
@@ -23792,8 +24107,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30456",
+                    "text": "Weist zu: Hellwach",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30523",
                     "text": "Weist zu: Tanz des Todes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|30546",
+                    "text": "Weist zu: Elektrifizierte Klaue",
                     "type": "crafted"
                 },
                 {
@@ -23802,8 +24127,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30720",
+                    "text": "Weist zu: Entropische Inkarnation",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|31129",
                     "text": "Weist zu: Lebenslanger Freund",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31172",
+                    "text": "Weist zu: Technik des Falken",
                     "type": "crafted"
                 },
                 {
@@ -23829,6 +24164,11 @@
                 {
                     "id": "crafted.stat_2954116742|31373",
                     "text": "Weist zu: Lautstarke Verstärkung",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31433",
+                    "text": "Weist zu: Katalyse",
                     "type": "crafted"
                 },
                 {
@@ -23902,6 +24242,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32448",
+                    "text": "Weist zu: Schockbeständigkeit",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32507",
                     "text": "Weist zu: Knochenschnitt",
                     "type": "crafted"
@@ -23912,8 +24257,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32664",
+                    "text": "Weist zu: Chakra des Atmens",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32721",
                     "text": "Weist zu: Abgelenktes Ziel",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|32799",
+                    "text": "Weist zu: Faszinierende Kameradschaft",
                     "type": "crafted"
                 },
                 {
@@ -23967,8 +24322,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|33400",
+                    "text": "Weist zu: Nachwirkendes Parieren",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3348",
                     "text": "Weist zu: Geist des Wolfs",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33542",
+                    "text": "Weist zu: Schnelle Finger",
                     "type": "crafted"
                 },
                 {
@@ -23979,6 +24344,11 @@
                 {
                     "id": "crafted.stat_2954116742|336",
                     "text": "Weist zu: Sturmböe",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33730",
+                    "text": "Weist zu: Fokussiertes Kanalisieren",
                     "type": "crafted"
                 },
                 {
@@ -24067,6 +24437,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35028",
+                    "text": "Weist zu: Mitten im Geschehen",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35031",
                     "text": "Weist zu: Chakra des Lebens",
                     "type": "crafted"
@@ -24082,6 +24457,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35369",
+                    "text": "Weist zu: Energie investieren",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35417",
                     "text": "Weist zu: Atem des Lindwurms",
                     "type": "crafted"
@@ -24092,6 +24472,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35581",
+                    "text": "Weist zu: Griffbereit",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35618",
+                    "text": "Weist zu: Kalte Ummantelung",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3567",
                     "text": "Weist zu: Rohes Mana",
                     "type": "crafted"
@@ -24099,6 +24489,11 @@
                 {
                     "id": "crafted.stat_2954116742|35739",
                     "text": "Weist zu: Niederschmetterndes Urteil",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35743",
+                    "text": "Weist zu: Saqawals Gefieder",
                     "type": "crafted"
                 },
                 {
@@ -24134,6 +24529,11 @@
                 {
                     "id": "crafted.stat_2954116742|36100",
                     "text": "Weist zu: Geschmolzene Klaue",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|36333",
+                    "text": "Weist zu: Explosive Ermutigung",
                     "type": "crafted"
                 },
                 {
@@ -24177,8 +24577,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|36976",
+                    "text": "Weist zu: Dem Tod geweiht",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|3698",
+                    "text": "Weist zu: Stachelgrube",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|372",
                     "text": "Weist zu: Hitzebeständigkeit",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37244",
+                    "text": "Weist zu: Schild-Experte",
                     "type": "crafted"
                 },
                 {
@@ -24194,6 +24609,11 @@
                 {
                     "id": "crafted.stat_2954116742|37302",
                     "text": "Weist zu: In Schach halten",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37408",
+                    "text": "Weist zu: Stillend",
                     "type": "crafted"
                 },
                 {
@@ -24242,6 +24662,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38329",
+                    "text": "Weist zu: Beißender Frost",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|38342",
                     "text": "Weist zu: Bestürzung",
                     "type": "crafted"
@@ -24287,8 +24712,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38895",
+                    "text": "Weist zu: Kristall-Elixier",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3894",
                     "text": "Weist zu: Unnatürlicher Wille",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|38965",
+                    "text": "Weist zu: Begrenzte Infusionen",
                     "type": "crafted"
                 },
                 {
@@ -24352,6 +24787,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40073",
+                    "text": "Weist zu: Durchnässt",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40117",
                     "text": "Weist zu: Stachelrüstung",
                     "type": "crafted"
@@ -24359,6 +24799,16 @@
                 {
                     "id": "crafted.stat_2954116742|40166",
                     "text": "Weist zu: Tiefe Trance",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40213",
+                    "text": "Weist zu: Leben bei Tötung",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40270",
+                    "text": "Weist zu: Frenetisch",
                     "type": "crafted"
                 },
                 {
@@ -24402,6 +24852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40985",
+                    "text": "Weist zu: Ermächtigende Überreste",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40990",
                     "text": "Weist zu: Dem Sturm ausgesetzt",
                     "type": "crafted"
@@ -24437,6 +24892,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|41811",
+                    "text": "Weist zu: Zerschmetternde Hand",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|41905",
                     "text": "Weist zu: Totengräber",
                     "type": "crafted"
@@ -24444,6 +24904,16 @@
                 {
                     "id": "crafted.stat_2954116742|41935",
                     "text": "Weist zu: Balg des Bären",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|41972",
+                    "text": "Weist zu: Vereisung",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42032",
+                    "text": "Weist zu: Eskalierendes Chaos",
                     "type": "crafted"
                 },
                 {
@@ -24484,6 +24954,11 @@
                 {
                     "id": "crafted.stat_2954116742|42245",
                     "text": "Weist zu: Effiziente Inschriften",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42302",
+                    "text": "Weist zu: Geteilter Schuss",
                     "type": "crafted"
                 },
                 {
@@ -24587,6 +25062,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|43939",
+                    "text": "Weist zu: Schmelzende Flammen",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|43944",
                     "text": "Weist zu: Instabilität",
                     "type": "crafted"
@@ -24619,6 +25099,11 @@
                 {
                     "id": "crafted.stat_2954116742|4447",
                     "text": "Weist zu: Ihre Motivation festmachen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|44566",
+                    "text": "Weist zu: Blitzrute",
                     "type": "crafted"
                 },
                 {
@@ -24659,6 +25144,11 @@
                 {
                     "id": "crafted.stat_2954116742|45177",
                     "text": "Weist zu: Treffsicher",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|45244",
+                    "text": "Weist zu: Wiederbefüllungen",
                     "type": "crafted"
                 },
                 {
@@ -24712,6 +25202,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|45751",
+                    "text": "Weist zu: Furchteinflößender Schild",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|45777",
                     "text": "Weist zu: Versteckter Widerhaken",
                     "type": "crafted"
@@ -24734,6 +25229,11 @@
                 {
                     "id": "crafted.stat_2954116742|46060",
                     "text": "Weist zu: Unersättlich",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46124",
+                    "text": "Weist zu: Arkane Überreste",
                     "type": "crafted"
                 },
                 {
@@ -24782,6 +25282,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|46692",
+                    "text": "Weist zu: Effiziente Alchemie",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|46696",
                     "text": "Weist zu: Beschädigung",
                     "type": "crafted"
@@ -24789,6 +25294,11 @@
                 {
                     "id": "crafted.stat_2954116742|4673",
                     "text": "Weist zu: Gewaltiger Schlag",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46972",
+                    "text": "Weist zu: Arkane Mixturen",
                     "type": "crafted"
                 },
                 {
@@ -24829,6 +25339,11 @@
                 {
                     "id": "crafted.stat_2954116742|47418",
                     "text": "Weist zu: Schutztränke",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|47420",
+                    "text": "Weist zu: Entbehrliche Armee",
                     "type": "crafted"
                 },
                 {
@@ -24877,6 +25392,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48215",
+                    "text": "Weist zu: Kopfschuss",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48240",
                     "text": "Weist zu: Schnelle Erholung",
                     "type": "crafted"
@@ -24907,13 +25427,28 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48658",
+                    "text": "Weist zu: Zerschmetternd",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48699",
                     "text": "Weist zu: Frostläufer",
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48734",
+                    "text": "Weist zu: Der Brüllende Affe",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48774",
                     "text": "Weist zu: Straffe Haut",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|48925",
+                    "text": "Weist zu: Segen des Mondes",
                     "type": "crafted"
                 },
                 {
@@ -24924,6 +25459,11 @@
                 {
                     "id": "crafted.stat_2954116742|49088",
                     "text": "Weist zu: Spaltkraft",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|4931",
+                    "text": "Weist zu: Verlässlicher Schutz",
                     "type": "crafted"
                 },
                 {
@@ -24939,6 +25479,11 @@
                 {
                     "id": "crafted.stat_2954116742|4959",
                     "text": "Weist zu: Heftiger Frost",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|49618",
+                    "text": "Weist zu: Tödlicher Schwung",
                     "type": "crafted"
                 },
                 {
@@ -24962,6 +25507,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|50023",
+                    "text": "Weist zu: Belebende Erhabenheit",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|50062",
                     "text": "Weist zu: Barriere von Venarius",
                     "type": "crafted"
@@ -24969,6 +25519,11 @@
                 {
                     "id": "crafted.stat_2954116742|5009",
                     "text": "Weist zu: Sternenklar",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|50239",
+                    "text": "Weist zu: Agilität der Stummwinde",
                     "type": "crafted"
                 },
                 {
@@ -25022,6 +25577,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51129",
+                    "text": "Weist zu: Anhäufen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|51169",
+                    "text": "Weist zu: Seelenblüte",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51213",
                     "text": "Weist zu: Auszehrung",
                     "type": "crafted"
@@ -25072,8 +25637,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51871",
+                    "text": "Weist zu: Unendlicher Durst",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51891",
                     "text": "Weist zu: Klarheit",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5191",
+                    "text": "Weist zu: Verbindung zum Wolf",
                     "type": "crafted"
                 },
                 {
@@ -25142,6 +25717,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|52669",
+                    "text": "Weist zu: Feuerschaden",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|52684",
+                    "text": "Weist zu: Erodierende Ketten",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|52764",
                     "text": "Weist zu: Mystischer Rausch",
                     "type": "crafted"
@@ -25149,6 +25734,11 @@
                 {
                     "id": "crafted.stat_2954116742|52803",
                     "text": "Weist zu: Gesunder Reisender",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5284",
+                    "text": "Weist zu: Zerstörerische Kraft",
                     "type": "crafted"
                 },
                 {
@@ -25172,8 +25762,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|53187",
+                    "text": "Weist zu: Kriegsfürst-Berserker",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|53265",
                     "text": "Weist zu: Biss der Natur",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53294",
+                    "text": "Weist zu: Abbrennen",
                     "type": "crafted"
                 },
                 {
@@ -25194,6 +25794,11 @@
                 {
                     "id": "crafted.stat_2954116742|53566",
                     "text": "Weist zu: Schnellschuss",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53607",
+                    "text": "Weist zu: Befestigte Stellung",
                     "type": "crafted"
                 },
                 {
@@ -25247,6 +25852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|54911",
+                    "text": "Weist zu: Feuerteufel",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|54990",
                     "text": "Weist zu: Aderlass",
                     "type": "crafted"
@@ -25277,6 +25887,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|55180",
+                    "text": "Weist zu: Unbarmherzige Gefallene",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|55193",
                     "text": "Weist zu: Maske der Täuschung",
                     "type": "crafted"
@@ -25284,6 +25899,11 @@
                 {
                     "id": "crafted.stat_2954116742|55308",
                     "text": "Weist zu: Schleuderschüsse",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55450",
+                    "text": "Weist zu: Sammlungsruf",
                     "type": "crafted"
                 },
                 {
@@ -25299,6 +25919,11 @@
                 {
                     "id": "crafted.stat_2954116742|5580",
                     "text": "Weist zu: Wachtürme",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55817",
+                    "text": "Weist zu: Alchemistisches Öl",
                     "type": "crafted"
                 },
                 {
@@ -25362,8 +25987,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|56714",
+                    "text": "Weist zu: Schneller Flug",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|56767",
                     "text": "Weist zu: Elektrifizierende Benommenheit",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56776",
+                    "text": "Weist zu: Gar",
                     "type": "crafted"
                 },
                 {
@@ -25389,6 +26024,11 @@
                 {
                     "id": "crafted.stat_2954116742|56988",
                     "text": "Weist zu: Elektrisches Blut",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56997",
+                    "text": "Weist zu: Heftiger Zusammenstoß",
                     "type": "crafted"
                 },
                 {
@@ -25424,6 +26064,11 @@
                 {
                     "id": "crafted.stat_2954116742|5728",
                     "text": "Weist zu: Uralte Obhut",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|57379",
+                    "text": "Weist zu: Ins Gesicht",
                     "type": "crafted"
                 },
                 {
@@ -25464,6 +26109,11 @@
                 {
                     "id": "crafted.stat_2954116742|5802",
                     "text": "Weist zu: Aus dem Stand",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|58183",
+                    "text": "Weist zu: Blutreißen",
                     "type": "crafted"
                 },
                 {
@@ -25514,6 +26164,11 @@
                 {
                     "id": "crafted.stat_2954116742|59208",
                     "text": "Weist zu: Rasender Kämpfer",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|59214",
+                    "text": "Weist zu: Schicksalhaftes Ende",
                     "type": "crafted"
                 },
                 {
@@ -25582,6 +26237,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|60273",
+                    "text": "Weist zu: Hindernisse",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|60404",
                     "text": "Weist zu: Perfekte Gelegenheit",
                     "type": "crafted"
@@ -25599,6 +26259,11 @@
                 {
                     "id": "crafted.stat_2954116742|60764",
                     "text": "Weist zu: Gefiederte Pfeile",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|60878",
+                    "text": "Weist zu: Blitzschaden",
                     "type": "crafted"
                 },
                 {
@@ -25662,6 +26327,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|61741",
+                    "text": "Weist zu: Anhaltendes Gift",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|6178",
                     "text": "Weist zu: Kraftbolzen",
                     "type": "crafted"
@@ -25669,6 +26339,11 @@
                 {
                     "id": "crafted.stat_2954116742|61921",
                     "text": "Weist zu: Sturmflut",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62034",
+                    "text": "Weist zu: Spektralwächter",
                     "type": "crafted"
                 },
                 {
@@ -25704,6 +26379,11 @@
                 {
                     "id": "crafted.stat_2954116742|62431",
                     "text": "Weist zu: Vorahnung",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62455",
+                    "text": "Weist zu: Bannerträger",
                     "type": "crafted"
                 },
                 {
@@ -25812,6 +26492,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|64415",
+                    "text": "Weist zu: Zerschmetternde Benommenheit",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|64443",
                     "text": "Weist zu: Aufprallkraft",
                     "type": "crafted"
@@ -25824,6 +26509,11 @@
                 {
                     "id": "crafted.stat_2954116742|64543",
                     "text": "Weist zu: Ungehemmte Kräfte",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|64650",
+                    "text": "Weist zu: Aufmerksames Ausweichen",
                     "type": "crafted"
                 },
                 {
@@ -25844,6 +26534,16 @@
                 {
                     "id": "crafted.stat_2954116742|65016",
                     "text": "Weist zu: Intensive Flammen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|65023",
+                    "text": "Weist zu: Undurchdringliche Hülle",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6514",
+                    "text": "Weist zu: Kakophonie",
                     "type": "crafted"
                 },
                 {
@@ -25877,8 +26577,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|6544",
+                    "text": "Weist zu: Brennende Schläge",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|65468",
                     "text": "Weist zu: Wiederholte Sprengungen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6655",
+                    "text": "Weist zu: Verschlimmerung",
                     "type": "crafted"
                 },
                 {
@@ -25899,6 +26609,11 @@
                 {
                     "id": "crafted.stat_2954116742|7163",
                     "text": "Weist zu: Stimulanzien",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|7275",
+                    "text": "Weist zu: Elektrisierungsanfälligkeit",
                     "type": "crafted"
                 },
                 {
@@ -25987,6 +26702,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|8554",
+                    "text": "Weist zu: Brennende Natur",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|8607",
                     "text": "Weist zu: Laviangas Gebräu",
                     "type": "crafted"
@@ -25999,6 +26719,11 @@
                 {
                     "id": "crafted.stat_2954116742|8782",
                     "text": "Weist zu: Ermächtigende Infusionen",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8791",
+                    "text": "Weist zu: Widerstandsfähiger Verbündeter",
                     "type": "crafted"
                 },
                 {
@@ -26024,6 +26749,11 @@
                 {
                     "id": "crafted.stat_2954116742|8904",
                     "text": "Weist zu: Tod aus der Ferne",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8916",
+                    "text": "Weist zu: Hauende Bestie",
                     "type": "crafted"
                 },
                 {
@@ -26072,6 +26802,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|94",
+                    "text": "Weist zu: Effizientes Töten",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|9421",
                     "text": "Weist zu: Schneebrecher",
                     "type": "crafted"
@@ -26089,6 +26824,11 @@
                 {
                     "id": "crafted.stat_2954116742|9535",
                     "text": "Weist zu: Gischtfäulnis-Wildheit",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|9652",
+                    "text": "Weist zu: Verbessernde Abwendung",
                     "type": "crafted"
                 },
                 {
@@ -31704,6 +32444,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1122225204",
+                    "text": "Verbunden: # zu maximalem Runenschutz",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1134865274",
                     "text": "Verbunden: #% zur Qualität aller Fertigkeiten",
                     "type": "augment"
@@ -31711,6 +32456,11 @@
                 {
                     "id": "rune.stat_1147690586",
                     "text": "# zur Stufe aller Blitz-Fertigkeiten",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1150343007",
+                    "text": "#% des Schadens von Treffern werden zuerst vom Leben Eures Gefährten abgezogen",
                     "type": "augment"
                 },
                 {
@@ -31829,6 +32579,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1377764687",
+                    "text": "Verbunden: Erhaltet Letztmaligkeit für # Sekunden pro verbrauchter Kombo, wenn Ihr Fertigkeiten benutzt",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1381474422",
                     "text": "#% erhöhte Magnitude von schädigenden Beeinträchtigungen, die Ihr verursacht",
                     "type": "augment"
@@ -31896,6 +32651,11 @@
                 {
                     "id": "rune.stat_1457312571",
                     "text": "Verbunden: #% Chance, dass Hieb-Fertigkeiten, die Ihr selbst benutzt, ein zusätzliches Nachbeben verursachen",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1479161975",
+                    "text": "Verbunden: #% des Schadens werden zuerst vom Mana abgezogen",
                     "type": "augment"
                 },
                 {
@@ -32041,6 +32801,11 @@
                 {
                     "id": "rune.stat_1678831767",
                     "text": "Stellt # Leben wieder her, wenn Ihr blockt",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1683578560",
+                    "text": "Unerschütterliche Haltung",
                     "type": "augment"
                 },
                 {
@@ -32529,6 +33294,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2443032293",
+                    "text": "Erhaltet # Wache für 0.5 Sekunden pro verbrauchter Kombo, wenn Ihr Fertigkeiten benutzt",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2444976134",
                     "text": "Erhaltet maximalen Energieschild in Höhe von #% der gesamten Stärke-Anforderungen der ausgerüsteten Rüstungsgegenstände",
                     "type": "augment"
@@ -32704,6 +33474,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2695354435",
+                    "text": "#% erhöhter globaler Ausweichwert bei niedrigem Leben",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2701582946",
                     "text": "Verbunden: #% erhöhter Abwendungswert",
                     "type": "augment"
@@ -32721,6 +33496,11 @@
                 {
                     "id": "rune.stat_2709367754",
                     "text": "Erhaltet # Rausch bei Nahkampftreffer",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2715190555",
+                    "text": "#% zu kritischer Trefferchance von Dornen",
                     "type": "augment"
                 },
                 {
@@ -32829,6 +33609,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2905515354",
+                    "text": "Ihr erleidet #% des Schaden von geblockten Treffern",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2910761524",
                     "text": "#% Chance, dass Zauberfertigkeiten 2 zusätzliche Projektile feuern",
                     "type": "augment"
@@ -32866,6 +33651,11 @@
                 {
                     "id": "rune.stat_2942439603",
                     "text": "Fertigkeiten haben #% Chance, Ladungen nicht zu entfernen, aber sie trotzdem als verbraucht zu zählen",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2957287092",
+                    "text": "Chance, Schaden zu blocken ist günstig",
                     "type": "augment"
                 },
                 {
@@ -33239,6 +34029,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3494229254",
+                    "text": "Verbunden: #% erhöhter Bonus für kritische Treffer für Dornen",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3515226849",
                     "text": "Stellt #% des maximalen Runenschutzes wieder her, wenn eine Eurer wiederbelebenden Kreaturen getötet wird",
                     "type": "augment"
@@ -33604,6 +34399,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_4108430531",
+                    "text": "Verbunden: #% des Schadens von Treffern werden zuerst vom Leben Eures Gefährten abgezogen",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_4111152445",
                     "text": "Verbunden: # zur Stufe aller Blitz-Fertigkeiten",
                     "type": "augment"
@@ -33776,6 +34576,11 @@
                 {
                     "id": "rune.stat_55876295",
                     "text": "#% des physischen Angriffsschadens werden als Leben geraubt",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_566086661",
+                    "text": "Angriffe mit dieser Waffe haben zusätzlichen Kälteschaden in Höhe von #% bis #% des maximalen Manas",
                     "type": "augment"
                 },
                 {
@@ -36295,6 +37100,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_3206904707",
+                    "text": "#% erhöhte Magnituden von expliziten Kälte-Modifikatoren",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_321970274",
                     "text": "Erleidet #% des physischen Schadens als Blitzschaden, während euer Schild gehoben ist",
                     "type": "desecrated"
@@ -36667,6 +37477,11 @@
                 {
                     "id": "desecrated.stat_3566150527",
                     "text": "Bedeutende Passive Fertigkeiten im Radius gewähren auch Regeneriert #% des Lebens pro Sekunde",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3574578302",
+                    "text": "#% erhöhte Magnituden von expliziten Feuer-Modifikatoren",
                     "type": "desecrated"
                 },
                 {

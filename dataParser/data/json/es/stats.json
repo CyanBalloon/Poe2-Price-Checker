@@ -5144,6 +5144,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|10169",
+                    "text": "Asigna Sin restricciones",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|10265",
                     "text": "Asigna Jabalina",
                     "type": "explicit"
@@ -5434,6 +5439,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|14265",
+                    "text": "Asigna Daño de fuego",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|14294",
                     "text": "Asigna Sangre sacrificial",
                     "type": "explicit"
@@ -5451,6 +5461,11 @@
                 {
                     "id": "explicit.stat_2954116742|14383",
                     "text": "Asigna Sufusión",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|1448",
+                    "text": "Asigna Vínculo del gato",
                     "type": "explicit"
                 },
                 {
@@ -6044,6 +6059,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|23907",
+                    "text": "Asigna Daño de hielo",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|23939",
                     "text": "Asigna Carne confitada",
                     "type": "explicit"
@@ -6336,6 +6356,11 @@
                 {
                     "id": "explicit.stat_2954116742|27761",
                     "text": "Asigna Contrarresto",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|27779",
+                    "text": "Asigna Señor de las borrascas",
                     "type": "explicit"
                 },
                 {
@@ -6719,6 +6744,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|33400",
+                    "text": "Asigna Parada reverberante",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|3348",
                     "text": "Asigna Espíritu del lobo",
                     "type": "explicit"
@@ -6906,6 +6936,11 @@
                 {
                     "id": "explicit.stat_2954116742|35739",
                     "text": "Asigna Sentencia aplastante",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|35743",
+                    "text": "Asigna Piel de Saqawal",
                     "type": "explicit"
                 },
                 {
@@ -8034,6 +8069,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|50239",
+                    "text": "Asigna Agilidad de los Viento mudo",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|50253",
                     "text": "Asigna Réplicas",
                     "type": "explicit"
@@ -8164,6 +8204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|5191",
+                    "text": "Asigna Vínculo del lobo",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|51934",
                     "text": "Asigna Eficiencia conjurada",
                     "type": "explicit"
@@ -8226,6 +8271,11 @@
                 {
                     "id": "explicit.stat_2954116742|52618",
                     "text": "Asigna Bendición de la bestia",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|52669",
+                    "text": "Asigna Daño de fuego",
                     "type": "explicit"
                 },
                 {
@@ -8831,6 +8881,11 @@
                 {
                     "id": "explicit.stat_2954116742|60764",
                     "text": "Asigna Arquería emplumada",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|60878",
+                    "text": "Asigna Daño de rayo",
                     "type": "explicit"
                 },
                 {
@@ -15174,6 +15229,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_853326030",
+                    "text": "Solo puedes engarzar # joya de rubí en este objeto",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_85367160",
                     "text": "Las habilidades pasivas notables dentro del radio también otorgan El #% del daño recibido se recobra como maná",
                     "type": "explicit"
@@ -16476,6 +16536,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1058934731",
+                    "text": "Las habilidades de esbirros temporales tienen # al límite de esbirros invocados",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1060572482",
                     "text": "Efecto de las habilidades pasivas pequeñas dentro del radio aumentado un #%",
                     "type": "fractured"
@@ -16558,6 +16623,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "Armadura, evasión y escudo de energía globales aumentados un #%",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1180552088",
+                    "text": "Los efectos beneficiosos de los arcontes sobre ti están aumentados un #%",
                     "type": "fractured"
                 },
                 {
@@ -16941,6 +17011,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1691403182",
+                    "text": "Los esbirros tienen la velocidad de recuperación del enfriamiento aumentada un #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1692879867",
                     "text": "Duración del sangrado aumentada un #% sobre ti",
                     "type": "fractured"
@@ -17051,6 +17126,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1823942939",
+                    "text": "# a la cantidad máxima de tótems balista que puedes invocar",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1829102168",
                     "text": "Duración de los estados alterados en los enemigos aumentada un #%",
                     "type": "fractured"
@@ -17068,6 +17148,11 @@
                 {
                     "id": "fractured.stat_1839076647",
                     "text": "Daño de proyectiles aumentado un #%",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1840985759",
+                    "text": "Área de efecto de los ataques aumentada un #%",
                     "type": "fractured"
                 },
                 {
@@ -17466,6 +17551,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2393315299",
+                    "text": "Magnitudes de los modificadores de crítico explícitos aumentadas un #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_239367161",
                     "text": "Acumulación de aturdimiento aumentada un #%",
                     "type": "fractured"
@@ -17601,6 +17691,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2567751411",
+                    "text": "Área de efecto de las habilidades de gritos de guerra aumentada un #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2570249991",
                     "text": "Los monstruos están evasivos",
                     "type": "fractured"
@@ -17648,6 +17743,11 @@
                 {
                     "id": "fractured.stat_2653955271",
                     "text": "El daño penetra el #% de la resistencia al fuego",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2663359259",
+                    "text": "Poder total contado por los gritos de guerra aumentado un #%",
                     "type": "fractured"
                 },
                 {
@@ -18661,6 +18761,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|26214",
+                    "text": "Asigna Dominio",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|26291",
                     "text": "Asigna Naturaleza electrizante",
                     "type": "fractured"
@@ -19496,6 +19601,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|42660",
+                    "text": "Asigna Furia dominante",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|42813",
                     "text": "Asigna Mareas de cambio",
                     "type": "fractured"
@@ -19643,6 +19753,11 @@
                 {
                     "id": "fractured.stat_2954116742|46060",
                     "text": "Asigna Voraz",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2954116742|46124",
+                    "text": "Asigna Remanentes arcanos",
                     "type": "fractured"
                 },
                 {
@@ -20921,6 +21036,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3143918757",
+                    "text": "Generación de gloria aumentada un #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3146310524",
                     "text": "Desorienta al impactar",
                     "type": "fractured"
@@ -21011,6 +21131,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_323800555",
+                    "text": "Ganas el #% del daño como daño de rayo extra con los hechizos",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3243034867",
                     "text": "Las habilidades pasivas notables dentro del radio también otorgan Las habilidades de aura tienen las magnitudes aumentadas un #%",
                     "type": "fractured"
@@ -21081,6 +21206,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3336230913",
+                    "text": "# a la barrera rúnica máxima",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3336890334",
                     "text": "Agrega de # a # de daño de rayo",
                     "type": "fractured"
@@ -21093,6 +21223,11 @@
                 {
                     "id": "fractured.stat_3362812763",
                     "text": "El #% de la armadura también se aplica al daño elemental",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3368921525",
+                    "text": "Los aumentos y las reducciones que afectan al daño de fuego y al daño de rayo dentro del radio se transforman para aplicarse al daño de hielo",
                     "type": "fractured"
                 },
                 {
@@ -21268,6 +21403,11 @@
                 {
                     "id": "fractured.stat_3596695232",
                     "text": "Daño de proyectiles aumentado un #% si has infligido un impacto cuerpo a cuerpo en los últimos ocho segundos",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3624940721",
+                    "text": "Magnitudes de los modificadores de rayo explícitos aumentadas un #%",
                     "type": "fractured"
                 },
                 {
@@ -21541,6 +21681,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3987691524",
+                    "text": "La pérdida inherente de la furia comienza 1 segundo más tarde",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3998863698",
                     "text": "Los monstruos tienen la acumulación del congelamiento aumentada un #%",
                     "type": "fractured"
@@ -21641,6 +21786,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4147510958",
+                    "text": "Las habilidades selladas tienen # al máximo de sellos",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4147897060",
                     "text": "Probabilidad de bloquear aumentada un #%",
                     "type": "fractured"
@@ -21716,8 +21866,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258524206",
+                    "text": "#% de probabilidad de generar un combo adicional al impactar",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4258720395",
                     "text": "Las habilidades pasivas notables dentro del radio también otorgan Los proyectiles tienen un #% de probabilidad de generar un proyectil adicional cuando se bifurcan",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_4273473110",
+                    "text": "Barrera rúnica máxima aumentada un #%",
                     "type": "fractured"
                 },
                 {
@@ -22113,6 +22273,11 @@
                 {
                     "id": "fractured.stat_924253255",
                     "text": "La potencia ralentizadora de los efectos nocivos está aumentada un #% sobre ti",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_933355817",
+                    "text": "Ganas Arconte de la no muerte cuando creas una ofrenda",
                     "type": "fractured"
                 },
                 {
@@ -22682,6 +22847,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|10169",
+                    "text": "Asigna Sin restricciones",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|10265",
                     "text": "Asigna Jabalina",
                     "type": "crafted"
@@ -22709,6 +22879,11 @@
                 {
                     "id": "crafted.stat_2954116742|10500",
                     "text": "Asigna Bloqueos desorientadores",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|10602",
+                    "text": "Asigna Pillaje",
                     "type": "crafted"
                 },
                 {
@@ -22742,6 +22917,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1104",
+                    "text": "Asigna Deseo de poder",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|11184",
                     "text": "Asigna Regalo de Zarokh",
                     "type": "crafted"
@@ -22772,6 +22952,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|116",
+                    "text": "Asigna Perspicacia",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|1169",
                     "text": "Asigna Llamada urgente",
                     "type": "crafted"
@@ -22799,6 +22984,11 @@
                 {
                     "id": "crafted.stat_2954116742|12245",
                     "text": "Asigna Pirómano",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|12337",
+                    "text": "Asigna Tormenta repentina",
                     "type": "crafted"
                 },
                 {
@@ -22902,6 +23092,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|13895",
+                    "text": "Asigna Punta precisa",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|13980",
                     "text": "Asigna Partir la tierra",
                     "type": "crafted"
@@ -22919,6 +23114,11 @@
                 {
                     "id": "crafted.stat_2954116742|14258",
                     "text": "Asigna Probabilidad de Titiritero",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|14265",
+                    "text": "Asigna Daño de fuego",
                     "type": "crafted"
                 },
                 {
@@ -22942,6 +23142,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1448",
+                    "text": "Asigna Vínculo del gato",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14602",
                     "text": "Asigna Disparos especializados",
                     "type": "crafted"
@@ -22952,6 +23157,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|14934",
+                    "text": "Asigna Espiral de manía",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14945",
                     "text": "Asigna Multitud creciente",
                     "type": "crafted"
@@ -22959,6 +23169,11 @@
                 {
                     "id": "crafted.stat_2954116742|1502",
                     "text": "Asigna Purificación de la Draiocht",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|15030",
+                    "text": "Asigna Recepción constante",
                     "type": "crafted"
                 },
                 {
@@ -23042,6 +23257,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|16466",
+                    "text": "Asigna Alacridad mental",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|16499",
                     "text": "Asigna Susurros persistentes",
                     "type": "crafted"
@@ -23054,6 +23274,11 @@
                 {
                     "id": "crafted.stat_2954116742|16626",
                     "text": "Asigna Área de impacto",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|16790",
+                    "text": "Asigna Lanzamiento de hechizos eficiente",
                     "type": "crafted"
                 },
                 {
@@ -23097,6 +23322,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17330",
+                    "text": "Asigna Perforación",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17340",
                     "text": "Asigna Subidón de adrenalina",
                     "type": "crafted"
@@ -23137,6 +23367,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17825",
+                    "text": "Asigna Retirada táctica",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17854",
                     "text": "Asigna Velocidad de huida",
                     "type": "crafted"
@@ -23159,6 +23394,11 @@
                 {
                     "id": "crafted.stat_2954116742|18419",
                     "text": "Asigna Reparación ancestral",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|18485",
+                    "text": "Asigna Unión inestable",
                     "type": "crafted"
                 },
                 {
@@ -23239,6 +23479,21 @@
                 {
                     "id": "crafted.stat_2954116742|2021",
                     "text": "Asigna Manantial",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20251",
+                    "text": "Asigna Suelo dividido",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20289",
+                    "text": "Asigna Garra helada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20388",
+                    "text": "Asigna Carne regenerativa",
                     "type": "crafted"
                 },
                 {
@@ -23362,8 +23617,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|22864",
+                    "text": "Asigna Golpe contaminado",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|22967",
+                    "text": "Asigna Vigilancia",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23078",
                     "text": "Asigna Protector sagrado",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|23221",
+                    "text": "Asigna Disparo habilidoso",
                     "type": "crafted"
                 },
                 {
@@ -23402,6 +23672,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23736",
+                    "text": "Asigna Rocía y reza",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23738",
                     "text": "Asigna Locura en los huesos",
                     "type": "crafted"
@@ -23412,8 +23687,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23907",
+                    "text": "Asigna Daño de hielo",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23939",
                     "text": "Asigna Carne confitada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|2394",
+                    "text": "Asigna Aluvión de filos",
                     "type": "crafted"
                 },
                 {
@@ -23447,8 +23732,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|24438",
+                    "text": "Asigna Madera endurecida",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|24483",
                     "text": "Asigna Acercamiento directo",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|24491",
+                    "text": "Asigna Ecos conjurados",
                     "type": "crafted"
                 },
                 {
@@ -23527,6 +23822,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|2575",
+                    "text": "Asigna Alacridad ancestral",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|25753",
                     "text": "Asigna Armas llameantes",
                     "type": "crafted"
@@ -23569,6 +23869,11 @@
                 {
                     "id": "crafted.stat_2954116742|26339",
                     "text": "Asigna Artificio ancestral",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|26356",
+                    "text": "Asigna Listo para explotar",
                     "type": "crafted"
                 },
                 {
@@ -23654,6 +23959,11 @@
                 {
                     "id": "crafted.stat_2954116742|27761",
                     "text": "Asigna Contrarresto",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|27779",
+                    "text": "Asigna Señor de las borrascas",
                     "type": "crafted"
                 },
                 {
@@ -23787,6 +24097,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30392",
+                    "text": "Asigna Socorro",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30395",
                     "text": "Asigna Bestia aulladora",
                     "type": "crafted"
@@ -23797,8 +24112,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30456",
+                    "text": "Asigna Alerta máxima",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30523",
                     "text": "Asigna Los muertos bailan",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|30546",
+                    "text": "Asigna Garra electrificada",
                     "type": "crafted"
                 },
                 {
@@ -23807,8 +24132,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30720",
+                    "text": "Asigna Encarnación entrópica",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|31129",
                     "text": "Asigna Amigo para toda la vida",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31172",
+                    "text": "Asigna Técnica del halcón",
                     "type": "crafted"
                 },
                 {
@@ -23834,6 +24169,11 @@
                 {
                     "id": "crafted.stat_2954116742|31373",
                     "text": "Asigna Potencia vocal",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31433",
+                    "text": "Asigna Catálisis",
                     "type": "crafted"
                 },
                 {
@@ -23907,6 +24247,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32448",
+                    "text": "Asigna Resistencia a la electrocución",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32507",
                     "text": "Asigna Cortar hasta el hueso",
                     "type": "crafted"
@@ -23917,8 +24262,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32664",
+                    "text": "Asigna Chakra de la respiración",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32721",
                     "text": "Asigna Objetivo distraído",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|32799",
+                    "text": "Asigna Compañía cautivadora",
                     "type": "crafted"
                 },
                 {
@@ -23972,8 +24327,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|33400",
+                    "text": "Asigna Parada reverberante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3348",
                     "text": "Asigna Espíritu del lobo",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33542",
+                    "text": "Asigna Dedos rápidos",
                     "type": "crafted"
                 },
                 {
@@ -23984,6 +24349,11 @@
                 {
                     "id": "crafted.stat_2954116742|336",
                     "text": "Asigna Crecimiento de la tormenta",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33730",
+                    "text": "Asigna Canalización concentrada",
                     "type": "crafted"
                 },
                 {
@@ -24072,6 +24442,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35028",
+                    "text": "Asigna En medio de la acción",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35031",
                     "text": "Asigna Chacra de vida",
                     "type": "crafted"
@@ -24087,6 +24462,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35369",
+                    "text": "Asigna Inversión en energías",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35417",
                     "text": "Asigna Aliento del guiverno",
                     "type": "crafted"
@@ -24097,6 +24477,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35581",
+                    "text": "Asigna Al alcance de la mano",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35618",
+                    "text": "Asigna Abrigo frío",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3567",
                     "text": "Asigna Maná puro",
                     "type": "crafted"
@@ -24104,6 +24494,11 @@
                 {
                     "id": "crafted.stat_2954116742|35739",
                     "text": "Asigna Sentencia aplastante",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35743",
+                    "text": "Asigna Piel de Saqawal",
                     "type": "crafted"
                 },
                 {
@@ -24139,6 +24534,11 @@
                 {
                     "id": "crafted.stat_2954116742|36100",
                     "text": "Asigna Garra fundida",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|36333",
+                    "text": "Asigna Potenciación explosiva",
                     "type": "crafted"
                 },
                 {
@@ -24182,8 +24582,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|36976",
+                    "text": "Asigna Señalado para morir",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|3698",
+                    "text": "Asigna Foso de pinchos",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|372",
                     "text": "Asigna Resistencia al calor",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37244",
+                    "text": "Asigna Pericia con escudos",
                     "type": "crafted"
                 },
                 {
@@ -24199,6 +24614,11 @@
                 {
                     "id": "crafted.stat_2954116742|37302",
                     "text": "Asigna Mantener a raya",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37408",
+                    "text": "Asigna Contención",
                     "type": "crafted"
                 },
                 {
@@ -24247,6 +24667,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38329",
+                    "text": "Asigna Escarcha cortante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|38342",
                     "text": "Asigna Atontamiento",
                     "type": "crafted"
@@ -24292,8 +24717,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38895",
+                    "text": "Asigna Elixir de cristal",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3894",
                     "text": "Asigna Voluntad sobrenatural",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|38965",
+                    "text": "Asigna Límites infundidos",
                     "type": "crafted"
                 },
                 {
@@ -24357,6 +24792,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40073",
+                    "text": "Asigna Empapado",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40117",
                     "text": "Asigna Armadura con pinchos",
                     "type": "crafted"
@@ -24364,6 +24804,16 @@
                 {
                     "id": "crafted.stat_2954116742|40166",
                     "text": "Asigna Trance profundo",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40213",
+                    "text": "Asigna Gusto por la sangre",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40270",
+                    "text": "Asigna Frenético",
                     "type": "crafted"
                 },
                 {
@@ -24407,6 +24857,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40985",
+                    "text": "Asigna Remantentes potenciadores",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40990",
                     "text": "Asigna Expuesto a la tormenta",
                     "type": "crafted"
@@ -24442,6 +24897,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|41811",
+                    "text": "Asigna Palma destructora",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|41905",
                     "text": "Asigna Enterrador",
                     "type": "crafted"
@@ -24449,6 +24909,16 @@
                 {
                     "id": "crafted.stat_2954116742|41935",
                     "text": "Asigna Piel del oso",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|41972",
+                    "text": "Asigna Glaciación",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42032",
+                    "text": "Asigna Desorden creciente",
                     "type": "crafted"
                 },
                 {
@@ -24489,6 +24959,11 @@
                 {
                     "id": "crafted.stat_2954116742|42245",
                     "text": "Asigna Inscripciones eficientes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42302",
+                    "text": "Asigna Disparo dividido",
                     "type": "crafted"
                 },
                 {
@@ -24592,6 +25067,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|43939",
+                    "text": "Asigna Llamas derretidoras",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|43944",
                     "text": "Asigna Inestabilidad",
                     "type": "crafted"
@@ -24624,6 +25104,11 @@
                 {
                     "id": "crafted.stat_2954116742|4447",
                     "text": "Asigna Retener su motivación",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|44566",
+                    "text": "Asigna Pararrayos",
                     "type": "crafted"
                 },
                 {
@@ -24664,6 +25149,11 @@
                 {
                     "id": "crafted.stat_2954116742|45177",
                     "text": "Asigna Golpea con precisión",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|45244",
+                    "text": "Asigna Rellenos",
                     "type": "crafted"
                 },
                 {
@@ -24717,6 +25207,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|45751",
+                    "text": "Asigna Escudo atemorizante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|45777",
                     "text": "Asigna Dardo oculto",
                     "type": "crafted"
@@ -24739,6 +25234,11 @@
                 {
                     "id": "crafted.stat_2954116742|46060",
                     "text": "Asigna Voraz",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46124",
+                    "text": "Asigna Remanentes arcanos",
                     "type": "crafted"
                 },
                 {
@@ -24787,6 +25287,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|46692",
+                    "text": "Asigna Alquimia eficiente",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|46696",
                     "text": "Asigna Perjudicar",
                     "type": "crafted"
@@ -24794,6 +25299,11 @@
                 {
                     "id": "crafted.stat_2954116742|4673",
                     "text": "Asigna Choque descomunal",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46972",
+                    "text": "Asigna Mezclas arcanas",
                     "type": "crafted"
                 },
                 {
@@ -24834,6 +25344,11 @@
                 {
                     "id": "crafted.stat_2954116742|47418",
                     "text": "Asigna Pociones protectoras",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|47420",
+                    "text": "Asigna Ejército prescindible",
                     "type": "crafted"
                 },
                 {
@@ -24882,6 +25397,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48215",
+                    "text": "Asigna Disparo en la cabeza",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48240",
                     "text": "Asigna Recuperación rápida",
                     "type": "crafted"
@@ -24912,13 +25432,28 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48658",
+                    "text": "Asigna Fragmentación",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48699",
                     "text": "Asigna Caminante de escarcha",
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48734",
+                    "text": "Asigna El primate aullador",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48774",
                     "text": "Asigna Carne tirante",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|48925",
+                    "text": "Asigna Bendición de la luna",
                     "type": "crafted"
                 },
                 {
@@ -24929,6 +25464,11 @@
                 {
                     "id": "crafted.stat_2954116742|49088",
                     "text": "Asigna Fuerza fragmentadora",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|4931",
+                    "text": "Asigna Escudo confiable",
                     "type": "crafted"
                 },
                 {
@@ -24944,6 +25484,11 @@
                 {
                     "id": "crafted.stat_2954116742|4959",
                     "text": "Asigna Gran helada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|49618",
+                    "text": "Asigna Floritura mortal",
                     "type": "crafted"
                 },
                 {
@@ -24967,6 +25512,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|50023",
+                    "text": "Asigna Grandeza vigorizante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|50062",
                     "text": "Asigna Barrera de Venarius",
                     "type": "crafted"
@@ -24974,6 +25524,11 @@
                 {
                     "id": "crafted.stat_2954116742|5009",
                     "text": "Asigna Contemplación de estrellas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|50239",
+                    "text": "Asigna Agilidad de los Viento mudo",
                     "type": "crafted"
                 },
                 {
@@ -25027,6 +25582,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51129",
+                    "text": "Asigna Amontonamiento",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|51169",
+                    "text": "Asigna Eclosión de almas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51213",
                     "text": "Asigna Desgaste",
                     "type": "crafted"
@@ -25077,8 +25642,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51871",
+                    "text": "Asigna Sed inmortal",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51891",
                     "text": "Asigna Lucidez",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5191",
+                    "text": "Asigna Vínculo del lobo",
                     "type": "crafted"
                 },
                 {
@@ -25147,6 +25722,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|52669",
+                    "text": "Asigna Daño de fuego",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|52684",
+                    "text": "Asigna Cadenas erosionadas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|52764",
                     "text": "Asigna Furia mística",
                     "type": "crafted"
@@ -25154,6 +25739,11 @@
                 {
                     "id": "crafted.stat_2954116742|52803",
                     "text": "Asigna Viajero saludable",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5284",
+                    "text": "Asigna Fuerza trituradora",
                     "type": "crafted"
                 },
                 {
@@ -25177,8 +25767,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|53187",
+                    "text": "Asigna Señor de la guerra berserker",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|53265",
                     "text": "Asigna Mordisco de la naturaleza",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53294",
+                    "text": "Asigna Quemazón",
                     "type": "crafted"
                 },
                 {
@@ -25199,6 +25799,11 @@
                 {
                     "id": "crafted.stat_2954116742|53566",
                     "text": "Asigna Corre y dispara",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53607",
+                    "text": "Asigna Ubicación fortificada",
                     "type": "crafted"
                 },
                 {
@@ -25252,6 +25857,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|54911",
+                    "text": "Asigna Encendedor",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|54990",
                     "text": "Asigna Desangrador",
                     "type": "crafted"
@@ -25282,6 +25892,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|55180",
+                    "text": "Asigna Caídos implacables",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|55193",
                     "text": "Asigna Máscara de subterfugio",
                     "type": "crafted"
@@ -25289,6 +25904,11 @@
                 {
                     "id": "crafted.stat_2954116742|55308",
                     "text": "Asigna Tiros de honda",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55450",
+                    "text": "Asigna Forma de movilización",
                     "type": "crafted"
                 },
                 {
@@ -25304,6 +25924,11 @@
                 {
                     "id": "crafted.stat_2954116742|5580",
                     "text": "Asigna Torres de vigilancia",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55817",
+                    "text": "Asigna Aceite alquímico",
                     "type": "crafted"
                 },
                 {
@@ -25367,8 +25992,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|56714",
+                    "text": "Asigna Vuelo rápido",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|56767",
                     "text": "Asigna Desorientación electrificante",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56776",
+                    "text": "Asigna Frito",
                     "type": "crafted"
                 },
                 {
@@ -25394,6 +26029,11 @@
                 {
                     "id": "crafted.stat_2954116742|56988",
                     "text": "Asigna Sangre eléctrica",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56997",
+                    "text": "Asigna Contacto pesado",
                     "type": "crafted"
                 },
                 {
@@ -25429,6 +26069,11 @@
                 {
                     "id": "crafted.stat_2954116742|5728",
                     "text": "Asigna Égida antigua",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|57379",
+                    "text": "Asigna En tu cara",
                     "type": "crafted"
                 },
                 {
@@ -25469,6 +26114,11 @@
                 {
                     "id": "crafted.stat_2954116742|5802",
                     "text": "Asigna La bolsa o la vida",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|58183",
+                    "text": "Asigna Desgarro sangriento",
                     "type": "crafted"
                 },
                 {
@@ -25519,6 +26169,11 @@
                 {
                     "id": "crafted.stat_2954116742|59208",
                     "text": "Asigna Luchador frenético",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|59214",
+                    "text": "Asigna Final predestinado",
                     "type": "crafted"
                 },
                 {
@@ -25587,6 +26242,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|60273",
+                    "text": "Asigna Obstáculos entumecedores",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|60404",
                     "text": "Asigna Oportunidad perfecta",
                     "type": "crafted"
@@ -25604,6 +26264,11 @@
                 {
                     "id": "crafted.stat_2954116742|60764",
                     "text": "Asigna Arquería emplumada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|60878",
+                    "text": "Asigna Daño de rayo",
                     "type": "crafted"
                 },
                 {
@@ -25667,6 +26332,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|61741",
+                    "text": "Asigna Toxinas duraderas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|6178",
                     "text": "Asigna Disparos de poder",
                     "type": "crafted"
@@ -25674,6 +26344,11 @@
                 {
                     "id": "crafted.stat_2954116742|61921",
                     "text": "Asigna Oleada de tormenta",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62034",
+                    "text": "Asigna Guardia prismático",
                     "type": "crafted"
                 },
                 {
@@ -25709,6 +26384,11 @@
                 {
                     "id": "crafted.stat_2954116742|62431",
                     "text": "Asigna Anticipación",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62455",
+                    "text": "Asigna Portaestandartes",
                     "type": "crafted"
                 },
                 {
@@ -25817,6 +26497,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|64415",
+                    "text": "Asigna Desorientación fragmentadora",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|64443",
                     "text": "Asigna Fuerza de impacto",
                     "type": "crafted"
@@ -25829,6 +26514,11 @@
                 {
                     "id": "crafted.stat_2954116742|64543",
                     "text": "Asigna Fuerzas desatadas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|64650",
+                    "text": "Asigna Esquiva con cautela",
                     "type": "crafted"
                 },
                 {
@@ -25849,6 +26539,16 @@
                 {
                     "id": "crafted.stat_2954116742|65016",
                     "text": "Asigna Llamas intensas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|65023",
+                    "text": "Asigna Coraza impenetrable",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6514",
+                    "text": "Asigna Cacofonía",
                     "type": "crafted"
                 },
                 {
@@ -25882,8 +26582,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|6544",
+                    "text": "Asigna Golpes ardientes",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|65468",
                     "text": "Asigna Explosivos repetidores",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6655",
+                    "text": "Asigna Agravación",
                     "type": "crafted"
                 },
                 {
@@ -25904,6 +26614,11 @@
                 {
                     "id": "crafted.stat_2954116742|7163",
                     "text": "Asigna Estimulantes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|7275",
+                    "text": "Asigna Exposición electrocutante",
                     "type": "crafted"
                 },
                 {
@@ -25992,6 +26707,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|8554",
+                    "text": "Asigna Naturaleza ardiente",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|8607",
                     "text": "Asigna Brebaje de Lavianga",
                     "type": "crafted"
@@ -26004,6 +26724,11 @@
                 {
                     "id": "crafted.stat_2954116742|8782",
                     "text": "Asigna Infusiones potenciadoras",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8791",
+                    "text": "Asigna Aliado fornido",
                     "type": "crafted"
                 },
                 {
@@ -26029,6 +26754,11 @@
                 {
                     "id": "crafted.stat_2954116742|8904",
                     "text": "Asigna Muerte desde lejos",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8916",
+                    "text": "Asigna Bestia golpeadora",
                     "type": "crafted"
                 },
                 {
@@ -26077,6 +26807,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|94",
+                    "text": "Asigna Asesinato eficiente",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|9421",
                     "text": "Asigna Rompenieves",
                     "type": "crafted"
@@ -26094,6 +26829,11 @@
                 {
                     "id": "crafted.stat_2954116742|9535",
                     "text": "Asigna Ferocidad de los Salmuera",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|9652",
+                    "text": "Asigna Desvío reparador",
                     "type": "crafted"
                 },
                 {
@@ -31709,6 +32449,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1122225204",
+                    "text": "Chamánico: # a la barrera rúnica máxima",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1134865274",
                     "text": "Chamánico: #% a la calidad de todas las habilidades",
                     "type": "augment"
@@ -31716,6 +32461,11 @@
                 {
                     "id": "rune.stat_1147690586",
                     "text": "# al nivel de todas las habilidades de rayo",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1150343007",
+                    "text": "El #% del daño de los impactos lo recibe la vida de tu compañero que puede recibir daño antes que tú",
                     "type": "augment"
                 },
                 {
@@ -31834,6 +32584,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1377764687",
+                    "text": "Chamánico: Ganas Finalidad durante # segundos por cada combo gastado al usar habilidades",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1381474422",
                     "text": "Magnitud de los estados alterados dañinos que aplicas aumentada un #%",
                     "type": "augment"
@@ -31901,6 +32656,11 @@
                 {
                     "id": "rune.stat_1457312571",
                     "text": "Chamánico: #% de probabilidad de que las habilidades de embate que usas tú mismo creen una réplica adicional",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1479161975",
+                    "text": "Chamánico: El #% daño lo recibe el maná antes que la vida",
                     "type": "augment"
                 },
                 {
@@ -32046,6 +32806,11 @@
                 {
                     "id": "rune.stat_1678831767",
                     "text": "Recuperas # de vida cuando bloqueas",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1683578560",
+                    "text": "Postura inquebrantable",
                     "type": "augment"
                 },
                 {
@@ -32534,6 +33299,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2443032293",
+                    "text": "Ganas # de protección durante 0.5 segundos por cada combo gastado al usar habilidades",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2444976134",
                     "text": "Ganas escudo de energía máximo equivalente al #% de los requisitos totales de fuerza de tus objetos de armadura equipados",
                     "type": "augment"
@@ -32709,6 +33479,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2695354435",
+                    "text": "Evasión global aumentada un #% cuando tienes la vida baja",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2701582946",
                     "text": "Chamánico: Desvío aumentado un #%",
                     "type": "augment"
@@ -32726,6 +33501,11 @@
                 {
                     "id": "rune.stat_2709367754",
                     "text": "Ganas # de furia al impactar cuerpo a cuerpo",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2715190555",
+                    "text": "#% a la probabilidad de impacto crítico de las espinas",
                     "type": "augment"
                 },
                 {
@@ -32834,6 +33614,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2905515354",
+                    "text": "Recibes el #% del daño de los impactos bloqueados",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2910761524",
                     "text": "#% de probabilidad de que las habilidades de hechizos disparen 2 proyectiles adicionales",
                     "type": "augment"
@@ -32871,6 +33656,11 @@
                 {
                     "id": "rune.stat_2942439603",
                     "text": "Las habilidades tienen un #% de probabilidad de no eliminar cargas, pero que sigan contando como cargas consumidas",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2957287092",
+                    "text": "La probabilidad de bloquear el daño es afortunada",
                     "type": "augment"
                 },
                 {
@@ -33244,6 +34034,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3494229254",
+                    "text": "Chamánico: Bonificación de daño crítico de las espinas aumentada un #%",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3515226849",
                     "text": "Recuperas un #% de tu barrera rúnica máxima cuando matan a uno de tus esbirros que revive",
                     "type": "augment"
@@ -33609,6 +34404,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_4108430531",
+                    "text": "Chamánico: El #% del daño de los impactos lo recibe la vida de tu compañero que puede recibir daño antes que tú",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_4111152445",
                     "text": "Chamánico: # al nivel de todas las habilidades de rayo",
                     "type": "augment"
@@ -33781,6 +34581,11 @@
                 {
                     "id": "rune.stat_55876295",
                     "text": "El #% del daño físico se absorbe como vida",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_566086661",
+                    "text": "Los ataques con esta arma tienen daño de hielo agregado equivalente al #% al #% del maná máximo",
                     "type": "augment"
                 },
                 {
@@ -36300,6 +37105,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_3206904707",
+                    "text": "Magnitudes de los modificadores de hielo explícitos aumentadas un #%",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_321970274",
                     "text": "Recibes el #% del daño físico como rayo mientras tengas el escudo levantado",
                     "type": "desecrated"
@@ -36672,6 +37482,11 @@
                 {
                     "id": "desecrated.stat_3566150527",
                     "text": "Las habilidades pasivas notables dentro del radio también otorgan Regeneras un #% de vida por segundo",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3574578302",
+                    "text": "Magnitudes de los modificadores de fuego explícitos aumentadas un #%",
                     "type": "desecrated"
                 },
                 {

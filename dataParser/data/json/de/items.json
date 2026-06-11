@@ -1215,6 +1215,9 @@
                     "type": "Erleuchtete Robe"
                 },
                 {
+                    "type": "Runenveredelte Erleuchtete Robe"
+                },
+                {
                     "type": "Runengeschmiedete Zerrissene Robe"
                 },
                 {
@@ -1639,6 +1642,9 @@
                 },
                 {
                     "type": "Rabenmantel"
+                },
+                {
+                    "type": "Runenveredelter Rabenmantel"
                 },
                 {
                     "type": "Templergewand"
@@ -3654,6 +3660,9 @@
                     "type": "Runengeschmiedeter Eisenfaustschild"
                 },
                 {
+                    "type": "Runenveredelter Eisenfaustschild"
+                },
+                {
                     "type": "Gezahnter Faustschild"
                 },
                 {
@@ -3856,6 +3865,9 @@
                 },
                 {
                     "type": "Runengeschmiedeter Schmelztiegel-Turmschild"
+                },
+                {
+                    "type": "Runenveredelter Schmelztiegel-Turmschild"
                 },
                 {
                     "type": "Hartholz-Tartsche"
@@ -9155,6 +9167,12 @@
                     "type": "Vermächtnis: Hirnschleuder"
                 },
                 {
+                    "type": "Vermächtnis: Dornenhecke"
+                },
+                {
+                    "type": "Vermächtnis: Strammriemen"
+                },
+                {
                     "type": "Vermächtnis: Brynhands Zeichen"
                 },
                 {
@@ -9167,10 +9185,16 @@
                     "type": "Vermächtnis: Fluchschnitzer"
                 },
                 {
+                    "type": "Vermächtnis: Schicksalsschlag"
+                },
+                {
                     "type": "Vermächtnis: Dualität"
                 },
                 {
                     "type": "Vermächtnis: Mahnwache in der Dunkelheit"
+                },
+                {
+                    "type": "Vermächtnis: Erians Kopfsteinpflaster"
                 },
                 {
                     "type": "Vermächtnis: Gesichtsbrecher"
@@ -9197,6 +9221,9 @@
                     "type": "Vermächtnis: Nordpfote"
                 },
                 {
+                    "type": "Vermächtnis: Olrovasara"
+                },
+                {
                     "type": "Vermächtnis: Stachelregen"
                 },
                 {
@@ -9210,6 +9237,9 @@
                 },
                 {
                     "type": "Vermächtnis: Trampelzeh"
+                },
+                {
+                    "type": "Vermächtnis: Grabenruf"
                 },
                 {
                     "type": "Vermächtnis: Verzerrter Lichthimmel"
@@ -9314,6 +9344,9 @@
                     "type": "Kleine Stein-Rune"
                 },
                 {
+                    "type": "Perfekte Stein-Rune"
+                },
+                {
                     "type": "Meisterwerk-Rune"
                 },
                 {
@@ -9333,6 +9366,9 @@
                 },
                 {
                     "type": "Laderune"
+                },
+                {
+                    "type": "Perfekte Laderune"
                 },
                 {
                     "type": "Schützende Rune der Verstärkung"
@@ -14387,14 +14423,6 @@
                     }
                 },
                 {
-                    "type": "Kettenflegel",
-                    "text": "INCOMPLETE Kettenflegel",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Hakenaxt",
                     "text": "INCOMPLETE Hakenaxt",
                     "name": "INCOMPLETE",
@@ -14411,40 +14439,8 @@
                     }
                 },
                 {
-                    "type": "Geriffeltes Großschwert",
-                    "text": "INCOMPLETE Geriffeltes Großschwert",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Kürschnermesser",
-                    "text": "INCOMPLETE Kürschnermesser",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Breitschwert",
                     "text": "INCOMPLETE Breitschwert",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Eisernes Großschwert",
-                    "text": "INCOMPLETE Eisernes Großschwert",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Küchenmesser",
-                    "text": "INCOMPLETE Küchenmesser",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14459,8 +14455,24 @@
                     }
                 },
                 {
-                    "type": "Bartaxt",
-                    "text": "INCOMPLETE Bartaxt",
+                    "type": "Kettenflegel",
+                    "text": "INCOMPLETE Kettenflegel",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Küchenmesser",
+                    "text": "INCOMPLETE Küchenmesser",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Kürschnermesser",
+                    "text": "INCOMPLETE Kürschnermesser",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14469,6 +14481,38 @@
                 {
                     "type": "Henker-Großaxt",
                     "text": "INCOMPLETE Henker-Großaxt",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Eisernes Großschwert",
+                    "text": "INCOMPLETE Eisernes Großschwert",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Geriffeltes Großschwert",
+                    "text": "INCOMPLETE Geriffeltes Großschwert",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Bartaxt",
+                    "text": "INCOMPLETE Bartaxt",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Spaltende Großaxt",
+                    "text": "INCOMPLETE Spaltende Großaxt",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14485,14 +14529,6 @@
                 {
                     "type": "Heiliger Flegel",
                     "text": "INCOMPLETE Heiliger Flegel",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Spaltende Großaxt",
-                    "text": "INCOMPLETE Spaltende Großaxt",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true

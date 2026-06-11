@@ -1218,6 +1218,9 @@
                     "type": "Túnica iluminada"
                 },
                 {
+                    "type": "Túnica iluminada perfeccionada con runas"
+                },
+                {
                     "type": "Túnica raída forjada con runas"
                 },
                 {
@@ -1642,6 +1645,9 @@
                 },
                 {
                     "type": "Manto de corvus"
+                },
+                {
+                    "type": "Manto de corvus perfeccionado con runas"
                 },
                 {
                     "type": "Vestimenta de templario"
@@ -3639,6 +3645,9 @@
                     "type": "Broquel de hierro forjado con runas"
                 },
                 {
+                    "type": "Broquel de hierro perfeccionado con runas"
+                },
+                {
                     "type": "Broquel corrugado"
                 },
                 {
@@ -3841,6 +3850,9 @@
                 },
                 {
                     "type": "Escudo torre de crisol forjado con runas"
+                },
+                {
+                    "type": "Escudo torre de crisol perfeccionado con runas"
                 },
                 {
                     "type": "Targe de madera dura"
@@ -9140,6 +9152,12 @@
                     "type": "Legado de Devanador de cerebros"
                 },
                 {
+                    "type": "Legado de Remiendos de espino"
+                },
+                {
+                    "type": "Legado de Peto brioso"
+                },
+                {
                     "type": "Legado de Marca de Brynhand"
                 },
                 {
@@ -9152,10 +9170,16 @@
                     "type": "Legado de Talladora de maldiciones"
                 },
                 {
+                    "type": "Legado de Golpe mortal"
+                },
+                {
                     "type": "Legado de Dualidad"
                 },
                 {
                     "type": "Legado de Vigilia crepuscular"
+                },
+                {
+                    "type": "Legado de Yelmo de Erian"
                 },
                 {
                     "type": "Legado de Rompecaras"
@@ -9182,6 +9206,9 @@
                     "type": "Legado de Garra del norte"
                 },
                 {
+                    "type": "Legado de Olrovasara"
+                },
+                {
                     "type": "Legado de Lluvia de plumas"
                 },
                 {
@@ -9195,6 +9222,9 @@
                 },
                 {
                     "type": "Legado de Aplastadedos"
+                },
+                {
+                    "type": "Legado de Timbre de trinchera"
                 },
                 {
                     "type": "Legado de Empíreo retorcido"
@@ -9299,6 +9329,9 @@
                     "type": "Runa de piedra menor"
                 },
                 {
+                    "type": "Runa de piedra perfecta"
+                },
+                {
                     "type": "Runa maestra"
                 },
                 {
@@ -9318,6 +9351,9 @@
                 },
                 {
                     "type": "Runa de carga"
+                },
+                {
+                    "type": "Runa de carga perfecta"
                 },
                 {
                     "type": "Runa protectora de refuerzo"
@@ -14369,14 +14405,6 @@
                     }
                 },
                 {
-                    "type": "Mangual con cadena",
-                    "text": "INCOMPLETE Mangual con cadena",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Hacha ganchuda",
                     "text": "INCOMPLETE Hacha ganchuda",
                     "name": "INCOMPLETE",
@@ -14393,22 +14421,6 @@
                     }
                 },
                 {
-                    "type": "Mandoble ondulado",
-                    "text": "INCOMPLETE Mandoble ondulado",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Cuchillo para despellejar",
-                    "text": "INCOMPLETE Cuchillo para despellejar",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Espada ancha",
                     "text": "INCOMPLETE Espada ancha",
                     "name": "INCOMPLETE",
@@ -14417,8 +14429,16 @@
                     }
                 },
                 {
-                    "type": "Espada larga de hierro",
-                    "text": "INCOMPLETE Espada larga de hierro",
+                    "type": "Daga simple",
+                    "text": "INCOMPLETE Daga simple",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Mangual con cadena",
+                    "text": "INCOMPLETE Mangual con cadena",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14433,8 +14453,32 @@
                     }
                 },
                 {
-                    "type": "Daga simple",
-                    "text": "INCOMPLETE Daga simple",
+                    "type": "Cuchillo para despellejar",
+                    "text": "INCOMPLETE Cuchillo para despellejar",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Gran hacha del verdugo",
+                    "text": "INCOMPLETE Gran hacha del verdugo",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Espada larga de hierro",
+                    "text": "INCOMPLETE Espada larga de hierro",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Mandoble ondulado",
+                    "text": "INCOMPLETE Mandoble ondulado",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14451,14 +14495,6 @@
                 {
                     "type": "Gran hacha fragmentadora",
                     "text": "INCOMPLETE Gran hacha fragmentadora",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Gran hacha del verdugo",
-                    "text": "INCOMPLETE Gran hacha del verdugo",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true

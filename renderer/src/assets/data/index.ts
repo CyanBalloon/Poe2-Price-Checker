@@ -138,8 +138,9 @@ function itemNamesFromLines(items: Generator<BaseType>) {
 }
 
 async function loadItems(language: string) {
+  const ts = Date.now();
   const ndjson = await (
-    await fetch(`${import.meta.env.BASE_URL}data/${language}/items.ndjson`)
+    await fetch(`${import.meta.env.BASE_URL}data/${language}/items.ndjson?t=${ts}`)
   ).text();
   const INDEX_WIDTH = 2;
   const indexNames = new Uint32Array(

@@ -1212,6 +1212,9 @@
                     "type": "Traje Iluminado"
                 },
                 {
+                    "type": "Traje Iluminado Runimor"
+                },
+                {
                     "type": "Traje Esfarrapado Runiforjado"
                 },
                 {
@@ -1633,6 +1636,9 @@
                 },
                 {
                     "type": "Manto de Corvus"
+                },
+                {
+                    "type": "Manto de Corvus Runimor"
                 },
                 {
                     "type": "Vestimentas de Templário"
@@ -3636,6 +3642,9 @@
                     "type": "Broquel de Ferro Runiforjado"
                 },
                 {
+                    "type": "Broquel de Ferro Runimor"
+                },
+                {
                     "type": "Broquel Sulcado"
                 },
                 {
@@ -3838,6 +3847,9 @@
                 },
                 {
                     "type": "Escudo Torreão do Calvário Runiforjado"
+                },
+                {
+                    "type": "Escudo Torreão do Calvário Runimor"
                 },
                 {
                     "type": "Tarja de Madeira Nobre"
@@ -9137,6 +9149,12 @@
                     "type": "Legado de Sacode-cérebros"
                 },
                 {
+                    "type": "Legado de Espinheiro"
+                },
+                {
+                    "type": "Legado de Envoltágil"
+                },
+                {
                     "type": "Legado de Marca de Brynhand"
                 },
                 {
@@ -9149,10 +9167,16 @@
                     "type": "Legado de Talha-maldição"
                 },
                 {
+                    "type": "Legado de Golpe Mortal"
+                },
+                {
                     "type": "Legado de Dualidade"
                 },
                 {
                     "type": "Legado de Vigília do Crepúsculo"
+                },
+                {
+                    "type": "Legado de Calçamento de Erian"
                 },
                 {
                     "type": "Legado de Quebra-Cara"
@@ -9179,6 +9203,9 @@
                     "type": "Legado de Pata do Norte"
                 },
                 {
+                    "type": "Legado de Olrovasara"
+                },
+                {
                     "type": "Legado de Chuva de Espinhos"
                 },
                 {
@@ -9192,6 +9219,9 @@
                 },
                 {
                     "type": "Legado de Marcha Pesada"
+                },
+                {
+                    "type": "Legado de Abissotimbral"
                 },
                 {
                     "type": "Legado de Empyreano Distorcido"
@@ -9296,6 +9326,9 @@
                     "type": "Runa de Pedra Menor"
                 },
                 {
+                    "type": "Runa de Pedra Perfeita"
+                },
+                {
                     "type": "Runa Obra-prima"
                 },
                 {
@@ -9315,6 +9348,9 @@
                 },
                 {
                     "type": "Runa de Carregamento"
+                },
+                {
+                    "type": "Runa de Carregamento Perfeita"
                 },
                 {
                     "type": "Runa de Salvaguarda do Reforço"
@@ -14375,14 +14411,6 @@
                     }
                 },
                 {
-                    "type": "Mangual com Corrente",
-                    "text": "INCOMPLETO Mangual com Corrente",
-                    "name": "INCOMPLETO",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Machado com Gancho",
                     "text": "INCOMPLETO Machado com Gancho",
                     "name": "INCOMPLETO",
@@ -14399,40 +14427,8 @@
                     }
                 },
                 {
-                    "type": "Espada Grande Ondulada",
-                    "text": "INCOMPLETO Espada Grande Ondulada",
-                    "name": "INCOMPLETO",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Faca de Esfolar",
-                    "text": "INCOMPLETO Faca de Esfolar",
-                    "name": "INCOMPLETO",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Espada Larga",
                     "text": "INCOMPLETO Espada Larga",
-                    "name": "INCOMPLETO",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Espada Grande de Ferro",
-                    "text": "INCOMPLETO Espada Grande de Ferro",
-                    "name": "INCOMPLETO",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Faca da Bruxa Velha",
-                    "text": "INCOMPLETO Faca da Bruxa Velha",
                     "name": "INCOMPLETO",
                     "flags": {
                         "unique": true
@@ -14447,8 +14443,24 @@
                     }
                 },
                 {
-                    "type": "Machado Barbado",
-                    "text": "INCOMPLETO Machado Barbado",
+                    "type": "Mangual com Corrente",
+                    "text": "INCOMPLETO Mangual com Corrente",
+                    "name": "INCOMPLETO",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Faca da Bruxa Velha",
+                    "text": "INCOMPLETO Faca da Bruxa Velha",
+                    "name": "INCOMPLETO",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Faca de Esfolar",
+                    "text": "INCOMPLETO Faca de Esfolar",
                     "name": "INCOMPLETO",
                     "flags": {
                         "unique": true
@@ -14457,6 +14469,38 @@
                 {
                     "type": "Machado Grande do Carrasco",
                     "text": "INCOMPLETO Machado Grande do Carrasco",
+                    "name": "INCOMPLETO",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Espada Grande de Ferro",
+                    "text": "INCOMPLETO Espada Grande de Ferro",
+                    "name": "INCOMPLETO",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Espada Grande Ondulada",
+                    "text": "INCOMPLETO Espada Grande Ondulada",
+                    "name": "INCOMPLETO",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Machado Barbado",
+                    "text": "INCOMPLETO Machado Barbado",
+                    "name": "INCOMPLETO",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Machado Grande Rompedor",
+                    "text": "INCOMPLETO Machado Grande Rompedor",
                     "name": "INCOMPLETO",
                     "flags": {
                         "unique": true
@@ -14473,14 +14517,6 @@
                 {
                     "type": "Mangual Sagrado",
                     "text": "INCOMPLETO Mangual Sagrado",
-                    "name": "INCOMPLETO",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Machado Grande Rompedor",
-                    "text": "INCOMPLETO Machado Grande Rompedor",
                     "name": "INCOMPLETO",
                     "flags": {
                         "unique": true

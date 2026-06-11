@@ -5144,6 +5144,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|10169",
+                    "text": "束縛なき を割り当てる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|10265",
                     "text": "ジャベリン を割り当てる",
                     "type": "explicit"
@@ -5434,6 +5439,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|14265",
+                    "text": "火ダメージ を割り当てる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|14294",
                     "text": "生贄の血 を割り当てる",
                     "type": "explicit"
@@ -5451,6 +5461,11 @@
                 {
                     "id": "explicit.stat_2954116742|14383",
                     "text": "浸透 を割り当てる",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|1448",
+                    "text": "ネコの絆 を割り当てる",
                     "type": "explicit"
                 },
                 {
@@ -6044,6 +6059,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|23907",
+                    "text": "冷気ダメージ を割り当てる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|23939",
                     "text": "艶のある肉 を割り当てる",
                     "type": "explicit"
@@ -6336,6 +6356,11 @@
                 {
                     "id": "explicit.stat_2954116742|27761",
                     "text": "反撃の構え を割り当てる",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|27779",
+                    "text": "スコールの王 を割り当てる",
                     "type": "explicit"
                 },
                 {
@@ -6719,6 +6744,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|33400",
+                    "text": "反響の受け流し を割り当てる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|3348",
                     "text": "オオカミの魂 を割り当てる",
                     "type": "explicit"
@@ -6906,6 +6936,11 @@
                 {
                     "id": "explicit.stat_2954116742|35739",
                     "text": "打撃の審判 を割り当てる",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|35743",
+                    "text": "サカワルの革 を割り当てる",
                     "type": "explicit"
                 },
                 {
@@ -8034,6 +8069,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|50239",
+                    "text": "ミュートウィンドの敏捷さ を割り当てる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|50253",
                     "text": "余震 を割り当てる",
                     "type": "explicit"
@@ -8164,6 +8204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|5191",
+                    "text": "オオカミの絆 を割り当てる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|51934",
                     "text": "発動の効率 を割り当てる",
                     "type": "explicit"
@@ -8226,6 +8271,11 @@
                 {
                     "id": "explicit.stat_2954116742|52618",
                     "text": "獣の恩寵 を割り当てる",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|52669",
+                    "text": "火ダメージ を割り当てる",
                     "type": "explicit"
                 },
                 {
@@ -8831,6 +8881,11 @@
                 {
                     "id": "explicit.stat_2954116742|60764",
                     "text": "羽付き矢羽 を割り当てる",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|60878",
+                    "text": "雷ダメージ を割り当てる",
                     "type": "explicit"
                 },
                 {
@@ -15174,6 +15229,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_853326030",
+                    "text": "このアイテムにルビージュエルを#個だけソケットできる",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_85367160",
                     "text": "範囲内のノータブルパッシブスキルは受けたダメージの#%をマナとして回収するも付与する",
                     "type": "explicit"
@@ -16476,6 +16536,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1058934731",
+                    "text": "一時的ミニオンスキルは召喚できるミニオンの上限 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1060572482",
                     "text": "範囲内のスモールパッシブスキルの効果が#%増加する",
                     "type": "fractured"
@@ -16558,6 +16623,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "グローバルアーマー、回避力およびエナジーシールドが#%増加する",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1180552088",
+                    "text": "プレイヤーに対するアルコンバフの効果が#%増加する",
                     "type": "fractured"
                 },
                 {
@@ -16941,6 +17011,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1691403182",
+                    "text": "ミニオンのクールダウン解消レートが#%増加する",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1692879867",
                     "text": "プレイヤーに対する出血の持続時間が#%増加する",
                     "type": "fractured"
@@ -17051,6 +17126,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1823942939",
+                    "text": "バリスタトーテムの最大召喚数 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1829102168",
                     "text": "敵に付与したダメージ性状態異常の持続時間が#%増加する",
                     "type": "fractured"
@@ -17068,6 +17148,11 @@
                 {
                     "id": "fractured.stat_1839076647",
                     "text": "投射物ダメージが#%増加する",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1840985759",
+                    "text": "アタックの効果範囲が#%増加する",
                     "type": "fractured"
                 },
                 {
@@ -17466,6 +17551,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2393315299",
+                    "text": "明示クリティカルモッドの強さが#%増加する",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_239367161",
                     "text": "スタン蓄積が#%増加する",
                     "type": "fractured"
@@ -17601,6 +17691,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2567751411",
+                    "text": "ウォークライスキルの効果範囲が#%増加する",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2570249991",
                     "text": "モンスターは回避力が高い",
                     "type": "fractured"
@@ -17648,6 +17743,11 @@
                 {
                     "id": "fractured.stat_2653955271",
                     "text": "ダメージは#%の火耐性を貫通する",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2663359259",
+                    "text": "ウォークライが計算する合計パワーが#%増加する",
                     "type": "fractured"
                 },
                 {
@@ -18661,6 +18761,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|26214",
+                    "text": "支配 を割り当てる",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|26291",
                     "text": "感電する自然 を割り当てる",
                     "type": "fractured"
@@ -19496,6 +19601,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|42660",
+                    "text": "司令官の憤怒 を割り当てる",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|42813",
                     "text": "変化の波 を割り当てる",
                     "type": "fractured"
@@ -19643,6 +19753,11 @@
                 {
                     "id": "fractured.stat_2954116742|46060",
                     "text": "欲深い を割り当てる",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2954116742|46124",
+                    "text": "アーケインレムナント を割り当てる",
                     "type": "fractured"
                 },
                 {
@@ -20921,6 +21036,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3143918757",
+                    "text": "グローリーの生成量が#%増加する",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3146310524",
                     "text": "ヒット時に眩暈を付与する",
                     "type": "fractured"
@@ -21011,6 +21131,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_323800555",
+                    "text": "スペルによるダメージの#%を追加雷ダメージとして獲得する",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3243034867",
                     "text": "範囲内のノータブルパッシブスキルはオーラスキルは強度が#%増加するも付与する",
                     "type": "fractured"
@@ -21081,6 +21206,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3336230913",
+                    "text": "最大ルーンワード #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3336890334",
                     "text": "#から#の雷ダメージを追加する",
                     "type": "fractured"
@@ -21093,6 +21223,11 @@
                 {
                     "id": "fractured.stat_3362812763",
                     "text": "アーマーの#%が元素ダメージにも適用される",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3368921525",
+                    "text": "範囲内の火および雷ダメージの増減のモッドは冷気ダメージに適用するよう変化する",
                     "type": "fractured"
                 },
                 {
@@ -21268,6 +21403,11 @@
                 {
                     "id": "fractured.stat_3596695232",
                     "text": "過去8秒間にプレイヤーが近接ヒットを与えていれば投射物ダメージが#%増加する",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3624940721",
+                    "text": "明示雷モッドの強さが#%増加する",
                     "type": "fractured"
                 },
                 {
@@ -21541,6 +21681,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3987691524",
+                    "text": "憤怒の固有効果による喪失が1秒遅く始まる",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3998863698",
                     "text": "モンスターの凍結蓄積が#%増加する",
                     "type": "fractured"
@@ -21641,6 +21786,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4147510958",
+                    "text": "シールスキルのシールの最大値 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4147897060",
                     "text": "ブロック率が#%増加する",
                     "type": "fractured"
@@ -21716,8 +21866,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258524206",
+                    "text": "ヒット時に#%の確率でコンボを追加で1構築する",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4258720395",
                     "text": "範囲内のノータブルパッシブスキルは投射物は分岐する時に#%の確率で追加の投射物を放つも付与する",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_4273473110",
+                    "text": "最大ルーンワードが#%増加する",
                     "type": "fractured"
                 },
                 {
@@ -22113,6 +22273,11 @@
                 {
                     "id": "fractured.stat_924253255",
                     "text": "プレイヤーに対する減速のデバフのポテンシャルが#%増加する",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_933355817",
+                    "text": "オファリングを生成した時に#%の確率で不死のアルコンを獲得する",
                     "type": "fractured"
                 },
                 {
@@ -22682,6 +22847,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|10169",
+                    "text": "束縛なき を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|10265",
                     "text": "ジャベリン を割り当てる",
                     "type": "crafted"
@@ -22709,6 +22879,11 @@
                 {
                     "id": "crafted.stat_2954116742|10500",
                     "text": "眩暈のブロック を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|10602",
+                    "text": "襲撃 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -22742,6 +22917,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1104",
+                    "text": "力への渇望 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|11184",
                     "text": "ザロクの贈り物 を割り当てる",
                     "type": "crafted"
@@ -22772,6 +22952,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|116",
+                    "text": "洞察力 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|1169",
                     "text": "緊急の呼びかけ を割り当てる",
                     "type": "crafted"
@@ -22799,6 +22984,11 @@
                 {
                     "id": "crafted.stat_2954116742|12245",
                     "text": "放火魔 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|12337",
+                    "text": "突発的な嵐 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -22902,6 +23092,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|13895",
+                    "text": "精確な突き を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|13980",
                     "text": "大地を裂け を割り当てる",
                     "type": "crafted"
@@ -22919,6 +23114,11 @@
                 {
                     "id": "crafted.stat_2954116742|14258",
                     "text": "パペットマスター確率 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|14265",
+                    "text": "火ダメージ を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -22942,6 +23142,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1448",
+                    "text": "ネコの絆 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14602",
                     "text": "特化ショット を割り当てる",
                     "type": "crafted"
@@ -22952,6 +23157,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|14934",
+                    "text": "躁病に陥る を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14945",
                     "text": "成長する群れ を割り当てる",
                     "type": "crafted"
@@ -22959,6 +23169,11 @@
                 {
                     "id": "crafted.stat_2954116742|1502",
                     "text": "ドリオクトの浄化 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|15030",
+                    "text": "定量摂取 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23042,6 +23257,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|16466",
+                    "text": "頭の回転の速さ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|16499",
                     "text": "長引く囁き を割り当てる",
                     "type": "crafted"
@@ -23054,6 +23274,11 @@
                 {
                     "id": "crafted.stat_2954116742|16626",
                     "text": "衝突エリア を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|16790",
+                    "text": "効率的な詠唱 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23097,6 +23322,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17330",
+                    "text": "穿孔 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17340",
                     "text": "アドレナリンラッシュ を割り当てる",
                     "type": "crafted"
@@ -23137,6 +23367,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17825",
+                    "text": "戦略的撤退 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17854",
                     "text": "脱出速度 を割り当てる",
                     "type": "crafted"
@@ -23159,6 +23394,11 @@
                 {
                     "id": "crafted.stat_2954116742|18419",
                     "text": "先祖の癒し を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|18485",
+                    "text": "不安定な絆 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23239,6 +23479,21 @@
                 {
                     "id": "crafted.stat_2954116742|2021",
                     "text": "源泉 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20251",
+                    "text": "割れる地面 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20289",
+                    "text": "凍結の爪 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20388",
+                    "text": "再生する肉 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23362,8 +23617,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|22864",
+                    "text": "汚れた一撃 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|22967",
+                    "text": "警戒 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23078",
                     "text": "聖なる守護者 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|23221",
+                    "text": "トリックショット を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23402,6 +23672,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23736",
+                    "text": "乱射して祈れ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23738",
                     "text": "骨に宿る狂気 を割り当てる",
                     "type": "crafted"
@@ -23412,8 +23687,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23907",
+                    "text": "冷気ダメージ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23939",
                     "text": "艶のある肉 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|2394",
+                    "text": "剣の乱舞 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23447,8 +23732,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|24438",
+                    "text": "堅木 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|24483",
                     "text": "クリティカル率ノータブル を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|24491",
+                    "text": "インボケーションの反響 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23527,6 +23822,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|2575",
+                    "text": "先祖の敏捷さ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|25753",
                     "text": "灼熱の腕 を割り当てる",
                     "type": "crafted"
@@ -23569,6 +23869,11 @@
                 {
                     "id": "crafted.stat_2954116742|26339",
                     "text": "先祖の技巧 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|26356",
+                    "text": "爆発寸前 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23654,6 +23959,11 @@
                 {
                     "id": "crafted.stat_2954116742|27761",
                     "text": "反撃の構え を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|27779",
+                    "text": "スコールの王 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23787,6 +24097,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30392",
+                    "text": "救援 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30395",
                     "text": "遠吠えの獣 を割り当てる",
                     "type": "crafted"
@@ -23797,8 +24112,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30456",
+                    "text": "高い警戒状態 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30523",
                     "text": "死者も踊る を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|30546",
+                    "text": "電撃の爪 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23807,8 +24132,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30720",
+                    "text": "エントロピーの具現化 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|31129",
                     "text": "人生を通じた友 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31172",
+                    "text": "鷹の技術 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23834,6 +24169,11 @@
                 {
                     "id": "crafted.stat_2954116742|31373",
                     "text": "声による強化 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31433",
+                    "text": "触媒作用 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23907,6 +24247,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32448",
+                    "text": "耐感電処理 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32507",
                     "text": "骨まで断つ を割り当てる",
                     "type": "crafted"
@@ -23917,8 +24262,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32664",
+                    "text": "呼吸のチャクラ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32721",
                     "text": "注意散漫な標的 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|32799",
+                    "text": "魅惑の相棒 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23972,8 +24327,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|33400",
+                    "text": "反響の受け流し を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3348",
                     "text": "オオカミの魂 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33542",
+                    "text": "速射 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -23984,6 +24349,11 @@
                 {
                     "id": "crafted.stat_2954116742|336",
                     "text": "嵐のうねり を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33730",
+                    "text": "チャネリング集中 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24072,6 +24442,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35028",
+                    "text": "混乱の真っただ中 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35031",
                     "text": "生命力のチャクラ を割り当てる",
                     "type": "crafted"
@@ -24087,6 +24462,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35369",
+                    "text": "エネルギー活用 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35417",
                     "text": "ワイバーンの吐息 を割り当てる",
                     "type": "crafted"
@@ -24097,6 +24477,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35581",
+                    "text": "手近に を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35618",
+                    "text": "冷気の覆い を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3567",
                     "text": "生のマナ を割り当てる",
                     "type": "crafted"
@@ -24104,6 +24494,11 @@
                 {
                     "id": "crafted.stat_2954116742|35739",
                     "text": "打撃の審判 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35743",
+                    "text": "サカワルの革 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24139,6 +24534,11 @@
                 {
                     "id": "crafted.stat_2954116742|36100",
                     "text": "マグマの爪 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|36333",
+                    "text": "爆発性の強化 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24182,8 +24582,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|36976",
+                    "text": "死の呪印 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|3698",
+                    "text": "針の落とし穴 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|372",
                     "text": "耐熱処理 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37244",
+                    "text": "盾の専門知識 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24199,6 +24614,11 @@
                 {
                     "id": "crafted.stat_2954116742|37302",
                     "text": "距離を取れ を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37408",
+                    "text": "止血 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24247,6 +24667,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38329",
+                    "text": "バイティングフロスト を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|38342",
                     "text": "茫然 を割り当てる",
                     "type": "crafted"
@@ -24292,8 +24717,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38895",
+                    "text": "クリスタルエリクサー を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3894",
                     "text": "この世のものではない意志 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|38965",
+                    "text": "インフューズの限界 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24357,6 +24792,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40073",
+                    "text": "ずぶ濡れ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40117",
                     "text": "棘付きの鎧 を割り当てる",
                     "type": "crafted"
@@ -24364,6 +24804,16 @@
                 {
                     "id": "crafted.stat_2954116742|40166",
                     "text": "深い催眠状態 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40213",
+                    "text": "血の味 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40270",
+                    "text": "狂乱 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24407,6 +24857,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40985",
+                    "text": "強化のレムナント を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40990",
                     "text": "嵐に晒される を割り当てる",
                     "type": "crafted"
@@ -24442,6 +24897,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|41811",
+                    "text": "粉砕の掌 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|41905",
                     "text": "墓堀人 を割り当てる",
                     "type": "crafted"
@@ -24449,6 +24909,16 @@
                 {
                     "id": "crafted.stat_2954116742|41935",
                     "text": "クマの皮 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|41972",
+                    "text": "氷結 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42032",
+                    "text": "エスカレートするメイヘム を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24489,6 +24959,11 @@
                 {
                     "id": "crafted.stat_2954116742|42245",
                     "text": "効率的な刻印 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42302",
+                    "text": "スプリットショット を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24592,6 +25067,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|43939",
+                    "text": "溶かす炎 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|43944",
                     "text": "不安定性 を割り当てる",
                     "type": "crafted"
@@ -24624,6 +25104,11 @@
                 {
                     "id": "crafted.stat_2954116742|4447",
                     "text": "戦意足止め を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|44566",
+                    "text": "避雷針 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24664,6 +25149,11 @@
                 {
                     "id": "crafted.stat_2954116742|45177",
                     "text": "精確な一撃 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|45244",
+                    "text": "補充 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24717,6 +25207,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|45751",
+                    "text": "威圧の盾 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|45777",
                     "text": "見えない切っ先 を割り当てる",
                     "type": "crafted"
@@ -24739,6 +25234,11 @@
                 {
                     "id": "crafted.stat_2954116742|46060",
                     "text": "欲深い を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46124",
+                    "text": "アーケインレムナント を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24787,6 +25287,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|46692",
+                    "text": "効率的な錬金術 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|46696",
                     "text": "損害 を割り当てる",
                     "type": "crafted"
@@ -24794,6 +25299,11 @@
                 {
                     "id": "crafted.stat_2954116742|4673",
                     "text": "巨大な一撃 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46972",
+                    "text": "秘宝の混合物 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24834,6 +25344,11 @@
                 {
                     "id": "crafted.stat_2954116742|47418",
                     "text": "防御のポーション を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|47420",
+                    "text": "使い捨ての軍隊 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24882,6 +25397,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48215",
+                    "text": "ヘッドショット を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48240",
                     "text": "急速回復 を割り当てる",
                     "type": "crafted"
@@ -24912,13 +25432,28 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48658",
+                    "text": "粉砕 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48699",
                     "text": "フロストウォーカー を割り当てる",
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48734",
+                    "text": "吠えるサル を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48774",
                     "text": "引き締まった肉 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|48925",
+                    "text": "月の祝福 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24929,6 +25464,11 @@
                 {
                     "id": "crafted.stat_2954116742|49088",
                     "text": "破砕の力 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|4931",
+                    "text": "信頼できる守り を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24944,6 +25484,11 @@
                 {
                     "id": "crafted.stat_2954116742|4959",
                     "text": "激しい霜 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|49618",
+                    "text": "致命的な一振り を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -24967,6 +25512,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|50023",
+                    "text": "力みなぎる威容 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|50062",
                     "text": "ヴェナリウスの障壁 を割り当てる",
                     "type": "crafted"
@@ -24974,6 +25524,11 @@
                 {
                     "id": "crafted.stat_2954116742|5009",
                     "text": "目が回る を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|50239",
+                    "text": "ミュートウィンドの敏捷さ を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25027,6 +25582,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51129",
+                    "text": "一斉攻撃 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|51169",
+                    "text": "魂の開花 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51213",
                     "text": "虚弱 を割り当てる",
                     "type": "crafted"
@@ -25077,8 +25642,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51871",
+                    "text": "不死の渇き を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51891",
                     "text": "明晰さ を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5191",
+                    "text": "オオカミの絆 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25147,6 +25722,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|52669",
+                    "text": "火ダメージ を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|52684",
+                    "text": "腐食の鎖 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|52764",
                     "text": "神秘の憤怒 を割り当てる",
                     "type": "crafted"
@@ -25154,6 +25739,11 @@
                 {
                     "id": "crafted.stat_2954116742|52803",
                     "text": "健康な旅行者 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5284",
+                    "text": "引き裂く力 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25177,8 +25767,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|53187",
+                    "text": "ウォーロードのバーサーカー を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|53265",
                     "text": "自然の噛みつき を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53294",
+                    "text": "焼却 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25199,6 +25799,11 @@
                 {
                     "id": "crafted.stat_2954116742|53566",
                     "text": "ランアンドガン を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53607",
+                    "text": "要塞化された拠点 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25252,6 +25857,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|54911",
+                    "text": "火つけ を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|54990",
                     "text": "流血 を割り当てる",
                     "type": "crafted"
@@ -25282,6 +25892,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|55180",
+                    "text": "容赦ない堕落者 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|55193",
                     "text": "偽装の仮面 を割り当てる",
                     "type": "crafted"
@@ -25289,6 +25904,11 @@
                 {
                     "id": "crafted.stat_2954116742|55308",
                     "text": "シリングショット を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55450",
+                    "text": "鼓舞の姿 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25304,6 +25924,11 @@
                 {
                     "id": "crafted.stat_2954116742|5580",
                     "text": "監視塔 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55817",
+                    "text": "錬金術のオイル を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25367,8 +25992,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|56714",
+                    "text": "高速飛行 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|56767",
                     "text": "感電する眩暈 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56776",
+                    "text": "まずいことになる を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25394,6 +26029,11 @@
                 {
                     "id": "crafted.stat_2954116742|56988",
                     "text": "帯電した血 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56997",
+                    "text": "激しい接触 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25429,6 +26069,11 @@
                 {
                     "id": "crafted.stat_2954116742|5728",
                     "text": "古代のイージス を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|57379",
+                    "text": "真正面から を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25469,6 +26114,11 @@
                 {
                     "id": "crafted.stat_2954116742|5802",
                     "text": "金を出すか命を寄越すか を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|58183",
+                    "text": "血を引き裂く一撃 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25519,6 +26169,11 @@
                 {
                     "id": "crafted.stat_2954116742|59208",
                     "text": "狂乱の戦士 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|59214",
+                    "text": "運命の終焉 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25587,6 +26242,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|60273",
+                    "text": "阻害の障害物 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|60404",
                     "text": "絶好の機会 を割り当てる",
                     "type": "crafted"
@@ -25604,6 +26264,11 @@
                 {
                     "id": "crafted.stat_2954116742|60764",
                     "text": "羽付き矢羽 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|60878",
+                    "text": "雷ダメージ を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25667,6 +26332,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|61741",
+                    "text": "持続する毒 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|6178",
                     "text": "パワーショット を割り当てる",
                     "type": "crafted"
@@ -25674,6 +26344,11 @@
                 {
                     "id": "crafted.stat_2954116742|61921",
                     "text": "ストームサージ を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62034",
+                    "text": "プリズムガード を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25709,6 +26384,11 @@
                 {
                     "id": "crafted.stat_2954116742|62431",
                     "text": "予見 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62455",
+                    "text": "旗手 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25817,6 +26497,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|64415",
+                    "text": "粉砕する眩暈 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|64443",
                     "text": "衝撃力 を割り当てる",
                     "type": "crafted"
@@ -25829,6 +26514,11 @@
                 {
                     "id": "crafted.stat_2954116742|64543",
                     "text": "束縛されていない力 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|64650",
+                    "text": "用心深いドッジ を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25849,6 +26539,16 @@
                 {
                     "id": "crafted.stat_2954116742|65016",
                     "text": "強烈な炎 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|65023",
+                    "text": "不可侵の殻 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6514",
+                    "text": "不協和音 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25882,8 +26582,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|6544",
+                    "text": "燃える一撃 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|65468",
                     "text": "繰り返す爆発 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6655",
+                    "text": "出血悪化 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25904,6 +26614,11 @@
                 {
                     "id": "crafted.stat_2954116742|7163",
                     "text": "刺激剤 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|7275",
+                    "text": "麻痺させる曝露 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -25992,6 +26707,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|8554",
+                    "text": "燃焼する自然 を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|8607",
                     "text": "ラビアンガの醸造 を割り当てる",
                     "type": "crafted"
@@ -26004,6 +26724,11 @@
                 {
                     "id": "crafted.stat_2954116742|8782",
                     "text": "強化されたインフュージョン を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8791",
+                    "text": "屈強な仲間 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -26029,6 +26754,11 @@
                 {
                     "id": "crafted.stat_2954116742|8904",
                     "text": "遠距離からの死 を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8916",
+                    "text": "叩き潰す獣 を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -26077,6 +26807,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|94",
+                    "text": "効率的な殺し を割り当てる",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|9421",
                     "text": "スノーピアサー を割り当てる",
                     "type": "crafted"
@@ -26094,6 +26829,11 @@
                 {
                     "id": "crafted.stat_2954116742|9535",
                     "text": "ブラインロットの獰猛さ を割り当てる",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|9652",
+                    "text": "癒しの受け流し を割り当てる",
                     "type": "crafted"
                 },
                 {
@@ -31709,6 +32449,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1122225204",
+                    "text": "絆 最大ルーンワード #",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1134865274",
                     "text": "絆 全てのスキルの品質 #%",
                     "type": "augment"
@@ -31716,6 +32461,11 @@
                 {
                     "id": "rune.stat_1147690586",
                     "text": "全ての雷スキルのレベル #",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1150343007",
+                    "text": "ヒットによるダメージの#%をプレイヤーの前にダメージを受けられるコンパニオンのライフから受ける",
                     "type": "augment"
                 },
                 {
@@ -31834,6 +32584,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1377764687",
+                    "text": "絆 スキル使用時に使用したコンボごとに#秒間決着を獲得する",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1381474422",
                     "text": "プレイヤーが付与したダメージ性状態異常の強度が#%増加する",
                     "type": "augment"
@@ -31901,6 +32656,11 @@
                 {
                     "id": "rune.stat_1457312571",
                     "text": "絆 プレイヤー自らが使用するスラムスキルは#%の確率で余震を追加で1回引き起こす",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1479161975",
+                    "text": "絆 ダメージの#%をライフより先にマナで受ける",
                     "type": "augment"
                 },
                 {
@@ -32046,6 +32806,11 @@
                 {
                     "id": "rune.stat_1678831767",
                     "text": "ブロック時に#のライフを回復する",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1683578560",
+                    "text": "アンウェイバリングスタンス",
                     "type": "augment"
                 },
                 {
@@ -32534,6 +33299,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2443032293",
+                    "text": "スキル使用時に使用したコンボごとに0.5秒間#のガードを獲得する",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2444976134",
                     "text": "装備中の防具アイテムの合計筋力装備要求の#%と同量の最大エナジーシールドを獲得する",
                     "type": "augment"
@@ -32709,6 +33479,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2695354435",
+                    "text": "低ライフ時にグローバル回避力が#%増加する",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2701582946",
                     "text": "絆 受け流し力が#%増加する",
                     "type": "augment"
@@ -32726,6 +33501,11 @@
                 {
                     "id": "rune.stat_2709367754",
                     "text": "近接ヒット時に憤怒を#獲得する",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2715190555",
+                    "text": "棘クリティカルヒット率 #%",
                     "type": "augment"
                 },
                 {
@@ -32834,6 +33614,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2905515354",
+                    "text": "ブロックしたヒットからダメージの#%を受ける",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2910761524",
                     "text": "#%の確率でスペルスキルは投射物を2個放つ",
                     "type": "augment"
@@ -32871,6 +33656,11 @@
                 {
                     "id": "rune.stat_2942439603",
                     "text": "スキルは#%の確率でチャージを取り除かないがそれを消費したと見なされる",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2957287092",
+                    "text": "ダメージブロック率が幸運になる",
                     "type": "augment"
                 },
                 {
@@ -33244,6 +34034,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3494229254",
+                    "text": "絆 棘クリティカルダメージボーナスが#%増加する",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3515226849",
                     "text": "復活するミニオンのうち1体が倒された時に最大ルーンワードの#%を回復する",
                     "type": "augment"
@@ -33609,6 +34404,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_4108430531",
+                    "text": "絆 ヒットによるダメージの#%をプレイヤーの前にダメージを受けられるコンパニオンのライフから受ける",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_4111152445",
                     "text": "絆 全ての雷スキルのレベル #",
                     "type": "augment"
@@ -33781,6 +34581,11 @@
                 {
                     "id": "rune.stat_55876295",
                     "text": "物理ダメージの#%をライフとしてリーチする",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_566086661",
+                    "text": "この武器によるアタックは最大マナの#%から#%と同量の追加冷気ダメージを持つ",
                     "type": "augment"
                 },
                 {
@@ -36300,6 +37105,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_3206904707",
+                    "text": "明示冷気モッドの強さが#%増加する",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_321970274",
                     "text": "盾を掲げている間物理ダメージの#%を雷ダメージとして受ける",
                     "type": "desecrated"
@@ -36672,6 +37482,11 @@
                 {
                     "id": "desecrated.stat_3566150527",
                     "text": "範囲内のノータブルパッシブスキルは毎秒ライフの#%を自動回復するも付与する",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3574578302",
+                    "text": "明示火モッドの強さが#%増加する",
                     "type": "desecrated"
                 },
                 {

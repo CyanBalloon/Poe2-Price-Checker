@@ -1,0 +1,74 @@
+/* Dark Fantasy Theme Overrides */
+.theme-dark-fantasy {
+  /* Main Backgrounds */
+  --df-bg-main: #14100e;
+  --df-bg-panel: #1a1512;
+  --df-bg-dark: #0f0b09;
+  
+  /* Borders */
+  --df-border-color: #5a482b;
+  --df-border-light: #7d6a45;
+  --df-border-dark: #3a2e1c;
+  
+  /* Buttons & Accents */
+  --df-accent-from: #8b0000;
+  --df-accent-to: #4a0000;
+  --df-accent-hover-from: #a50000;
+  --df-accent-hover-to: #660000;
+  
+  --df-text-muted: #a89f91;
+  --df-text-normal: #d4c8b8;
+  --df-text-highlight: #f0e6d2;
+}
+
+/* Background overrides */
+.theme-dark-fantasy .bg-\[\#0e1017\] { background-color: var(--df-bg-panel) !important; }
+.theme-dark-fantasy .bg-\[\#11121a\] { background-color: var(--df-bg-dark) !important; }
+.theme-dark-fantasy .bg-\[\#151722\] { background-color: var(--df-bg-main) !important; }
+.theme-dark-fantasy .bg-\[\#07080b\] { background-color: var(--df-bg-dark) !important; }
+.theme-dark-fantasy .bg-gray-800 { background-color: var(--df-bg-panel) !important; }
+.theme-dark-fantasy .bg-gray-900 { background-color: var(--df-bg-dark) !important; }
+.theme-dark-fantasy .bg-\[\#161822\] { background-color: var(--df-bg-dark) !important; }
+.theme-dark-fantasy .bg-gray-700 { background-color: var(--df-bg-panel) !important; }
+.theme-dark-fantasy .bg-\[\#1f2233\] { background-color: #2b221d !important; }
+
+/* Border overrides */
+.theme-dark-fantasy .border-\[\#191b22\] { border-color: var(--df-border-color) !important; }
+.theme-dark-fantasy .border-\[\#1d202e\]\/60 { border-color: rgba(90, 72, 43, 0.6) !important; }
+.theme-dark-fantasy .border-\[\#222538\] { border-color: var(--df-border-light) !important; }
+.theme-dark-fantasy .border-\[\#222538\]\/60 { border-color: rgba(125, 106, 69, 0.6) !important; }
+.theme-dark-fantasy .border-gray-700 { border-color: var(--df-border-color) !important; }
+
+/* Gradients and buttons */
+.theme-dark-fantasy .from-violet-600, .theme-dark-fantasy .from-purple-600 { --tw-gradient-from: var(--df-accent-from) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(139, 0, 0, 0)) !important; }
+.theme-dark-fantasy .to-indigo-600 { --tw-gradient-to: var(--df-accent-to) !important; }
+.theme-dark-fantasy .hover\:from-violet-500:hover, .theme-dark-fantasy .hover\:from-purple-500:hover { --tw-gradient-from: var(--df-accent-hover-from) !important; }
+.theme-dark-fantasy .hover\:to-indigo-500:hover { --tw-gradient-to: var(--df-accent-hover-to) !important; }
+
+.theme-dark-fantasy .bg-violet-600, .theme-dark-fantasy .bg-purple-600 { background-color: var(--df-accent-from) !important; }
+.theme-dark-fantasy .border-violet-500, .theme-dark-fantasy .border-purple-500 { border-color: var(--df-accent-hover-from) !important; }
+.theme-dark-fantasy .text-violet-400, .theme-dark-fantasy .text-purple-400 { color: #d84545 !important; }
+.theme-dark-fantasy .text-violet-300, .theme-dark-fantasy .text-purple-300 { color: #f06565 !important; }
+.theme-dark-fantasy .text-\[\#8b5cf6\] { color: #d84545 !important; }
+.theme-dark-fantasy .bg-violet-500\/5, .theme-dark-fantasy .bg-purple-500\/5 { background-color: rgba(139, 0, 0, 0.05) !important; }
+.theme-dark-fantasy .bg-violet-500\/10, .theme-dark-fantasy .bg-purple-500\/10 { background-color: rgba(139, 0, 0, 0.1) !important; }
+.theme-dark-fantasy .bg-violet-500\/20, .theme-dark-fantasy .bg-purple-500\/20 { background-color: rgba(139, 0, 0, 0.2) !important; }
+.theme-dark-fantasy .border-violet-500\/10, .theme-dark-fantasy .border-purple-500\/10 { border-color: rgba(139, 0, 0, 0.1) !important; }
+.theme-dark-fantasy .focus\:border-violet-500:focus, .theme-dark-fantasy .focus\:border-purple-500:focus { border-color: var(--df-accent-hover-from) !important; }
+
+/* Text overrides */
+.theme-dark-fantasy .text-gray-400 { color: var(--df-text-muted) !important; }
+.theme-dark-fantasy .text-gray-300 { color: var(--df-text-normal) !important; }
+.theme-dark-fantasy .text-gray-200 { color: var(--df-text-highlight) !important; }
+
+/* Font override */
+.theme-dark-fantasy {
+  font-family: "Georgia", serif !important;
+}
+.theme-dark-fantasy .font-poe-sc {
+  font-family: "Georgia", serif !important;
+  font-variant: small-caps;
+}
+.theme-dark-fantasy .font-mono {
+  font-family: "Consolas", monospace !important;
+}

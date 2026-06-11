@@ -143,6 +143,7 @@ export interface Config {
   accountName: string;
   stashScroll: boolean;
   language: "en" | "ru" | "cmn-Hant" | "ko" | "ja" | "de" | "es" | "pt" | "fr";
+  theme: "default" | "dark-fantasy";
   preferredTradeSite: "default" | "www";
   realm: "pc-ggg" | "pc-garena";
   widgets: widget.Widget[];
@@ -202,6 +203,7 @@ export const defaultConfig = (): Config => ({
   accountName: "",
   stashScroll: true,
   language: "en",
+  theme: "default",
   preferredTradeSite: "default",
   realm: "pc-ggg",
   fontSize: 16,

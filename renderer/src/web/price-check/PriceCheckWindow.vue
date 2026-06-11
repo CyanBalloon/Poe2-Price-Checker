@@ -355,6 +355,28 @@ export default defineComponent({
       if (isStandalone.value && !(e as { isManual?: boolean }).isManual) return;
       performance.mark("price-check-event");
 
+      const parsedTemp = e.item ? ok(e.item as ParsedItem) : parseClipboard(e.clipboard);
+      if (parsedTemp.isOk()) {
+        const itemTemp = parsedTemp.value;
+        const isLineageSupport = itemTemp.category === ItemCategory.Gem && (itemTemp.info.icon?.includes('/Lineage') ?? false);
+        const isListingsDisabled = 
+          itemTemp.category === ItemCategory.Currency ||
+          isLineageSupport ||
+          itemTemp.info.tradeTag != null;
+
+        if (isListingsDisabled && !isStandalone.value) {
+          const searchWidget = wm.widgets.value.find(w => w.wmType === 'item-search');
+          if (searchWidget) {
+            wm.show(searchWidget.wmId);
+            nextTick(() => {
+              window.dispatchEvent(new CustomEvent("add-search-item", { detail: itemTemp }));
+            });
+            wm.hide(props.config.wmId);
+            return;
+          }
+        }
+      }
+
       if (Host.isElectron && !e.focusOverlay && !isStandalone.value) {
         // everything in CSS pixels
         const width = 28.75 * AppConfig().fontSize;

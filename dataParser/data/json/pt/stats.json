@@ -5144,6 +5144,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|10169",
+                    "text": "Atribui Livre",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|10265",
                     "text": "Atribui Azagaia",
                     "type": "explicit"
@@ -5434,6 +5439,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|14265",
+                    "text": "Atribui Dano de Fogo",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|14294",
                     "text": "Atribui Sangue Sacrificial",
                     "type": "explicit"
@@ -5451,6 +5461,11 @@
                 {
                     "id": "explicit.stat_2954116742|14383",
                     "text": "Atribui Sufusão",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|1448",
+                    "text": "Atribui Vínculo do Gato",
                     "type": "explicit"
                 },
                 {
@@ -6044,6 +6059,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|23907",
+                    "text": "Atribui Dano de Frio",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|23939",
                     "text": "Atribui Carne Glaceada",
                     "type": "explicit"
@@ -6336,6 +6356,11 @@
                 {
                     "id": "explicit.stat_2954116742|27761",
                     "text": "Atribui Postura Reativa",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|27779",
+                    "text": "Atribui Senhor da Turbulência",
                     "type": "explicit"
                 },
                 {
@@ -6719,6 +6744,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|33400",
+                    "text": "Atribui Aparo Reverberante",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|3348",
                     "text": "Atribui Espírito do Lobo",
                     "type": "explicit"
@@ -6906,6 +6936,11 @@
                 {
                     "id": "explicit.stat_2954116742|35739",
                     "text": "Atribui Julgamento Esmagador",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|35743",
+                    "text": "Atribui Pele de Saqawal",
                     "type": "explicit"
                 },
                 {
@@ -8034,6 +8069,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|50239",
+                    "text": "Atribui Agilidade do Vento Mudo",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|50253",
                     "text": "Atribui Tremores Secundários",
                     "type": "explicit"
@@ -8164,6 +8204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|5191",
+                    "text": "Atribui Vínculo do Lobo",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|51934",
                     "text": "Atribui Eficácia Invocada",
                     "type": "explicit"
@@ -8226,6 +8271,11 @@
                 {
                     "id": "explicit.stat_2954116742|52618",
                     "text": "Atribui Dádiva da Fera",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|52669",
+                    "text": "Atribui Dano de Fogo",
                     "type": "explicit"
                 },
                 {
@@ -8831,6 +8881,11 @@
                 {
                     "id": "explicit.stat_2954116742|60764",
                     "text": "Atribui Flechas Emplumadas",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|60878",
+                    "text": "Atribui Dano Elétrico",
                     "type": "explicit"
                 },
                 {
@@ -15169,6 +15224,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_853326030",
+                    "text": "É possível encaixar apenas # joia rubi neste item",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_85367160",
                     "text": "Habilidades passivas notáveis ao alcance também concedem #% do dano sofrido é recuperado como mana",
                     "type": "explicit"
@@ -16471,6 +16531,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1058934731",
+                    "text": "Habilidades de lacaio temporário têm # ao limite de lacaios invocados",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1060572482",
                     "text": "Efeito de habilidades passivas pequenas no raio de alcance aumentado em #%",
                     "type": "fractured"
@@ -16553,6 +16618,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "Armadura, evasão e escudo de energia globais aumentados em #%",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1180552088",
+                    "text": "Efeito do bônus de arconte em você aumentado em #%",
                     "type": "fractured"
                 },
                 {
@@ -16936,6 +17006,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1691403182",
+                    "text": "Velocidade de recarga dos lacaios aumentada em #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1692879867",
                     "text": "Duração de sangramento em você aumentada em #%",
                     "type": "fractured"
@@ -17046,6 +17121,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1823942939",
+                    "text": "# ao número máximo de Totens Balista criados",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1829102168",
                     "text": "Duração de afecções danosas em inimigos aumentada em #%",
                     "type": "fractured"
@@ -17063,6 +17143,11 @@
                 {
                     "id": "fractured.stat_1839076647",
                     "text": "Dano de projétil aumentado em #%",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1840985759",
+                    "text": "Área de efeito de ataques aumentada em #%",
                     "type": "fractured"
                 },
                 {
@@ -17461,6 +17546,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2393315299",
+                    "text": "Intensidades dos modificadores explícitos de crítico aumentadas em #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_239367161",
                     "text": "Acúmulo de atordoamento aumentado em #%",
                     "type": "fractured"
@@ -17596,6 +17686,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2567751411",
+                    "text": "Habilidades de clamor têm a área de efeito aumentada em #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2570249991",
                     "text": "Monstros são evasivos",
                     "type": "fractured"
@@ -17643,6 +17738,11 @@
                 {
                     "id": "fractured.stat_2653955271",
                     "text": "Dano ignora #% da resistência a dano de fogo",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2663359259",
+                    "text": "Poder total contado por clamores aumentado em #%",
                     "type": "fractured"
                 },
                 {
@@ -18656,6 +18756,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|26214",
+                    "text": "Atribui Domínio",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|26291",
                     "text": "Atribui Natureza Eletrificante",
                     "type": "fractured"
@@ -19491,6 +19596,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|42660",
+                    "text": "Atribui Fúria de Comando",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|42813",
                     "text": "Atribui Marés de Mudança",
                     "type": "fractured"
@@ -19638,6 +19748,11 @@
                 {
                     "id": "fractured.stat_2954116742|46060",
                     "text": "Atribui Voraz",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2954116742|46124",
+                    "text": "Atribui Vestígios Arcanos",
                     "type": "fractured"
                 },
                 {
@@ -20916,6 +21031,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3143918757",
+                    "text": "Geração de glória aumentada em #%",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3146310524",
                     "text": "Desorienta ao atingir",
                     "type": "fractured"
@@ -21006,6 +21126,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_323800555",
+                    "text": "Ganha #% do dano como dano elétrico adicional com magias",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3243034867",
                     "text": "Habilidades passivas notáveis ao alcance também concedem Habilidades de aura têm a intensidade aumentada em #%",
                     "type": "fractured"
@@ -21076,6 +21201,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3336230913",
+                    "text": "# à Salvaguarda Rúnica máxima",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3336890334",
                     "text": "Adiciona de # a # de dano elétrico",
                     "type": "fractured"
@@ -21088,6 +21218,11 @@
                 {
                     "id": "fractured.stat_3362812763",
                     "text": "#% da armadura também se aplica ao dano elemental",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3368921525",
+                    "text": "Aumentos e reduções de\ndano elétrico e de fogo no raio de alcance são transformados para aplicar dano de frio",
                     "type": "fractured"
                 },
                 {
@@ -21263,6 +21398,11 @@
                 {
                     "id": "fractured.stat_3596695232",
                     "text": "Dano de projétil aumentado em #%, se você causou um acerto corpo a corpo nos últimos 8 segundos",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3624940721",
+                    "text": "Intensidades dos modificadores explícitos elétricos aumentadas em #%",
                     "type": "fractured"
                 },
                 {
@@ -21536,6 +21676,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3987691524",
+                    "text": "A perda natural de fúria atrasa 1 segundo",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3998863698",
                     "text": "Monstros têm o acúmulo de congelamento aumentado em #%",
                     "type": "fractured"
@@ -21636,6 +21781,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4147510958",
+                    "text": "Habilidades de selo têm # ao máximo de selos",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4147897060",
                     "text": "Chance de bloqueio aumentada em #%",
                     "type": "fractured"
@@ -21711,8 +21861,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258524206",
+                    "text": "#% de chance de acumular um combo adicional ao atingir",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4258720395",
                     "text": "Habilidades passivas notáveis ao alcance também concedem Projéteis têm #% de chance de ganhar 1 projétil adicional ao ramificar",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_4273473110",
+                    "text": "Salvaguarda Rúnica máxima aumentada em #%",
                     "type": "fractured"
                 },
                 {
@@ -22108,6 +22268,11 @@
                 {
                     "id": "fractured.stat_924253255",
                     "text": "Potência das penalidades de desaceleração em você aumentada em #%",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_933355817",
+                    "text": "#% de ganhar Arconte da Morte-viva ao criar uma oferenda",
                     "type": "fractured"
                 },
                 {
@@ -22677,6 +22842,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|10169",
+                    "text": "Atribui Livre",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|10265",
                     "text": "Atribui Azagaia",
                     "type": "crafted"
@@ -22704,6 +22874,11 @@
                 {
                     "id": "crafted.stat_2954116742|10500",
                     "text": "Atribui Bloqueios Desorientadores",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|10602",
+                    "text": "Atribui Aniquilação",
                     "type": "crafted"
                 },
                 {
@@ -22737,6 +22912,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1104",
+                    "text": "Atribui Sede de Poder",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|11184",
                     "text": "Atribui Dádiva de Zarokh",
                     "type": "crafted"
@@ -22767,6 +22947,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|116",
+                    "text": "Atribui Perspicácia",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|1169",
                     "text": "Atribui Chamado Urgente",
                     "type": "crafted"
@@ -22794,6 +22979,11 @@
                 {
                     "id": "crafted.stat_2954116742|12245",
                     "text": "Atribui Incendiário",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|12337",
+                    "text": "Atribui Tempestade Repentina",
                     "type": "crafted"
                 },
                 {
@@ -22897,6 +23087,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|13895",
+                    "text": "Atribui Ponto Preciso",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|13980",
                     "text": "Atribui Partir a Terra",
                     "type": "crafted"
@@ -22914,6 +23109,11 @@
                 {
                     "id": "crafted.stat_2954116742|14258",
                     "text": "Atribui Chance de Mestre das Marionetes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|14265",
+                    "text": "Atribui Dano de Fogo",
                     "type": "crafted"
                 },
                 {
@@ -22937,6 +23137,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1448",
+                    "text": "Atribui Vínculo do Gato",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14602",
                     "text": "Atribui Disparos Técnicos",
                     "type": "crafted"
@@ -22947,6 +23152,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|14934",
+                    "text": "Atribui Cair em Obsessão",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14945",
                     "text": "Atribui Enxame Crescente",
                     "type": "crafted"
@@ -22954,6 +23164,11 @@
                 {
                     "id": "crafted.stat_2954116742|1502",
                     "text": "Atribui Purificação Draíocht",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|15030",
+                    "text": "Atribui Fluxo Contínuo",
                     "type": "crafted"
                 },
                 {
@@ -23037,6 +23252,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|16466",
+                    "text": "Atribui Diligência Mental",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|16499",
                     "text": "Atribui Sussurros Persistentes",
                     "type": "crafted"
@@ -23049,6 +23269,11 @@
                 {
                     "id": "crafted.stat_2954116742|16626",
                     "text": "Atribui Área de Impacto",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|16790",
+                    "text": "Atribui Conjuração Eficiente",
                     "type": "crafted"
                 },
                 {
@@ -23092,6 +23317,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17330",
+                    "text": "Atribui Perfuração",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17340",
                     "text": "Atribui Surto de Adrenalina",
                     "type": "crafted"
@@ -23132,6 +23362,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17825",
+                    "text": "Atribui Recuo Estratégico",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17854",
                     "text": "Atribui Velocidade de Fuga",
                     "type": "crafted"
@@ -23154,6 +23389,11 @@
                 {
                     "id": "crafted.stat_2954116742|18419",
                     "text": "Atribui Reparação Ancestral",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|18485",
+                    "text": "Atribui Vínculo Instável",
                     "type": "crafted"
                 },
                 {
@@ -23234,6 +23474,21 @@
                 {
                     "id": "crafted.stat_2954116742|2021",
                     "text": "Atribui Nascente",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20251",
+                    "text": "Atribui Chão Fendido",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20289",
+                    "text": "Atribui Garra Congelada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20388",
+                    "text": "Atribui Carne Regenerativa",
                     "type": "crafted"
                 },
                 {
@@ -23357,8 +23612,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|22864",
+                    "text": "Atribui Golpe Maculado",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|22967",
+                    "text": "Atribui Vigilância",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23078",
                     "text": "Atribui Protetor Sagrado",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|23221",
+                    "text": "Atribui Disparo Ardiloso",
                     "type": "crafted"
                 },
                 {
@@ -23397,6 +23667,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23736",
+                    "text": "Atribui Disparar e Rezar",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23738",
                     "text": "Atribui Loucura nos Ossos",
                     "type": "crafted"
@@ -23407,8 +23682,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23907",
+                    "text": "Atribui Dano de Frio",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23939",
                     "text": "Atribui Carne Glaceada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|2394",
+                    "text": "Atribui Rajada de Lâminas",
                     "type": "crafted"
                 },
                 {
@@ -23442,8 +23727,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|24438",
+                    "text": "Atribui Madeira Endurecida",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|24483",
                     "text": "Atribui Abordagem Direta",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|24491",
+                    "text": "Atribui Ecos Invocados",
                     "type": "crafted"
                 },
                 {
@@ -23522,6 +23817,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|2575",
+                    "text": "Atribui Diligência Ancestral",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|25753",
                     "text": "Atribui Armas Fulgurantes",
                     "type": "crafted"
@@ -23564,6 +23864,11 @@
                 {
                     "id": "crafted.stat_2954116742|26339",
                     "text": "Atribui Artifício Ancestral",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|26356",
+                    "text": "Atribui Vulnerável a Explosão",
                     "type": "crafted"
                 },
                 {
@@ -23649,6 +23954,11 @@
                 {
                     "id": "crafted.stat_2954116742|27761",
                     "text": "Atribui Postura Reativa",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|27779",
+                    "text": "Atribui Senhor da Turbulência",
                     "type": "crafted"
                 },
                 {
@@ -23782,6 +24092,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30392",
+                    "text": "Atribui Resgate",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30395",
                     "text": "Atribui Fera Uivante",
                     "type": "crafted"
@@ -23792,8 +24107,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30456",
+                    "text": "Atribui Alerta Vermelho",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30523",
                     "text": "Atribui Mortos Dançantes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|30546",
+                    "text": "Atribui Garra Eletrificada",
                     "type": "crafted"
                 },
                 {
@@ -23802,8 +24127,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30720",
+                    "text": "Atribui Encarnação Entrópica",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|31129",
                     "text": "Atribui Amigo de uma Vida",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31172",
+                    "text": "Atribui Técnica do Falcão",
                     "type": "crafted"
                 },
                 {
@@ -23829,6 +24164,11 @@
                 {
                     "id": "crafted.stat_2954116742|31373",
                     "text": "Atribui Potencialização Vocal",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31433",
+                    "text": "Atribui Catálise",
                     "type": "crafted"
                 },
                 {
@@ -23902,6 +24242,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32448",
+                    "text": "Atribui Imune à Eletrificação",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32507",
                     "text": "Atribui Cortar até o Osso",
                     "type": "crafted"
@@ -23912,8 +24257,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32664",
+                    "text": "Atribui Chacra do Fôlego",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32721",
                     "text": "Atribui Alvo Distraído",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|32799",
+                    "text": "Atribui Companhia Cativante",
                     "type": "crafted"
                 },
                 {
@@ -23967,8 +24322,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|33400",
+                    "text": "Atribui Aparo Reverberante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3348",
                     "text": "Atribui Espírito do Lobo",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33542",
+                    "text": "Atribui Dedos Rápidos",
                     "type": "crafted"
                 },
                 {
@@ -23979,6 +24344,11 @@
                 {
                     "id": "crafted.stat_2954116742|336",
                     "text": "Atribui Tormenta Intensificada",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33730",
+                    "text": "Atribui Canalização Concentrada",
                     "type": "crafted"
                 },
                 {
@@ -24067,6 +24437,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35028",
+                    "text": "Atribui No Meio de Tudo",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35031",
                     "text": "Atribui Chacra da Vida",
                     "type": "crafted"
@@ -24082,6 +24457,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35369",
+                    "text": "Atribui Energias Investidas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35417",
                     "text": "Atribui Sopro da Serpe",
                     "type": "crafted"
@@ -24092,6 +24472,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35581",
+                    "text": "Atribui À Mão",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35618",
+                    "text": "Atribui Camada de Gelo",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3567",
                     "text": "Atribui Mana Puro",
                     "type": "crafted"
@@ -24099,6 +24489,11 @@
                 {
                     "id": "crafted.stat_2954116742|35739",
                     "text": "Atribui Julgamento Esmagador",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35743",
+                    "text": "Atribui Pele de Saqawal",
                     "type": "crafted"
                 },
                 {
@@ -24134,6 +24529,11 @@
                 {
                     "id": "crafted.stat_2954116742|36100",
                     "text": "Atribui Garra Derretida",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|36333",
+                    "text": "Atribui Potencialização Explosiva",
                     "type": "crafted"
                 },
                 {
@@ -24177,8 +24577,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|36976",
+                    "text": "Atribui Marca da Morte",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|3698",
+                    "text": "Atribui Fosso de Estacas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|372",
                     "text": "Atribui Imune a Calor",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37244",
+                    "text": "Atribui Especialista em Escudos",
                     "type": "crafted"
                 },
                 {
@@ -24194,6 +24609,11 @@
                 {
                     "id": "crafted.stat_2954116742|37302",
                     "text": "Atribui Sob Controle",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37408",
+                    "text": "Atribui Estancamento",
                     "type": "crafted"
                 },
                 {
@@ -24242,6 +24662,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38329",
+                    "text": "Atribui Gelo Cortante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|38342",
                     "text": "Atribui Estupefação",
                     "type": "crafted"
@@ -24287,8 +24712,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38895",
+                    "text": "Atribui Elixir de Cristal",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3894",
                     "text": "Atribui Vontade Sobrenatural",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|38965",
+                    "text": "Atribui Limites de Infusões",
                     "type": "crafted"
                 },
                 {
@@ -24352,6 +24787,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40073",
+                    "text": "Atribui Encharcamento",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40117",
                     "text": "Atribui Armadura de Espinhos",
                     "type": "crafted"
@@ -24359,6 +24799,16 @@
                 {
                     "id": "crafted.stat_2954116742|40166",
                     "text": "Atribui Transe Profundo",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40213",
+                    "text": "Atribui Desejo por Sangue",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40270",
+                    "text": "Atribui Frenético",
                     "type": "crafted"
                 },
                 {
@@ -24402,6 +24852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40985",
+                    "text": "Atribui Vestígios Fortalecedores",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40990",
                     "text": "Atribui Exposição à Tempestade",
                     "type": "crafted"
@@ -24437,6 +24892,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|41811",
+                    "text": "Atribui Palma Estilhaçante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|41905",
                     "text": "Atribui Coveiro",
                     "type": "crafted"
@@ -24444,6 +24904,16 @@
                 {
                     "id": "crafted.stat_2954116742|41935",
                     "text": "Atribui Pele do Urso",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|41972",
+                    "text": "Atribui Glaciação",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42032",
+                    "text": "Atribui Caos Ascendente",
                     "type": "crafted"
                 },
                 {
@@ -24484,6 +24954,11 @@
                 {
                     "id": "crafted.stat_2954116742|42245",
                     "text": "Atribui Inscrições Eficientes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42302",
+                    "text": "Atribui Disparo Dividido",
                     "type": "crafted"
                 },
                 {
@@ -24587,6 +25062,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|43939",
+                    "text": "Atribui Chamas Derretedoras",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|43944",
                     "text": "Atribui Instabilidade",
                     "type": "crafted"
@@ -24619,6 +25099,11 @@
                 {
                     "id": "crafted.stat_2954116742|4447",
                     "text": "Atribui Contenha sua Motivação",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|44566",
+                    "text": "Atribui Para-raios",
                     "type": "crafted"
                 },
                 {
@@ -24659,6 +25144,11 @@
                 {
                     "id": "crafted.stat_2954116742|45177",
                     "text": "Atribui Golpe Certeiro",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|45244",
+                    "text": "Atribui Reabastecimentos",
                     "type": "crafted"
                 },
                 {
@@ -24712,6 +25202,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|45751",
+                    "text": "Atribui Escudo Aterrorizante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|45777",
                     "text": "Atribui Farpa Oculta",
                     "type": "crafted"
@@ -24734,6 +25229,11 @@
                 {
                     "id": "crafted.stat_2954116742|46060",
                     "text": "Atribui Voraz",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46124",
+                    "text": "Atribui Vestígios Arcanos",
                     "type": "crafted"
                 },
                 {
@@ -24782,6 +25282,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|46692",
+                    "text": "Atribui Alquimia Eficiente",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|46696",
                     "text": "Atribui Prejudicar",
                     "type": "crafted"
@@ -24789,6 +25294,11 @@
                 {
                     "id": "crafted.stat_2954116742|4673",
                     "text": "Atribui Impacto Colossal",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46972",
+                    "text": "Atribui Compostos Arcanos",
                     "type": "crafted"
                 },
                 {
@@ -24829,6 +25339,11 @@
                 {
                     "id": "crafted.stat_2954116742|47418",
                     "text": "Atribui Poções Protetoras",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|47420",
+                    "text": "Atribui Exército Descartável",
                     "type": "crafted"
                 },
                 {
@@ -24877,6 +25392,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48215",
+                    "text": "Atribui Disparo na Cabeça",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48240",
                     "text": "Atribui Recuperação Rápida",
                     "type": "crafted"
@@ -24907,13 +25427,28 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48658",
+                    "text": "Atribui Despedaçamento",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48699",
                     "text": "Atribui Passo Gelado",
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48734",
+                    "text": "Atribui O Primata Uivante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48774",
                     "text": "Atribui Carne Tensa",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|48925",
+                    "text": "Atribui Bênção da Lua",
                     "type": "crafted"
                 },
                 {
@@ -24924,6 +25459,11 @@
                 {
                     "id": "crafted.stat_2954116742|49088",
                     "text": "Atribui Força Fragmentadora",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|4931",
+                    "text": "Atribui Salvaguarda Condicional",
                     "type": "crafted"
                 },
                 {
@@ -24939,6 +25479,11 @@
                 {
                     "id": "crafted.stat_2954116742|4959",
                     "text": "Atribui Gelo Maciço",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|49618",
+                    "text": "Atribui Floreio Mortal",
                     "type": "crafted"
                 },
                 {
@@ -24962,6 +25507,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|50023",
+                    "text": "Atribui Grandeza Revigorante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|50062",
                     "text": "Atribui Barreira de Venarius",
                     "type": "crafted"
@@ -24969,6 +25519,11 @@
                 {
                     "id": "crafted.stat_2954116742|5009",
                     "text": "Atribui Ver Estrelas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|50239",
+                    "text": "Atribui Agilidade do Vento Mudo",
                     "type": "crafted"
                 },
                 {
@@ -25022,6 +25577,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51129",
+                    "text": "Atribui Acumulação",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|51169",
+                    "text": "Atribui Esplendor Anímico",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51213",
                     "text": "Atribui Assolamento",
                     "type": "crafted"
@@ -25072,8 +25637,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51871",
+                    "text": "Atribui Sede Imortal",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51891",
                     "text": "Atribui Lucidez",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5191",
+                    "text": "Atribui Vínculo do Lobo",
                     "type": "crafted"
                 },
                 {
@@ -25142,6 +25717,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|52669",
+                    "text": "Atribui Dano de Fogo",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|52684",
+                    "text": "Atribui Correntes Desgastadas",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|52764",
                     "text": "Atribui Fúria Mística",
                     "type": "crafted"
@@ -25149,6 +25734,11 @@
                 {
                     "id": "crafted.stat_2954116742|52803",
                     "text": "Atribui Viajante Saudável",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5284",
+                    "text": "Atribui Força Retalhadora",
                     "type": "crafted"
                 },
                 {
@@ -25172,8 +25762,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|53187",
+                    "text": "Atribui Senhor da Guerra Furioso",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|53265",
                     "text": "Atribui Mordida da Natureza",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53294",
+                    "text": "Atribui Consumir em Chamas",
                     "type": "crafted"
                 },
                 {
@@ -25194,6 +25794,11 @@
                 {
                     "id": "crafted.stat_2954116742|53566",
                     "text": "Atribui Atirar e Correr",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53607",
+                    "text": "Atribui Local Fortificado",
                     "type": "crafted"
                 },
                 {
@@ -25247,6 +25852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|54911",
+                    "text": "Atribui Espoleta",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|54990",
                     "text": "Atribui Dessangramento",
                     "type": "crafted"
@@ -25277,6 +25887,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|55180",
+                    "text": "Atribui Caídos Implacáveis",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|55193",
                     "text": "Atribui Máscara do Subterfúgio",
                     "type": "crafted"
@@ -25284,6 +25899,11 @@
                 {
                     "id": "crafted.stat_2954116742|55308",
                     "text": "Atribui Estilingadas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55450",
+                    "text": "Atribui Forma Inspiradora",
                     "type": "crafted"
                 },
                 {
@@ -25299,6 +25919,11 @@
                 {
                     "id": "crafted.stat_2954116742|5580",
                     "text": "Atribui Torres de Vigia",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55817",
+                    "text": "Atribui Óleo Alquímico",
                     "type": "crafted"
                 },
                 {
@@ -25362,8 +25987,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|56714",
+                    "text": "Atribui Voo Veloz",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|56767",
                     "text": "Atribui Desorientação Eletrificante",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56776",
+                    "text": "Atribui Acabado",
                     "type": "crafted"
                 },
                 {
@@ -25389,6 +26024,11 @@
                 {
                     "id": "crafted.stat_2954116742|56988",
                     "text": "Atribui Sangue Elétrico",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56997",
+                    "text": "Atribui Contato Pesado",
                     "type": "crafted"
                 },
                 {
@@ -25424,6 +26064,11 @@
                 {
                     "id": "crafted.stat_2954116742|5728",
                     "text": "Atribui Égide Antiga",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|57379",
+                    "text": "Atribui Na Sua Cara",
                     "type": "crafted"
                 },
                 {
@@ -25464,6 +26109,11 @@
                 {
                     "id": "crafted.stat_2954116742|5802",
                     "text": "Atribui Fique e Atire",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|58183",
+                    "text": "Atribui Dilaceramento Sangrento",
                     "type": "crafted"
                 },
                 {
@@ -25514,6 +26164,11 @@
                 {
                     "id": "crafted.stat_2954116742|59208",
                     "text": "Atribui Lutador Desesperado",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|59214",
+                    "text": "Atribui Fim Predestinado",
                     "type": "crafted"
                 },
                 {
@@ -25582,6 +26237,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|60273",
+                    "text": "Atribui Obstáculos Tolhedores",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|60404",
                     "text": "Atribui Oportunidade Perfeita",
                     "type": "crafted"
@@ -25599,6 +26259,11 @@
                 {
                     "id": "crafted.stat_2954116742|60764",
                     "text": "Atribui Flechas Emplumadas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|60878",
+                    "text": "Atribui Dano Elétrico",
                     "type": "crafted"
                 },
                 {
@@ -25662,6 +26327,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|61741",
+                    "text": "Atribui Toxinas Duradouras",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|6178",
                     "text": "Atribui Disparos Poderosos",
                     "type": "crafted"
@@ -25669,6 +26339,11 @@
                 {
                     "id": "crafted.stat_2954116742|61921",
                     "text": "Atribui Surto Tempestuoso",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62034",
+                    "text": "Atribui Guarda Prismática",
                     "type": "crafted"
                 },
                 {
@@ -25704,6 +26379,11 @@
                 {
                     "id": "crafted.stat_2954116742|62431",
                     "text": "Atribui Antecipação",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62455",
+                    "text": "Atribui Porta-estandarte",
                     "type": "crafted"
                 },
                 {
@@ -25812,6 +26492,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|64415",
+                    "text": "Atribui Desorientação Estilhaçante",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|64443",
                     "text": "Atribui Força de Impacto",
                     "type": "crafted"
@@ -25824,6 +26509,11 @@
                 {
                     "id": "crafted.stat_2954116742|64543",
                     "text": "Atribui Forças Libertas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|64650",
+                    "text": "Atribui Esquiva Cautelosa",
                     "type": "crafted"
                 },
                 {
@@ -25844,6 +26534,16 @@
                 {
                     "id": "crafted.stat_2954116742|65016",
                     "text": "Atribui Chamas Intensas",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|65023",
+                    "text": "Atribui Carapaça Impenetrável",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6514",
+                    "text": "Atribui Cacofonia",
                     "type": "crafted"
                 },
                 {
@@ -25877,8 +26577,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|6544",
+                    "text": "Atribui Golpes Abrasadores",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|65468",
                     "text": "Atribui Explosivos Repetidores",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6655",
+                    "text": "Atribui Agravamento",
                     "type": "crafted"
                 },
                 {
@@ -25899,6 +26609,11 @@
                 {
                     "id": "crafted.stat_2954116742|7163",
                     "text": "Atribui Estimulantes",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|7275",
+                    "text": "Atribui Exposição Eletrocutante",
                     "type": "crafted"
                 },
                 {
@@ -25987,6 +26702,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|8554",
+                    "text": "Atribui Natureza Abrasadora",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|8607",
                     "text": "Atribui Infusão de Lavianga",
                     "type": "crafted"
@@ -25999,6 +26719,11 @@
                 {
                     "id": "crafted.stat_2954116742|8782",
                     "text": "Atribui Infusões Fortalecedoras",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8791",
+                    "text": "Atribui Aliado Robusto",
                     "type": "crafted"
                 },
                 {
@@ -26024,6 +26749,11 @@
                 {
                     "id": "crafted.stat_2954116742|8904",
                     "text": "Atribui Morte de Longe",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8916",
+                    "text": "Atribui Fera Destruidora",
                     "type": "crafted"
                 },
                 {
@@ -26072,6 +26802,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|94",
+                    "text": "Atribui Matança Eficiente",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|9421",
                     "text": "Atribui Fura-neve",
                     "type": "crafted"
@@ -26089,6 +26824,11 @@
                 {
                     "id": "crafted.stat_2954116742|9535",
                     "text": "Atribui Ferocidade da Salmoura Podre",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|9652",
+                    "text": "Atribui Deflexão Reparadora",
                     "type": "crafted"
                 },
                 {
@@ -31704,6 +32444,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1122225204",
+                    "text": "Vinculado: # à Salvaguarda Rúnica máxima",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1134865274",
                     "text": "Vinculado: #% à qualidade de todas as habilidades",
                     "type": "augment"
@@ -31711,6 +32456,11 @@
                 {
                     "id": "rune.stat_1147690586",
                     "text": "# ao nível de todas as habilidades elétricas",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1150343007",
+                    "text": "#% do dano dos ataques é subtraído da vida do seu companheiro que pode sofrer dano antes de atingir você",
                     "type": "augment"
                 },
                 {
@@ -31829,6 +32579,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1377764687",
+                    "text": "Vinculado: Ganha Finalização por # segundos por combo gasto ao usar habilidades",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1381474422",
                     "text": "Intensidade de afecções danosas infligidas por você aumentada em #%",
                     "type": "augment"
@@ -31896,6 +32651,11 @@
                 {
                     "id": "rune.stat_1457312571",
                     "text": "Vinculado: #% de chance de as habilidades de pancada usadas por você causarem um tremor secundário adicional",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1479161975",
+                    "text": "Vinculado: #% do dano é subtraído do mana antes da vida",
                     "type": "augment"
                 },
                 {
@@ -32041,6 +32801,11 @@
                 {
                     "id": "rune.stat_1678831767",
                     "text": "Recupera # de vida ao bloquear",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1683578560",
+                    "text": "Postura Inabalável",
                     "type": "augment"
                 },
                 {
@@ -32529,6 +33294,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2443032293",
+                    "text": "Ganha # de Guarda por 0,5 segundo por combo gasto ao usar habilidades",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2444976134",
                     "text": "Ganha escudo de energia máximo equivalente a #% do total de Força exigido pelos itens de armadura equipados",
                     "type": "augment"
@@ -32704,6 +33474,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2695354435",
+                    "text": "Evasão global aumentada em #% em vida baixa",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2701582946",
                     "text": "Vinculado: Taxa de deflexão aumentada em #%",
                     "type": "augment"
@@ -32721,6 +33496,11 @@
                 {
                     "id": "rune.stat_2709367754",
                     "text": "Ganha # de fúria ao atingir corpo a corpo",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2715190555",
+                    "text": "#% à chance de golpe crítico de espinhos",
                     "type": "augment"
                 },
                 {
@@ -32829,6 +33609,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2905515354",
+                    "text": "Você sofre #% do dano de ataques bloqueados",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2910761524",
                     "text": "#% de chance de as habilidades de magia dispararem 2 projéteis adicionais",
                     "type": "augment"
@@ -32866,6 +33651,11 @@
                 {
                     "id": "rune.stat_2942439603",
                     "text": "Habilidades têm #% de chance de não remover cargas, mas ainda contam como se as consumissem",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2957287092",
+                    "text": "A chance de bloquear dano é Sortuda",
                     "type": "augment"
                 },
                 {
@@ -33239,6 +34029,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3494229254",
+                    "text": "Vinculado: Bônus de dano crítico de espinhos aumentado em #%",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3515226849",
                     "text": "Recupera #% de Salvaguarda Rúnica máxima quando um dos seus lacaios reviventes é morto",
                     "type": "augment"
@@ -33604,6 +34399,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_4108430531",
+                    "text": "Vinculado: #% do dano dos ataques é subtraído da vida do seu companheiro que pode sofrer dano antes de atingir você",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_4111152445",
                     "text": "Vinculado: # ao nível de todas as habilidades elétricas",
                     "type": "augment"
@@ -33776,6 +34576,11 @@
                 {
                     "id": "rune.stat_55876295",
                     "text": "#% do dano de ataques físicos é roubado como vida",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_566086661",
+                    "text": "Ataques com esta arma têm dano de frio adicionado equivalente a #% a #% do mana máximo",
                     "type": "augment"
                 },
                 {
@@ -36295,6 +37100,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_3206904707",
+                    "text": "Intensidades dos modificadores explícitos de frio aumentadas em #%",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_321970274",
                     "text": "#% do dano físico sofrido como dano elétrico enquanto seu escudo estiver levantado",
                     "type": "desecrated"
@@ -36667,6 +37477,11 @@
                 {
                     "id": "desecrated.stat_3566150527",
                     "text": "Habilidades passivas notáveis ao alcance também concedem Regenera #% de vida máxima por segundo",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3574578302",
+                    "text": "Intensidades dos modificadores explícitos de fogo aumentadas em #%",
                     "type": "desecrated"
                 },
                 {

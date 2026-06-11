@@ -1218,6 +1218,9 @@
                     "type": "Robe éclairée"
                 },
                 {
+                    "type": "Runemastered Enlightened Robe"
+                },
+                {
                     "type": "Robe déchirée runeforgée"
                 },
                 {
@@ -1645,6 +1648,9 @@
                 },
                 {
                     "type": "Manteau de corbeau"
+                },
+                {
+                    "type": "Runemastered Corvus Mantle"
                 },
                 {
                     "type": "Habits de templier"
@@ -3663,6 +3669,9 @@
                     "type": "Bocle en fer runeforgé"
                 },
                 {
+                    "type": "Runemastered Iron Buckler"
+                },
+                {
                     "type": "Bocle strié"
                 },
                 {
@@ -3865,6 +3874,9 @@
                 },
                 {
                     "type": "Pavois du creuset runeforgé"
+                },
+                {
+                    "type": "Runemastered Crucible Tower Shield"
                 },
                 {
                     "type": "Targe en bois dur"
@@ -9161,6 +9173,12 @@
                     "type": "Legacy of Brain Rattler"
                 },
                 {
+                    "type": "Legacy of Briarpatch"
+                },
+                {
+                    "type": "Legacy of Briskwrap"
+                },
+                {
                     "type": "Legacy of Brynhand's Mark"
                 },
                 {
@@ -9173,10 +9191,16 @@
                     "type": "Legacy of Cursecarver"
                 },
                 {
+                    "type": "Legacy of Deathblow"
+                },
+                {
                     "type": "Legacy of Duality"
                 },
                 {
                     "type": "Legacy of Dusk Vigil"
+                },
+                {
+                    "type": "Legacy of Erian's Cobble"
                 },
                 {
                     "type": "Legacy of Facebreaker"
@@ -9203,6 +9227,9 @@
                     "type": "Legacy of Northpaw"
                 },
                 {
+                    "type": "Legacy of Olrovasara"
+                },
+                {
                     "type": "Legacy of Quill Rain"
                 },
                 {
@@ -9216,6 +9243,9 @@
                 },
                 {
                     "type": "Legacy of Trampletoe"
+                },
+                {
+                    "type": "Legacy of Trenchtimbre"
                 },
                 {
                     "type": "Legacy of Twisted Empyrean"
@@ -9320,6 +9350,9 @@
                     "type": "Rune de la Pierre mineure"
                 },
                 {
+                    "type": "Rune de la Pierre parfaite"
+                },
+                {
                     "type": "Masterwork Rune"
                 },
                 {
@@ -9339,6 +9372,9 @@
                 },
                 {
                     "type": "Charging Rune"
+                },
+                {
+                    "type": "Perfect Charging Rune"
                 },
                 {
                     "type": "Warding Rune of Reinforcement"
@@ -14408,14 +14444,6 @@
                     }
                 },
                 {
-                    "type": "Fléau d'armes en chaînes",
-                    "text": "INCOMPLET Fléau d'armes en chaînes",
-                    "name": "INCOMPLET",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Hache à crochet",
                     "text": "INCOMPLET Hache à crochet",
                     "name": "INCOMPLET",
@@ -14432,22 +14460,6 @@
                     }
                 },
                 {
-                    "type": "Espadon ondulé",
-                    "text": "INCOMPLET Espadon ondulé",
-                    "name": "INCOMPLET",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Couteau à dépecer",
-                    "text": "INCOMPLET Couteau à dépecer",
-                    "name": "INCOMPLET",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Épée large",
                     "text": "INCOMPLET Épée large",
                     "name": "INCOMPLET",
@@ -14456,8 +14468,16 @@
                     }
                 },
                 {
-                    "type": "Espadon en fer",
-                    "text": "INCOMPLET Espadon en fer",
+                    "type": "Dague simple",
+                    "text": "INCOMPLET Dague simple",
+                    "name": "INCOMPLET",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Fléau d'armes en chaînes",
+                    "text": "INCOMPLET Fléau d'armes en chaînes",
                     "name": "INCOMPLET",
                     "flags": {
                         "unique": true
@@ -14472,8 +14492,32 @@
                     }
                 },
                 {
-                    "type": "Dague simple",
-                    "text": "INCOMPLET Dague simple",
+                    "type": "Couteau à dépecer",
+                    "text": "INCOMPLET Couteau à dépecer",
+                    "name": "INCOMPLET",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Grande hache de bourreau",
+                    "text": "INCOMPLET Grande hache de bourreau",
+                    "name": "INCOMPLET",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Espadon en fer",
+                    "text": "INCOMPLET Espadon en fer",
+                    "name": "INCOMPLET",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Espadon ondulé",
+                    "text": "INCOMPLET Espadon ondulé",
                     "name": "INCOMPLET",
                     "flags": {
                         "unique": true
@@ -14490,14 +14534,6 @@
                 {
                     "type": "Grande hache à fendre",
                     "text": "INCOMPLET Grande hache à fendre",
-                    "name": "INCOMPLET",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Grande hache de bourreau",
-                    "text": "INCOMPLET Grande hache de bourreau",
                     "name": "INCOMPLET",
                     "flags": {
                         "unique": true

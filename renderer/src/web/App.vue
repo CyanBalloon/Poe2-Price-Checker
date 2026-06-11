@@ -6,13 +6,23 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, watchEffect } from "vue";
 import OverlayWindow from "./overlay/OverlayWindow.vue";
 import StandaloneWindow from "./standalone/StandaloneWindow.vue";
+import { AppConfig } from "./Config";
 
 const isStandalone = computed(() => {
   const params = new URLSearchParams(window.location.search);
   return params.get("mode") === "standalone";
+});
+
+watchEffect(() => {
+  const config = AppConfig();
+  if (config && config.theme === "dark-fantasy") {
+    document.body.classList.add("theme-dark-fantasy");
+  } else {
+    document.body.classList.remove("theme-dark-fantasy");
+  }
 });
 </script>
 
@@ -20,6 +30,7 @@ const isStandalone = computed(() => {
 @import url("@fortawesome/fontawesome-free/css/all.min.css");
 @import url("animate.css/animate.css");
 @import url("../assets/font.css");
+@import url("../assets/theme.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

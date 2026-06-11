@@ -131,6 +131,7 @@ export const defaultConfigMock = (overrides: Partial<Config> = {}) => {
     accountName: "TestAccount",
     stashScroll: false,
     language: "en", // Default language
+    theme: "default",
     preferredTradeSite: "default",
     realm: "pc-ggg",
     widgets: [],

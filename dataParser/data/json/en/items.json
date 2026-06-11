@@ -1215,6 +1215,9 @@
                     "type": "Enlightened Robe"
                 },
                 {
+                    "type": "Runemastered Enlightened Robe"
+                },
+                {
                     "type": "Runeforged Tattered Robe"
                 },
                 {
@@ -1639,6 +1642,9 @@
                 },
                 {
                     "type": "Corvus Mantle"
+                },
+                {
+                    "type": "Runemastered Corvus Mantle"
                 },
                 {
                     "type": "Templar Vestments"
@@ -3660,6 +3666,9 @@
                     "type": "Runeforged Iron Buckler"
                 },
                 {
+                    "type": "Runemastered Iron Buckler"
+                },
+                {
                     "type": "Ridged Buckler"
                 },
                 {
@@ -3862,6 +3871,9 @@
                 },
                 {
                     "type": "Runeforged Crucible Tower Shield"
+                },
+                {
+                    "type": "Runemastered Crucible Tower Shield"
                 },
                 {
                     "type": "Hardwood Targe"
@@ -9161,6 +9173,12 @@
                     "type": "Legacy of Brain Rattler"
                 },
                 {
+                    "type": "Legacy of Briarpatch"
+                },
+                {
+                    "type": "Legacy of Briskwrap"
+                },
+                {
                     "type": "Legacy of Brynhand's Mark"
                 },
                 {
@@ -9173,10 +9191,16 @@
                     "type": "Legacy of Cursecarver"
                 },
                 {
+                    "type": "Legacy of Deathblow"
+                },
+                {
                     "type": "Legacy of Duality"
                 },
                 {
                     "type": "Legacy of Dusk Vigil"
+                },
+                {
+                    "type": "Legacy of Erian's Cobble"
                 },
                 {
                     "type": "Legacy of Facebreaker"
@@ -9203,6 +9227,9 @@
                     "type": "Legacy of Northpaw"
                 },
                 {
+                    "type": "Legacy of Olrovasara"
+                },
+                {
                     "type": "Legacy of Quill Rain"
                 },
                 {
@@ -9216,6 +9243,9 @@
                 },
                 {
                     "type": "Legacy of Trampletoe"
+                },
+                {
+                    "type": "Legacy of Trenchtimbre"
                 },
                 {
                     "type": "Legacy of Twisted Empyrean"
@@ -9320,6 +9350,9 @@
                     "type": "Lesser Stone Rune"
                 },
                 {
+                    "type": "Perfect Stone Rune"
+                },
+                {
                     "type": "Masterwork Rune"
                 },
                 {
@@ -9339,6 +9372,9 @@
                 },
                 {
                     "type": "Charging Rune"
+                },
+                {
+                    "type": "Perfect Charging Rune"
                 },
                 {
                     "type": "Warding Rune of Reinforcement"
@@ -14414,14 +14450,6 @@
                     }
                 },
                 {
-                    "type": "Chain Flail",
-                    "text": "INCOMPLETE Chain Flail",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Hook Axe",
                     "text": "INCOMPLETE Hook Axe",
                     "name": "INCOMPLETE",
@@ -14438,22 +14466,6 @@
                     }
                 },
                 {
-                    "type": "Rippled Greatsword",
-                    "text": "INCOMPLETE Rippled Greatsword",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Skinning Knife",
-                    "text": "INCOMPLETE Skinning Knife",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
                     "type": "Broadsword",
                     "text": "INCOMPLETE Broadsword",
                     "name": "INCOMPLETE",
@@ -14462,8 +14474,16 @@
                     }
                 },
                 {
-                    "type": "Iron Greatsword",
-                    "text": "INCOMPLETE Iron Greatsword",
+                    "type": "Simple Dagger",
+                    "text": "INCOMPLETE Simple Dagger",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Chain Flail",
+                    "text": "INCOMPLETE Chain Flail",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14478,8 +14498,32 @@
                     }
                 },
                 {
-                    "type": "Simple Dagger",
-                    "text": "INCOMPLETE Simple Dagger",
+                    "type": "Skinning Knife",
+                    "text": "INCOMPLETE Skinning Knife",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Executioner Greataxe",
+                    "text": "INCOMPLETE Executioner Greataxe",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Iron Greatsword",
+                    "text": "INCOMPLETE Iron Greatsword",
+                    "name": "INCOMPLETE",
+                    "flags": {
+                        "unique": true
+                    }
+                },
+                {
+                    "type": "Rippled Greatsword",
+                    "text": "INCOMPLETE Rippled Greatsword",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true
@@ -14496,14 +14540,6 @@
                 {
                     "type": "Splitting Greataxe",
                     "text": "INCOMPLETE Splitting Greataxe",
-                    "name": "INCOMPLETE",
-                    "flags": {
-                        "unique": true
-                    }
-                },
-                {
-                    "type": "Executioner Greataxe",
-                    "text": "INCOMPLETE Executioner Greataxe",
                     "name": "INCOMPLETE",
                     "flags": {
                         "unique": true

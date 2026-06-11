@@ -5144,6 +5144,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|10169",
+                    "text": "할당 자유분방",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|10265",
                     "text": "할당 투창",
                     "type": "explicit"
@@ -5434,6 +5439,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|14265",
+                    "text": "할당 화염 피해",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|14294",
                     "text": "할당 피의 제물",
                     "type": "explicit"
@@ -5451,6 +5461,11 @@
                 {
                     "id": "explicit.stat_2954116742|14383",
                     "text": "할당 확산",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|1448",
+                    "text": "할당 고양이의 유대",
                     "type": "explicit"
                 },
                 {
@@ -6044,6 +6059,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|23907",
+                    "text": "할당 냉기 피해",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|23939",
                     "text": "할당 윤기 나는 육체",
                     "type": "explicit"
@@ -6336,6 +6356,11 @@
                 {
                     "id": "explicit.stat_2954116742|27761",
                     "text": "할당 반격 태세",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|27779",
+                    "text": "할당 돌풍의 군주",
                     "type": "explicit"
                 },
                 {
@@ -6719,6 +6744,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|33400",
+                    "text": "할당 반향하는 흘려보내기",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|3348",
                     "text": "할당 늑대의 혼백",
                     "type": "explicit"
@@ -6906,6 +6936,11 @@
                 {
                     "id": "explicit.stat_2954116742|35739",
                     "text": "할당 타쇄하는 심판",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|35743",
+                    "text": "할당 사카왈의 가죽",
                     "type": "explicit"
                 },
                 {
@@ -8034,6 +8069,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|50239",
+                    "text": "할당 고요한 바람단의 민첩함",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|50253",
                     "text": "할당 여진",
                     "type": "explicit"
@@ -8164,6 +8204,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_2954116742|5191",
+                    "text": "할당 늑대의 유대",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_2954116742|51934",
                     "text": "할당 기원 효율",
                     "type": "explicit"
@@ -8226,6 +8271,11 @@
                 {
                     "id": "explicit.stat_2954116742|52618",
                     "text": "할당 야수의 은혜",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|52669",
+                    "text": "할당 화염 피해",
                     "type": "explicit"
                 },
                 {
@@ -8831,6 +8881,11 @@
                 {
                     "id": "explicit.stat_2954116742|60764",
                     "text": "할당 깃 화살",
+                    "type": "explicit"
+                },
+                {
+                    "id": "explicit.stat_2954116742|60878",
+                    "text": "할당 번개 피해",
                     "type": "explicit"
                 },
                 {
@@ -15169,6 +15224,11 @@
                     "type": "explicit"
                 },
                 {
+                    "id": "explicit.stat_853326030",
+                    "text": "이 아이템에는 루비 주얼을 #개만 장착 가능",
+                    "type": "explicit"
+                },
+                {
                     "id": "explicit.stat_85367160",
                     "text": "반경 내 주요 패시브 스킬이 받은 피해의 #%를 마나로 회생도 부여",
                     "type": "explicit"
@@ -16471,6 +16531,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1058934731",
+                    "text": "소환한 소환수의 일시적 소환수 스킬 제한 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1060572482",
                     "text": "반경 내 소형 패시브 스킬 효과 #% 증가",
                     "type": "fractured"
@@ -16553,6 +16618,11 @@
                 {
                     "id": "fractured.stat_1177404658",
                     "text": "일반 방어도, 회피, 에너지 보호막 #% 증가",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1180552088",
+                    "text": "플레이어에게 적용되는 집정관 버프의 효과 #% 증가",
                     "type": "fractured"
                 },
                 {
@@ -16936,6 +17006,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1691403182",
+                    "text": "소환수의 재사용 대기시간 회복 속도 #% 증가",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1692879867",
                     "text": "플레이어에게 적용되는 출혈 지속시간 #% 증가",
                     "type": "fractured"
@@ -17046,6 +17121,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_1823942939",
+                    "text": "소환 가능한 쇠뇌 토템 최대 개수 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_1829102168",
                     "text": "적에게 적용되는 피해를 주는 상태 이상의 지속시간 #% 증가",
                     "type": "fractured"
@@ -17063,6 +17143,11 @@
                 {
                     "id": "fractured.stat_1839076647",
                     "text": "투사체 피해 #% 증가",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_1840985759",
+                    "text": "공격 효과 범위 #% 증가",
                     "type": "fractured"
                 },
                 {
@@ -17461,6 +17546,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2393315299",
+                    "text": "비고정 치명타 속성 부여 규모 #% 증가",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_239367161",
                     "text": "기절 축적 #% 증가",
                     "type": "fractured"
@@ -17596,6 +17686,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2567751411",
+                    "text": "함성 스킬의 효과 범위 #% 증가",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2570249991",
                     "text": "몬스터가 회피하는 몬스터",
                     "type": "fractured"
@@ -17643,6 +17738,11 @@
                 {
                     "id": "fractured.stat_2653955271",
                     "text": "피해가 화염 저항 #% 관통",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2663359259",
+                    "text": "함성이 적용된 총 위세 #% 증가",
                     "type": "fractured"
                 },
                 {
@@ -18656,6 +18756,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|26214",
+                    "text": "할당 지배",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|26291",
                     "text": "할당 짜릿한 천성",
                     "type": "fractured"
@@ -19491,6 +19596,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_2954116742|42660",
+                    "text": "할당 격노의 명",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_2954116742|42813",
                     "text": "할당 변화의 파도",
                     "type": "fractured"
@@ -19638,6 +19748,11 @@
                 {
                     "id": "fractured.stat_2954116742|46060",
                     "text": "할당 탐욕",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_2954116742|46124",
+                    "text": "할당 비전 잔류물",
                     "type": "fractured"
                 },
                 {
@@ -20916,6 +21031,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3143918757",
+                    "text": "영광 재생 #% 증가",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3146310524",
                     "text": "명중 시 혼미",
                     "type": "fractured"
@@ -21006,6 +21126,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_323800555",
+                    "text": "주문 피해의 #%를 추가 번개 피해로 획득",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3243034867",
                     "text": "반경 내 주요 패시브 스킬이 오라 스킬의 강도 #% 증가도 부여",
                     "type": "fractured"
@@ -21076,6 +21201,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3336230913",
+                    "text": "최대 룬 수호 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3336890334",
                     "text": "번개 피해 #~# 추가",
                     "type": "fractured"
@@ -21088,6 +21218,11 @@
                 {
                     "id": "fractured.stat_3362812763",
                     "text": "방어도의 #%가 원소 피해에도 적용",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3368921525",
+                    "text": "반경 내 화염 및 번개 피해의\n증가 및 감소가 변형되어 냉기 피해에 적용",
                     "type": "fractured"
                 },
                 {
@@ -21263,6 +21398,11 @@
                 {
                     "id": "fractured.stat_3596695232",
                     "text": "최근 8초 이내 근접 공격을 명중시킨 경우 투사체 피해 #% 증가",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_3624940721",
+                    "text": "비고정 번개 속성 부여 규모 #% 증가",
                     "type": "fractured"
                 },
                 {
@@ -21536,6 +21676,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_3987691524",
+                    "text": "기본 격노 상실이 1초 늦게 시작",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_3998863698",
                     "text": "몬스터의 동결 축적 #% 증가",
                     "type": "fractured"
@@ -21636,6 +21781,11 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4147510958",
+                    "text": "봉인된 스킬의 봉인 최대치 #",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4147897060",
                     "text": "막기 확률 #% 증가",
                     "type": "fractured"
@@ -21711,8 +21861,18 @@
                     "type": "fractured"
                 },
                 {
+                    "id": "fractured.stat_4258524206",
+                    "text": "명중 시 #% 확률로 추가 연계 축적",
+                    "type": "fractured"
+                },
+                {
                     "id": "fractured.stat_4258720395",
                     "text": "반경 내 주요 패시브 스킬이 투사체가 갈라질 때 #%의 확률로 투사체 1개 추가 생성도 부여",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_4273473110",
+                    "text": "최대 룬 수호 #% 증가",
                     "type": "fractured"
                 },
                 {
@@ -22108,6 +22268,11 @@
                 {
                     "id": "fractured.stat_924253255",
                     "text": "디버프의 감속 효력 #% 증가",
+                    "type": "fractured"
+                },
+                {
+                    "id": "fractured.stat_933355817",
+                    "text": "공물 생성 시 #% 확률로 불사의 집정관 획득",
                     "type": "fractured"
                 },
                 {
@@ -22677,6 +22842,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|10169",
+                    "text": "할당 자유분방",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|10265",
                     "text": "할당 투창",
                     "type": "crafted"
@@ -22704,6 +22874,11 @@
                 {
                     "id": "crafted.stat_2954116742|10500",
                     "text": "할당 혼미의 막기",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|10602",
+                    "text": "할당 빼앗기",
                     "type": "crafted"
                 },
                 {
@@ -22737,6 +22912,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1104",
+                    "text": "할당 힘의 욕망",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|11184",
                     "text": "할당 자로크의 선물",
                     "type": "crafted"
@@ -22767,6 +22947,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|116",
+                    "text": "할당 통찰력",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|1169",
                     "text": "할당 다급한 부름",
                     "type": "crafted"
@@ -22794,6 +22979,11 @@
                 {
                     "id": "crafted.stat_2954116742|12245",
                     "text": "할당 방화범",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|12337",
+                    "text": "할당 섬광 폭풍",
                     "type": "crafted"
                 },
                 {
@@ -22897,6 +23087,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|13895",
+                    "text": "할당 정확한 지점",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|13980",
                     "text": "할당 대지 분쇄",
                     "type": "crafted"
@@ -22914,6 +23109,11 @@
                 {
                     "id": "crafted.stat_2954116742|14258",
                     "text": "할당 인형사 확률",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|14265",
+                    "text": "할당 화염 피해",
                     "type": "crafted"
                 },
                 {
@@ -22937,6 +23137,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|1448",
+                    "text": "할당 고양이의 유대",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14602",
                     "text": "할당 특수 사격",
                     "type": "crafted"
@@ -22947,6 +23152,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|14934",
+                    "text": "할당 광증으로의 추락",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|14945",
                     "text": "할당 자라나는 무리",
                     "type": "crafted"
@@ -22954,6 +23164,11 @@
                 {
                     "id": "crafted.stat_2954116742|1502",
                     "text": "할당 드라이어흐트 정화",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|15030",
+                    "text": "할당 꾸준한 섭취",
                     "type": "crafted"
                 },
                 {
@@ -23037,6 +23252,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|16466",
+                    "text": "할당 기민한 정신",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|16499",
                     "text": "할당 지속되는 속삭임",
                     "type": "crafted"
@@ -23049,6 +23269,11 @@
                 {
                     "id": "crafted.stat_2954116742|16626",
                     "text": "할당 충격 범위",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|16790",
+                    "text": "할당 효율적인 시전",
                     "type": "crafted"
                 },
                 {
@@ -23092,6 +23317,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17330",
+                    "text": "할당 천공",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17340",
                     "text": "할당 아드레날린 분출",
                     "type": "crafted"
@@ -23132,6 +23362,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|17825",
+                    "text": "할당 전술적 후퇴",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|17854",
                     "text": "할당 탈출 속도",
                     "type": "crafted"
@@ -23154,6 +23389,11 @@
                 {
                     "id": "crafted.stat_2954116742|18419",
                     "text": "할당 선대의 치유",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|18485",
+                    "text": "할당 불안정한 결속",
                     "type": "crafted"
                 },
                 {
@@ -23234,6 +23474,21 @@
                 {
                     "id": "crafted.stat_2954116742|2021",
                     "text": "할당 원천",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20251",
+                    "text": "할당 갈라지는 대지",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20289",
+                    "text": "할당 얼어붙은 발톱",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|20388",
+                    "text": "할당 재생성 살성",
                     "type": "crafted"
                 },
                 {
@@ -23357,8 +23612,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|22864",
+                    "text": "할당 더럽혀진 타격",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|22967",
+                    "text": "할당 경계",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23078",
                     "text": "할당 상서로운 보호자",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|23221",
+                    "text": "할당 기교 사격",
                     "type": "crafted"
                 },
                 {
@@ -23397,6 +23667,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23736",
+                    "text": "할당 흩뿌리고 구경하기",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23738",
                     "text": "할당 뼛속 광기",
                     "type": "crafted"
@@ -23407,8 +23682,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|23907",
+                    "text": "할당 냉기 피해",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|23939",
                     "text": "할당 윤기 나는 육체",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|2394",
+                    "text": "할당 질풍의 칼날",
                     "type": "crafted"
                 },
                 {
@@ -23442,8 +23727,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|24438",
+                    "text": "할당 굳어진 나무",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|24483",
                     "text": "할당 직접 접근",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|24491",
+                    "text": "할당 기원의 메아리",
                     "type": "crafted"
                 },
                 {
@@ -23522,6 +23817,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|2575",
+                    "text": "할당 선대의 기민성",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|25753",
                     "text": "할당 불길을 뿜는 팔",
                     "type": "crafted"
@@ -23564,6 +23864,11 @@
                 {
                     "id": "crafted.stat_2954116742|26339",
                     "text": "할당 선대의 책략",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|26356",
+                    "text": "할당 폭발 준비 완료",
                     "type": "crafted"
                 },
                 {
@@ -23649,6 +23954,11 @@
                 {
                     "id": "crafted.stat_2954116742|27761",
                     "text": "할당 반격 태세",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|27779",
+                    "text": "할당 돌풍의 군주",
                     "type": "crafted"
                 },
                 {
@@ -23782,6 +24092,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30392",
+                    "text": "할당 구제",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30395",
                     "text": "할당 울부짖는 야수",
                     "type": "crafted"
@@ -23792,8 +24107,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30456",
+                    "text": "할당 경계 태세",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|30523",
                     "text": "할당 망자의 춤",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|30546",
+                    "text": "할당 전기를 띤 발톱",
                     "type": "crafted"
                 },
                 {
@@ -23802,8 +24127,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|30720",
+                    "text": "할당 엔트로피의 화신",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|31129",
                     "text": "할당 평생의 친구",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31172",
+                    "text": "할당 매의 기술",
                     "type": "crafted"
                 },
                 {
@@ -23829,6 +24164,11 @@
                 {
                     "id": "crafted.stat_2954116742|31373",
                     "text": "할당 격려의 목소리",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|31433",
+                    "text": "할당 촉매 작용",
                     "type": "crafted"
                 },
                 {
@@ -23902,6 +24242,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32448",
+                    "text": "할당 감전 방지 처리",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32507",
                     "text": "할당 최대 절감",
                     "type": "crafted"
@@ -23912,8 +24257,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|32664",
+                    "text": "할당 호흡의 차크라",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|32721",
                     "text": "할당 정신 팔린 대상",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|32799",
+                    "text": "할당 매혹적인 동료 의식",
                     "type": "crafted"
                 },
                 {
@@ -23967,8 +24322,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|33400",
+                    "text": "할당 반향하는 흘려보내기",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3348",
                     "text": "할당 늑대의 혼백",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33542",
+                    "text": "할당 빠른 손가락",
                     "type": "crafted"
                 },
                 {
@@ -23979,6 +24344,11 @@
                 {
                     "id": "crafted.stat_2954116742|336",
                     "text": "할당 폭풍의 팽창",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|33730",
+                    "text": "할당 집약된 집중 유지",
                     "type": "crafted"
                 },
                 {
@@ -24067,6 +24437,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35028",
+                    "text": "할당 한복판",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35031",
                     "text": "할당 생명의 차크라",
                     "type": "crafted"
@@ -24082,6 +24457,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35369",
+                    "text": "할당 에너지 투자",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|35417",
                     "text": "할당 와이번의 숨결",
                     "type": "crafted"
@@ -24092,6 +24472,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|35581",
+                    "text": "할당 손 닿는 거리",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35618",
+                    "text": "할당 냉기의 외투",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3567",
                     "text": "할당 미가공된 마나",
                     "type": "crafted"
@@ -24099,6 +24489,11 @@
                 {
                     "id": "crafted.stat_2954116742|35739",
                     "text": "할당 타쇄하는 심판",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|35743",
+                    "text": "할당 사카왈의 가죽",
                     "type": "crafted"
                 },
                 {
@@ -24134,6 +24529,11 @@
                 {
                     "id": "crafted.stat_2954116742|36100",
                     "text": "할당 녹아내린 발톱",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|36333",
+                    "text": "할당 폭발적인 강화",
                     "type": "crafted"
                 },
                 {
@@ -24177,8 +24577,23 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|36976",
+                    "text": "할당 죽음의 징표",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|3698",
+                    "text": "할당 가시 구덩이",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|372",
                     "text": "할당 내열 처리",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37244",
+                    "text": "할당 방패 전문 지식",
                     "type": "crafted"
                 },
                 {
@@ -24194,6 +24609,11 @@
                 {
                     "id": "crafted.stat_2954116742|37302",
                     "text": "할당 거리 유지",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|37408",
+                    "text": "할당 지혈",
                     "type": "crafted"
                 },
                 {
@@ -24242,6 +24662,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38329",
+                    "text": "할당 살을 에는 서리",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|38342",
                     "text": "할당 충격 가하기",
                     "type": "crafted"
@@ -24287,8 +24712,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|38895",
+                    "text": "할당 수정 영액",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|3894",
                     "text": "할당 섬뜩한 의지",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|38965",
+                    "text": "할당 주입되는 제한",
                     "type": "crafted"
                 },
                 {
@@ -24352,6 +24787,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40073",
+                    "text": "할당 흠뻑 젖음",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40117",
                     "text": "할당 가시 박힌 방어구",
                     "type": "crafted"
@@ -24359,6 +24799,16 @@
                 {
                     "id": "crafted.stat_2954116742|40166",
                     "text": "할당 깊은 무아지경",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40213",
+                    "text": "할당 피에 대한 욕구",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|40270",
+                    "text": "할당 광란",
                     "type": "crafted"
                 },
                 {
@@ -24402,6 +24852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|40985",
+                    "text": "할당 강화하는 잔류물",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|40990",
                     "text": "할당 폭풍 노출",
                     "type": "crafted"
@@ -24437,6 +24892,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|41811",
+                    "text": "할당 분쇄 장법",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|41905",
                     "text": "할당 무덤 파는 자",
                     "type": "crafted"
@@ -24444,6 +24904,16 @@
                 {
                     "id": "crafted.stat_2954116742|41935",
                     "text": "할당 곰의 가죽",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|41972",
+                    "text": "할당 빙하 작용",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42032",
+                    "text": "할당 격화되는 아수라장",
                     "type": "crafted"
                 },
                 {
@@ -24484,6 +24954,11 @@
                 {
                     "id": "crafted.stat_2954116742|42245",
                     "text": "할당 효율적인 명문",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|42302",
+                    "text": "할당 분할 사격",
                     "type": "crafted"
                 },
                 {
@@ -24587,6 +25062,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|43939",
+                    "text": "할당 녹이는 화염",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|43944",
                     "text": "할당 불안정",
                     "type": "crafted"
@@ -24619,6 +25099,11 @@
                 {
                     "id": "crafted.stat_2954116742|4447",
                     "text": "할당 전의 고정",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|44566",
+                    "text": "할당 피뢰침",
                     "type": "crafted"
                 },
                 {
@@ -24659,6 +25144,11 @@
                 {
                     "id": "crafted.stat_2954116742|45177",
                     "text": "할당 정곡 노리기",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|45244",
+                    "text": "할당 보충",
                     "type": "crafted"
                 },
                 {
@@ -24712,6 +25202,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|45751",
+                    "text": "할당 공포를 자아내는 방패",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|45777",
                     "text": "할당 숨겨진 가시",
                     "type": "crafted"
@@ -24734,6 +25229,11 @@
                 {
                     "id": "crafted.stat_2954116742|46060",
                     "text": "할당 탐욕",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46124",
+                    "text": "할당 비전 잔류물",
                     "type": "crafted"
                 },
                 {
@@ -24782,6 +25282,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|46692",
+                    "text": "할당 효율적인 연금술",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|46696",
                     "text": "할당 손상",
                     "type": "crafted"
@@ -24789,6 +25294,11 @@
                 {
                     "id": "crafted.stat_2954116742|4673",
                     "text": "할당 육중한 타격",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|46972",
+                    "text": "할당 비전 혼합체",
                     "type": "crafted"
                 },
                 {
@@ -24829,6 +25339,11 @@
                 {
                     "id": "crafted.stat_2954116742|47418",
                     "text": "할당 수호하는 물약",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|47420",
+                    "text": "할당 소모성 군단",
                     "type": "crafted"
                 },
                 {
@@ -24877,6 +25392,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48215",
+                    "text": "할당 머리 사격",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48240",
                     "text": "할당 빠른 회복",
                     "type": "crafted"
@@ -24907,13 +25427,28 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48658",
+                    "text": "할당 산산조각의",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48699",
                     "text": "할당 서리보행자",
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|48734",
+                    "text": "할당 울부짖는 영장류",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|48774",
                     "text": "할당 팽팽한 육체",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|48925",
+                    "text": "할당 달의 축복",
                     "type": "crafted"
                 },
                 {
@@ -24924,6 +25459,11 @@
                 {
                     "id": "crafted.stat_2954116742|49088",
                     "text": "할당 파편화하는 힘",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|4931",
+                    "text": "할당 든든한 결계",
                     "type": "crafted"
                 },
                 {
@@ -24939,6 +25479,11 @@
                 {
                     "id": "crafted.stat_2954116742|4959",
                     "text": "할당 무거운 서리",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|49618",
+                    "text": "할당 치명적인 허세",
                     "type": "crafted"
                 },
                 {
@@ -24962,6 +25507,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|50023",
+                    "text": "할당 활기를 주는 광영",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|50062",
                     "text": "할당 베나리우스의 방벽",
                     "type": "crafted"
@@ -24969,6 +25519,11 @@
                 {
                     "id": "crafted.stat_2954116742|5009",
                     "text": "할당 눈앞의 별",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|50239",
+                    "text": "할당 고요한 바람단의 민첩함",
                     "type": "crafted"
                 },
                 {
@@ -25022,6 +25577,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51129",
+                    "text": "할당 계속 쌓기",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|51169",
+                    "text": "할당 영혼 꽃",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51213",
                     "text": "할당 소모성",
                     "type": "crafted"
@@ -25072,8 +25637,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|51871",
+                    "text": "할당 불멸의 갈증",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|51891",
                     "text": "할당 명료함",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5191",
+                    "text": "할당 늑대의 유대",
                     "type": "crafted"
                 },
                 {
@@ -25142,6 +25717,16 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|52669",
+                    "text": "할당 화염 피해",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|52684",
+                    "text": "할당 침식하는 사슬",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|52764",
                     "text": "할당 신비한 격노",
                     "type": "crafted"
@@ -25149,6 +25734,11 @@
                 {
                     "id": "crafted.stat_2954116742|52803",
                     "text": "할당 정정한 여행자",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|5284",
+                    "text": "할당 찢어발기는 힘",
                     "type": "crafted"
                 },
                 {
@@ -25172,8 +25762,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|53187",
+                    "text": "할당 전쟁군주 광전사",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|53265",
                     "text": "할당 자연의 이빨",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53294",
+                    "text": "할당 태워 없애기",
                     "type": "crafted"
                 },
                 {
@@ -25194,6 +25794,11 @@
                 {
                     "id": "crafted.stat_2954116742|53566",
                     "text": "할당 뛰고 치기",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|53607",
+                    "text": "할당 견고한 거점",
                     "type": "crafted"
                 },
                 {
@@ -25247,6 +25852,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|54911",
+                    "text": "할당 부싯돌",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|54990",
                     "text": "할당 출혈 과다",
                     "type": "crafted"
@@ -25277,6 +25887,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|55180",
+                    "text": "할당 끈질긴 몰락자",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|55193",
                     "text": "할당 기만의 가면",
                     "type": "crafted"
@@ -25284,6 +25899,11 @@
                 {
                     "id": "crafted.stat_2954116742|55308",
                     "text": "할당 새총 사격",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55450",
+                    "text": "할당 집결의 형체",
                     "type": "crafted"
                 },
                 {
@@ -25299,6 +25919,11 @@
                 {
                     "id": "crafted.stat_2954116742|5580",
                     "text": "할당 감시 포탑",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|55817",
+                    "text": "할당 연금술 기름",
                     "type": "crafted"
                 },
                 {
@@ -25362,8 +25987,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|56714",
+                    "text": "할당 재빠른 비행",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|56767",
                     "text": "할당 짜릿한 혼미",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56776",
+                    "text": "할당 조리 완료",
                     "type": "crafted"
                 },
                 {
@@ -25389,6 +26024,11 @@
                 {
                     "id": "crafted.stat_2954116742|56988",
                     "text": "할당 전기 피",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|56997",
+                    "text": "할당 묵직한 접촉",
                     "type": "crafted"
                 },
                 {
@@ -25424,6 +26064,11 @@
                 {
                     "id": "crafted.stat_2954116742|5728",
                     "text": "할당 고대의 비호",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|57379",
+                    "text": "할당 대면 공격",
                     "type": "crafted"
                 },
                 {
@@ -25464,6 +26109,11 @@
                 {
                     "id": "crafted.stat_2954116742|5802",
                     "text": "할당 위치 사수 사격",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|58183",
+                    "text": "할당 피눈물",
                     "type": "crafted"
                 },
                 {
@@ -25514,6 +26164,11 @@
                 {
                     "id": "crafted.stat_2954116742|59208",
                     "text": "할당 광적인 투사",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|59214",
+                    "text": "할당 예견된 최후",
                     "type": "crafted"
                 },
                 {
@@ -25582,6 +26237,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|60273",
+                    "text": "할당 걸리적거리는 장애물",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|60404",
                     "text": "할당 절호의 기회",
                     "type": "crafted"
@@ -25599,6 +26259,11 @@
                 {
                     "id": "crafted.stat_2954116742|60764",
                     "text": "할당 깃 화살",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|60878",
+                    "text": "할당 번개 피해",
                     "type": "crafted"
                 },
                 {
@@ -25662,6 +26327,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|61741",
+                    "text": "할당 지속되는 독소",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|6178",
                     "text": "할당 강력한 사격",
                     "type": "crafted"
@@ -25669,6 +26339,11 @@
                 {
                     "id": "crafted.stat_2954116742|61921",
                     "text": "할당 폭풍 쇄도",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62034",
+                    "text": "할당 분광의 수호병",
                     "type": "crafted"
                 },
                 {
@@ -25704,6 +26379,11 @@
                 {
                     "id": "crafted.stat_2954116742|62431",
                     "text": "할당 기대",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|62455",
+                    "text": "할당 기수",
                     "type": "crafted"
                 },
                 {
@@ -25812,6 +26492,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|64415",
+                    "text": "할당 산산조각의 혼미",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|64443",
                     "text": "할당 충격 힘",
                     "type": "crafted"
@@ -25824,6 +26509,11 @@
                 {
                     "id": "crafted.stat_2954116742|64543",
                     "text": "할당 족쇄 풀린 힘",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|64650",
+                    "text": "할당 경계하는 회피",
                     "type": "crafted"
                 },
                 {
@@ -25844,6 +26534,16 @@
                 {
                     "id": "crafted.stat_2954116742|65016",
                     "text": "할당 격렬한 화염",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|65023",
+                    "text": "할당 뚫리지 않는 껍질",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6514",
+                    "text": "할당 불협화음",
                     "type": "crafted"
                 },
                 {
@@ -25877,8 +26577,18 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|6544",
+                    "text": "할당 불타는 타격",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|65468",
                     "text": "할당 반복되는 폭발물",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|6655",
+                    "text": "할당 가중",
                     "type": "crafted"
                 },
                 {
@@ -25899,6 +26609,11 @@
                 {
                     "id": "crafted.stat_2954116742|7163",
                     "text": "할당 자극제",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|7275",
+                    "text": "할당 전기 처형 노출",
                     "type": "crafted"
                 },
                 {
@@ -25987,6 +26702,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|8554",
+                    "text": "할당 불타는 천성",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|8607",
                     "text": "할당 라비앙가의 약",
                     "type": "crafted"
@@ -25999,6 +26719,11 @@
                 {
                     "id": "crafted.stat_2954116742|8782",
                     "text": "할당 강화하는 주입",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8791",
+                    "text": "할당 튼튼한 동료",
                     "type": "crafted"
                 },
                 {
@@ -26024,6 +26749,11 @@
                 {
                     "id": "crafted.stat_2954116742|8904",
                     "text": "할당 멀리서 찾아온 죽음",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|8916",
+                    "text": "할당 후려치는 야수",
                     "type": "crafted"
                 },
                 {
@@ -26072,6 +26802,11 @@
                     "type": "crafted"
                 },
                 {
+                    "id": "crafted.stat_2954116742|94",
+                    "text": "할당 효율적인 살상",
+                    "type": "crafted"
+                },
+                {
                     "id": "crafted.stat_2954116742|9421",
                     "text": "할당 설원을 가로지르는 자",
                     "type": "crafted"
@@ -26089,6 +26824,11 @@
                 {
                     "id": "crafted.stat_2954116742|9535",
                     "text": "할당 부패한 염수단의 흉포함",
+                    "type": "crafted"
+                },
+                {
+                    "id": "crafted.stat_2954116742|9652",
+                    "text": "할당 치유의 튕겨내기",
                     "type": "crafted"
                 },
                 {
@@ -31704,6 +32444,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1122225204",
+                    "text": "결속됨: 최대 룬 수호 #",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1134865274",
                     "text": "결속됨: 모든 스킬의 퀄리티 #%",
                     "type": "augment"
@@ -31711,6 +32456,11 @@
                 {
                     "id": "rune.stat_1147690586",
                     "text": "모든 번개 스킬 레벨 #",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1150343007",
+                    "text": "명중 피해의 #%가 자신보다 피해를 받는 반려수의 생명력에 먼저 적용",
                     "type": "augment"
                 },
                 {
@@ -31829,6 +32579,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_1377764687",
+                    "text": "결속됨: 스킬 사용 시 소모한 연계 하나당 #초 동안 최후 획득",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_1381474422",
                     "text": "플레이어가 유발하는 피해를 주는 상태 이상의 강도 #% 증가",
                     "type": "augment"
@@ -31896,6 +32651,11 @@
                 {
                     "id": "rune.stat_1457312571",
                     "text": "결속됨: 직접 사용하는 강타 스킬이 #%의 확률로 추가 여진 유발",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1479161975",
+                    "text": "결속됨: 받는 피해의 #%를 생명력 대신 마나로 소모",
                     "type": "augment"
                 },
                 {
@@ -32041,6 +32801,11 @@
                 {
                     "id": "rune.stat_1678831767",
                     "text": "막아낼 시 생명력 # 회복",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_1683578560",
+                    "text": "변함없는 자세",
                     "type": "augment"
                 },
                 {
@@ -32529,6 +33294,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2443032293",
+                    "text": "스킬 사용 시 소모한 연계 하나당 0.5초 동안 가호 # 획득",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2444976134",
                     "text": "장착한 방어구 아이템의 힘 요구사항의 총합의 #%와 동일한 에너지 보호막 최대치 획득",
                     "type": "augment"
@@ -32704,6 +33474,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2695354435",
+                    "text": "낮은 생명력 상태일 때 일반 회피 #% 증가",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2701582946",
                     "text": "결속됨: 튕겨내기 평점 #% 증가",
                     "type": "augment"
@@ -32721,6 +33496,11 @@
                 {
                     "id": "rune.stat_2709367754",
                     "text": "근접 명중 시 격노 # 획득",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2715190555",
+                    "text": "가시 치명타 명중 확률 #%",
                     "type": "augment"
                 },
                 {
@@ -32829,6 +33609,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_2905515354",
+                    "text": "피격을 막아낼 시 피해의 #%를 받음",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_2910761524",
                     "text": "주문 스킬이 #%의 확률로 투사체 2개 추가 발사",
                     "type": "augment"
@@ -32866,6 +33651,11 @@
                 {
                     "id": "rune.stat_2942439603",
                     "text": "스킬이 #% 확률로 충전을 제거하지 않고도 소모한 것으로 간주",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_2957287092",
+                    "text": "공격 피해 막기 확률에 행운 적용",
                     "type": "augment"
                 },
                 {
@@ -33239,6 +34029,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_3494229254",
+                    "text": "결속됨: 가시의 치명타 피해 보너스 #% 증가",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_3515226849",
                     "text": "플레이어의 부활 소환수가 사망하면 플레이어가 룬 수호 최대치의 #% 회복",
                     "type": "augment"
@@ -33604,6 +34399,11 @@
                     "type": "augment"
                 },
                 {
+                    "id": "rune.stat_4108430531",
+                    "text": "결속됨: 명중 피해의 #%가 자신보다 피해를 받는 반려수의 생명력에 먼저 적용",
+                    "type": "augment"
+                },
+                {
                     "id": "rune.stat_4111152445",
                     "text": "결속됨: 모든 번개 스킬 레벨 #",
                     "type": "augment"
@@ -33776,6 +34576,11 @@
                 {
                     "id": "rune.stat_55876295",
                     "text": "물리 공격 피해의 #%를 생명력으로 흡수",
+                    "type": "augment"
+                },
+                {
+                    "id": "rune.stat_566086661",
+                    "text": "이 무기로 공격 시 마나 최대치의 #%~#%와 동일한 냉기 피해 추가",
                     "type": "augment"
                 },
                 {
@@ -36295,6 +37100,11 @@
                     "type": "desecrated"
                 },
                 {
+                    "id": "desecrated.stat_3206904707",
+                    "text": "비고정 냉기 속성 부여 규모 #% 증가",
+                    "type": "desecrated"
+                },
+                {
                     "id": "desecrated.stat_321970274",
                     "text": "방패를 올린 동안 물리 피해의 #%를 번개 피해로 받음",
                     "type": "desecrated"
@@ -36667,6 +37477,11 @@
                 {
                     "id": "desecrated.stat_3566150527",
                     "text": "반경 내 주요 패시브 스킬이 1초마다 생명력의 #% 재생도 부여",
+                    "type": "desecrated"
+                },
+                {
+                    "id": "desecrated.stat_3574578302",
+                    "text": "비고정 화염 속성 부여 규모 #% 증가",
                     "type": "desecrated"
                 },
                 {

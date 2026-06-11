@@ -2,7 +2,12 @@
   <div class="flex items-center gap-x-1">
     <slot name="item">
       <div class="flex items-center justify-center shrink-0" :class="imgSize">
-        <ui-item-img :icon="itemImg" overflow-hidden />
+        <ui-item-img 
+          :icon="itemImg" 
+          :item-name="itemBase?.name"
+          :namespace="itemBase?.namespace"
+          overflow-hidden 
+        />
       </div>
     </slot>
     <i class="fas fa-arrow-right text-gray-600 px-1 text-sm"></i>
@@ -47,12 +52,17 @@
       />
       <img v-else src="/images/exa.png" class="max-w-full max-h-full" />
     </div>
+    <div v-if="price?.currency === 'div' && exaltedRate" class="flex items-center whitespace-nowrap text-gray-400 text-xs">
+      <span class="opacity-70">({{ Math.round(price.min * exaltedRate) }}</span>
+      <img src="/images/exa.png" class="w-4 h-4 inline-block mx-0.5 opacity-80" />
+      <span class="opacity-70">)</span>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, computed, PropType } from "vue";
-import { displayRounding } from "../background/Prices";
+import { displayRounding, usePoeninja } from "../background/Prices";
 import { ITEM_BY_REF, BaseType } from "@/assets/data";
 import UiItemImg from "./UiItemImg.vue";
 
@@ -91,6 +101,7 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { exaltedRate } = usePoeninja();
     const minText = computed(() =>
       props.price ? displayRounding(props.price.min, props.fraction) : "?",
     );
@@ -121,6 +132,7 @@ export default defineComponent({
       minText,
       maxText,
       imgSize,
+      exaltedRate,
       isRange: computed(() => {
         return minText.value !== maxText.value;
       }),

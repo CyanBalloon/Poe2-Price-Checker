@@ -321,17 +321,50 @@ class NdBuilderService:
         )
 
         logger.info("adding static data")
-        static = self.ref_trade_store.static()
-        static["icon_s"] = static["image"].apply(lambda x: f"https://web.poecdn.com{x}")
+        ref_static = self.ref_trade_store.static()
+        lang_static = self.trade_store.static()
+
+        static = pd.merge(
+            ref_static,
+            lang_static,
+            on="image",
+            suffixes=("_ref", "_lang"),
+        )
+        static = static[
+            static["text_ref"].notna() & 
+            (static["text_ref"] != "") & 
+            static["image"].notna() & 
+            (static["image"] != "")
+        ]
+        static["icon_s"] = static["image"].apply(lambda x: f"https://web.poecdn.com{x}" if isinstance(x, str) else None)
+
         static_items_added = images_added.merge(
-            static[["text", "icon_s", "tradeTag"]],
+            static[["text_ref", "text_lang", "icon_s", "tradeTag_ref"]],
             left_on="refName",
-            right_on="text",
-            how="left",
+            right_on="text_ref",
+            how="outer",
         )
-        static_items_added.loc[static_items_added["icon_s"].notna(), "icon"] = (
-            static_items_added["icon_s"]
+
+        # Fill in names for outer merged static items
+        outer_mask = static_items_added["refName"].isna()
+        static_items_added.loc[outer_mask, "refName"] = static_items_added.loc[outer_mask, "text_ref"]
+        static_items_added.loc[outer_mask, "name"] = static_items_added.loc[outer_mask, "text_lang"]
+        static_items_added.loc[outer_mask, "namespace"] = "ITEM"
+        static_items_added.loc[outer_mask, "w"] = 1
+        static_items_added.loc[outer_mask, "h"] = 1
+
+        # Set tradeTag
+        static_items_added["tradeTag"] = static_items_added["tradeTag"].fillna(static_items_added["tradeTag_ref"])
+
+        # Map icons for all items
+        icon_cond = static_items_added["icon_s"].notna() & (
+            static_items_added["icon"].isna() | 
+            (static_items_added["icon"] == "%NOT_FOUND%")
         )
+        static_items_added.loc[icon_cond, "icon"] = static_items_added.loc[icon_cond, "icon_s"]
+
+        # Ensure tags is always list
+        static_items_added["tags"] = static_items_added["tags"].apply(lambda x: x if isinstance(x, list) else [])
 
         logger.info("Sorting and returning items")
         self.items = static_items_added.sort_values(by=["namespace", "refName"])[

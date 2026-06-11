@@ -213,40 +213,22 @@
         </div>
 
         <!-- Tab: Search -->
-        <div v-show="activeTab === 'search'" class="flex-1 flex flex-col min-h-0 max-w-3xl mx-auto w-full">
-          <div class="flex-1 border border-[#191b22] rounded-2xl bg-[#0d0e12]/30 backdrop-blur-md overflow-hidden flex flex-col p-4">
-            <component 
-              v-if="itemSearchWidgetConfig"
-              :is="itemSearchComponent" 
-              :config="itemSearchWidgetConfig" 
-            />
-          </div>
+        <div v-show="activeTab === 'search'" class="flex-1 flex flex-col min-h-0 w-full relative">
+          <component 
+            v-if="itemSearchWidgetConfig"
+            :is="itemSearchComponent" 
+            :config="itemSearchWidgetConfig" 
+          />
         </div>
 
-        <!-- Tab: Logs -->
-        <div v-show="activeTab === 'logs'" class="flex-1 flex flex-col min-h-0">
-          <div class="flex-1 bg-[#07080a] border border-[#191b22] rounded-2xl p-5 font-mono text-xs overflow-hidden flex flex-col shadow-md shadow-black/20">
-            <div class="flex items-center justify-between border-b border-[#191b22] pb-3 mb-4 select-none shrink-0">
-              <span class="text-xs font-semibold uppercase text-violet-400 tracking-wider">Client and System Logs</span>
-              <button @click="clearLogsText" class="px-3 py-1 bg-[#13151f] hover:bg-[#1a1c2a] border border-[#202334] rounded-lg text-[10px] text-gray-400 hover:text-gray-200 transition-colors">
-                Clear View
-              </button>
-            </div>
-            <div class="flex-1 overflow-auto select-text text-gray-400 font-mono text-xs pr-2 leading-relaxed">
-              <pre class="whitespace-pre-wrap">{{ logsTextToShow }}</pre>
-            </div>
-          </div>
-        </div>
 
         <!-- Tab: Settings -->
-        <div v-show="activeTab === 'settings'" class="flex-1 flex flex-col min-h-0 max-w-4xl mx-auto w-full">
-          <div class="flex-1 border border-[#191b22] rounded-2xl bg-[#0d0e12]/30 backdrop-blur-md overflow-hidden p-6">
-            <component 
-              v-if="settingsWidgetConfig"
-              :is="settingsComponent" 
-              :config="settingsWidgetConfig" 
-            />
-          </div>
+        <div v-show="activeTab === 'settings'" class="flex-1 flex flex-col min-h-0 w-full relative">
+          <component 
+            v-if="settingsWidgetConfig"
+            :is="settingsComponent" 
+            :config="settingsWidgetConfig" 
+          />
         </div>
       </main>
     </div>
@@ -265,6 +247,7 @@ import {
   nextTick 
 } from "vue";
 import { registry } from "../overlay/widget-registry.js";
+import { ItemCategory, parseClipboard } from "@/parser";
 import { AppConfig, saveConfig } from "@/web/Config";
 import { Host } from "@/web/background/IPC";
 import { useLeagues } from "@/web/background/Leagues";
@@ -314,6 +297,25 @@ export default defineComponent({
     Host.onEvent("MAIN->CLIENT::item-text", (e) => {
       if (e.isManual) return;
       if (e.target === "price-check") {
+        const parsed = parseClipboard(e.clipboard);
+        if (parsed.isOk()) {
+          const item = parsed.value;
+          const isLineageSupport = item.category === ItemCategory.Gem && (item.info.icon?.includes('/Lineage') ?? false);
+          const isListingsDisabled = 
+            item.category === ItemCategory.Currency ||
+            isLineageSupport ||
+            item.info.tradeTag != null;
+
+          if (isListingsDisabled) {
+            activeTab.value = "search";
+            nextTick(() => {
+              window.dispatchEvent(new CustomEvent("add-search-item", { detail: item }));
+            });
+            return;
+          } else {
+            activeTab.value = "price-check";
+          }
+        }
         manualItemText.value = e.clipboard;
         handleManualPaste();
       }
@@ -325,7 +327,6 @@ export default defineComponent({
     const tabs = [
       { id: "price-check", name: "Price Check", icon: "fas fa-search-dollar" },
       { id: "search", name: "Item Search", icon: "fas fa-search" },
-      { id: "logs", name: "System Logs", icon: "fas fa-file-alt" },
       { id: "settings", name: "Settings", icon: "fas fa-cog" },
     ];
 
@@ -335,17 +336,6 @@ export default defineComponent({
 
     const version = computed(() => Host.version.value);
     const leagueId = computed(() => AppConfig().leagueId);
-
-    // Custom logs clearing
-    const clearedLogsOffset = ref(0);
-    const logsTextToShow = computed(() => {
-      const fullLogs = Host.logs.value;
-      if (clearedLogsOffset.value >= fullLogs.length) return "";
-      return fullLogs.slice(clearedLogsOffset.value);
-    });
-    function clearLogsText() {
-      clearedLogsOffset.value = Host.logs.value.length;
-    }
 
     // Manual input parsing
     const manualItemText = ref("");
@@ -472,8 +462,6 @@ export default defineComponent({
       currentTabName,
       version,
       leagueId,
-      logsTextToShow,
-      clearLogsText,
       manualItemText,
       handleManualPaste,
       isPasteCollapsed,

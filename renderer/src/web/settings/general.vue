@@ -14,6 +14,13 @@
         <option value="fr">Français</option>
       </select>
     </div>
+    <div class="mb-4">
+      <div class="flex-1 mb-1">{{ t(":theme") || 'Theme' }}</div>
+      <select v-model="theme" class="p-1 rounded bg-gray-700 w-32">
+        <option value="default">Default</option>
+        <option value="dark-fantasy">Dark Fantasy</option>
+      </select>
+    </div>
     <div class="mb-4" v-if="language !== 'en'">
       <div class="flex-1 mb-1">{{ t(":preferred_trade_site") }}</div>
       <select v-model="preferredTradeSite" class="p-1 rounded bg-gray-700 w-24">
@@ -169,6 +176,15 @@ export default defineComponent({
           if (value !== "cmn-Hant") {
             props.config.realm = "pc-ggg";
           }
+        },
+      }),
+      theme: computed<typeof props.config.theme>({
+        get() {
+          return props.config.theme || "default";
+        },
+        set(value) {
+          props.config.theme = value;
+          AppConfig().theme = value;
         },
       }),
       tradeUrl: computed(() => {
