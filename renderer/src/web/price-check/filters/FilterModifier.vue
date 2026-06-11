@@ -86,11 +86,12 @@
               class="min-w-5 min-h-5 w-5 h-5"
             />
           </div>
-          <div 
-            v-if="showQ20Notice" 
-            :class="isStandalone ? 'bg-teal-950/20 border border-teal-900/30 text-teal-400 rounded-lg px-1.5 py-0.5 text-[9px] font-bold tracking-wider uppercase shrink-0' : $style['qualityLabel']"
-          >
+          <div v-if="showQ20Notice" :class="isStandalone ? 'bg-teal-950/20 border border-teal-900/30 text-teal-400 rounded-lg px-1.5 py-0.5 text-[9px] font-bold tracking-wider uppercase shrink-0' : $style['qualityLabel']">
             {{ t("item.prop_quality", [calcQuality]) }}
+          </div>
+          <div v-if="showInputs" class="flex gap-1 items-center shrink-0 ml-1">
+            <button @click="adjustRoll(-10)" type="button" :class="isStandalone ? 'px-1 py-0.5 text-[9px] bg-[#151722] border border-[#222538]/60 rounded text-gray-400 hover:text-gray-200 hover:bg-[#1f2233] transition-colors' : 'px-1 py-0.5 text-[9px] bg-gray-800 border border-gray-700 rounded text-gray-400 hover:text-gray-200'">-10%</button>
+            <button @click="adjustRoll(10)" type="button" :class="isStandalone ? 'px-1 py-0.5 text-[9px] bg-[#151722] border border-[#222538]/60 rounded text-gray-400 hover:text-gray-200 hover:bg-[#1f2233] transition-colors' : 'px-1 py-0.5 text-[9px] bg-gray-800 border border-gray-700 rounded text-gray-400 hover:text-gray-200'">+10%</button>
           </div>
           <div class="flex gap-1 ml-1 select-all shrink-0">
             <input
@@ -329,6 +330,28 @@ export default defineComponent({
       }
     }
 
+    function adjustRoll(percent: number) {
+      if (!props.filter.roll) return;
+      const roll = props.filter.roll;
+      const round = (val: number) => {
+        return roll.dp ? Number(val.toFixed(2)) : Math.round(val);
+      };
+
+      if (roll.min != null) {
+        roll.min = round(roll.min * (1 + percent / 100));
+      } else if (percent < 0) {
+        roll.min = round(roll.value * (1 + percent / 100));
+      } else {
+        roll.min = round(roll.value * (1 + percent / 100));
+      }
+
+      if (roll.max != null) {
+        roll.max = round(roll.max * (1 + percent / 100));
+      }
+      
+      props.filter.disabled = false;
+    }
+
     const text = computed(() => {
       if (
         !props.filter.tradeId?.[0] ||
@@ -447,6 +470,7 @@ export default defineComponent({
       ),
       inputFocus,
       toggleFilter,
+      adjustRoll,
       showShortText: computed(
         () =>
           (props.item.category === ItemCategory.Jewel &&
