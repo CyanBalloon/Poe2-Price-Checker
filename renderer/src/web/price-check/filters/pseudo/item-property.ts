@@ -584,7 +584,12 @@ function mapProps(ctx: FiltersCreationContext) {
 }
 
 function removeUsedStats(ctx: FiltersCreationContext, stats: Set<string>) {
-  ctx.statsByType = ctx.statsByType.filter((m) => !stats.has(m.stat.ref));
+  ctx.statsByType = ctx.statsByType.filter(
+    (m) =>
+      m.type === ModifierType.Augment ||
+      m.type === ModifierType.AddedAugment ||
+      !stats.has(m.stat.ref)
+  );
 }
 
 function isSingleAttrArmour(item: ParsedItem) {

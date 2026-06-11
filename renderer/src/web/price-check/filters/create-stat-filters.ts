@@ -4,6 +4,7 @@ import {
   ItemCategory,
   itemIsModifiable,
 } from "@/parser";
+import { WEAPON, ARMOUR } from "@/parser/meta";
 import {
   ModifierType,
   StatCalculated,
@@ -327,6 +328,76 @@ export function shortRollToFilter(
   return filterRoll;
 }
 
+const LOCAL_STAT_IDS = new Set([
+  "explicit.stat_4052037485",
+  "explicit.stat_53045048",
+  "explicit.stat_691932474",
+  "explicit.stat_124859000",
+  "explicit.stat_3484657501",
+  "explicit.stat_1062208444",
+  "explicit.stat_210067635",
+  "explicit.stat_2481353198",
+  "implicit.stat_1574531783",
+  "fractured.stat_210067635",
+  "fractured.stat_4052037485",
+  "fractured.stat_53045048",
+  "fractured.stat_691932474",
+  "fractured.stat_124859000",
+  "fractured.stat_1062208444",
+  "fractured.stat_3484657501",
+  "fractured.stat_2481353198",
+  "crafted.stat_210067635",
+  "crafted.stat_124859000",
+  "crafted.stat_1062208444",
+  "crafted.stat_691932474",
+  "crafted.stat_2481353198",
+  "enchant.stat_210067635",
+  "enchant.stat_124859000",
+  "enchant.stat_1062208444",
+  "enchant.stat_2481353198",
+  "rune.stat_210067635",
+  "rune.stat_691932474",
+  "rune.stat_53045048",
+  "rune.stat_4052037485",
+  "rune.stat_3484657501",
+  "rune.stat_2481353198",
+  "desecrated.stat_4052037485",
+  "desecrated.stat_53045048",
+  "desecrated.stat_124859000",
+  "desecrated.stat_691932474",
+  "desecrated.stat_210067635",
+  "desecrated.stat_3484657501",
+  "desecrated.stat_1062208444",
+  "desecrated.stat_2481353198"
+]);
+
+function getTradeIds(
+  stat: StatCalculated,
+  type: ModifierType,
+  item: ParsedItem
+): string[] {
+  let ids = stat.stat.trade.ids[
+    type === ModifierType.AddedAugment ? ModifierType.Augment : type
+  ] ?? [];
+
+  if (ids.length > 1) {
+    const isArmourOrWeapon = item.category && (ARMOUR.has(item.category) || WEAPON.has(item.category));
+    
+    const localId = ids.find(id => LOCAL_STAT_IDS.has(id));
+    const globalId = ids.find(id => !LOCAL_STAT_IDS.has(id));
+    
+    if (localId && globalId) {
+      if (isArmourOrWeapon) {
+        ids = [localId];
+      } else {
+        ids = [globalId];
+      }
+    }
+  }
+  
+  return ids;
+}
+
 export function calculatedStatToFilter(
   calc: StatCalculated,
   percent: number,
@@ -344,10 +415,7 @@ export function calculatedStatToFilter(
 
   if (stat.trade.option) {
     filter = {
-      tradeId:
-        stat.trade.ids[
-        type === ModifierType.AddedAugment ? ModifierType.Augment : type
-        ] ?? [],
+      tradeId: getTradeIds(calc, type, item),
       statRef: stat.ref,
       text:
         roll?.option === roll?.value
@@ -365,10 +433,7 @@ export function calculatedStatToFilter(
   }
 
   filter ??= {
-    tradeId:
-      stat.trade.ids[
-      type === ModifierType.AddedAugment ? ModifierType.Augment : type
-      ] ?? [],
+    tradeId: getTradeIds(calc, type, item),
     statRef: stat.ref,
     text: translation.string,
     tag: type as unknown as FilterTag,
@@ -767,6 +832,10 @@ function hideAllAugments(filters: StatFilter[]) {
       filter.tag === FilterTag.Augment ||
       filter.tag === FilterTag.AddedAugment
     ) {
+      if (filter.roll) {
+        continue;
+      }
+
       // disable all
       filter.disabled = true;
 

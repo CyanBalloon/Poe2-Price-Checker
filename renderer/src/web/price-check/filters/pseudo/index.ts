@@ -203,13 +203,7 @@ const PSEUDO_RULES: PseudoRule[] = [
     pseudo: stat("#% increased Movement Speed"),
     stats: [{ ref: stat("#% increased Movement Speed") }],
     mutate(filter) {
-      if (
-        filter.sources.length !== 1 ||
-        (filter.sources.length === 1 &&
-          filter.sources[0].modifier.info.type !== ModifierType.Implicit)
-      ) {
-        filter.disabled = false;
-      }
+      filter.disabled = false;
     },
   },
   // {
@@ -417,6 +411,8 @@ export function filterPseudo(ctx: FiltersCreationContext) {
 
   ctx.statsByType = ctx.statsByType.filter(
     (m) =>
+      m.type === ModifierType.Augment ||
+      m.type === ModifierType.AddedAugment ||
       !PSEUDO_RULES.some((rule) =>
         rule.stats.some(({ ref }) => m.stat.ref === ref),
       ),
@@ -479,6 +475,13 @@ function filterPseudoSources(
   const out: StatSource[] = [];
   for (const calc of stats) {
     for (const source of calc.sources) {
+      if (
+        source.modifier?.info &&
+        (source.modifier.info.type === ModifierType.Augment ||
+          source.modifier.info.type === ModifierType.AddedAugment)
+      ) {
+        continue;
+      }
       const result = mapFn(calc, source);
       if (result) {
         out.push(result);

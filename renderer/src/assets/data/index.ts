@@ -202,6 +202,46 @@ async function loadItems(language: string) {
   }
 }
 
+function mergeStats(stats: Stat[]): Stat {
+  if (stats.length === 1) return stats[0];
+  const merged: Stat = {
+    ref: stats[0].ref,
+    better: stats[0].better,
+    matchers: [],
+    trade: {
+      ids: {},
+    },
+  };
+  const seenMatchers = new Set<string>();
+  for (const s of stats) {
+    if (s.trade.inverted !== undefined) merged.trade.inverted = s.trade.inverted;
+    if (s.trade.option !== undefined) merged.trade.option = s.trade.option;
+    
+    if (s.matchers) {
+      for (const m of s.matchers) {
+        if (!seenMatchers.has(m.string)) {
+          seenMatchers.add(m.string);
+          merged.matchers.push(m);
+        }
+      }
+    }
+    
+    if (s.trade.ids) {
+      for (const [type, ids] of Object.entries(s.trade.ids)) {
+        if (!merged.trade.ids[type]) {
+          merged.trade.ids[type] = [];
+        }
+        for (const id of ids) {
+          if (!merged.trade.ids[type].includes(id)) {
+            merged.trade.ids[type].push(id);
+          }
+        }
+      }
+    }
+  }
+  return merged;
+}
+
 async function loadStats(language: string) {
   const ndjson = await (
     await fetch(`${import.meta.env.BASE_URL}data/${language}/stats.ndjson`)
@@ -223,16 +263,45 @@ async function loadStats(language: string) {
   );
 
   STAT_BY_REF = function (ref: string) {
-    let start = dataBinarySearch(
+    const hash = Number(fnv1a(ref, { size: 32 }));
+    const foundIdx = dataBinarySearch(
       indexRef,
-      Number(fnv1a(ref, { size: 32 })),
+      hash,
       0,
       INDEX_WIDTH,
     );
-    if (start === -1) return undefined;
-    start = indexRef[start * INDEX_WIDTH + 1];
-    const end = ndjson.indexOf("\n", start);
-    return JSON.parse(ndjson.slice(start, end));
+    if (foundIdx === -1) return undefined;
+
+    const matchedStats: Stat[] = [];
+
+    const checkIndex = (idx: number) => {
+      const start = indexRef[idx * INDEX_WIDTH + 1];
+      const end = ndjson.indexOf("\n", start);
+      const parsed = JSON.parse(ndjson.slice(start, end)) as Stat;
+      if (parsed.ref === ref) {
+        matchedStats.push(parsed);
+      }
+    };
+
+    checkIndex(foundIdx);
+
+    let l = foundIdx - 1;
+    while (l >= 0 && indexRef[l * INDEX_WIDTH] === hash) {
+      checkIndex(l);
+      l--;
+    }
+
+    let r = foundIdx + 1;
+    while (
+      r < indexRef.length / INDEX_WIDTH &&
+      indexRef[r * INDEX_WIDTH] === hash
+    ) {
+      checkIndex(r);
+      r++;
+    }
+
+    if (matchedStats.length === 0) return undefined;
+    return mergeStats(matchedStats);
   };
 
   STAT_BY_MATCH_STR = function (matchStr: string) {

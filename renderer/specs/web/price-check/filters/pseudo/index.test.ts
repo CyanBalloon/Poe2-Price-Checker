@@ -210,6 +210,25 @@ describe("filterPseudo", () => {
     expect(movementSpeed).toBeDefined();
   });
 
+  it("should enable movement speed pseudo filter by default even if single implicit source", () => {
+    const ctx: FiltersCreationContext = {
+      item: { info: { refName: "name" } } as ParsedItem,
+      searchInRange: 0,
+      filters: [],
+      statsByType: [
+        createStatHelper(MovementSpeedRef, 30, ModifierType.Implicit),
+      ],
+    };
+
+    filterPseudo(ctx);
+
+    const movementSpeed = ctx.filters.find(
+      (f) => f.statRef === MovementSpeedRef,
+    );
+    expect(movementSpeed).toBeDefined();
+    expect(movementSpeed?.disabled).toBe(false);
+  });
+
   it("should merge two of same stats", () => {
     const ctx: FiltersCreationContext = {
       item: { info: { refName: "name" } } as ParsedItem,
@@ -315,4 +334,29 @@ describe("filterPseudo", () => {
     expect(uses?.disabled).toBe(false);
     expect(uses?.roll?.value).toBe(8);
   });
+
+  it("should not combine augment modifiers into pseudo stats", () => {
+    const ctx: FiltersCreationContext = {
+      item: { info: { refName: "name" } } as ParsedItem,
+      searchInRange: 0,
+      filters: [],
+      statsByType: [
+        createStatHelper(MovementSpeedRef, 30, ModifierType.Explicit),
+        createStatHelper(MovementSpeedRef, 5, ModifierType.Augment),
+      ],
+    };
+
+    filterPseudo(ctx);
+
+    const movementSpeed = ctx.filters.find(
+      (f) => f.statRef === MovementSpeedRef,
+    );
+    expect(movementSpeed).toBeDefined();
+    expect(movementSpeed?.roll?.value).toBe(30);
+
+    expect(ctx.statsByType).toHaveLength(1);
+    expect(ctx.statsByType[0].type).toBe(ModifierType.Augment);
+    expect(ctx.statsByType[0].sources[0].contributes?.value).toBe(5);
+  });
 });
+
