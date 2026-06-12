@@ -11,7 +11,7 @@ import { GameConfig } from "./host-files/GameConfig";
 import { Shortcuts } from "./shortcuts/Shortcuts";
 import { AppUpdater } from "./AppUpdater";
 import { AppTray } from "./AppTray";
-import { OverlayVisibility } from "./windowing/OverlayVisibility";
+
 import { GameLogWatcher } from "./host-files/GameLogWatcher";
 import { HttpProxy } from "./proxy";
 import { installExtension, VUEJS_DEVTOOLS } from "electron-devtools-installer";
@@ -94,10 +94,8 @@ let tray: AppTray;
     setTimeout(
       async () => {
         const overlay = new OverlayWindow(eventPipe, logger, poeWindow);
-        if (!process.argv.includes("--standalone")) {
-          // eslint-disable-next-line no-new
-          new OverlayVisibility(eventPipe, overlay, gameConfig);
-        }
+        tray.onShow = () => overlay.showWindow();
+
         const shortcuts = await Shortcuts.create(
           logger,
           overlay,

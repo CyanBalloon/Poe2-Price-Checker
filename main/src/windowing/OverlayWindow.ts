@@ -3,7 +3,6 @@ import { BrowserWindow, dialog, shell, Menu, app, screen } from "electron";
 import fs from "fs";
 import {
   OverlayController,
-  OVERLAY_WINDOW_OPTS,
 } from "electron-overlay-window";
 import type { ServerEvents } from "../server";
 import type { Logger } from "../RemoteLogger";
@@ -32,9 +31,7 @@ export class OverlayWindow {
       this.wasUsedRecently = e.isOverlay;
     });
 
-    if (process.argv.includes("--no-overlay")) return;
-
-    const isStandalone = process.argv.includes("--standalone");
+    const isStandalone = true;
 
     const windowState = {
       width: 1280,
@@ -78,7 +75,6 @@ export class OverlayWindow {
 
     this.window = new BrowserWindow({
       icon: path.join(__dirname, process.env.STATIC!, "icon.png"),
-      ...(isStandalone ? {} : OVERLAY_WINDOW_OPTS),
       width: isStandalone ? windowState.width : 800,
       height: isStandalone ? windowState.height : 600,
       x: isStandalone ? windowState.x : undefined,
@@ -113,7 +109,8 @@ export class OverlayWindow {
 
       this.window.on("resize", saveState);
       this.window.on("move", saveState);
-      this.window.on("close", () => {
+      this.window.on("close", (e) => {
+        e.preventDefault();
         if (saveTimeout) clearTimeout(saveTimeout);
         if (!this.window) return;
         try {
@@ -125,6 +122,7 @@ export class OverlayWindow {
             y: bounds.y,
           }), "utf8");
         } catch {}
+        this.window.hide();
       });
     }
 
@@ -151,7 +149,7 @@ export class OverlayWindow {
   }
 
   loadAppPage(port: number) {
-    const isStandalone = process.argv.includes("--standalone");
+    const isStandalone = true;
     const baseUrl =
       process.env.VITE_DEV_SERVER_URL || `http://localhost:${port}/index.html`;
     const url = isStandalone ? `${baseUrl}?mode=standalone` : baseUrl;
@@ -170,31 +168,21 @@ export class OverlayWindow {
   }
 
   assertOverlayActive = () => {
-    if (process.argv.includes("--standalone")) return;
-    if (!this.isInteractable) {
-      this.isInteractable = true;
-      OverlayController.activateOverlay();
-      this.poeWindow.isActive = false;
+    if (this.window) {
+      this.window.show();
+      this.window.focus();
     }
   };
 
   assertGameActive = () => {
-    if (process.argv.includes("--standalone")) {
-      OverlayController.focusTarget();
-      return;
-    }
-    if (this.isInteractable) {
-      this.isInteractable = false;
-      OverlayController.focusTarget();
-      this.poeWindow.isActive = true;
-    }
+    OverlayController.focusTarget();
   };
 
   toggleActiveState = () => {
-    if (process.argv.includes("--standalone")) {
       if (this.window) {
         if (this.window.isVisible()) {
           this.window.hide();
+          this.assertGameActive();
         } else {
           this.window.setAlwaysOnTop(true);
           this.window.show();
@@ -204,20 +192,12 @@ export class OverlayWindow {
           }, 50);
         }
       }
-      return;
-    }
-    this.isOverlayKeyUsed = true;
-    if (this.isInteractable) {
-      this.assertGameActive();
-    } else {
-      this.assertOverlayActive();
-    }
   };
 
   updateOpts(overlayKey: string, windowTitle: string) {
     this.overlayKey = overlayKey;
-    const isStandalone = process.argv.includes("--standalone");
-    this.poeWindow.attach(isStandalone ? undefined : this.window, windowTitle);
+    const isStandalone = true;
+    this.poeWindow.attach(undefined, windowTitle);
   }
 
   showWindow() {
@@ -261,9 +241,6 @@ export class OverlayWindow {
     switch (code) {
       case "Escape":
       case "Ctrl + W": {
-        if (process.argv.includes("--standalone")) break;
-        event.preventDefault();
-        process.nextTick(this.assertGameActive);
         break;
       }
       case this.overlayKey: {

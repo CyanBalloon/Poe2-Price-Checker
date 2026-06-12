@@ -137,7 +137,8 @@ export function createExactStatFilters(
     } else if (filter.tag === FilterTag.Explicit) {
       filter.disabled = !filter.sources.some(
         (source) =>
-          source.modifier.info.tier != null && source.modifier.info.tier <= 2,
+          (source.modifier.info.tier != null && source.modifier.info.tier <= 2) ||
+          item.rarity === ItemRarity.Magic,
       );
     } else if (filter.tag !== FilterTag.Property) {
       filter.disabled = false;

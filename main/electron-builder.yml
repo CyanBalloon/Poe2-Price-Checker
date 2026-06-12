@@ -1,7 +1,8 @@
 publish:
   - "github"
 productName: "Exiled Exchange 2"
-npmRebuild: false
+npmRebuild: true
+compression: normal
 files:
   - "package.json"
   - from: "dist"
@@ -16,7 +17,6 @@ nsis:
   allowToChangeInstallationDirectory: true
 win:
   target:
-    - "nsis"
     - "portable"
 linux:
   target:

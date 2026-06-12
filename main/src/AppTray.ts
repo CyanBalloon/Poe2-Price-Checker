@@ -33,15 +33,14 @@ export class AppTray {
     });
   }
 
+  public onShow?: () => void;
+
   rebuildMenu() {
     const contextMenu = Menu.buildFromTemplate([
       {
-        label: "Settings/League",
+        label: "Show Window",
         click: () => {
-          dialog.showMessageBox({
-            title: "Settings",
-            message: `Open Path of Exile 2 and press "${this.overlayKey}". Click on the button with cog icon there.`,
-          });
+          if (this.onShow) this.onShow();
         },
       },
       {

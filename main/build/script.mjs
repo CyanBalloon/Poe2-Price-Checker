@@ -56,7 +56,7 @@ const mainContext = await esbuild.context({
   outfile: 'dist/main.js',
   define: {
     'process.env.STATIC': (isDev) ? '"../build/icons"' : '"."',
-    'process.env.VITE_DEV_SERVER_URL': (isDev) ? '"http://localhost:5174"' : 'null'
+    'process.env.VITE_DEV_SERVER_URL': (isDev) ? '"http://localhost:5176"' : 'null'
   },
   plugins: (isDev) ? [{
     name: 'electron-runner',
