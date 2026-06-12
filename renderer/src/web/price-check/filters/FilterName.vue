@@ -13,9 +13,18 @@
         <span class="px-2 py-0.5 rounded-md text-[9px] font-bold tracking-wider uppercase bg-[#101116] border border-[#1b1d2a] text-gray-400">
           {{ item.category || 'Item' }}
         </span>
-        <span v-if="item.isCorrupted" class="px-2 py-0.5 rounded-md text-[9px] font-bold tracking-wider uppercase bg-red-950/25 border border-red-900/30 text-red-400">
+        <button 
+          v-if="filters.corrupted"
+          @click="corrupted = !corrupted"
+          :class="[
+            'px-2 py-0.5 rounded-md text-[9px] font-bold tracking-wider uppercase border transition-colors',
+            corrupted 
+              ? 'bg-red-950/25 border-red-900/50 text-red-400 hover:bg-red-900/40' 
+              : 'bg-[#101116] border-[#1b1d2a] text-gray-500 hover:text-gray-400'
+          ]"
+        >
           Corrupted
-        </span>
+        </button>
       </div>
 
       <!-- Search Rarity Filter Dropdown -->
@@ -81,6 +90,27 @@
           type="number" 
           v-model.number="filters.itemLevel.value"
           @focus="filters.itemLevel.disabled = false"
+          class="w-6 bg-transparent text-center font-bold font-mono text-teal-400 focus:outline-none select-all [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+        />
+      </div>
+
+      <!-- Gem Level -->
+      <div 
+        v-if="filters.gemLevel"
+        :class="[
+          'text-[10px] font-medium px-2 py-0.5 rounded-xl border flex items-center gap-1 select-none transition-all duration-200',
+          !filters.gemLevel.disabled 
+            ? 'bg-[#1e1a38]/60 border-violet-500/40 text-violet-300 shadow-sm shadow-violet-950/20' 
+            : 'bg-[#101218] border-transparent text-gray-400 hover:border-[#202334]'
+        ]"
+      >
+        <button @click="filters.gemLevel.disabled = !filters.gemLevel.disabled" class="hover:text-gray-200 transition-colors uppercase text-[9px] font-semibold tracking-wide">
+          Lvl
+        </button>
+        <input 
+          type="number" 
+          v-model.number="filters.gemLevel.value"
+          @focus="filters.gemLevel.disabled = false"
           class="w-6 bg-transparent text-center font-bold font-mono text-teal-400 focus:outline-none select-all [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
         />
       </div>

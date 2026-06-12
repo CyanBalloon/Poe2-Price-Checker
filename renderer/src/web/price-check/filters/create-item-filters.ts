@@ -604,7 +604,7 @@ function createGemFilters(
   if (item.gemSockets!) {
     filters.socketNumber = {
       value: item.gemSockets.number,
-      disabled: item.gemSockets.number < 3,
+      disabled: false,
     };
   }
 
@@ -618,7 +618,7 @@ function createGemFilters(
   if (item.gemLevel != null) {
     filters.gemLevel = {
       value: item.gemLevel!,
-      disabled: item.gemLevel! < 19,
+      disabled: false,
     };
   }
 

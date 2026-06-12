@@ -1,9 +1,13 @@
 import json
 import os
 
-json_dir = r"e:\Projects\Modern-Exiled-Exchange-2\dataParser\data\json"
-public_dir = r"e:\Projects\Modern-Exiled-Exchange-2\renderer\public\data"
+json_dir = os.path.join(os.path.dirname(__file__), "data", "json")
+public_dir = os.path.join(os.path.dirname(__file__), "..", "renderer", "public", "data")
 languages = ["en", "ru", "cmn-Hant", "ko", "ja", "de", "es", "pt", "fr"]
+
+MANUAL_IMAGE_OVERRIDES = {
+    "Uhtred's Chalice": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvR2Vtcy9OZXcvTmV3U3VwcG9ydC9MaW5lYWdlL1V0aHJlZHNDaGFsaWNlIiwic2NhbGUiOjEsInJlYWxtIjoicG9lMiJ9XQ/484fb5bdbb/UthredsChalice.png"
+}
 
 # Metadata for missing base types
 MISSING_BASES_META = {
@@ -197,6 +201,11 @@ def main():
                 added_uniques += 1
 
         print(f"  Added uniques: {added_uniques}, Added bases: {added_bases}")
+
+        # Apply manual image overrides
+        for item in items:
+            if item.get("refName") in MANUAL_IMAGE_OVERRIDES:
+                item["icon"] = MANUAL_IMAGE_OVERRIDES[item["refName"]]
 
         # Sort the items: by namespace, then refName
         items.sort(key=lambda x: (x.get("namespace"), x.get("refName")))

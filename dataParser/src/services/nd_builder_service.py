@@ -472,6 +472,7 @@ class NdBuilderService:
             classes[["_index", "Id"]],
             left_on="ItemClass",
             right_on="_index",
+            how="left",
             validate="m:1",
         ).drop(["_index"], axis=1)
         return combined_non_unique

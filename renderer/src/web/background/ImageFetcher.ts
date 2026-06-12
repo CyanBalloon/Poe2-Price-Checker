@@ -4,6 +4,17 @@ const CACHE_KEY = "exchanged-dynamic-icons";
 let cache: Record<string, string> = {};
 try {
   cache = JSON.parse(localStorage.getItem(CACHE_KEY) || "{}");
+  // Clear out any previously saved 404s from permanent storage
+  let needsSave = false;
+  for (const key of Object.keys(cache)) {
+    if (cache[key] === "404") {
+      delete cache[key];
+      needsSave = true;
+    }
+  }
+  if (needsSave) {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+  }
 } catch (e) {
   cache = {};
 }
@@ -64,7 +75,7 @@ async function processQueue() {
       } else {
         // Cache misses as "404" so we don't spam the API for impossible items
         cache[req.itemName] = "404";
-        saveCache();
+        // Do NOT saveCache() for 404s, so it tries again on next app start
         req.resolve(null);
       }
     } catch (e) {

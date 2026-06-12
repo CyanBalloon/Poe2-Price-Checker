@@ -438,7 +438,10 @@ const results = computed(() => {
     if (localNs === "SkillGem") localNs = "GEM";
     if (localNs === "UniqueWeapon" || localNs === "UniqueArmour" || localNs === "UniqueAccessory" || localNs === "UniqueFlask" || localNs === "UniqueJewel") localNs = "UNIQUE";
     
-    const localMatches = ITEM_BY_TRANSLATED(localNs as any, res.name);
+    let localMatches = ITEM_BY_TRANSLATED(localNs as any, res.name);
+    if (!localMatches || localMatches.length === 0) {
+      localMatches = ITEM_BY_TRANSLATED("ITEM" as any, res.name);
+    }
     const localItem = localMatches?.[0];
 
     if (res.name.includes("Uhtred's Rite")) {

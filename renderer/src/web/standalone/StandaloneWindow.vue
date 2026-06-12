@@ -1,28 +1,28 @@
 <template>
   <div class="flex h-screen w-screen bg-[#07080a] text-gray-100 font-sans overflow-hidden">
     <!-- Left Sidebar -->
-    <div v-show="!isSidebarCollapsed" class="w-64 bg-[#0d0e12] border-r border-[#191b22] flex flex-col justify-between p-5 select-none shrink-0">
+    <div 
+      @mouseenter="isHovered = true"
+      @mouseleave="isHovered = false"
+      class="bg-[#0d0e12] border-r border-[#191b22] flex flex-col justify-between p-3 select-none shrink-0 transition-all duration-300 ease-in-out overflow-hidden"
+      :class="isHovered ? 'w-64' : 'w-16'"
+    >
       <div>
         <!-- App Title / Logo -->
-        <div class="flex items-center justify-between mb-8 px-2">
+        <div class="flex items-center mb-8 px-1">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-teal-400 p-[1px] flex items-center justify-center shadow-lg shadow-violet-950/20">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-teal-400 p-[1px] flex items-center justify-center shadow-lg shadow-violet-950/20 shrink-0">
               <div class="w-full h-full bg-[#0d0e12] rounded-lg flex items-center justify-center">
                 <img src="/images/jeweler.png" class="w-5 h-5 animate-pulse" alt="EE2" />
               </div>
             </div>
-            <span class="text-sm font-semibold tracking-wider bg-gradient-to-r from-violet-400 via-indigo-200 to-teal-300 bg-clip-text text-transparent">
+            <span 
+              class="text-sm font-semibold tracking-wider bg-gradient-to-r from-violet-400 via-indigo-200 to-teal-300 bg-clip-text text-transparent transition-all duration-300 overflow-hidden whitespace-nowrap"
+              :class="isHovered ? 'opacity-100 max-w-[150px]' : 'opacity-0 max-w-0'"
+            >
               EXILED EXCHANGE 2
             </span>
           </div>
-          
-          <button 
-            @click="isSidebarCollapsed = true"
-            class="text-gray-500 hover:text-gray-300 transition-colors p-1"
-            title="Collapse Sidebar"
-          >
-            <i class="fas fa-chevron-left text-xs"></i>
-          </button>
         </div>
 
         <!-- Navigation Tabs -->
@@ -31,21 +31,29 @@
             v-for="tab in tabs" 
             :key="tab.id"
             @click="activeTab = tab.id"
+            class="w-full flex items-center px-2.5 py-3 rounded-xl text-sm transition-all duration-300 font-medium border border-transparent"
             :class="[
-              'w-full flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm transition-all duration-300 font-medium border border-transparent',
               activeTab === tab.id 
                 ? 'bg-[#151722] text-[#8b5cf6] border-[#202334] shadow-inner shadow-black/40' 
                 : 'text-gray-400 hover:text-gray-200 hover:bg-[#111218]/50'
             ]"
           >
-            <i :class="[tab.icon, 'text-base transition-colors', activeTab === tab.id ? 'text-[#8b5cf6]' : 'text-gray-500']"></i>
-            <span>{{ tab.name }}</span>
+            <i :class="[tab.icon, 'text-base transition-colors w-5 text-center shrink-0', activeTab === tab.id ? 'text-[#8b5cf6]' : 'text-gray-500']"></i>
+            <span 
+              class="transition-all duration-300 overflow-hidden whitespace-nowrap"
+              :class="isHovered ? 'opacity-100 max-w-[150px] ml-3' : 'opacity-0 max-w-0 ml-0'"
+            >
+              {{ tab.name }}
+            </span>
           </button>
         </nav>
       </div>
 
       <!-- Footer Info -->
-      <div class="border-t border-[#191b22] pt-4 px-2 text-[11px] text-gray-500 flex flex-col gap-2">
+      <div 
+        class="border-t border-[#191b22] pt-4 px-2 text-[11px] text-gray-500 flex flex-col gap-2 transition-all duration-300 overflow-hidden"
+        :class="isHovered ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0 pt-0 border-t-transparent'"
+      >
         <div class="flex items-center justify-between">
           <span>Version</span>
           <span class="font-mono text-gray-400">{{ version }}</span>
@@ -66,16 +74,6 @@
       <!-- Header -->
       <header class="h-16 border-b border-[#191b22] flex items-center justify-between px-8 select-none bg-[#090a0e]/40 backdrop-blur-md shrink-0 z-30 relative">
         <div class="flex items-center gap-6">
-          <!-- Expand Button (only when sidebar is collapsed) -->
-          <button 
-            v-if="isSidebarCollapsed" 
-            @click="isSidebarCollapsed = false"
-            class="text-gray-400 hover:text-white transition-colors mr-2 p-1 flex items-center justify-center bg-[#151722] hover:bg-[#1f2234] border border-[#202334] rounded-lg w-8 h-8"
-            title="Expand Sidebar"
-          >
-            <i class="fas fa-chevron-right text-xs"></i>
-          </button>
-          
           <h1 class="text-base font-semibold tracking-wide text-gray-200 uppercase">{{ currentTabName }}</h1>
           
           <!-- Divine/Exalt Exchange Ratio (only on Price Check tab) -->
@@ -323,7 +321,7 @@ export default defineComponent({
 
     // Tabs setup
     const activeTab = ref("price-check");
-    const isSidebarCollapsed = ref(false);
+    const isHovered = ref(false);
     const tabs = [
       { id: "price-check", name: "Price Check", icon: "fas fa-search-dollar" },
       { id: "search", name: "Item Search", icon: "fas fa-search" },
@@ -482,7 +480,7 @@ export default defineComponent({
       isLeagueDropdownOpen,
       tradeLeagues,
       selectLeague,
-      isSidebarCollapsed,
+      isHovered,
     };
   },
 });

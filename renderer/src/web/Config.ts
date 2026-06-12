@@ -650,6 +650,10 @@ function upgradeConfig(_config: Config): Config {
 
     config.configVersion = 31;
   }
+  
+  if ((config as any).theme === "pastel") {
+    config.theme = "default";
+  }
   /* eslint-enable */
 
   return config as unknown as Config;

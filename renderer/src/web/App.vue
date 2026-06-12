@@ -18,10 +18,11 @@ const isStandalone = computed(() => {
 
 watchEffect(() => {
   const config = AppConfig();
-  if (config && config.theme === "dark-fantasy") {
-    document.body.classList.add("theme-dark-fantasy");
-  } else {
-    document.body.classList.remove("theme-dark-fantasy");
+  document.body.classList.remove("theme-dark-fantasy");
+  if (config) {
+    if (config.theme === "dark-fantasy") {
+      document.body.classList.add("theme-dark-fantasy");
+    }
   }
 });
 </script>
