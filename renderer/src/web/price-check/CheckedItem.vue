@@ -237,6 +237,7 @@ import {
   onUnmounted,
 } from "vue";
 import { useI18n } from "vue-i18n";
+import { useStorage } from "@vueuse/core";
 import { ItemRarity, ItemCategory, ParsedItem } from "@/parser";
 import TradeListing from "./trade/TradeListing.vue";
 import TradeBulk from "./trade/TradeBulk.vue";
@@ -574,7 +575,7 @@ export default defineComponent({
 
     const { t } = useI18n();
 
-    const leftPanelWidth = ref(420);
+    const leftPanelWidth = useStorage("priceCheckLeftPanelWidth", 420);
     function startResize(e: MouseEvent) {
       e.preventDefault();
       const startX = e.clientX;
