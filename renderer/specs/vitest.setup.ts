@@ -36,9 +36,10 @@ export const setupFetchMock = () => {
   // @ts-expect-error - fetch is not defined in vitest
   global.fetch = vi.fn(async (url) => {
     const basePath = path.resolve(__dirname, "../public/");
+    const parsedUrl = new URL(url, 'http://localhost');
     const filePath = path.join(
       basePath,
-      url.replace(import.meta.env.BASE_URL, ""),
+      parsedUrl.pathname.replace(import.meta.env.BASE_URL, ""),
     );
 
     const createResponse = (body: unknown, status = 200) => ({
