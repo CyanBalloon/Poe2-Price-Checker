@@ -73,5 +73,6 @@ export function explicitModifierCount(item: ParsedItem) {
     prefixes,
     suffixes,
     total: prefixes + suffixes,
+    length: randomMods.length,
   };
 }

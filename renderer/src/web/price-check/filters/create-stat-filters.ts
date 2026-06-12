@@ -869,9 +869,9 @@ function showHasEmptyModifier(ctx: FiltersCreationContext):
   }
 
   if (item.rarity === ItemRarity.Magic) {
-    const { prefixes: magicPrefixes, suffixes: magicSuffixes } =
+    const { prefixes: magicPrefixes, suffixes: magicSuffixes, length: magicLength } =
       explicitModifierCount(item);
-    if (magicPrefixes && magicSuffixes) {
+    if (magicLength === 2) {
       return false;
     }
     if (magicPrefixes > 0) {
@@ -888,6 +888,15 @@ function showHasEmptyModifier(ctx: FiltersCreationContext):
         empty: ItemHasEmptyModifier.Prefix,
         counts: {
           [ItemHasEmptyModifier.Prefix]: 1,
+          [ItemHasEmptyModifier.Suffix]: 0,
+          [ItemHasEmptyModifier.Any]: 1,
+        },
+      };
+    } else if (magicLength === 1) {
+      return {
+        empty: ItemHasEmptyModifier.Any,
+        counts: {
+          [ItemHasEmptyModifier.Prefix]: 0,
           [ItemHasEmptyModifier.Suffix]: 0,
           [ItemHasEmptyModifier.Any]: 1,
         },
