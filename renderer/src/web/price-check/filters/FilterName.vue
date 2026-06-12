@@ -63,10 +63,10 @@
       <span class="text-xs text-gray-400 font-medium flex items-center">
         {{ item.baseType || item.info.refName }}
         <span 
-          v-if="item.requirements?.level" 
+          v-if="item.requires?.level" 
           class="text-teal-500/80 text-[10px] ml-1.5 font-bold tracking-wide uppercase bg-teal-950/30 px-1.5 py-0.5 rounded border border-teal-900/30"
         >
-          (Base Lvl {{ item.requirements.level }})
+          (Base Lvl {{ item.requires.level }})
         </span>
       </span>
     </div>
