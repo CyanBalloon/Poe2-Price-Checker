@@ -7,9 +7,11 @@ files:
   - "package.json"
   - from: "dist"
     to: "."
-    filter: ["main.js", "vision.js"]
+    filter: ["main.js", "vision.js", "clicker.exe"]
   - from: "../renderer/dist"
     to: "."
+asarUnpack:
+  - "**/clicker.exe"
 extraMetadata:
   main: "main.js"
 nsis:

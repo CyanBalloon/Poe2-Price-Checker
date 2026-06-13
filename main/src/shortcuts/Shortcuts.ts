@@ -23,6 +23,8 @@ const UiohookToName = Object.fromEntries(
   Object.entries(UiohookKey).map(([k, v]) => [v, k]),
 );
 
+const isStandalone = true;
+
 export class Shortcuts {
   private actions: ShortcutAction[] = [];
   private stashScroll = false;
@@ -65,14 +67,14 @@ export class Shortcuts {
     this.clipboard = new HostClipboard(logger);
 
     const updateActiveState = () => {
-      const isFocused = this.isGameWindowActive || this.poeWindow.isActive || (process.argv.includes("--standalone") && this.overlay.window?.isFocused());
+      const isFocused = this.isGameWindowActive || this.poeWindow.isActive || (isStandalone && this.overlay.window?.isFocused());
       if (this.clickerProcess && this.clickerProcess.stdin.writable) {
         this.clickerProcess.stdin.write(isFocused ? "active 1\n" : "active 0\n");
       }
     };
 
     if (process.platform === "win32") {
-      const clickerPath = path.join(__dirname, "clicker.exe");
+      const clickerPath = path.join(__dirname, "clicker.exe").replace("app.asar", "app.asar.unpacked");
       try {
         this.clickerProcess = child_process.spawn(clickerPath, [], { stdio: ["pipe", "pipe", "ignore"] });
         
@@ -92,13 +94,13 @@ export class Shortcuts {
                 this.gameBounds = { x, y, width, height };
               }
 
-              if (process.argv.includes("--standalone")) {
+              if (isStandalone) {
                 this.register();
               }
               updateActiveState();
             } else if (trimmed === "focus 0") {
               this.isGameWindowActive = false;
-              if (process.argv.includes("--standalone") && !this.overlay.window?.isFocused()) {
+              if (isStandalone && !this.overlay.window?.isFocused()) {
                 this.unregister();
               }
               updateActiveState();
@@ -139,7 +141,7 @@ export class Shortcuts {
                 focusOverlay: false,
               },
             });
-            if (process.argv.includes("--standalone")) {
+            if (isStandalone) {
               this.overlay.showWindow();
             }
           }
@@ -162,7 +164,7 @@ export class Shortcuts {
       });
     });
 
-    if (process.argv.includes("--standalone") && this.overlay.window) {
+    if (isStandalone && this.overlay.window) {
       this.overlay.window.on("focus", () => {
         this.register();
         updateActiveState();
@@ -215,7 +217,7 @@ export class Shortcuts {
                   focusOverlay: false,
                 },
               });
-              if (process.argv.includes("--standalone")) {
+              if (isStandalone) {
                 this.overlay.showWindow();
               }
             }
@@ -247,7 +249,7 @@ export class Shortcuts {
     });
 
     uIOhook.on("wheel", (e) => {
-      const isActive = this.isGameWindowActive || this.poeWindow.isActive || (process.argv.includes("--standalone") && this.overlay.window?.isFocused());
+      const isActive = this.isGameWindowActive || this.poeWindow.isActive || (isStandalone && this.overlay.window?.isFocused());
       if (!this.isCtrlPressed || !isActive) return;
 
       if (isMouseOverStash(e, this)) return;
@@ -392,7 +394,7 @@ export class Shortcuts {
                     focusOverlay: Boolean(action.focusOverlay),
                   },
                 });
-                if (process.argv.includes("--standalone")) {
+                if (isStandalone) {
                   if (action.target === "price-check") {
                     this.overlay.showWindow();
                   }

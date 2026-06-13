@@ -121,9 +121,10 @@ class Clicker {
         lastRect.Left = 0; lastRect.Top = 0; lastRect.Right = 0; lastRect.Bottom = 0;
         while (true) {
             bool isCtrlPressed = (GetAsyncKeyState(0x11) & 0x8000) != 0; // VK_CONTROL
+            bool isShiftPressed = (GetAsyncKeyState(0x10) & 0x8000) != 0; // VK_SHIFT
             bool isRButtonPressed = (GetAsyncKeyState(0x02) & 0x8000) != 0; // VK_RBUTTON
             bool isAltPressed = (GetAsyncKeyState(0x12) & 0x8000) != 0; // VK_MENU (Alt)
-            
+
             RECT currentRect;
             currentRect.Left = 0; currentRect.Top = 0; currentRect.Right = 0; currentRect.Bottom = 0;
             bool isGameActive = IsTargetWindowActive(ref currentRect);
@@ -142,7 +143,7 @@ class Clicker {
                 Console.Out.Flush();
             }
 
-            if (isTargetActive && isCtrlPressed && isRButtonPressed && !isAltPressed) {
+            if (isTargetActive && (isCtrlPressed || isShiftPressed) && isRButtonPressed && !isAltPressed) {
                 mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
                 Thread.Sleep(66); // 15 CPS -> 1000 / 15 = 66.6ms
             } else {
