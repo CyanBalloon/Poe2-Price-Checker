@@ -113,7 +113,7 @@ async function fetchIconFromTradeApi(itemName: string, namespace: string): Promi
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "User-Agent": "ExiledExchange2/1.0"
+      "User-Agent": "Poe2PriceChecker/1.0"
     },
     body: JSON.stringify(payload)
   });
@@ -138,7 +138,7 @@ async function fetchIconFromTradeApi(itemName: string, namespace: string): Promi
   const fetchRes = await Host.proxy(`www.pathofexile.com/api/trade2/fetch/${fetchId}?query=${queryId}`, {
     method: "GET",
     headers: {
-      "User-Agent": "ExiledExchange2/1.0"
+      "User-Agent": "Poe2PriceChecker/1.0"
     }
   });
 

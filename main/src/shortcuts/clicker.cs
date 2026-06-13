@@ -107,7 +107,7 @@ class Clicker {
         StringBuilder sb = new StringBuilder(256);
         if (GetWindowText(handle, sb, 256) > 0) {
             string title = sb.ToString();
-            if (title.Contains("Path of Exile") || title.Contains("Exiled Exchange")) {
+            if (title.Contains("Path of Exile") || title.Contains("Poe2 Price Checker")) {
                 GetWindowRect(handle, out rect);
                 return true;
             }
