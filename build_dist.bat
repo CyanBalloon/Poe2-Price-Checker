@@ -1,7 +1,7 @@
 @echo off
 cd /d "%~dp0"
 echo ===================================================
-echo Building Exiled Exchange 2 Executable...
+echo Building Poe2 Price Checker Executable...
 echo Please ensure you ran this as Administrator!
 echo ===================================================
 echo.

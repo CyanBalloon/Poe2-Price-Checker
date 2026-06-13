@@ -27,7 +27,7 @@ def main(**kwargs: dict[str, bool | str]):
     pull: bool = kwargs.get("pull", False)  # pyright: ignore[reportAssignmentType]
     image_mode: MODE = kwargs.get("image_mode", "noLookup")  # pyright: ignore[reportAssignmentType]
     push: bool = kwargs.get("push", False)  # pyright: ignore[reportAssignmentType]
-    main_repo_path: str = kwargs.get("main_repo_path", "../exiled-exchange-2")  # pyright: ignore[reportAssignmentType]
+    main_repo_path: str = kwargs.get("main_repo_path", "../poe2-price-checker")  # pyright: ignore[reportAssignmentType]
 
     if pull:
         GameDataProvider().run_export()
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     )
     _ = parser.add_argument(
         "--main-repo-path",
-        default="../exiled-exchange-2",
+        default="../poe2-price-checker",
         help="Path to main repo",
     )
 

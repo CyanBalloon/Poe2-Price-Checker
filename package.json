@@ -1,8 +1,8 @@
 {
-  "name": "exiled-exchange-2-root",
+  "name": "poe2-price-checker-root",
   "version": "1.0.0",
   "private": true,
-  "description": "Root workspace runner for Exiled Exchange 2",
+  "description": "Root workspace runner for Poe2 Price Checker",
   "scripts": {
     "install:all": "npm install --prefix renderer && npm install --prefix main",
     "dev:renderer": "npm run dev --prefix renderer",

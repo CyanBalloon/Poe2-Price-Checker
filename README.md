@@ -1,6 +1,6 @@
-# ![Icon](./renderer/public/images/jeweler.png) Exiled Exchange 2
+# ![Icon](./renderer/public/images/jeweler.png) Poe2 Price Checker
 
-Exiled Exchange 2 is a standalone desktop application for **Path of Exile 2**, built to facilitate fast price checking, item parsing, and market analysis. It operates entirely as an independent desktop window and does not use game-overlay hooks.
+Poe2 Price Checker is a standalone desktop application for **Path of Exile 2**, built to facilitate fast price checking, item parsing, and market analysis. It operates entirely as an independent desktop window and does not use game-overlay hooks.
 
 ## Features
 
@@ -14,12 +14,21 @@ The application monitors window focus in the background. Hover over an item in P
 
 ## Installation
 
-1. Download the latest `Exiled Exchange 2 1.0.0.exe` from the Releases page.
+1. Download the latest `Poe2 Price Checker 1.0.0.exe` from the Releases page.
 2. Run the `.exe` file. The application is fully portable and self-contained.
 3. The standalone window will open on your desktop.
 4. Launch **Path of Exile 2**. Hover over an item and press `Ctrl+D` to perform a price check.
 
 ## Usage & Settings
-- **Closing the Application**: To completely close the application, right-click the `Exiled Exchange 2` icon in the system tray and select **Quit**.
+- **Closing the Application**: To completely close the application, right-click the `Poe2 Price Checker` icon in the system tray and select **Quit**.
 - **Minimizing**: Clicking the `X` on the window will hide the application to the system tray. To show it again, double-click the tray icon or right-click and select "Show Window".
 - **Settings**: Configuration options are accessible via the gear icon within the application's interface.
+
+## Credits & Origin
+
+This project is a specialized fork of Exiled Exchange 2 (which itself is a fork of Awakened PoE Trade).
+
+**Key modifications in this fork include:**
+- Completely rewritten as a standalone desktop application (removal of the overlay engine).
+- Support for parsing Magic items and explicitly identifying complex prefixes/suffixes.
+- Dedicated Tier filters for base types (e.g., Evasion-only boots).

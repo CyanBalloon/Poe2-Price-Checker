@@ -1,0 +1,13 @@
+Item Class: Support Skill Gems
+Rarity: Gem
+Uhtred's Augury
+--------
+Support, Lineage
+Level: 1
+--------
+Requirements:
+Level: 10
+--------
+Supports any skill that summons minions.
+--------
+Minions have 10% more Maximum Life

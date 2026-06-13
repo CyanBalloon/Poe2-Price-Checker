@@ -78,9 +78,9 @@ export async function initConfig() {
 
     // TODO
     // dialog.showErrorBox(
-    //   'Exiled Exchange 2 - Incompatible configuration',
+    //   'Poe2 Price Checker - Incompatible configuration',
     //   // ----------------------
-    //   'You are trying to use an older version of Exiled Exchange 2 with a newer incompatible configuration file.\n' +
+    //   'You are trying to use an older version of Poe2 Price Checker with a newer incompatible configuration file.\n' +
     //   'You need to install the latest version to continue using it.'
     // )
   }

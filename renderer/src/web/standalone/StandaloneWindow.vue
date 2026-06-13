@@ -20,7 +20,7 @@
               class="text-sm font-semibold tracking-wider bg-gradient-to-r from-violet-400 via-indigo-200 to-teal-300 bg-clip-text text-transparent transition-all duration-300 overflow-hidden whitespace-nowrap"
               :class="isHovered ? 'opacity-100 max-w-[150px]' : 'opacity-0 max-w-0'"
             >
-              EXILED EXCHANGE 2
+              POE2 PRICE CHECKER
             </span>
           </div>
         </div>

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TARGET_DIR="../exiled-exchange-2/dataParser"
+TARGET_DIR="../poe2-price-checker/dataParser"
 
 rsync -av --exclude-from='.gitignore' --exclude='data/json' --exclude='data/vendor' --exclude="*.ipynb" --exclude="*.json" --exclude='.git' ./ "$TARGET_DIR"
 

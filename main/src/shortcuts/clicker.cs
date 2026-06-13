@@ -78,7 +78,7 @@ class Clicker {
     private const int SW_SHOW = 5;
 
     static void FocusOverlayWindow() {
-        IntPtr targetWindow = FindWindow(null, "Exiled Exchange 2");
+        IntPtr targetWindow = FindWindow(null, "Poe2 Price Checker");
         if (targetWindow == IntPtr.Zero) return;
 
         IntPtr foregroundWindow = GetForegroundWindow();

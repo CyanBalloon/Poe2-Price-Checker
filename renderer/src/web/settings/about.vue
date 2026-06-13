@@ -2,18 +2,18 @@
   <div class="p-2 flex flex-col h-full items-center">
     <div class="flex flex-col items-center p-2 mb-4">
       <img class="w-12 h-12" src="/images/jeweler.png" />
-      <p class="text-base">Exiled Exchange 2</p>
+      <p class="text-base">Poe2 Price Checker</p>
       <p class="">{{ t("app.version", [version]) }}</p>
       <div class="flex gap-2">
         <a
           class="border-b"
-          href="https://github.com/Kvan7/exiled-exchange-2/releases"
+          href="https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases"
           target="_blank"
           >{{ t("app.release_notes") }}</a
         >
         <a
           class="border-b"
-          href="https://github.com/Kvan7/exiled-exchange-2/issues"
+          href="https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/issues"
           target="_blank"
           >{{ t("app.report_bug") }}</a
         >
@@ -73,7 +73,7 @@ function checkForUpdates() {
 }
 
 function openDownloadPage() {
-  window.open("https://github.com/Kvan7/exiled-exchange-2/releases");
+  window.open("https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases");
 }
 
 function quitAndInstall() {

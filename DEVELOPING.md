@@ -1,6 +1,6 @@
-# Developing Exiled Exchange 2
+# Developing Poe2 Price Checker
 
-This document covers how to compile, build, and debug Exiled Exchange 2 from source.
+This document covers how to compile, build, and debug Poe2 Price Checker from source.
 
 ## Prerequisites
 - Node.js (v18+)
@@ -14,7 +14,7 @@ This document covers how to compile, build, and debug Exiled Exchange 2 from sou
 
 ## Developer Workflow
 
-Exiled Exchange 2 is a standalone desktop application. The development pipeline consists of two separate processes:
+Poe2 Price Checker is a standalone desktop application. The development pipeline consists of two separate processes:
 
 1. **Frontend (Renderer)**:
    In the root directory, run:
@@ -46,6 +46,6 @@ This script will:
 - Install all dependencies.
 - Rebuild native modules (`npmRebuild: true`) to match the Electron V8 headers.
 - Compile the frontend UI.
-- Package the application into `/main/dist/Exiled Exchange 2 1.0.0.exe`.
+- Package the application into `/main/dist/Poe2 Price Checker 1.0.0.exe`.
 
 Only the `.exe` file needs to be distributed.

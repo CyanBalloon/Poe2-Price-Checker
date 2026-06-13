@@ -1,6 +1,6 @@
 publish:
   - "github"
-productName: "Exiled Exchange 2"
+productName: "Poe2 Price Checker"
 npmRebuild: true
 compression: normal
 files:

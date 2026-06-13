@@ -80,7 +80,7 @@ export class OverlayWindow {
       x: isStandalone ? windowState.x : undefined,
       y: isStandalone ? windowState.y : undefined,
       frame: isStandalone,
-      title: "Exiled Exchange 2",
+      title: "Poe2 Price Checker",
       show: true,
       webPreferences: {
         allowRunningInsecureContent: false,
@@ -269,7 +269,7 @@ export class OverlayWindow {
         // ----------------------
         "Path of Exile 2 is running with administrator rights.\n" +
           "\n" +
-          "You need to restart Exiled Exchange 2 with administrator rights.",
+          "You need to restart Poe2 Price Checker with administrator rights.",
       );
     } else {
       this.server.sendEventTo("broadcast", {
