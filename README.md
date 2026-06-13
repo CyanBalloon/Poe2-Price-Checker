@@ -12,6 +12,12 @@ The application monitors window focus in the background. Hover over an item in P
 - Supports advanced magic item parsing, including accurate recognition of specialized modifiers (e.g., `+3 to Level of all Projectile Skills` on Magic bows).
 - Displays clear modifier breakdowns.
 
+## Tool Showcase
+
+| Base Types & Search | Item Pricing & Filters |
+| :---: | :---: |
+| ![Search](./docs/images/search.png) | ![Price Check](./docs/images/price-check.png) |
+
 ## Installation
 
 1. Download the latest `Poe2 Price Checker 1.0.0.exe` from the Releases page.
