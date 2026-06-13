@@ -1,71 +1,51 @@
-# How this works
+# Developing Exiled Exchange 2
 
-There are 2 main parts of the app:
+This document covers how to compile, build, and debug Exiled Exchange 2 from source.
 
-1. renderer: this is the HTML/Javascript-based UI rendered within the Electron container. This runs Vue.js, a React-like Javascript framework for rendering front-end.
-2. main: includes the main app (written in Electron). Handles keyboard shortcuts, brings up the UI and overlays.
+## Prerequisites
+- Node.js (v18+)
+- Python (for data parsing scripts)
+- Git
 
-Note that these 2 both depend on each other, and one cannot run without the other.
+## Getting Started
 
-# How to develop
+1. Clone the repository.
+2. Run `npm install` in both the `/main` and `/renderer` directories.
 
-The most up-to-date instructions can always be derived from CI:
+## Developer Workflow (Standalone Mode)
 
-[.github/workflows/main.yml](https://github.com/Kvan7/exiled-exchange-2/blob/master/.github/workflows/main.yml)
+Because Exiled Exchange 2 is a standalone desktop application, the development pipeline consists of two separate processes:
 
-Here's what that looks like as of 2023-12-03.
+1. **Frontend (Renderer)**:
+   In the root directory, run:
+   ```bash
+   npm run dev:renderer
+   ```
+   This spins up the Vite development server (usually on `http://localhost:5176`) which powers the UI and features hot-module reloading.
 
-```shell
-cd renderer
-npm install
-npm run make-index-files
-npm run dev
+2. **Backend (Main/Standalone)**:
+   In a second terminal, run:
+   ```bash
+   npm run dev:standalone
+   ```
+   This compiles the C++ shortcut hooks (`clicker.cs`) and launches the Electron application, pointing it directly at your running Vite server.
 
-# In a second shell
-cd main
-npm install
-npm run dev
-```
+The standalone application window will pop up immediately. You can make edits to `/renderer/src` and see them instantly reflect in the app.
 
-## Formatting
+## Building for Production
 
-```shell
-cd renderer
-npm run format
-```
+We use `electron-builder` to package the application into a single, portable `.exe` file for Windows.
 
-# How to build
+1. Ensure all your changes are saved.
+2. Run the provided build script as an administrator (required for `electron-builder` symlinks):
+   ```bash
+   build_dist.bat
+   ```
+   
+This script will automatically:
+- Install all dependencies.
+- Rebuild native modules (`npmRebuild: true`) to match the Electron V8 headers.
+- Compile the frontend UI.
+- Package the application into `/main/dist/Exiled Exchange 2 1.0.0.exe`.
 
-```shell
-cd renderer
-npm install
-npm run make-index-files
-npm run build
-
-cd ../main
-npm install
-npm run build
-# We want to sign with a distribution certificate to ensure other users can
-# install without errors
-CSC_NAME="Certificate name in Keychain" npm run package
-```
-
-# How to release a build
-
-1. Commit all changes
-2. Bump version in `main/package.json`
-3. `npm i` in renderer & main (update `package-lock.json` with new version)
-4. `npm run build` in renderer & main
-5. Stage & commit bumped version
-6. `git push`
-7. `git tag vX.X.X`
-8. `git push origin vX.X.X`
-9. Open release page, create release with tag & title as text of tag & save as draft
-
-# How to build yourself
-
-```shell
-sh testUpdate.sh
-```
-
-Read the contents of `testUpdate.sh` to understand what it does. Running random scripts from the internet is not recommended so you really should read the code before running it.
+You only need to distribute the single `.exe` file to your testers.

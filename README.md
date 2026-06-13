@@ -1,50 +1,40 @@
-# ![Perfect Jewelers Orb](./renderer/public/images/jeweler.png) Exiled Exchange 2
+# ![Icon](./renderer/public/images/jeweler.png) Exiled Exchange 2 (Standalone Edition)
 
-[![GitHub Downloads (specific asset, latest release)](https://img.shields.io/github/downloads/kvan7/exiled-exchange-2/latest/Exiled-Exchange-2-Setup-0.15.4.exe?style=plastic&link=https%3A%2F%2Ftooomm.github.io%2Fgithub-release-stats%2F%3Fusername%3Dkvan7%26repository%3DExiled-Exchange-2)](https://tooomm.github.io/github-release-stats/?username=kvan7&repository=Exiled-Exchange-2)
-[![GitHub Tag](https://img.shields.io/github/v/tag/kvan7/exiled-exchange-2?style=plastic&label=latest%20version)](https://github.com/Kvan7/Exiled-Exchange-2/releases/latest)
-[![GitHub commits since latest release (branch)](https://img.shields.io/github/commits-since/kvan7/exiled-exchange-2/latest/dev?style=plastic)](https://github.com/Kvan7/Exiled-Exchange-2/commits/dev/)
-[![Translation status](https://translate.codeberg.org/widget/exiled-exchange-2/svg-badge.svg)](https://translate.codeberg.org/engage/exiled-exchange-2/)
+A fully standalone desktop application for **Path of Exile 2**, designed to make price checking, item parsing, and market analysis faster and cleaner than ever. 
 
-Path of Exile 2 overlay program for price checking items, among many other loved features.
+Unlike previous tools, Exiled Exchange 2 has been surgically stripped of invasive game-overlay hooks and completely rebuilt as a pristine, independent desktop application that safely runs on your second monitor or alongside your game.
 
-Fork of [Awakened PoE Trade](https://github.com/SnosMe/awakened-poe-trade).
+## Features
 
-The ONLY official download sites are <https://kvan7.github.io/Exiled-Exchange-2/download> or <https://github.com/Kvan7/Exiled-Exchange-2/releases>, any other locations are not official and may be malicious.
+### 💻 True Standalone Desktop Window
+- **No Overlays**: Runs as a normal, framable desktop window. You can drag it, resize it, and put it on your second monitor. 
+- **Zero Game Hooking**: Doesn't aggressively inject transparent windows over Path of Exile, preventing game crashes and performance dips.
+- **System Tray Integration**: Quietly minimizes to your system tray. Just right click and select "Show Window" to bring it back.
 
-## Moving from POE1/Awakened PoE Trade
+### 🔍 Instant Price Checking Macros
+Even though the app runs standalone, it safely monitors Path of Exile's window focus in the background. 
+Simply hover over an item in Path of Exile 2 and press `Ctrl + D`! The standalone window will instantly populate with the parsed item details and automatically pull live market prices.
 
-1. Download latest release from [releases](https://github.com/Kvan7/exiled-exchange-2/releases)
-2. Run installer
-3. Run Exiled Exchange 2
-4. Launch PoE2 to generate correct files
-5. Quit PoE2 and EE2 after seeing the banner popup that EE2 loaded
-6. Copy `apt-data` from `%APPDATA%\awakened-poe-trade` to `%APPDATA%\exiled-exchange-2` to copy your previous settings
-  - Resulting directory structure should look like this:
-  - `%APPDATA%\exiled-exchange-2\apt-data\`
-    - `config.json`
-7. Edit `config.json` and change the value of "windowTitle": "Path of Exile" to instead be "Path of Exile 2", otherwise it will open only for poe1
-8. Start Exiled Exchange 2 and PoE2
+### 🧠 Intelligent Item Parsing
+- Automatically parses copied items directly from your clipboard.
+- Supports advanced magic item parsing (e.g., explicitly recognizing `+3 to Level of all Projectile Skills` on Magic bows).
+- Displays clear, easy-to-read modifier breakdowns.
 
-## FAQ
+## Installation
 
-<https://kvan7.github.io/Exiled-Exchange-2/faq>
+1. Download the latest `Exiled Exchange 2 1.0.0.exe` from the Releases page.
+2. Run the `.exe` file. It's a completely self-contained portable executable.
+3. The standalone window will instantly appear on your desktop.
+4. Launch **Path of Exile 2** and start playing! Hover over an item and press `Ctrl+D` to price check.
 
-## Tool showcase
+## Usage & Settings
+- To completely close the application, right-click the `Exiled Exchange 2` icon in your Windows System Tray and select **Quit**.
+- Clicking the `X` on the window will simply hide it to the system tray for convenience.
+- Settings can be accessed via the gear icon within the app's UI.
 
-| Gem                                                | Rare                                                 | Unique                                                   | Currency                                                     |
-| -------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
-| ![Gem Check](./docs/reference-images/GemCheck.png) | ![Rare Check](./docs/reference-images/RareCheck.png) | ![Unique Check](./docs/reference-images/UniqueCheck.png) | ![Currency Check](./docs/reference-images/CurrencyCheck.png) |
-
-### Development
-
-See [DEVELOPING.md](./DEVELOPING.md)
-
-### Acknowledgments
-
-- [awakened-poe-trade](https://github.com/SnosMe/awakened-poe-trade)
-- [libuiohook](https://github.com/kwhat/libuiohook)
-- [RePoE](https://github.com/brather1ng/RePoE)
-- [poeprices.info](https://www.poeprices.info/)
-- [poe.ninja](https://poe.ninja/)
-
-![graph](https://i.imgur.com/MATqhv7.png)
+## Migrating from POE1 / Awakened PoE Trade
+To migrate your old configuration files:
+1. Close Exiled Exchange 2.
+2. Copy the `apt-data` folder from `%APPDATA%\awakened-poe-trade` to `%APPDATA%\exiled-exchange-2`.
+3. Open `config.json` inside that folder and ensure `"windowTitle": "Path of Exile 2"`.
+4. Relaunch the app.
