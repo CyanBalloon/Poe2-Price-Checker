@@ -90,6 +90,11 @@ export class OverlayWindow {
     });
 
     if (isStandalone) {
+      let isQuitting = false;
+      app.on("before-quit", () => {
+        isQuitting = true;
+      });
+
       let saveTimeout: NodeJS.Timeout | undefined;
       const saveState = () => {
         if (saveTimeout) clearTimeout(saveTimeout);
@@ -110,7 +115,10 @@ export class OverlayWindow {
       this.window.on("resize", saveState);
       this.window.on("move", saveState);
       this.window.on("close", (e) => {
-        e.preventDefault();
+        if (!isQuitting) {
+          e.preventDefault();
+          this.window!.hide();
+        }
         if (saveTimeout) clearTimeout(saveTimeout);
         if (!this.window) return;
         try {
@@ -122,7 +130,6 @@ export class OverlayWindow {
             y: bounds.y,
           }), "utf8");
         } catch {}
-        this.window.hide();
       });
     }
 
