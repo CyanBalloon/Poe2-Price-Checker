@@ -1,6 +1,6 @@
 {
   "name": "poe2-price-checker-root",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "Root workspace runner for Poe2 Price Checker",
   "scripts": {

@@ -197,7 +197,7 @@
               </div>
               <div class="text-[11px] text-gray-500 flex items-center gap-1.5">
                 <i class="fas fa-info-circle text-violet-400"></i>
-                <span>You can also press <kbd class="bg-[#1b1c26] border border-[#2c2e42] px-1 py-0.5 rounded text-gray-300 font-mono">Ctrl + C</kbd> inside PoE2 to load item details instantly.</span>
+                <span>You can also press <kbd class="bg-[#1b1c26] border border-[#2c2e42] px-1 py-0.5 rounded text-gray-300 font-mono">{{ priceCheckHotkey }}</kbd> inside PoE2 to load item details instantly.</span>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@ import {
 } from "vue";
 import { registry } from "../overlay/widget-registry.js";
 import { ItemCategory, ItemRarity, parseClipboard } from "@/parser";
-import { AppConfig, saveConfig } from "@/web/Config";
+import { AppConfig, saveConfig, pushHostConfig } from "@/web/Config";
 import { Host } from "@/web/background/IPC";
 import { useLeagues } from "@/web/background/Leagues";
 import { usePoeninja } from "@/web/background/Prices";
@@ -571,6 +571,15 @@ export default defineComponent({
       }
     }
 
+    const priceCheckHotkey = computed(() => {
+      const pc = priceCheckWidgetConfig.value;
+      if (!pc) return "Ctrl + D";
+      const hold = pc.hotkeyHold;
+      const key = pc.hotkey;
+      if (!key) return "None";
+      return hold && hold !== "None" ? `${hold} + ${key}` : key;
+    });
+
     onMounted(() => {
       nextTick(() => {
         // Notify host we are running in standalone mode (not transparent overlay)
@@ -578,6 +587,7 @@ export default defineComponent({
           name: "CLIENT->MAIN::used-recently",
           payload: { isOverlay: false },
         });
+        pushHostConfig();
       });
     });
 
@@ -610,6 +620,7 @@ export default defineComponent({
       isHovered,
       updateButton,
       handleUpdateButtonClick,
+      priceCheckHotkey,
     };
   },
 });

@@ -123,33 +123,7 @@ export class Shortcuts {
       }
     }
 
-    // Clipboard watcher for standalone auto-paste
-    let lastClipboardText = "";
-    setInterval(() => {
-      try {
-        const text = clipboard.readText();
-        const trimmed = text.trim();
-        if (trimmed && trimmed !== lastClipboardText) {
-          lastClipboardText = trimmed;
-          if (trimmed.startsWith("Item Class:") || trimmed.startsWith("Rarity:")) {
-            this.server.sendEventTo("broadcast", {
-              name: "MAIN->CLIENT::item-text",
-              payload: {
-                target: "price-check",
-                clipboard: trimmed,
-                position: { x: 0, y: 0 },
-                focusOverlay: false,
-              },
-            });
-            if (isStandalone) {
-              this.overlay.showWindow();
-            }
-          }
-        }
-      } catch (err) {
-        // ignore
-      }
-    }, 500);
+    // Clipboard watcher for standalone auto-paste removed to prevent default Ctrl+C price checking
 
     this.poeWindow.on("active-change", (isActive) => {
       process.nextTick(() => {
@@ -200,32 +174,6 @@ export class Shortcuts {
         this.isCtrlPressed = true;
       }
 
-      const isCtrlC = e.ctrlKey && !e.altKey && !e.shiftKey && UiohookToName[e.keycode] === "C";
-      if (isCtrlC) {
-        setTimeout(() => {
-          try {
-            const text = clipboard.readText();
-            const trimmed = text.trim();
-            if (trimmed && (trimmed.startsWith("Item Class:") || trimmed.startsWith("Rarity:"))) {
-              lastClipboardText = trimmed;
-              this.server.sendEventTo("broadcast", {
-                name: "MAIN->CLIENT::item-text",
-                payload: {
-                  target: "price-check",
-                  clipboard: trimmed,
-                  position: { x: 0, y: 0 },
-                  focusOverlay: false,
-                },
-              });
-              if (isStandalone) {
-                this.overlay.showWindow();
-              }
-            }
-          } catch (err) {
-            // ignore
-          }
-        }, 150);
-      }
 
       if (!this.logKeys) return;
       const pressed = eventToString(e);
@@ -269,6 +217,7 @@ export class Shortcuts {
     restoreClipboard: boolean,
     language: string,
   ) {
+
     this.stashScroll = stashScroll;
     this.logKeys = logKeys;
     this.clipboard.updateOptions(restoreClipboard);
@@ -328,6 +277,12 @@ export class Shortcuts {
         !duplicates.has(action.shortcut) ||
         action.action.type === "toggle-overlay",
     );
+
+    const isActive = this.isGameWindowActive || this.poeWindow.isActive || (isStandalone && this.overlay.window?.isFocused());
+    if (isActive) {
+      this.unregister();
+      this.register();
+    }
   }
 
   private register() {
@@ -378,18 +333,17 @@ export class Shortcuts {
             stashSearch(entry.action.text, this.clipboard, this.overlay);
           } else if (entry.action.type === "copy-item") {
             const { action } = entry;
-
             const pressPosition = screen.getCursorScreenPoint();
 
             this.clipboard
               .readItemText()
-              .then((clipboard) => {
+              .then((clipboardText) => {
                 this.areaTracker.removeListeners();
-                this.server.sendEventTo("last-active", {
+                this.server.sendEventTo("broadcast", {
                   name: "MAIN->CLIENT::item-text",
                   payload: {
                     target: action.target,
-                    clipboard,
+                    clipboard: clipboardText,
                     position: pressPosition,
                     focusOverlay: Boolean(action.focusOverlay),
                   },
@@ -479,12 +433,6 @@ function pressKeysToCopyItemText(
   let keys = mergeTwoHotkeys("Ctrl + C", showModsKey).split(" + ");
   keys = keys.filter((key) => key !== "C");
   if (process.platform !== "darwin") {
-    // On non-Mac platforms, don't toggle keys that are already being pressed.
-    //
-    // For unknown reasons, we need to toggle pressed keys on Mac for advanced
-    // mod descriptions to be copied. You can test this by setting the shortcut
-    // to "Alt + any letter". They'll work with this line, but not if it's
-    // commented out.
     keys = keys.filter((key) => !pressedModKeys.includes(key));
   }
 
