@@ -10,26 +10,20 @@
       <div>
         <!-- App Title / Logo -->
         <div class="flex items-center mb-8 px-1">
-          <div class="flex items-center gap-3">
+          <div class="flex items-center w-full">
             <div 
               class="rounded-xl bg-gradient-to-tr from-violet-600 to-teal-400 p-[1px] flex items-center justify-center shadow-lg shadow-violet-950/20 shrink-0 transition-all duration-300 ease-out"
-              :class="isHovered ? 'w-14 h-14' : 'w-8 h-8'"
+              :class="isHovered ? 'w-full aspect-square' : 'w-8 h-8'"
             >
               <div class="w-full h-full bg-[#0d0e12] rounded-xl flex items-center justify-center overflow-hidden relative">
                 <img 
                   src="/images/jeweler.png" 
                   class="animate-pulse transition-all duration-300 ease-out absolute inset-0 m-auto" 
-                  :class="isHovered ? 'w-[90%] h-[90%] object-contain scale-110' : 'w-5 h-5'"
+                  :class="isHovered ? 'w-[95%] h-[95%] object-contain' : 'w-5 h-5'"
                   alt="EE2" 
                 />
               </div>
             </div>
-            <span 
-              class="text-sm font-semibold tracking-wider bg-gradient-to-r from-violet-400 via-indigo-200 to-teal-300 bg-clip-text text-transparent transition-all duration-300 overflow-hidden whitespace-nowrap"
-              :class="isHovered ? 'opacity-100 max-w-[150px]' : 'opacity-0 max-w-0'"
-            >
-              POE2 PRICE CHECKER
-            </span>
           </div>
         </div>
 
