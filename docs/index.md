@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "Poe2 Price Checker"
+  name: "Path of Exile 2 Price Checker"
   text: "The Ultimate Trade Macro"
   tagline: "A standalone, ultra-fast, and safe desktop price checking tool for Path of Exile 2."
   image:
     src: /images/jeweler.png
-    alt: Poe2 Price Checker Logo
+    alt: Path of Exile 2 Price Checker Logo
   actions:
     - theme: brand
       text: Download Installer

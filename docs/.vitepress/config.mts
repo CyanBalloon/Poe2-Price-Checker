@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Poe2 Price Checker",
+  title: "Path of Exile 2 Price Checker",
   description: "A fast, standalone desktop trade macro and price checking tool for Path of Exile 2 (PoE 2).",
   base: "/Poe2-Price-Checker/",
   cleanUrls: true,
