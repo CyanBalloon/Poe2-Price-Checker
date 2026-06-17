@@ -28,6 +28,12 @@ features:
     icon: 🧠
 ---
 
+<br>
+
+::: tip 🚀 ZERO FPS IMPACT & NO OVERLAYS
+**This application is NOT an overlay.** It operates entirely as an independent desktop window, guaranteeing that it will **NEVER affect your in-game FPS** or violate Terms of Service.
+:::
+
 <style>
 :root {
   --vp-home-hero-name-color: transparent;
