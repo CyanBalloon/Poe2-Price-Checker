@@ -2,21 +2,20 @@
   <div 
     :class="[
       isStandalone 
-        ? 'p-2.5 mb-1.5 rounded-xl bg-[#0d0e14]/40 hover:bg-[#1f2235]/95 border border-[#1b1c26]/60 hover:border-violet-500/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-200 flex flex-col relative' 
+        ? 'p-2.5 mb-1.5 rounded-xl bg-[#0d0e14]/40 hover:bg-[#1f2235]/95 border border-[#1b1c26]/60 hover:border-violet-500/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-200 flex flex-col relative cursor-pointer' 
         : $style['filter']
     ]"
+    @click="toggleFilter"
   >
-    <div v-if="!isStandalone && showSourceInfo" :class="$style['mods']">
+    <div v-if="!isStandalone && showSourceInfo" :class="$style['mods']" @click.stop>
       <div class="pl-5 py-1" v-for="(source, idx) of filter.sources" :key="idx">
         <source-info :source="source" :filter="filter" />
       </div>
     </div>
     <div class="flex flex-col min-w-0 flex-1">
       <div :class="[isStandalone ? 'flex items-center justify-between gap-2.5' : 'pb-px flex items-baseline justify-between']">
-        <button
-          class="flex items-center text-left min-w-0 flex-1"
-          @click="toggleFilter"
-          type="button"
+        <div
+          class="flex items-center text-left min-w-0 flex-1 select-none"
         >
           <i
             class="w-5 text-base transition-colors duration-200 shrink-0"
@@ -36,8 +35,8 @@
                 :roll="roll?.value"
             /></span>
           </div>
-        </button>
-        <div class="flex items-center gap-1.5 shrink-0 select-none">
+        </div>
+        <div class="flex items-center gap-1.5 shrink-0 select-none" @click.stop>
           <span 
             v-if="showTag" 
             :class="isStandalone ? getStandaloneTagClass(tag) : [$style['tag'], $style[`tag-${tag}`]]"
@@ -87,8 +86,8 @@
             {{ t("item.prop_quality", [calcQuality]) }}
           </div>
           <div v-if="showInputs" class="flex gap-1 items-center shrink-0 ml-1">
-            <button @click="adjustRoll(-10)" type="button" :class="isStandalone ? 'px-1 py-0.5 text-[9px] bg-[#151722] border border-[#222538]/60 rounded text-gray-400 hover:text-gray-200 hover:bg-[#1f2233] transition-colors' : 'px-1 py-0.5 text-[9px] bg-gray-800 border border-gray-700 rounded text-gray-400 hover:text-gray-200'">-10%</button>
-            <button @click="adjustRoll(10)" type="button" :class="isStandalone ? 'px-1 py-0.5 text-[9px] bg-[#151722] border border-[#222538]/60 rounded text-gray-400 hover:text-gray-200 hover:bg-[#1f2233] transition-colors' : 'px-1 py-0.5 text-[9px] bg-gray-800 border border-gray-700 rounded text-gray-400 hover:text-gray-200'">+10%</button>
+            <button @click.stop="adjustRoll(-10)" type="button" :class="isStandalone ? 'px-1 py-0.5 text-[9px] bg-[#151722] border border-[#222538]/60 rounded text-gray-400 hover:text-gray-200 hover:bg-[#1f2233] transition-colors' : 'px-1 py-0.5 text-[9px] bg-gray-800 border border-gray-700 rounded text-gray-400 hover:text-gray-200'">-10%</button>
+            <button @click.stop="adjustRoll(10)" type="button" :class="isStandalone ? 'px-1 py-0.5 text-[9px] bg-[#151722] border border-[#222538]/60 rounded text-gray-400 hover:text-gray-200 hover:bg-[#1f2233] transition-colors' : 'px-1 py-0.5 text-[9px] bg-gray-800 border border-gray-700 rounded text-gray-400 hover:text-gray-200'">+10%</button>
           </div>
           <div class="flex gap-1 ml-1 select-all shrink-0">
             <input
@@ -102,6 +101,7 @@
               ref="inputMinEl"
               v-model.number="inputMin"
               @focus="inputFocus($event, 'min')"
+              @click.stop
               @mousewheel.stop
             />
             <input
@@ -115,12 +115,13 @@
               ref="inputMaxEl"
               v-model.number="inputMax"
               @focus="inputFocus($event, 'max')"
+              @click.stop
               @mousewheel.stop
             />
           </div>
         </div>
       </div>
-      <div v-if="!isStandalone" class="flex">
+      <div v-if="!isStandalone" class="flex" @click.stop>
         <div class="w-5 flex items-start">
           <ui-popover
             v-if="isHidden"
@@ -130,7 +131,7 @@
             boundary="#price-window"
           >
             <template #target>
-              <span class="text-xs leading-none text-gray-600 cursor-pointer">
+              <span class="text-xs leading-none text-gray-600 cursor-pointer" @click.stop>
                 <i
                   class="fas fa-eye-slash"
                   :class="{ 'faa-ring': !isDisabled }"
@@ -172,16 +173,18 @@
           :roll="roll.value"
           :dp="roll.dp"
           :bounds="roll.bounds"
+          @click.stop
         />
         <div v-if="!isStandalone" style="width: calc(2 * 3rem + 1px)" />
       </div>
     </div>
-    <div class="flex flex-col">
+    <div class="flex flex-col" @click.stop>
       <modifier-anointment :filter="filter" v-if="filter.oils" />
     </div>
     <div 
       v-if="isStandalone && showSourceInfo" 
       class="mt-2 pt-2 border-t border-[#222538]/30 flex flex-col gap-1.5 pl-5"
+      @click.stop
     >
       <div v-for="(source, idx) of filter.sources" :key="idx">
         <source-info :source="source" :filter="filter" />
@@ -490,6 +493,7 @@ export default defineComponent({
   @apply border-b border-gray-700;
   display: flex;
   position: relative;
+  cursor: pointer;
 }
 
 .rollInput {
