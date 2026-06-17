@@ -1,0 +1,36 @@
+---
+layout: home
+
+hero:
+  name: "Poe2 Price Checker"
+  text: "The Ultimate Trade Macro"
+  tagline: "A standalone, ultra-fast, and safe desktop price checking tool for Path of Exile 2."
+  image:
+    src: /images/jeweler.png
+    alt: Poe2 Price Checker Logo
+  actions:
+    - theme: brand
+      text: Download Installer
+      link: https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases/latest/download/Poe2-Price-Checker-Setup-1.0.3.exe
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/CyanBalloon/Modern-Exiled-Exchange-2
+
+features:
+  - title: Instant Price Checking
+    details: Hover over an item in Path of Exile 2 and press Ctrl+D. The app fetches live market prices instantly, matching exact affixes and rolls.
+    icon: ⚡
+  - title: Standalone & Safe
+    details: Operates entirely as an independent desktop window and does not use game-overlay hooks. 100% compliant with ToS.
+    icon: 🛡️
+  - title: Intelligent Parsing
+    details: Supports advanced magic item parsing, tier identification, and precise recognition of complex PoE 2 prefixes and suffixes.
+    icon: 🧠
+---
+
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+}
+</style>

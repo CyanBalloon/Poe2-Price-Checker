@@ -4,6 +4,10 @@ This release introduces support for dual packaging targets (Setup installer and 
 
 ---
 
+### 📥 How to Install
+- **Setup Installer (`Poe2 Price Checker Setup X.X.X.exe`)**: Download and run the installer. It will automatically install to your system and handle background auto-updates.
+- **Portable Version (`Poe2 Price Checker X.X.X.exe`)**: Download the standalone executable and run it directly from any folder of your choice. No installation is required.
+
 ### 📦 Dual packaging targets
 We now compile and distribute both executable versions of the application:
 1. **Setup Installer** (`Poe2 Price Checker Setup 1.0.1.exe`): Standard installation to Local AppData with background auto-download and update capability.

@@ -25,7 +25,7 @@ import { applyRules as applyMirroredTabletRules } from "./pseudo/reflection-rule
 import { applyRules as applyMissingFracturedRules } from "./pseudo/missing-fractured-rules";
 import { filterItemProp, filterBasePercentile } from "./pseudo/item-property";
 import { decodeOils, applyAnointmentRules } from "./pseudo/anointments";
-import { StatBetter, CLIENT_STRINGS } from "@/assets/data";
+import { StatBetter, CLIENT_STRINGS, TRADE_STAT_BY_MATCH_STR } from "@/assets/data";
 import { explicitModifierCount, maxUsefulItemLevel } from "./common";
 import { getMaxSockets } from "@/parser/Parser";
 
@@ -372,31 +372,74 @@ const LOCAL_STAT_IDS = new Set([
   "desecrated.stat_2481353198"
 ]);
 
+const JEWEL_STAT_IDS = new Set([
+  "explicit.stat_1604736568",
+  "fractured.stat_1604736568",
+  "crafted.stat_1604736568",
+  "desecrated.stat_1604736568"
+]);
+
+function isStatLocalByDefault(statRef: string, item: ParsedItem): boolean {
+  if (statRef.includes("Armour") && item.armourAR) return true;
+  if (statRef.includes("Evasion") && item.armourEV) return true;
+  if ((statRef.includes("Energy Shield") || statRef.toLowerCase().includes("energy shield")) && item.armourES) return true;
+  if (statRef.includes("Ward") && item.armourRW) return true;
+  if (statRef.includes("Block") && item.armourBLOCK) return true;
+
+  if (item.category && WEAPON.has(item.category)) {
+    if (statRef.includes("Attack Speed")) return true;
+    if (statRef.includes("Critical Strike Chance")) return true;
+    if (statRef.includes("Physical Damage")) return true;
+    if (statRef.startsWith("Adds ") && statRef.includes(" Damage") && !statRef.includes("to Spells") && !statRef.includes("to Attacks")) return true;
+  }
+
+  return false;
+}
+
 function getTradeIds(
   stat: StatCalculated,
   type: ModifierType,
   item: ParsedItem
-): string[] {
+): { ids: string[]; localId?: string; globalId?: string; isLocal?: boolean } {
   let ids = stat.stat.trade.ids[
     type === ModifierType.AddedAugment ? ModifierType.Augment : type
   ] ?? [];
 
+  const isJewel = item.category === ItemCategory.Jewel || item.category === ItemCategory.AbyssJewel || item.category === ItemCategory.ClusterJewel;
+
+  if (isJewel) {
+    const allIds = Object.values(stat.stat.trade.ids).flat() as string[];
+    const jewelIds = allIds.filter(id => JEWEL_STAT_IDS.has(id));
+    if (jewelIds.length > 0) {
+      const bestId = jewelIds.find(id => id.startsWith("explicit.")) || jewelIds.find(id => id.startsWith(type + ".")) || jewelIds[0];
+      return { ids: [bestId] };
+    } else {
+      const rawTradeStat = TRADE_STAT_BY_MATCH_STR(stat.stat.ref + " (Jewel)");
+      if (rawTradeStat && rawTradeStat[type]) {
+        const jewelIdsRaw = rawTradeStat[type].filter(id => JEWEL_STAT_IDS.has(id));
+        if (jewelIdsRaw.length > 0) {
+          const bestId = jewelIdsRaw.find(id => id.startsWith("explicit.")) || jewelIdsRaw.find(id => id.startsWith(type + ".")) || jewelIdsRaw[0];
+          return { ids: [bestId] };
+        }
+      }
+    }
+  }
+
   if (ids.length > 1) {
-    const isArmourOrWeapon = item.category && (ARMOUR.has(item.category) || WEAPON.has(item.category));
-    
     const localId = ids.find(id => LOCAL_STAT_IDS.has(id));
     const globalId = ids.find(id => !LOCAL_STAT_IDS.has(id));
     
     if (localId && globalId) {
-      if (isArmourOrWeapon) {
-        ids = [localId];
+      const isLocal = isStatLocalByDefault(stat.stat.ref, item);
+      if (isLocal) {
+        return { ids: [localId], localId, globalId, isLocal: true };
       } else {
-        ids = [globalId];
+        return { ids: [globalId], localId, globalId, isLocal: false };
       }
     }
   }
   
-  return ids;
+  return { ids };
 }
 
 export function calculatedStatToFilter(
@@ -405,7 +448,14 @@ export function calculatedStatToFilter(
   item: ParsedItem,
   disabled: boolean = true,
 ): StatFilter {
-  const { stat, sources, type } = calc;
+  let { stat, sources, type } = calc;
+
+  const nonAugmentSources = sources.filter(s => s.modifier.info.type !== ModifierType.Augment && s.modifier.info.type !== ModifierType.AddedAugment);
+
+  if (nonAugmentSources.length > 1 && stat.trade.ids[ModifierType.Pseudo]) {
+    type = ModifierType.Pseudo;
+  }
+
   let filter: StatFilter;
 
   const roll = statSourcesTotal(
@@ -414,9 +464,14 @@ export function calculatedStatToFilter(
   );
   const translation = translateStatWithRoll(calc, roll);
 
+  const tradeIdsInfo = getTradeIds({ ...calc, type }, type, item);
+
   if (stat.trade.option) {
     filter = {
-      tradeId: getTradeIds(calc, type, item),
+      tradeId: tradeIdsInfo.ids,
+      tradeIdLocal: tradeIdsInfo.localId,
+      tradeIdGlobal: tradeIdsInfo.globalId,
+      isLocal: tradeIdsInfo.isLocal,
       statRef: stat.ref,
       text:
         roll?.option === roll?.value
@@ -434,9 +489,14 @@ export function calculatedStatToFilter(
   }
 
   filter ??= {
-    tradeId: getTradeIds(calc, type, item),
+    tradeId: tradeIdsInfo.ids,
+    tradeIdLocal: tradeIdsInfo.localId,
+    tradeIdGlobal: tradeIdsInfo.globalId,
+    isLocal: tradeIdsInfo.isLocal,
     statRef: stat.ref,
-    text: translation.string,
+    text: tradeIdsInfo.ids.some(id => JEWEL_STAT_IDS.has(id)) 
+      ? translation.string + " (Jewel)" 
+      : translation.string,
     tag: type as unknown as FilterTag,
     oils: decodeOils(calc),
     sources,

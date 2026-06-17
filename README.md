@@ -1,6 +1,6 @@
-# ![Icon](./renderer/public/images/jeweler.png) Poe2 Price Checker
+# ![Icon](./renderer/public/images/jeweler.png) Poe2 Price Checker (Trade Macro)
 
-Poe2 Price Checker is a standalone desktop application for **Path of Exile 2**, built to facilitate fast price checking, item parsing, and market analysis. It operates entirely as an independent desktop window and does not use game-overlay hooks.
+Poe2 Price Checker is an advanced, standalone desktop **trade macro and price checking tool** for **Path of Exile 2 (PoE 2)**. Built to facilitate lightning-fast price checking, accurate item parsing, and live market analysis, it serves as a powerful alternative to Awakened PoE Trade for Path of exile 2. It operates entirely as an independent desktop window and does not use game-overlay hooks, ensuring maximum performance and safety.
 
 ## Features
 
@@ -23,12 +23,12 @@ The application monitors window focus in the background. Hover over an item in P
 You can choose between two versions of the application:
 
 ### Option A: Setup Installer (Recommended)
-1. Download the latest `Poe2-Price-Checker-Setup-1.0.2.exe` from the Releases page.
+1. [Download v1.0.3 for Windows](https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases/download/v1.0.3/Poe2-Price-Checker-Setup-1.0.3.exe) from the Releases page.
 2. Run the installer to install the application on your computer.
 3. Once installed, it will automatically launch and check for updates in the background.
 
 ### Option B: Portable Version
-1. Download the latest `Poe2 Price Checker 1.0.2.exe` portable executable from the Releases page.
+1. Download the latest `Poe2 Price Checker 1.0.3.exe` portable executable from the Releases page.
 2. Run the `.exe` directly. It is completely self-contained.
 3. If an update is available, it will automatically open the GitHub Releases page in your default browser for you to download the new version.
 

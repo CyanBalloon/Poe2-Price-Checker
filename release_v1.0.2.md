@@ -4,6 +4,10 @@ This release introduces UI refinements for mod elements and filter widths, text 
 
 ---
 
+### 📥 How to Install
+- **Setup Installer (`Poe2 Price Checker Setup X.X.X.exe`)**: Download and run the installer. It will automatically install to your system and handle background auto-updates.
+- **Portable Version (`Poe2 Price Checker X.X.X.exe`)**: Download the standalone executable and run it directly from any folder of your choice. No installation is required.
+
 ### 🎨 Beautiful Mod Elements & Visual Overhaul
 We redesigned the mod elements on the price check panel:
 - **Consistent Theme**: Removed the old legacy app background from mod elements when hovered. They now integrate beautifully with the application's modern visual theme.

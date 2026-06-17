@@ -44,6 +44,13 @@
             {{ t(`filters.tag_${tag.replace("-", "_")}`) }}
             {{ filter.sources.length > 1 ? ` x ${filter.sources.length}` : null }}
           </span>
+          <button
+            v-if="filter.tradeIdLocal && filter.tradeIdGlobal"
+            @click.stop="toggleIsLocal"
+            :class="isStandalone ? getStandaloneTagClass('pseudo') + ' hover:bg-[#202336] hover:text-gray-200 cursor-pointer transition-colors' : [$style['tag'], $style['tag-pseudo'], 'cursor-pointer hover:bg-gray-600']"
+          >
+            {{ filter.isLocal ? 'Local' : 'Global' }}
+          </button>
           <filter-modifier-tiers :filter="filter" :item="item" />
           <filter-modifier-item-has-empty
             :filter="filter"
@@ -153,6 +160,13 @@
               {{ t(`filters.tag_${tag.replace("-", "_")}`) }}
               {{ filter.sources.length > 1 ? ` x ${filter.sources.length}` : null }}
             </span>
+            <button
+              v-if="filter.tradeIdLocal && filter.tradeIdGlobal"
+              @click.stop="toggleIsLocal"
+              :class="isStandalone ? getStandaloneTagClass('pseudo') + ' hover:bg-[#202336] hover:text-gray-200 cursor-pointer transition-colors' : [$style['tag'], $style['tag-pseudo'], 'cursor-pointer hover:bg-gray-600']"
+            >
+              {{ filter.isLocal ? 'Local' : 'Global' }}
+            </button>
             <filter-modifier-tiers :filter="filter" :item="item" />
             <filter-modifier-item-has-empty
               :filter="filter"
@@ -330,6 +344,14 @@ export default defineComponent({
       }
     }
 
+    function toggleIsLocal() {
+      props.filter.isLocal = !props.filter.isLocal;
+      if (props.filter.tradeIdLocal && props.filter.tradeIdGlobal) {
+        props.filter.tradeId = [props.filter.isLocal ? props.filter.tradeIdLocal : props.filter.tradeIdGlobal];
+      }
+      ctx.emit("submit");
+    }
+
     function adjustRoll(percent: number) {
       if (!props.filter.roll) return;
       const roll = props.filter.roll;
@@ -470,6 +492,7 @@ export default defineComponent({
       ),
       inputFocus,
       toggleFilter,
+      toggleIsLocal,
       adjustRoll,
       showShortText: computed(
         () =>
