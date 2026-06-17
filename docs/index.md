@@ -20,8 +20,8 @@ features:
   - title: Instant Price Checking
     details: Hover over an item in Path of Exile 2 and press Ctrl+D. The app fetches live market prices instantly, matching exact affixes and rolls.
     icon: ⚡
-  - title: Standalone & Safe
-    details: Operates entirely as an independent desktop window and does not use game-overlay hooks. 100% compliant with ToS.
+  - title: Zero Lag & No Overlays
+    details: This app is NOT an overlay. It operates entirely as an independent desktop window, meaning it will NEVER affect your in-game FPS. 100% compliant with ToS.
     icon: 🛡️
   - title: Intelligent Parsing
     details: Supports advanced magic item parsing, tier identification, and precise recognition of complex PoE 2 prefixes and suffixes.
