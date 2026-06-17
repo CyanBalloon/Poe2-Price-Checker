@@ -1,4 +1,4 @@
-# ![Icon](./renderer/public/images/jeweler.png) Poe2 Price Checker (Trade Macro)
+# <img src="./renderer/public/images/jeweler.png" width="48" align="top" /> Poe2 Price Checker (Trade Macro)
 
 Poe2 Price Checker is an advanced, standalone desktop **trade macro and price checking tool** for **Path of Exile 2 (PoE 2)**. Built to facilitate lightning-fast price checking, accurate item parsing, and live market analysis, it serves as a powerful alternative to Awakened PoE Trade for Path of exile 2. It operates entirely as an independent desktop window and does not use game-overlay hooks, ensuring maximum performance and safety.
 
