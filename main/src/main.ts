@@ -116,6 +116,7 @@ let tray: AppTray;
             );
             gameLogWatcher.restart(cfg.clientLog ?? "", cfg.readClientLog);
             gameConfig.readConfig(cfg.gameConfig ?? "");
+            appUpdater.updateSettings(cfg.autoUpdater);
             appUpdater.checkAtStartup();
             tray.overlayKey = cfg.overlayKey;
             fileWriter.restart(cfg.libraryAlpha, cfg.libraryOutputPath);

@@ -111,6 +111,9 @@
     <div class="italic text-gray-500 mb-4">
       {{ t(":client_log_explain") }}
     </div>
+    <ui-checkbox class="mb-4" v-model="autoUpdater">{{
+      t(":auto_updater") || 'Enable background auto-updates'
+    }}</ui-checkbox>
     <div class="mb-4" :class="{ 'p-2 bg-slate-800 rounded': enableAlphas }">
       <ui-checkbox class="mb-4" v-model="enableAlphas">{{
         t(":enable_alphas")
@@ -237,6 +240,7 @@ export default defineComponent({
       windowTitle: configModelValue(() => props.config, "windowTitle"),
       enableAlphas: configModelValue(() => props.config, "enableAlphas"),
       readClientLog: configModelValue(() => props.config, "readClientLog"),
+      autoUpdater: configModelValue(() => props.config, "autoUpdater"),
       libraryAlpha,
     };
   },

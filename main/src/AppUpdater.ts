@@ -1,3 +1,4 @@
+import { app, shell } from "electron";
 import { autoUpdater } from "electron-updater";
 import type { ServerEvents } from "./server";
 import type { UpdateInfo } from "../../ipc/types";
@@ -6,7 +7,7 @@ export class AppUpdater {
   private _checkedAtStartup = false;
   private _info: UpdateInfo = { state: "initial" };
 
-  public readonly noAutoUpdatesReason: Extract<
+  public noAutoUpdatesReason: Extract<
     UpdateInfo,
     { state: "update-available" }
   >["noDownloadReason"] = null;
@@ -53,6 +54,9 @@ export class AppUpdater {
         version: info.version,
         noDownloadReason: this.noAutoUpdatesReason,
       };
+      if (process.env.PORTABLE_EXECUTABLE_DIR) {
+        shell.openExternal("https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases");
+      }
     });
     autoUpdater.on("update-not-available", () => {
       this.info = { state: "update-not-available", checkedAt: Date.now() };
@@ -66,7 +70,29 @@ export class AppUpdater {
     // on('download-progress') https://github.com/electron-userland/electron-builder/issues/2521
   }
 
+  updateSettings(enableAutoUpdater: boolean) {
+    if (enableAutoUpdater) {
+      autoUpdater.autoDownload = !process.env.PORTABLE_EXECUTABLE_DIR;
+      if (autoUpdater.autoDownload) {
+        this.noAutoUpdatesReason = null;
+      } else {
+        this.noAutoUpdatesReason = "not-supported";
+      }
+    } else {
+      autoUpdater.autoDownload = false;
+      this.noAutoUpdatesReason = "disabled-by-flag";
+    }
+
+    if (process.argv.includes("--no-updates")) {
+      autoUpdater.autoDownload = false;
+      this.noAutoUpdatesReason = "disabled-by-flag";
+    }
+  }
+
   checkAtStartup() {
+    if (this.noAutoUpdatesReason === "disabled-by-flag") {
+      return;
+    }
     if (!this._checkedAtStartup) {
       this._checkedAtStartup = true;
       this.check();
@@ -74,6 +100,14 @@ export class AppUpdater {
   }
 
   private check = async () => {
+    if (!app.isPackaged) {
+      this.info = { state: "checking-for-update" };
+      setTimeout(() => {
+        this.info = { state: "update-not-available", checkedAt: Date.now() };
+      }, 1000);
+      return;
+    }
+
     try {
       await autoUpdater.checkForUpdates();
     } catch {

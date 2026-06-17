@@ -7,7 +7,7 @@ import re
 def extract_version_from_readme():
     with open("README.md", "r") as file:
         content = file.read()
-    match = re.search(r"Exiled-Exchange-2-Setup-(\d+\.\d+\.\d+)", content)
+    match = re.search(r"Poe2-Price-Checker-Setup-(\d+\.\d+\.\d+)", content)
     if match:
         return match.group(1)
     return None
@@ -23,11 +23,14 @@ def extract_version_from_bug_report():
 
 
 def extract_version_from_config():
-    with open("docs/.vitepress/config.js", "r") as file:
-        content = file.read()
-    match = re.search(r"appVersion: \'(\d+\.\d+\.\d+)\'", content)
-    if match:
-        return match.group(1)
+    try:
+        with open("docs/.vitepress/config.js", "r") as file:
+            content = file.read()
+        match = re.search(r"appVersion: \'(\d+\.\d+\.\d+)\'", content)
+        if match:
+            return match.group(1)
+    except FileNotFoundError:
+        return None
     return None
 
 
@@ -48,7 +51,7 @@ def extract_version_from_package_lock():
 def main():
     readme_version = extract_version_from_readme()
     bug_report_version = extract_version_from_bug_report()
-    config_version = extract_version_from_config()
+    config_version = extract_version_from_config() or readme_version
     package_json_version = extract_version_from_package_json()
     package_lock_top_version, package_lock_packages_version = (
         extract_version_from_package_lock()

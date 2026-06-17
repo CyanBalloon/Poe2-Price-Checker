@@ -13,36 +13,63 @@
         v-if="starred.length"
         tag="div"
         :enter-active-class="$style.starredItemEnter"
-        class="flex flex-wrap justify-center gap-4"
+        class="flex flex-wrap justify-center gap-4 animate-fade-in"
       >
-        <button
+        <div
           v-for="item in starred"
           :key="item.info.refName + (item.discr || '')"
-          @click="starredItemClick($event, item)"
-          class="flex items-center gap-5 bg-[#0d0e12]/80 hover:bg-[#151722] border border-[#191b22] hover:border-violet-500/60 rounded-3xl p-5 transition-all group cursor-pointer shadow-2xl w-[26rem] backdrop-blur-md"
+          class="flex items-center gap-5 bg-[#0d0e12]/80 border border-[#191b22] hover:border-violet-500/40 rounded-3xl p-5 shadow-2xl w-[28rem] backdrop-blur-md relative overflow-hidden transition-all duration-300"
         >
-          <div class="w-16 h-16 flex items-center justify-center bg-[#07080a] border border-[#202334] rounded-2xl shrink-0 overflow-hidden group-hover:border-violet-500/40 transition-colors shadow-inner">
-            <UiItemImg
-              :icon="item.info.icon || '%NOT_FOUND%'"
-              :item-name="item.info.name"
-              :namespace="item.info.namespace"
-              class="max-w-[75%] max-h-[75%] object-contain drop-shadow-lg transform group-hover:scale-110 transition-transform"
-            />
-          </div>
-          <div class="flex flex-col text-left min-w-0 flex-1 justify-center gap-1">
-            <div class="text-sm font-bold text-gray-200 truncate">{{ item.info.name }}</div>
-            <div class="flex items-center gap-2">
-              <span v-if="item.price" class="text-xs font-semibold text-teal-400 bg-teal-400/10 px-2 py-0.5 rounded border border-teal-400/20 truncate">{{ formatPrice(item.price) }}</span>
-              <span v-if="item.price && item.price.currency === 'div' && exaltedRate" class="flex items-center gap-1 text-xs font-semibold text-violet-400 bg-violet-400/10 px-2 py-0.5 rounded border border-violet-400/20 truncate">
-                {{ Math.round(item.price.min * exaltedRate) }} <img src="/images/exa.png" class="w-3.5 h-3.5 inline-block opacity-90" />
-              </span>
-              <span class="text-xs text-gray-500 truncate">{{ item.discr ? t(item.discr) : item.info.namespace === 'GEM' ? 'Skill Gem' : item.info.namespace === 'UNIQUE' ? 'Unique' : 'Base Item' }}</span>
+          <!-- Left side (clickable: opens ninja Url if available) -->
+          <div 
+            @click="starredItemClick($event, item)"
+            class="flex items-center gap-4 flex-1 min-w-0"
+            :class="{ 'cursor-pointer group': item.ninjaUrl }"
+          >
+            <div class="w-16 h-16 flex items-center justify-center bg-[#07080a] border border-[#202334] rounded-2xl shrink-0 overflow-hidden group-hover:border-violet-500/40 transition-colors shadow-inner">
+              <UiItemImg
+                :icon="item.info.icon || '%NOT_FOUND%'"
+                :item-name="item.info.name"
+                :namespace="item.info.namespace"
+                class="max-w-[75%] max-h-[75%] object-contain drop-shadow-lg transform group-hover:scale-110 transition-transform"
+              />
+            </div>
+            <div class="flex flex-col text-left min-w-0 flex-1 justify-center gap-1">
+              <div class="text-sm font-bold truncate" :class="isUnique(item) ? 'text-orange-300' : 'text-gray-200'">{{ item.info.name }}</div>
+              <div class="flex items-center flex-wrap gap-2 mt-0.5">
+                <span v-if="item.price" class="text-xs font-semibold text-teal-400 bg-teal-400/10 px-2 py-0.5 rounded border border-teal-400/20 truncate">{{ formatPrice(item.price) }}</span>
+                <span v-if="item.price && item.price.currency === 'div' && exaltedRate" class="flex items-center gap-1 text-xs font-semibold text-violet-400 bg-violet-400/10 px-2 py-0.5 rounded border border-violet-400/20 truncate">
+                  {{ Math.round(item.price.min * exaltedRate) }} <img src="/images/exa.png" class="w-3.5 h-3.5 inline-block opacity-90" />
+                </span>
+                <span class="text-xs text-gray-500 truncate">{{ item.discr ? t(item.discr) : item.info.namespace === 'GEM' ? 'Skill Gem' : isUnique(item) ? 'Unique' : 'Base Item' }}</span>
+              </div>
             </div>
           </div>
-          <div v-if="item.ninjaUrl" class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-[#151722] border border-[#202334] group-hover:bg-violet-600 group-hover:border-violet-500 transition-colors shadow-sm">
-            <i class="fas fa-external-link-alt text-[10px] text-gray-400 group-hover:text-white transition-colors"></i>
+
+          <!-- Right side: Actions -->
+          <div class="flex items-center gap-2 shrink-0">
+            <!-- Price Check exact rolls / Switch to price-check tab -->
+            <button
+              v-if="isUnique(item)"
+              @click="triggerPriceCheck(item)"
+              class="px-3 py-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 border border-violet-500/30 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-md shadow-violet-950/40 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] transition-all duration-300"
+              title="Check price with exact mods values"
+            >
+              <i class="fas fa-search-dollar"></i>
+              <span>{{ item.rawItem ? 'Check Rolls' : 'Check' }}</span>
+            </button>
+
+            <!-- Ninja external link icon -->
+            <div 
+              v-if="item.ninjaUrl" 
+              @click="starredItemClick($event, item)"
+              class="cursor-pointer flex items-center justify-center w-8 h-8 rounded-xl bg-[#151722] hover:bg-violet-600 border border-[#202334] hover:border-violet-500 transition-colors shadow-sm text-gray-400 hover:text-white"
+              title="Open on poe.ninja"
+            >
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </div>
           </div>
-        </button>
+        </div>
       </transition-group>
 
       <!-- Search Section -->
@@ -284,6 +311,7 @@ interface SelectedItem {
   chaos?: number;
   price?: CurrencyValue;
   ninjaUrl?: string;
+  rawItem?: ParsedItem;
 }
 
 function useSelectedItems() {
@@ -355,7 +383,7 @@ import { WidgetManager } from "../overlay/interfaces";
 import { usePoeninja } from "@/web/background/Prices";
 import { Host } from "@/web/background/IPC";
 import { createVirtualItem, ItemRarity } from "@/parser/ParsedItem";
-import { ItemCategory } from "@/parser";
+import { ItemCategory, ParsedItem } from "@/parser";
 
 import ItemQuickPrice from "@/web/ui/ItemQuickPrice.vue";
 import Widget from "../overlay/Widget.vue";
@@ -384,6 +412,35 @@ const isStandalone = computed(() => {
   return params.get("mode") === "standalone";
 });
 
+function isUnique(item: SelectedItem) {
+  const ns = item.info.namespace;
+  return ns === 'UNIQUE' || ns.startsWith('Unique') || item.info.unique != null;
+}
+
+function triggerPriceCheck(item: SelectedItem) {
+  let clipboardText = "";
+  if (item.rawItem) {
+    clipboardText = item.rawItem.rawText;
+  } else {
+    // Construct a mock unique item text so the parser recognizes it
+    clipboardText = `Rarity: Unique\n${item.info.name}\n${item.info.unique?.base || item.info.refName}`;
+  }
+
+  Host.selfDispatch({
+    name: "MAIN->CLIENT::item-text",
+    payload: {
+      target: "price-check",
+      clipboard: clipboardText,
+      position: { x: window.innerWidth / 2, y: window.innerHeight / 2 },
+      focusOverlay: false,
+      isManual: true,
+      item: item.rawItem,
+    }
+  });
+
+  window.dispatchEvent(new CustomEvent("change-tab", { detail: "price-check" }));
+}
+
 Host.onEvent("MAIN->CLIENT::ocr-text", (e) => {
   if (e.target !== "heist-gems") return;
 
@@ -397,7 +454,7 @@ Host.onEvent("MAIN->CLIENT::ocr-text", (e) => {
 
 function selectItem(
   item: BaseType,
-  opts?: { unique?: true; withTimeout?: true },
+  opts?: { unique?: true; withTimeout?: true; rawItem?: ParsedItem },
 ) {
   queuePricesFetch();
 
@@ -418,7 +475,8 @@ function selectItem(
     info: item,
     chaos: price?.primaryValue,
     price: price != null ? autoCurrency(price.primaryValue) : undefined,
-    ninjaUrl: price?.url
+    ninjaUrl: price?.url,
+    rawItem: opts?.rawItem,
   });
   if (isAdded && opts?.withTimeout) {
     showTimeout.value?.reset();
@@ -490,10 +548,11 @@ function formatExaltedPrice(divVal: number) {
 
 onMounted(() => {
   const handleAddSearchItem = (e: Event) => {
-    const parsedItem = (e as CustomEvent).detail;
+    const parsedItem = (e as CustomEvent).detail as ParsedItem;
     if (!parsedItem) return;
     selectItem(parsedItem.info, {
       unique: parsedItem.rarity === ItemRarity.Unique ? true : undefined,
+      rawItem: parsedItem,
     });
   };
   window.addEventListener("add-search-item", handleAddSearchItem);

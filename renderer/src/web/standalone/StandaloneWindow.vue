@@ -118,38 +118,52 @@
           </div>
         </div>
         
-        <!-- League Dropdown Select -->
-        <div class="relative">
-          <button 
-            @click="isLeagueDropdownOpen = !isLeagueDropdownOpen" 
-            class="px-4 py-1.5 bg-[#0e1017] hover:bg-[#151822] border border-[#202334] rounded-xl text-xs flex items-center gap-2 text-gray-300 transition-all duration-200 shadow-sm shadow-black/50 z-50 relative"
+        <!-- Check for updates & League Dropdown Select -->
+        <div class="flex items-center gap-3">
+          <!-- Check for Update Button -->
+          <button
+            @click="handleUpdateButtonClick"
+            class="px-3 py-1.5 border rounded-xl text-xs flex items-center gap-2 transition-all duration-200 shadow-sm z-50 relative font-medium"
+            :class="updateButton.class"
+            :title="updateButton.text"
           >
-            <i class="fas fa-globe text-teal-400"></i>
-            <span>{{ leagueId || 'Select League' }}</span>
-            <i class="fas fa-chevron-down text-[10px] text-gray-500 ml-1"></i>
+            <i :class="updateButton.icon"></i>
+            <span>{{ updateButton.text }}</span>
           </button>
-          
-          <!-- Dropdown overlay to close on click outside -->
-          <div v-if="isLeagueDropdownOpen" class="fixed inset-0 z-40" @click="isLeagueDropdownOpen = false"></div>
-          
-          <!-- Dropdown Options Menu -->
-          <div 
-            v-if="isLeagueDropdownOpen" 
-            class="absolute right-0 top-11 w-56 bg-[#0d0e12] border border-[#202334] rounded-xl shadow-2xl z-50 py-1.5 overflow-hidden duration-200"
-          >
+
+          <!-- League Dropdown Select -->
+          <div class="relative">
             <button 
-              v-for="league in tradeLeagues" 
-              :key="league.id"
-              @click="selectLeague(league.id)"
-              :class="[
-                'w-full text-left px-4 py-2 text-xs transition-colors duration-150',
-                league.id === leagueId 
-                  ? 'bg-[#151722] text-[#8b5cf6] font-medium' 
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-[#111218]/50'
-              ]"
+              @click="isLeagueDropdownOpen = !isLeagueDropdownOpen" 
+              class="px-4 py-1.5 bg-[#0e1017] hover:bg-[#151822] border border-[#202334] rounded-xl text-xs flex items-center gap-2 text-gray-300 transition-all duration-200 shadow-sm shadow-black/50 z-50 relative"
             >
-              {{ league.text }}
+              <i class="fas fa-globe text-teal-400"></i>
+              <span>{{ leagueId || 'Select League' }}</span>
+              <i class="fas fa-chevron-down text-[10px] text-gray-500 ml-1"></i>
             </button>
+            
+            <!-- Dropdown overlay to close on click outside -->
+            <div v-if="isLeagueDropdownOpen" class="fixed inset-0 z-40" @click="isLeagueDropdownOpen = false"></div>
+            
+            <!-- Dropdown Options Menu -->
+            <div 
+              v-if="isLeagueDropdownOpen" 
+              class="absolute right-0 top-11 w-56 bg-[#0d0e12] border border-[#202334] rounded-xl shadow-2xl z-50 py-1.5 overflow-hidden duration-200"
+            >
+              <button 
+                v-for="league in tradeLeagues" 
+                :key="league.id"
+                @click="selectLeague(league.id)"
+                :class="[
+                  'w-full text-left px-4 py-2 text-xs transition-colors duration-150',
+                  league.id === leagueId 
+                    ? 'bg-[#151722] text-[#8b5cf6] font-medium' 
+                    : 'text-gray-400 hover:text-gray-200 hover:bg-[#111218]/50'
+                ]"
+              >
+                {{ league.text }}
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -242,10 +256,11 @@ import {
   shallowRef, 
   watch, 
   onMounted, 
+  onUnmounted,
   nextTick 
 } from "vue";
 import { registry } from "../overlay/widget-registry.js";
-import { ItemCategory, parseClipboard } from "@/parser";
+import { ItemCategory, ItemRarity, parseClipboard } from "@/parser";
 import { AppConfig, saveConfig } from "@/web/Config";
 import { Host } from "@/web/background/IPC";
 import { useLeagues } from "@/web/background/Leagues";
@@ -298,11 +313,13 @@ export default defineComponent({
         const parsed = parseClipboard(e.clipboard);
         if (parsed.isOk()) {
           const item = parsed.value;
+          const isUnique = item.rarity === ItemRarity.Unique;
           const isLineageSupport = item.category === ItemCategory.Gem && (item.info.icon?.includes('/Lineage') ?? false);
           const isListingsDisabled = 
             item.category === ItemCategory.Currency ||
             isLineageSupport ||
-            item.info.tradeTag != null;
+            item.info.tradeTag != null ||
+            isUnique;
 
           if (isListingsDisabled) {
             activeTab.value = "search";
@@ -321,6 +338,17 @@ export default defineComponent({
 
     // Tabs setup
     const activeTab = ref("price-check");
+
+    const handleTabChange = (e: Event) => {
+      const targetTab = (e as CustomEvent).detail;
+      if (targetTab) {
+        activeTab.value = targetTab;
+      }
+    };
+    window.addEventListener("change-tab", handleTabChange);
+    onUnmounted(() => {
+      window.removeEventListener("change-tab", handleTabChange);
+    });
     const isHovered = ref(false);
     const tabs = [
       { id: "price-check", name: "Price Check", icon: "fas fa-search-dollar" },
@@ -334,6 +362,105 @@ export default defineComponent({
 
     const version = computed(() => Host.version.value);
     const leagueId = computed(() => AppConfig().leagueId);
+
+    function checkForUpdates() {
+      console.log("checkForUpdates logic triggered");
+      Host.sendEvent({
+        name: "CLIENT->MAIN::user-action",
+        payload: { action: "check-for-update" },
+      });
+    }
+
+    function openDownloadPage() {
+      console.log("openDownloadPage logic triggered");
+      window.open("https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases");
+    }
+
+    function quitAndInstall() {
+      console.log("quitAndInstall logic triggered");
+      Host.sendEvent({
+        name: "CLIENT->MAIN::user-action",
+        payload: { action: "update-and-restart" },
+      });
+    }
+
+    function handleUpdateButtonClick() {
+      console.log("handleUpdateButtonClick fired! Current update state is:", Host.updateInfo.value.state);
+      if (updateButton.value && typeof updateButton.value.action === "function") {
+        updateButton.value.action();
+      }
+    }
+
+    const showUpToDate = ref(false);
+    let upToDateTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    watch(() => Host.updateInfo.value.state, (newState) => {
+      if (newState === "update-not-available") {
+        showUpToDate.value = true;
+        if (upToDateTimeout) clearTimeout(upToDateTimeout);
+        upToDateTimeout = setTimeout(() => {
+          showUpToDate.value = false;
+        }, 5000);
+      }
+    });
+
+    const updateButton = computed(() => {
+      const info = Host.updateInfo.value;
+      if (info.state === "checking-for-update") {
+        return {
+          text: "Checking...",
+          icon: "fas fa-sync-alt animate-spin text-teal-400",
+          class: "bg-[#0e1017] border-[#202334] text-gray-400 cursor-not-allowed",
+          action: () => {},
+        };
+      }
+      if (info.state === "update-downloaded") {
+        return {
+          text: "Restart to Update",
+          icon: "fas fa-check-circle text-green-400",
+          class: "bg-[#16a34a]/20 border-green-500/50 hover:bg-[#16a34a]/30 text-green-200 animate-pulse",
+          action: quitAndInstall,
+        };
+      }
+      if (info.state === "update-available") {
+        if (info.noDownloadReason) {
+          return {
+            text: `Update Available (v${info.version})`,
+            icon: "fas fa-cloud-download-alt text-teal-400",
+            class: "bg-teal-500/10 border-teal-500/30 hover:bg-teal-500/20 text-teal-300",
+            action: openDownloadPage,
+          };
+        }
+        return {
+          text: "Downloading Update...",
+          icon: "fas fa-arrow-down animate-bounce text-teal-400",
+          class: "bg-teal-500/10 border-teal-500/30 text-teal-300 cursor-not-allowed",
+          action: () => {},
+        };
+      }
+      if (info.state === "error") {
+        return {
+          text: "Check Error",
+          icon: "fas fa-exclamation-triangle text-amber-500",
+          class: "bg-amber-500/10 border-amber-500/30 hover:bg-amber-500/20 text-amber-300",
+          action: checkForUpdates,
+        };
+      }
+      if (showUpToDate.value) {
+        return {
+          text: "Up to Date",
+          icon: "fas fa-check text-teal-400",
+          class: "bg-[#0e1017] border-teal-500/30 text-teal-300",
+          action: checkForUpdates,
+        };
+      }
+      return {
+        text: "Check for Update",
+        icon: "fas fa-cloud-download-alt text-teal-400",
+        class: "bg-[#0e1017] border-[#202334] hover:bg-[#151822] text-gray-300",
+        action: checkForUpdates,
+      };
+    });
 
     // Manual input parsing
     const manualItemText = ref("");
@@ -481,6 +608,8 @@ export default defineComponent({
       tradeLeagues,
       selectLeague,
       isHovered,
+      updateButton,
+      handleUpdateButtonClick,
     };
   },
 });

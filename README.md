@@ -20,10 +20,20 @@ The application monitors window focus in the background. Hover over an item in P
 
 ## Installation
 
-1. Download the latest `Poe2 Price Checker 1.0.0.exe` from the Releases page.
-2. Run the `.exe` file. The application is fully portable and self-contained.
-3. The standalone window will open on your desktop.
-4. Launch **Path of Exile 2**. Hover over an item and press `Ctrl+D` to perform a price check.
+You can choose between two versions of the application:
+
+### Option A: Setup Installer (Recommended)
+1. Download the latest `Poe2-Price-Checker-Setup-1.0.1.exe` from the Releases page.
+2. Run the installer to install the application on your computer.
+3. Once installed, it will automatically launch and check for updates in the background.
+
+### Option B: Portable Version
+1. Download the latest `Poe2 Price Checker 1.0.1.exe` portable executable from the Releases page.
+2. Run the `.exe` directly. It is completely self-contained.
+3. If an update is available, it will automatically open the GitHub Releases page in your default browser for you to download the new version.
+
+After launching, hover over an item in **Path of Exile 2** and press `Ctrl+D` to perform a price check.
+
 
 ## Usage & Settings
 - **Closing the Application**: To completely close the application, right-click the `Poe2 Price Checker` icon in the system tray and select **Quit**.

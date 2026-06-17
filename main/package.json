@@ -1,6 +1,6 @@
 {
   "name": "poe2-price-checker",
-  "version": "0.15.4",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "node build/script.mjs",

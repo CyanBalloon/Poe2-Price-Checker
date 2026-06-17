@@ -34,7 +34,7 @@ The application window will open automatically. Edits to `/renderer/src` will be
 
 ## Building for Production
 
-The project uses `electron-builder` to package the application into a single, portable `.exe` file for Windows.
+The project uses `electron-builder` to package the application into an installer `.exe` file for Windows.
 
 1. Ensure all changes are saved.
 2. Run the provided build script as an administrator (required for `electron-builder` symlinks):
@@ -46,6 +46,9 @@ This script will:
 - Install all dependencies.
 - Rebuild native modules (`npmRebuild: true`) to match the Electron V8 headers.
 - Compile the frontend UI.
-- Package the application into `/main/dist/Poe2 Price Checker 1.0.0.exe`.
+- Package the application into `/main/dist/`:
+  - `Poe2 Price Checker Setup 1.0.1.exe` (NSIS Setup Installer)
+  - `Poe2 Price Checker 1.0.1.exe` (Portable Executable)
+  - `latest.yml` (Update descriptor metadata for the installer version)
 
-Only the `.exe` file needs to be distributed.
+Both executable formats will be built and placed under the `/main/dist/` directory.

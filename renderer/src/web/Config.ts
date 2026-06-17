@@ -154,6 +154,7 @@ export interface Config {
   alphas: Array<"library">;
   tipsFrequency: TipsFrequency;
   readClientLog: boolean; // default to false, opt-in only
+  autoUpdater: boolean;
 }
 
 export const defaultConfig = (): Config => ({
@@ -207,6 +208,7 @@ export const defaultConfig = (): Config => ({
   preferredTradeSite: "default",
   realm: "pc-ggg",
   fontSize: 16,
+  autoUpdater: true,
   widgets: widgetRegistry.widgets.reduce<widget.Widget[]>(
     (widgets, { widget }) => {
       const res: widget.Widget[] = [];
@@ -813,5 +815,6 @@ function getConfigForHost(): HostConfig {
     readClientLog: config.readClientLog,
     libraryAlpha: config.enableAlphas && config.alphas.includes("library"),
     libraryOutputPath: library.libraryOutputPath,
+    autoUpdater: config.autoUpdater,
   };
 }
