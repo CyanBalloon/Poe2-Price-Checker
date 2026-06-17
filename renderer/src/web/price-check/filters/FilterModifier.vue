@@ -2,7 +2,7 @@
   <div 
     :class="[
       isStandalone 
-        ? 'p-2.5 mb-1.5 rounded-xl bg-[#0d0e14]/40 hover:bg-[#141622]/80 border border-[#1b1c26]/60 hover:border-violet-500/30 transition-all duration-200 flex flex-col relative' 
+        ? 'p-2.5 mb-1.5 rounded-xl bg-[#0d0e14]/40 hover:bg-[#1f2235]/95 border border-[#1b1c26]/60 hover:border-violet-500/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.15)] transition-all duration-200 flex flex-col relative' 
         : $style['filter']
     ]"
   >
@@ -34,9 +34,6 @@
               ><item-modifier-text
                 :text="showShortText ? shortText : text"
                 :roll="roll?.value"
-            /></span>
-            <span class="search-text-full whitespace-pre-wrap text-[13px] text-gray-100"
-              ><item-modifier-text :text="text" :roll="roll?.value"
             /></span>
           </div>
         </button>
@@ -666,30 +663,6 @@ export default defineComponent({
 </style>
 
 <style lang="postcss">
-.search-text-full {
-  position: absolute;
-  left: -8px;
-  right: -8px;
-  top: -6px;
-  padding: 6px 10px;
-  z-index: 50;
-  white-space: pre-wrap;
-  width: max-content;
-  max-width: 28rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-
-  .search-text:not(:hover) & {
-    display: none;
-  }
-
-  .search-text:hover & {
-    background-color: #121420;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    color: #e2e8f0;
-  }
-}
-
 .truncate-start {
   overflow: hidden;
   text-overflow: ellipsis;

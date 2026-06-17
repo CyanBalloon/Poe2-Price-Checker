@@ -8,9 +8,6 @@
           style="line-height: 1rem"
         >
           <span class="truncate"><ItemModifierText :text="stat.text" /></span>
-          <span class="search-text-full whitespace-pre-wrap cursor-default"
-            ><ItemModifierText :text="stat.text"
-          /></span>
         </div>
       </div>
       <div class="ml-5 text-xs leading-none">
