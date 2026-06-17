@@ -11,9 +11,17 @@
         <!-- App Title / Logo -->
         <div class="flex items-center mb-8 px-1">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-violet-600 to-teal-400 p-[1px] flex items-center justify-center shadow-lg shadow-violet-950/20 shrink-0">
+            <div 
+              class="rounded-lg bg-gradient-to-tr from-violet-600 to-teal-400 p-[1px] flex items-center justify-center shadow-lg shadow-violet-950/20 shrink-0 transition-all duration-300 ease-out"
+              :class="isHovered ? 'w-10 h-10' : 'w-8 h-8'"
+            >
               <div class="w-full h-full bg-[#0d0e12] rounded-lg flex items-center justify-center">
-                <img src="/images/jeweler.png" class="w-5 h-5 animate-pulse" alt="EE2" />
+                <img 
+                  src="/images/jeweler.png" 
+                  class="animate-pulse transition-all duration-300 ease-out" 
+                  :class="isHovered ? 'w-8 h-8' : 'w-5 h-5'"
+                  alt="EE2" 
+                />
               </div>
             </div>
             <span 
