@@ -2,7 +2,7 @@
   <div 
     :class="[
       isStandalone 
-        ? 'p-2 mb-1.5 rounded-xl bg-[#101218]/30 hover:bg-[#151824]/50 transition-all duration-200 flex flex-col relative' 
+        ? 'p-2.5 mb-1.5 rounded-xl bg-[#0d0e14]/40 hover:bg-[#141622]/80 border border-[#1b1c26]/60 hover:border-violet-500/30 transition-all duration-200 flex flex-col relative' 
         : $style['filter']
     ]"
   >
@@ -19,7 +19,7 @@
           type="button"
         >
           <i
-            class="w-5 text-sm transition-colors duration-200 shrink-0"
+            class="w-5 text-base transition-colors duration-200 shrink-0"
             :class="[
               isStandalone
                 ? (isDisabled ? 'far fa-square text-gray-600' : 'fas fa-check-square text-violet-500')
@@ -30,12 +30,12 @@
             class="search-text flex-1 mr-1 relative flex min-w-0"
             style="line-height: 1rem"
           >
-            <span class="truncate text-xs font-medium text-gray-300"
+            <span class="truncate text-[13px] font-semibold text-gray-200"
               ><item-modifier-text
                 :text="showShortText ? shortText : text"
                 :roll="roll?.value"
             /></span>
-            <span class="search-text-full whitespace-pre-wrap text-xs"
+            <span class="search-text-full whitespace-pre-wrap text-[13px] text-gray-100"
               ><item-modifier-text :text="text" :roll="roll?.value"
             /></span>
           </div>
@@ -95,7 +95,7 @@
           </div>
           <div class="flex gap-1 ml-1 select-all shrink-0">
             <input
-              :class="isStandalone ? 'bg-[#07080b] border border-[#222538]/60 text-center w-10 py-0.5 rounded-md text-[10px] font-mono text-gray-300 placeholder-gray-700 focus:border-violet-500 focus:outline-none transition-colors' : $style['rollInput']"
+              :class="isStandalone ? 'bg-[#07080b] border border-[#222538]/60 text-center w-12 py-1 rounded-md text-[11px] font-mono text-gray-300 placeholder-gray-700 focus:border-violet-500 focus:outline-none transition-colors' : $style['rollInput']"
               :placeholder="t('min')"
               :min="roll?.bounds?.min"
               :max="roll?.bounds?.max"
@@ -108,7 +108,7 @@
               @mousewheel.stop
             />
             <input
-              :class="isStandalone ? 'bg-[#07080b] border border-[#222538]/60 text-center w-10 py-0.5 rounded-md text-[10px] font-mono text-gray-300 placeholder-gray-700 focus:border-violet-500 focus:outline-none transition-colors' : $style['rollInput']"
+              :class="isStandalone ? 'bg-[#07080b] border border-[#222538]/60 text-center w-12 py-1 rounded-md text-[11px] font-mono text-gray-300 placeholder-gray-700 focus:border-violet-500 focus:outline-none transition-colors' : $style['rollInput']"
               :placeholder="t('max')"
               :min="roll?.bounds?.min"
               :max="roll?.bounds?.max"
@@ -532,11 +532,11 @@ export default defineComponent({
 }
 
 .mods {
-  @apply border-b-4 border-gray-500;
+  border-bottom: 3px solid rgba(139, 92, 246, 0.4);
   background: linear-gradient(
     to bottom,
-    theme("colors.gray.800"),
-    theme("colors.gray.900")
+    #11121d,
+    #0a0b12
   );
   @apply -mx-4 px-4;
   position: absolute;
@@ -545,6 +545,7 @@ export default defineComponent({
   right: 0;
   pointer-events: none;
   z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .filter:not(:hover) > .mods {
@@ -667,18 +668,25 @@ export default defineComponent({
 <style lang="postcss">
 .search-text-full {
   position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  padding-bottom: 1px;
-  z-index: 10;
+  left: -8px;
+  right: -8px;
+  top: -6px;
+  padding: 6px 10px;
+  z-index: 50;
+  white-space: pre-wrap;
+  width: max-content;
+  max-width: 28rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 
   .search-text:not(:hover) & {
     display: none;
   }
 
   .search-text:hover & {
-    @apply bg-gray-700;
+    background-color: #121420;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #e2e8f0;
   }
 }
 

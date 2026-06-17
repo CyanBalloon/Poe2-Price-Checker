@@ -575,7 +575,7 @@ export default defineComponent({
 
     const { t } = useI18n();
 
-    const leftPanelWidth = useStorage("priceCheckLeftPanelWidth", 420);
+    const leftPanelWidth = useStorage("priceCheckLeftPanelWidth", 800);
     function startResize(e: MouseEvent) {
       e.preventDefault();
       const startX = e.clientX;
