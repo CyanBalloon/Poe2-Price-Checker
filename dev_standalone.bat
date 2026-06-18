@@ -17,6 +17,9 @@ if not exist "renderer\node_modules\" (
 echo Starting Frontend (Renderer) in a new window...
 start "Poe2 Renderer" cmd /c "npm run dev:renderer"
 
+echo Waiting 3 seconds for Vite to initialize...
+timeout /t 3 /nobreak >nul
+
 echo Starting Backend (Main Standalone) in a new window...
 start "Poe2 Standalone" cmd /c "npm run dev:standalone"
 
