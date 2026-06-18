@@ -241,20 +241,6 @@ function upgradeConfig(_config: Config): Config {
   };
 
   if (config.configVersion < 3) {
-    config.widgets.push({
-      ...defaultConfig().widgets.find((w) => w.wmType === "image-strip")!,
-      wmId: Math.max(0, ...config.widgets.map((_) => _.wmId)) + 1,
-      wmZorder: null,
-    });
-
-    config.widgets.push({
-      ...defaultConfig().widgets.find((w) => w.wmType === "delve-grid")!,
-      wmId: Math.max(0, ...config.widgets.map((_) => _.wmId)) + 1,
-      wmZorder: null,
-    });
-
-    config.widgets.find((w) => w.wmType === "menu")!.alwaysShow = false;
-
     config.configVersion = 3;
   }
 
@@ -263,18 +249,11 @@ function upgradeConfig(_config: Config): Config {
       (w) => w.wmType === "price-check",
     )!.chaosPriceThreshold = 0.05;
 
-    const mapCheck = config.widgets.find((w) => w.wmType === "map-check")!;
-    (mapCheck as any).selectedStats.forEach((e: any) => {
-      e.matcher = e.matchRef;
-      e.matchRef = undefined;
-    });
-
-    {
-      const widgets = config.widgets.filter((w) => w.wmType === "image-strip")!;
-      widgets.forEach((imgStrip: any) => {
-        imgStrip.images.forEach((e: any, idx: number) => {
-          e.id = idx;
-        });
+    const mapCheck = config.widgets.find((w) => w.wmType === "map-check");
+    if (mapCheck) {
+      (mapCheck as any).selectedStats.forEach((e: any) => {
+        e.matcher = e.matchRef;
+        e.matchRef = undefined;
       });
     }
 
@@ -299,10 +278,12 @@ function upgradeConfig(_config: Config): Config {
   }
 
   if (config.configVersion < 7) {
-    const mapCheck = config.widgets.find((w) => w.wmType === "map-check")!;
-    mapCheck.wmType = "item-check";
-    mapCheck.maps = { selectedStats: mapCheck.selectedStats };
-    mapCheck.selectedStats = undefined;
+    const mapCheck = config.widgets.find((w) => w.wmType === "map-check");
+    if (mapCheck) {
+      mapCheck.wmType = "item-check";
+      (mapCheck as any).maps = { selectedStats: (mapCheck as any).selectedStats };
+      (mapCheck as any).selectedStats = undefined;
+    }
     (config as any).itemCheckKey = (config as any).mapCheckKey || null;
     (config as any).mapCheckKey = undefined;
 
@@ -453,10 +434,6 @@ function upgradeConfig(_config: Config): Config {
   }
 
   if (config.configVersion < 16) {
-    const delve = config.widgets.find(
-      (w) => w.wmType === "delve-grid",
-    ) as widget.DelveGridWidget;
-    delve.toggleKey = (config as any).delveGridKey;
 
     const itemCheck = config.widgets.find(
       (w) => w.wmType === "item-check",
@@ -735,14 +712,7 @@ function getConfigForHost(): HostConfig {
     });
   }
 
-  const delveGrid = AppConfig("delve-grid") as widget.DelveGridWidget;
-  if (delveGrid.toggleKey) {
-    actions.push({
-      shortcut: delveGrid.toggleKey,
-      action: { type: "trigger-event", target: "delve-grid" },
-      keepModKeys: true,
-    });
-  }
+
   for (const command of config.commands) {
     if (command.hotkey) {
       actions.push({
