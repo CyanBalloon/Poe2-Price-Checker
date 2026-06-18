@@ -1,10 +1,5 @@
 <template>
-  <Widget
-    :config="config"
-    :removable="false"
-    :inline-edit="false"
-    move-handles="top-bottom"
-  >
+  <div class="flex-1 overflow-auto custom-scrollbar">
     <div
       class="widget-default-style p-1 flex flex-col overflow-y-auto min-h-0 min-w-48"
     >
@@ -48,13 +43,13 @@
         </button>
       </div>
     </div>
-  </Widget>
+  </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, PropType, shallowRef, watch } from "vue";
 
-import Widget from "@/web/overlay/Widget.vue";
+
 import { WidgetSpec } from "@/web/overlay/interfaces";
 import { ColumnOpts, getHeader, LibraryWidget } from "./widget";
 import { Host } from "@/web/background/IPC";
@@ -129,7 +124,7 @@ export default defineComponent({
       };
     },
   } satisfies WidgetSpec,
-  components: { Widget, SingleItemSession },
+  components: { SingleItemSession },
   props: {
     config: {
       type: Object as PropType<LibraryWidget>,

@@ -1,9 +1,5 @@
 <template>
-  <widget
-    :config="config"
-    move-handles="corners"
-    v-slot="{ isMoving, isEditing }"
-  >
+  <div class="flex-1 overflow-auto custom-scrollbar">
     <div
       class="relative p-2 rounded bg-gray-900 overflow-y-auto text-gray-100"
       :class="{
@@ -12,47 +8,20 @@
         'w-[768px]': config.notepadSize >= WidgetWidth.Large,
       }"
     >
-      <div v-if="!isEditing" class="m-1 text-center truncate">
+      <div class="m-1 text-center truncate">
         {{ config.wmTitle || "Untitled" }}
       </div>
-      <input
-        v-else
-        class="rounded p-1 bg-gray-700 w-full mb-1"
-        v-model="config.wmTitle"
-      />
       <textarea
         v-model="config.notepadBody"
-        :disabled="isMoving"
         :placeholder="t(':placeholder')"
         :class="$style.notepadArea"
       />
-      <div
-        v-if="!isMoving && isEditing"
-        class="absolute bottom-3 right-3 flex items-center gap-1 bg-gray-700 p-1 rounded"
-      >
-        <span class="text-gray-400 leading-none">{{ t(":width") }}</span>
-        <button
-          :class="$style.widthButton"
-          @click="config.notepadSize--"
-          :disabled="config.notepadSize === WidgetWidth.Small"
-        >
-          <i class="fas fa-minus"></i>
-        </button>
-        <button
-          :class="$style.widthButton"
-          @click="config.notepadSize++"
-          :disabled="config.notepadSize === WidgetWidth.Large"
-        >
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
     </div>
-  </widget>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, inject } from "vue";
-import Widget from "@/web/overlay/Widget.vue";
 import {
   WidgetManager,
   WidgetSpec,
@@ -72,7 +41,7 @@ export default defineComponent({
     instances: "multi",
     trNameKey: "notepad.name",
   } satisfies WidgetSpec,
-  components: { Widget },
+  components: {},
   props: {
     config: {
       type: Object as PropType<NotepadWidget>,

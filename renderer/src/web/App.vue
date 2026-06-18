@@ -1,20 +1,13 @@
 <template>
   <div id="app" class="text-sm font-poe-sc">
-    <StandaloneWindow v-if="isStandalone" />
-    <OverlayWindow v-else />
+    <StandaloneWindow />
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect } from "vue";
-import OverlayWindow from "./overlay/OverlayWindow.vue";
+import { watchEffect } from "vue";
 import StandaloneWindow from "./standalone/StandaloneWindow.vue";
 import { AppConfig } from "./Config";
-
-const isStandalone = computed(() => {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("mode") === "standalone";
-});
 
 watchEffect(() => {
   const config = AppConfig();

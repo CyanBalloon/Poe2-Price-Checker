@@ -1,11 +1,5 @@
 <template>
-  <widget
-    :config="config"
-    move-handles="center"
-    v-slot="{ isMoving }"
-    :inline-edit="false"
-    :hideable="false"
-  >
+  <div class="flex-1 overflow-auto custom-scrollbar">
     <div :class="$style.wrapper">
       <div :class="$style.timer">
         <span>{{ formatted.h }}:{{ formatted.m }}:</span
@@ -14,7 +8,7 @@
       <div v-if="!isRunning" :class="$style.paused">
         {{ t("stopwatch.paused") }}
       </div>
-      <div v-if="!isMoving" :class="$style.controls">
+      <div class="controls">
         <button v-if="!isRunning" @click="start" :class="$style.button">
           <i class="fas fa-play"></i>
         </button>
@@ -26,7 +20,7 @@
         </button>
       </div>
     </div>
-  </widget>
+  </div>
 </template>
 
 <script lang="ts">
@@ -39,7 +33,6 @@ import {
   computed,
 } from "vue";
 import { useI18n } from "vue-i18n";
-import Widget from "../overlay/Widget.vue";
 import { MainProcess } from "@/web/background/IPC";
 import { Duration } from "luxon";
 import {
@@ -54,7 +47,7 @@ export default defineComponent({
     instances: "multi",
     trNameKey: "stopwatch.name",
   } satisfies WidgetSpec,
-  components: { Widget },
+  components: {},
   props: {
     config: {
       type: Object as PropType<StopwatchWidget>,

@@ -1,5 +1,5 @@
 <template>
-  <Widget :config="config" move-handles="corners" :inline-edit="false">
+  <div class="flex-1 overflow-auto custom-scrollbar">
     <div
       class="widget-default-style p-1 flex flex-col overflow-y-auto min-h-0"
       style="min-width: 5rem"
@@ -26,7 +26,7 @@
         </button>
       </div>
     </div>
-  </Widget>
+  </div>
 </template>
 
 <script lang="ts">
@@ -100,7 +100,6 @@ import { MainProcess } from "@/web/background/IPC";
 import { pushHostConfig } from "@/web/Config";
 import type { WidgetManager } from "../overlay/interfaces.js";
 
-import Widget from "../overlay/Widget.vue";
 import UiToggle from "@/web/ui/UiToggle.vue";
 
 const props = defineProps<{

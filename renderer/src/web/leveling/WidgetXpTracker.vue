@@ -1,10 +1,5 @@
 <template>
-  <Widget
-    :config="config"
-    :removable="false"
-    :inline-edit="false"
-    move-handles="top-bottom"
-  >
+  <div class="flex-1 overflow-auto custom-scrollbar">
     <div
       class="min-h-10"
       :class="[
@@ -48,13 +43,13 @@
         >
       </div>
     </div>
-  </Widget>
+  </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
 
-import Widget from "../overlay/Widget.vue";
+
 import { WidgetSpec } from "../overlay/interfaces";
 import { XpWidget } from "./widget";
 import { useI18n } from "vue-i18n";
@@ -107,7 +102,7 @@ export default defineComponent({
       };
     },
   } satisfies WidgetSpec,
-  components: { Widget },
+  components: {},
   props: {
     config: {
       type: Object as PropType<XpWidget>,

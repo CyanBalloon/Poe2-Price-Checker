@@ -1,15 +1,10 @@
 <template>
-  <Widget
-    :config="{ ...config, anchor }"
-    move-handles="none"
-    :removable="false"
-    :inline-edit="false"
-  >
+  <div class="flex-1 overflow-auto custom-scrollbar">
     <template v-if="item">
       <MapCheck v-if="isMapLike" :item="item" :config="config.maps" />
       <ItemInfo v-else :item="item" />
     </template>
-  </Widget>
+  </div>
 </template>
 
 <script lang="ts">
@@ -64,7 +59,6 @@ import { ItemCategory, ItemRarity, parseClipboard, ParsedItem } from "@/parser";
 import { registerActions } from "./hotkeyable-actions";
 import type { WidgetManager } from "../overlay/interfaces";
 
-import Widget from "../overlay/Widget.vue";
 import MapCheck from "../map-check/MapCheck.vue";
 import ItemInfo from "./ItemInfo.vue";
 
@@ -91,22 +85,7 @@ MainProcess.onEvent("MAIN->CLIENT::item-text", (e) => {
 
 props.config.wmWants = "hide";
 
-const anchor = computed(() => {
-  const width = wm.size.value.width;
-  const poePanelWidth = wm.poePanelWidth.value;
 
-  const side =
-    checkPosition.value.x > window.screenX + width / 2 ? "inventory" : "stash";
-
-  return {
-    pos: side === "stash" ? "cl" : "cr",
-    y: 50,
-    x:
-      side === "stash"
-        ? (poePanelWidth / width) * 100
-        : ((width - poePanelWidth) / width) * 100,
-  };
-});
 
 const isMapLike = computed(() => {
   if (!item.value) return false;

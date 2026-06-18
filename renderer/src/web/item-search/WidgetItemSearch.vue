@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isStandalone" class="flex-1 flex flex-col w-full h-full bg-transparent overflow-y-auto custom-scrollbar p-8">
+  <div class="flex-1 flex flex-col w-full h-full bg-transparent overflow-y-auto custom-scrollbar p-8">
     <div class="w-full flex flex-col gap-8 mt-2 mb-16">
       
       <!-- Hero Header -->
@@ -139,131 +139,6 @@
       </div>
     </div>
   </div>
-
-  <Widget
-    v-else
-    :config="config"
-    :move-handles="['tl', 'bl']"
-    :removable="false"
-    :inline-edit="false"
-  >
-    <div
-      class="widget-default-style flex flex-col p-2 gap-2"
-      style="min-width: 26rem; max-width: 32rem;"
-    >
-      <!-- Overlay Starred Items Row -->
-      <transition-group
-        v-if="starred.length"
-        tag="div"
-        :enter-active-class="$style.starredItemEnter"
-        class="flex flex-col gap-2 p-2 bg-[var(--df-bg-panel,#0d0e12)] border border-[var(--df-border-color,#191b22)] rounded-xl shadow-lg shadow-black/40"
-      >
-        <button
-          v-for="item in starred"
-          :key="item.info.refName + (item.discr || '')"
-          :class="$style.starredItem"
-          @click="starredItemClick($event, item)"
-          class="flex flex-row items-center gap-4 bg-[#151722] hover:bg-[#1f2233] border border-[#202334] rounded-lg p-3 transition-colors group cursor-pointer w-full"
-        >
-          <div class="w-10 h-10 flex items-center justify-center bg-[#07080a] border border-[#202334] rounded-xl shrink-0 overflow-hidden group-hover:border-violet-500/40 transition-colors shadow-inner">
-            <UiItemImg
-              :icon="item.info.icon || '%NOT_FOUND%'"
-              :item-name="item.info.name"
-              :namespace="item.info.namespace"
-              class="max-w-[80%] max-h-[80%] object-contain drop-shadow-md transform group-hover:scale-105 transition-transform"
-            />
-          </div>
-          <div class="flex flex-col flex-1 min-w-0 text-left justify-center gap-1">
-            <div class="text-xs font-bold text-gray-200 truncate">{{ item.info.name }}</div>
-            <div class="flex items-center gap-2">
-              <span v-if="item.price" class="text-[10px] font-semibold text-teal-400 bg-teal-400/10 px-1.5 py-0.5 rounded border border-teal-400/20 truncate">{{ formatPrice(item.price) }}</span>
-              <span v-if="item.price && item.price.currency === 'div' && exaltedRate" class="flex items-center gap-1 text-[10px] font-semibold text-violet-400 bg-violet-400/10 px-1.5 py-0.5 rounded border border-violet-400/20 truncate">
-                {{ Math.round(item.price.min * exaltedRate) }} <img src="/images/exa.png" class="w-3 h-3 inline-block opacity-90" />
-              </span>
-              <span class="text-[10px] text-gray-500 truncate">{{ item.discr ? t(item.discr) : item.info.namespace === 'GEM' ? 'Skill Gem' : item.info.namespace === 'UNIQUE' ? 'Unique' : 'Base Item' }}</span>
-            </div>
-          </div>
-          <div v-if="item.ninjaUrl" class="shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-[#0d0e12] border border-[#202334] group-hover:bg-violet-600 group-hover:border-violet-500 transition-colors">
-            <i class="fas fa-external-link-alt text-[9px] text-gray-400 group-hover:text-white transition-colors"></i>
-          </div>
-        </button>
-      </transition-group>
-
-      <!-- Overlay Main Search Panel -->
-      <UiTimeout
-        v-if="!showSearch"
-        ref="showTimeout"
-        @timeout="makeInvisible"
-        class="self-center"
-        :ms="4000"
-      />
-      <div v-else class="flex flex-col bg-[var(--df-bg-main,#0e1017)] border border-[var(--df-border-color,#191b22)] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md">
-        
-        <!-- Search Bar Header -->
-        <div class="flex items-center gap-2 p-3 bg-[var(--df-bg-panel,#0d0e12)]/50 border-b border-[var(--df-border-color,#191b22)]">
-          <div class="relative flex-1">
-            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-violet-400/70 text-xs"></i>
-            <input
-              type="text"
-              :placeholder="t(':input')"
-              class="w-full bg-[#151722] border border-[#202334] rounded-xl pl-8 pr-3 py-1.5 text-xs text-gray-200 placeholder-gray-500 focus:outline-none focus:border-violet-500/50 focus:shadow-[0_0_10px_rgba(139,92,246,0.1)] transition-all"
-              v-model="searchValue"
-              autofocus
-            />
-          </div>
-          <button @click="clearSelectedItems" class="px-3 py-1.5 bg-[#151722] hover:bg-[#1a1c2a] border border-[#202334] rounded-xl text-[10px] font-semibold text-gray-400 hover:text-red-400 transition-colors flex items-center gap-1.5">
-            <i class="fas fa-times" /> {{ t(":reset") }}
-          </button>
-        </div>
-
-
-
-        <!-- Results List -->
-        <div class="flex flex-col max-h-[16rem] overflow-y-auto custom-scrollbar">
-          <div v-for="item in results || []" :key="item.name" class="group border-b border-[#191b22]/30 last:border-0">
-            <div class="flex items-center p-2 hover:bg-[#151722]/80 transition-colors cursor-pointer" @click="selectItem(item, { unique: item.unique ? true : undefined })">
-              <div class="w-10 h-10 flex items-center justify-center bg-[#0d0e12] border border-[#191b22] rounded-lg shrink-0 overflow-hidden shadow-inner group-hover:border-violet-500/30 transition-colors">
-                <UiItemImg
-                  :icon="item.icon || '%NOT_FOUND%'"
-                  :item-name="item.name"
-                  :namespace="item.namespace"
-                  class="max-w-[80%] max-h-[80%] object-contain drop-shadow-md"
-                />
-              </div>
-              <div class="flex flex-col ml-3 flex-1 min-w-0">
-                <div class="text-sm font-medium text-gray-200 truncate" :class="{ 'text-orange-300': item.unique, 'text-teal-300': item.namespace === 'GEM' }">
-                  {{ item.name }}
-                </div>
-                <div v-if="item.unique" class="text-[11px] text-gray-500 truncate">
-                  {{ item.unique.base }}
-                </div>
-              </div>
-              <button 
-                class="ml-3 px-3 py-1 bg-violet-600/10 hover:bg-violet-600 text-violet-400 hover:text-white rounded-lg text-xs font-semibold opacity-0 group-hover:opacity-100 transition-all border border-violet-500/20 hover:border-violet-500"
-              >
-                {{ t("Select") }}
-              </button>
-            </div>
-          </div>
-          
-          <!-- Empty States -->
-          <div v-if="results === false" class="flex flex-col items-center justify-center p-8 text-center text-gray-500">
-            <div class="w-10 h-10 rounded-full bg-[#151722] flex items-center justify-center mb-2">
-              <i class="fas fa-search text-gray-400"></i>
-            </div>
-            <span class="text-xs">{{ t(":too_many_") }}</span>
-          </div>
-          <div v-else-if="!results.length" class="flex flex-col items-center justify-center p-8 text-center text-gray-500">
-            <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center mb-2 border border-red-500/20">
-              <i class="fas fa-exclamation-triangle text-red-400/70"></i>
-            </div>
-            <span class="text-xs">{{ t(":not_found") }}</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </Widget>
 </template>
 
 <script lang="ts">
@@ -386,7 +261,6 @@ import { createVirtualItem, ItemRarity } from "@/parser/ParsedItem";
 import { ItemCategory, ParsedItem } from "@/parser";
 
 import ItemQuickPrice from "@/web/ui/ItemQuickPrice.vue";
-import Widget from "../overlay/Widget.vue";
 import UiTimeout from "@/web/ui/UiTimeout.vue";
 import UiItemImg from "@/web/ui/UiItemImg.vue";
 
@@ -406,11 +280,6 @@ nextTick(() => {
 
 const searchValue = shallowRef("");
 const { items: starred, addItem, clearItems } = useSelectedItems();
-
-const isStandalone = computed(() => {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("mode") === "standalone";
-});
 
 function isUnique(item: SelectedItem) {
   const ns = item.info.namespace;
