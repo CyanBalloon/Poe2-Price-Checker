@@ -359,10 +359,11 @@ export default defineComponent({
       if (parsedTemp.isOk()) {
         const itemTemp = parsedTemp.value;
         const isLineageSupport = itemTemp.category === ItemCategory.Gem && (itemTemp.info.icon?.includes('/Lineage') ?? false);
+        const isUnidentifiedUnique = itemTemp.isUnidentified && itemTemp.rarity === ItemRarity.Unique;
         const isListingsDisabled = 
-          itemTemp.category === ItemCategory.Currency ||
+          (itemTemp.category === ItemCategory.Currency ||
           isLineageSupport ||
-          itemTemp.info.tradeTag != null;
+          itemTemp.info.tradeTag != null) && !isUnidentifiedUnique;
 
         if (isListingsDisabled && !isStandalone.value) {
           const searchWidget = wm.widgets.value.find(w => w.wmType === 'item-search');

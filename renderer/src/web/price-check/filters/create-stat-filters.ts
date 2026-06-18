@@ -380,11 +380,12 @@ const JEWEL_STAT_IDS = new Set([
 ]);
 
 function isStatLocalByDefault(statRef: string, item: ParsedItem): boolean {
-  if (statRef.includes("Armour") && item.armourAR) return true;
-  if (statRef.includes("Evasion") && item.armourEV) return true;
-  if ((statRef.includes("Energy Shield") || statRef.toLowerCase().includes("energy shield")) && item.armourES) return true;
-  if (statRef.includes("Ward") && item.armourRW) return true;
-  if (statRef.includes("Block") && item.armourBLOCK) return true;
+  const isArmour = item.category && ARMOUR.has(item.category);
+  if (statRef.includes("Armour") && (item.armourAR || isArmour)) return true;
+  if (statRef.includes("Evasion") && (item.armourEV || isArmour)) return true;
+  if ((statRef.includes("Energy Shield") || statRef.toLowerCase().includes("energy shield")) && (item.armourES || isArmour)) return true;
+  if (statRef.includes("Ward") && (item.armourRW || isArmour)) return true;
+  if (statRef.includes("Block") && (item.armourBLOCK || isArmour)) return true;
 
   if (item.category && WEAPON.has(item.category)) {
     if (statRef.includes("Attack Speed")) return true;
