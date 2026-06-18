@@ -204,7 +204,7 @@ export const defaultConfig = (): Config => ({
   accountName: "",
   stashScroll: true,
   language: "en",
-  theme: "default",
+  theme: "dark-fantasy",
   preferredTradeSite: "default",
   realm: "pc-ggg",
   fontSize: 16,
