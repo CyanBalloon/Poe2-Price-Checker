@@ -13,13 +13,13 @@
           <div class="flex items-center w-full">
             <div 
               class="rounded-xl bg-gradient-to-tr from-violet-600 to-teal-400 p-[1px] flex items-center justify-center shadow-lg shadow-violet-950/20 shrink-0 transition-all duration-300 ease-out"
-              :class="isHovered ? 'w-full aspect-square' : 'w-8 h-8'"
+              :class="isHovered ? 'w-56 h-56' : 'w-8 h-8'"
             >
               <div class="w-full h-full bg-[#0d0e12] rounded-xl flex items-center justify-center overflow-hidden relative">
                 <img 
                   src="/images/jeweler.png" 
-                  class="animate-pulse transition-all duration-300 ease-out absolute inset-0 m-auto" 
-                  :class="isHovered ? 'w-[95%] h-[95%] object-contain' : 'w-5 h-5'"
+                  class="animate-pulse transition-all duration-300 ease-out absolute inset-0 m-auto object-contain" 
+                  :class="isHovered ? 'w-52 h-52' : 'w-5 h-5'"
                   alt="EE2" 
                 />
               </div>

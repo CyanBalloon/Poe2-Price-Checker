@@ -32,6 +32,14 @@ Poe2 Price Checker is a standalone desktop application. The development pipeline
 
 The application window will open automatically. Edits to `/renderer/src` will be reflected immediately in the application via HMR.
 
+### Fast Launch (Windows)
+
+For convenience on Windows, you can simply run:
+```bash
+dev_standalone.bat
+```
+This script will verify that `node_modules` are installed in both directories (running `npm run install:all` if they are missing), and start both development servers concurrently in separate windows.
+
 ## Building for Production
 
 The project uses `electron-builder` to package the application into an installer `.exe` file for Windows.
