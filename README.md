@@ -26,12 +26,12 @@ The application monitors window focus in the background. Hover over an item in P
 You can choose between two versions of the application:
 
 ### Option A: Setup Installer (Recommended)
-1. [Download v1.0.2 for Windows](https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases/download/v1.0.2/Poe2-Price-Checker-Setup-1.0.2.exe) from the Releases page.
+1. [Download the latest Windows Installer](https://github.com/CyanBalloon/Poe2-Price-Checker/releases/latest) from the Releases page.
 2. Run the installer to install the application on your computer.
 3. Once installed, it will automatically launch and check for updates in the background.
 
 ### Option B: Portable Version
-1. Download the latest `Poe2 Price Checker 1.0.2.exe` portable executable from the Releases page.
+1. [Download the latest Portable Executable](https://github.com/CyanBalloon/Poe2-Price-Checker/releases/latest) from the Releases page.
 2. Run the `.exe` directly. It is completely self-contained.
 3. If an update is available, it will automatically open the GitHub Releases page in your default browser for you to download the new version.
 
