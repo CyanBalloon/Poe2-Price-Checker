@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Download Installer
-      link: https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases/latest/download/Poe2-Price-Checker-Setup-1.0.3.exe
+      link: https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases/latest/download/Poe2-Price-Checker-Setup-1.0.2.exe
     - theme: alt
       text: View on GitHub
       link: https://github.com/CyanBalloon/Modern-Exiled-Exchange-2
