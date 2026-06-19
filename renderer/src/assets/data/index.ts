@@ -112,7 +112,11 @@ function ndjsonFindLines<T>(ndjson: string) {
       const end = ndjson.indexOf("\n", matchPos);
       const jsonLine = ndjson.slice(start, end);
       if (andIncludes.every((str) => jsonLine.includes(str))) {
-        yield JSON.parse(jsonLine) as T;
+        const parsed = JSON.parse(jsonLine) as any;
+        if (parsed.refName && CUSTOM_ICONS[parsed.refName]) {
+          parsed.icon = CUSTOM_ICONS[parsed.refName];
+        }
+        yield parsed as T;
       }
       start = end + 1;
     }
