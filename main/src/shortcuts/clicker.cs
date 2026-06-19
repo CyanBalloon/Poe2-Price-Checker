@@ -107,6 +107,9 @@ class Clicker {
     private static uint mainThreadId;
     private static bool shouldExit = false;
 
+    // Track the physical state of Right Mouse Button since we block its events from the OS key/mouse state cache
+    private static bool isRButtonHeld = false;
+
     static void Main() {
         mainThreadId = GetCurrentThreadId();
 
@@ -146,6 +149,14 @@ class Clicker {
     private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam) {
         if (nCode >= 0) {
             int msg = (int)wParam;
+            
+            // Track state first
+            if (msg == WM_RBUTTONDOWN) {
+                isRButtonHeld = true;
+            } else if (msg == WM_RBUTTONUP) {
+                isRButtonHeld = false;
+            }
+
             if (msg == WM_RBUTTONDOWN || msg == WM_RBUTTONUP || msg == WM_RBUTTONDBLCLK) {
                 bool isCtrlPressed = (GetAsyncKeyState(0x11) & 0x8000) != 0; // VK_CONTROL
                 bool isShiftPressed = (GetAsyncKeyState(0x10) & 0x8000) != 0; // VK_SHIFT
@@ -228,8 +239,11 @@ class Clicker {
         while (!shouldExit) {
             bool isCtrlPressed = (GetAsyncKeyState(0x11) & 0x8000) != 0; // VK_CONTROL
             bool isShiftPressed = (GetAsyncKeyState(0x10) & 0x8000) != 0; // VK_SHIFT
-            bool isRButtonPressed = (GetAsyncKeyState(0x02) & 0x8000) != 0; // VK_RBUTTON
             bool isAltPressed = (GetAsyncKeyState(0x12) & 0x8000) != 0; // VK_MENU (Alt)
+
+            // Since right clicks are blocked in our user32 hook, GetAsyncKeyState(0x02) returns 0.
+            // We use our custom state variable isRButtonHeld instead.
+            bool isRButtonPressed = isRButtonHeld || ((GetAsyncKeyState(0x02) & 0x8000) != 0);
 
             RECT currentRect;
             currentRect.Left = 0; currentRect.Top = 0; currentRect.Right = 0; currentRect.Bottom = 0;
@@ -250,8 +264,11 @@ class Clicker {
             }
 
             if (isTargetActive && (isCtrlPressed || isShiftPressed) && isRButtonPressed && !isAltPressed) {
-                mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-                Thread.Sleep(66); // 15 CPS -> 1000 / 15 = 66.6ms
+                // Send distinct Left Down and Left Up events with a short hold delay to ensure the game registers the click sequence
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                Thread.Sleep(20); // Hold for 20ms
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                Thread.Sleep(46); // Sleep remaining time to maintain ~15 CPS (66ms total)
             } else {
                 Thread.Sleep(10);
             }
