@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cyanballoon.github.io/Poe2-Price-Checker/sitemap.xml

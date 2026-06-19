@@ -55,7 +55,7 @@ export class AppUpdater {
         noDownloadReason: this.noAutoUpdatesReason,
       };
       if (process.env.PORTABLE_EXECUTABLE_DIR) {
-        shell.openExternal("https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases");
+        shell.openExternal("https://github.com/CyanBalloon/Poe2-Price-Checker/releases");
       }
     });
     autoUpdater.on("update-not-available", () => {

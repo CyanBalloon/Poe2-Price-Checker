@@ -37,6 +37,6 @@ echo.
 echo ===================================================
 echo SUCCESS! 
 echo Your compiled executables are located in:
-echo Modern-Exiled-Exchange-2\main\dist\
+echo main\dist\
 echo ===================================================
 pause

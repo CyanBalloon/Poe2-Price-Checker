@@ -376,7 +376,7 @@ export default defineComponent({
 
     function openDownloadPage() {
       console.log("openDownloadPage logic triggered");
-      window.open("https://github.com/CyanBalloon/Modern-Exiled-Exchange-2/releases");
+      window.open("https://github.com/CyanBalloon/Poe2-Price-Checker/releases");
     }
 
     function quitAndInstall() {

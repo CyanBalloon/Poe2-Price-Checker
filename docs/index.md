@@ -14,7 +14,7 @@ hero:
       link: https://github.com/CyanBalloon/Poe2-Price-Checker/releases/download/v1.0.4/Poe2-Price-Checker-Setup-1.0.4.exe
     - theme: alt
       text: View on GitHub
-      link: https://github.com/CyanBalloon/Modern-Exiled-Exchange-2
+      link: https://github.com/CyanBalloon/Poe2-Price-Checker
 
 features:
   - title: Instant Price Checking

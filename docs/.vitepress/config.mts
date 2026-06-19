@@ -5,14 +5,49 @@ export default defineConfig({
   description: "A fast, standalone desktop trade macro and price checking tool for Path of Exile 2 (PoE 2).",
   base: "/Poe2-Price-Checker/",
   cleanUrls: true,
+  lastUpdated: true,
+  sitemap: {
+    hostname: 'https://cyanballoon.github.io/Poe2-Price-Checker/'
+  },
+  transformHead: async ({ pageData }) => {
+    if (pageData.relativePath === 'index.md') {
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Path of Exile 2 Price Checker",
+        "operatingSystem": "Windows",
+        "applicationCategory": "GameApplication, UtilityApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "A standalone, ultra-fast, and safe desktop trade macro and price checking tool for Path of Exile 2.",
+        "downloadUrl": "https://github.com/CyanBalloon/Poe2-Price-Checker/releases/latest",
+        "softwareVersion": "1.0.4",
+        "author": {
+          "@type": "Organization",
+          "name": "CyanBalloon"
+        }
+      };
+      return [
+        [
+          'script',
+          { type: 'application/ld+json' },
+          JSON.stringify(jsonLd)
+        ]
+      ];
+    }
+    return [];
+  },
   themeConfig: {
     logo: '/images/jeweler.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'GitHub', link: 'https://github.com/CyanBalloon/Modern-Exiled-Exchange-2' }
+      { text: 'GitHub', link: 'https://github.com/CyanBalloon/Poe2-Price-Checker' }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/CyanBalloon/Modern-Exiled-Exchange-2' }
+      { icon: 'github', link: 'https://github.com/CyanBalloon/Poe2-Price-Checker' }
     ],
     footer: {
       message: 'Released under the MIT License.',
