@@ -370,7 +370,8 @@ export function stat(text: string) {
   return text;
 }
 
-export let CUSTOM_ICONS: Record<string, string> = {};
+import { reactive } from "vue";
+export const CUSTOM_ICONS: Record<string, string> = reactive({});
 
 export async function init(lang: string) {
   CLIENT_STRINGS_REF = await loadClientStrings("en");
@@ -383,7 +384,7 @@ export async function init(lang: string) {
 
   try {
     const response = await fetch("/custom-icons");
-    CUSTOM_ICONS = await response.json();
+    Object.assign(CUSTOM_ICONS, await response.json());
   } catch (e) {
     console.error("Failed to load custom icons:", e);
   }
