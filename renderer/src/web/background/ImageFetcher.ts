@@ -8,14 +8,14 @@ try {
   let needsSave = false;
   for (const key of Object.keys(cache)) {
     if (cache[key] === "404") {
-      delete cache[key];
+      Reflect.deleteProperty(cache, key);
       needsSave = true;
     }
   }
   if (needsSave) {
     localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
   }
-} catch (e) {
+} catch {
   cache = {};
 }
 
@@ -85,7 +85,7 @@ async function processQueue() {
 
     // Wait 1.5 seconds between requests to avoid strict rate limits
     if (queue.length > 0) {
-      await new Promise(r => setTimeout(r, 1500));
+      await new Promise(resolve => setTimeout(resolve, 1500));
     }
   }
 
@@ -93,7 +93,7 @@ async function processQueue() {
 }
 
 async function fetchIconFromTradeApi(itemName: string, namespace: string): Promise<string | null> {
-  const query: Record<string, any> = {
+  const query: Record<string, unknown> = {
     status: { option: "any" },
     stats: [{ type: "and", filters: [] }]
   };
@@ -122,7 +122,7 @@ async function fetchIconFromTradeApi(itemName: string, namespace: string): Promi
     if (searchRes.status === 429) {
       console.warn("Trade API rate limit hit!");
       // Sleep extra if rate limited
-      await new Promise(r => setTimeout(r, 5000));
+      await new Promise(resolve => setTimeout(resolve, 5000));
     }
     return null;
   }

@@ -1,7 +1,4 @@
 import {
-  // populatePseudoRules,
-  // pseudoRules,
-  stat,
   STAT_BY_REF,
 } from "@/assets/data";
 // import { STAT_BY_REF } from "@/assets/data";
@@ -14,6 +11,7 @@ import { type StatFilter } from "../interfaces";
 import { ARMOUR_STATS, WEAPON_STATS } from "./item-property";
 import { tryParseTranslation } from "@/parser/stat-translations";
 
+/*
 const RESISTANCES_INFO = [
   {
     ref: stat("#% to All Resistances"),
@@ -63,6 +61,7 @@ const ATTRIBUTES_INFO = [
   { ref: stat("# to Strength and Dexterity"), attributes: ["str", "dex"] },
   { ref: stat("# to Dexterity and Intelligence"), attributes: ["dex", "int"] },
 ];
+*/
 
 interface PseudoRule {
   group?: string;

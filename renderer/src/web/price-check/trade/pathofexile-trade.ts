@@ -390,6 +390,22 @@ interface TradeModMetadata {
   magnitudes: Array<{ hash: string; min: string; max: string }>;
 }
 
+export interface RawTradeResult {
+  item: {
+    frameType: number;
+    name?: string;
+    typeLine?: string;
+    baseType?: string;
+    ilvl?: number;
+    corrupted?: boolean;
+    gemSockets?: unknown[];
+    extended?: {
+      hashes?: Record<string, Array<Array<string | number[] | null>>>;
+      mods?: Record<string, TradeModMetadata[]>;
+    };
+  };
+}
+
 interface TradeDataRichLine {
   name: string;
   values: Array<[string, TradeNumberColors]>;
@@ -545,7 +561,7 @@ export interface PricingResult {
   inDemand?: boolean;
   gone?: boolean;
   whisper?: string;
-  rawResult?: any;
+  rawResult?: RawTradeResult;
 }
 
 export function createTradeRequest(

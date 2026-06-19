@@ -173,8 +173,8 @@ export default defineComponent({
 
     const hotkeys = computed(() => {
       if (!configClone.value) return [];
-      const hideoutCmd = configClone.value.commands.find((c: any) => c.text === '/hideout');
-      const priceCheckWidget = configClone.value.widgets.find((w: any) => w.wmType === 'price-check');
+      const hideoutCmd = configClone.value.commands.find((c: { text: string }) => c.text === '/hideout');
+      const priceCheckWidget = configClone.value.widgets.find((w: { wmType: string }) => w.wmType === 'price-check');
       return [
         {
           translationKey: "Price Check",

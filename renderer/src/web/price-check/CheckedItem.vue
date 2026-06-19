@@ -416,7 +416,7 @@ export default defineComponent({
         }
 
         if (item.info && (item.info.icon === "%NOT_FOUND%" || !item.info.icon)) {
-          void (async () => {
+          (async () => {
             try {
               const league = itemFilters.value?.trade?.league;
               if (!league) return;

@@ -326,7 +326,30 @@ export default defineComponent({
         const raw = res.rawResult;
         if (!raw) return;
 
-        const query: any = {
+        const query: {
+          status: { option: string };
+          stats: Array<{
+            type: string;
+            value?: { min?: number; max?: number };
+            filters: Array<{ id: string; value?: { min?: number; max?: number } }>;
+          }>;
+          filters: {
+            type_filters?: {
+              filters: {
+                rarity?: { option: string };
+                ilvl?: { min?: number; max?: number };
+              };
+            };
+            misc_filters?: {
+              filters: {
+                corrupted?: { option: string };
+                gem_sockets?: { min?: number };
+              };
+            };
+          };
+          name?: string;
+          type?: string;
+        } = {
           status: {
             option: props.filters.trade.listingType || "securable"
           },
@@ -365,7 +388,7 @@ export default defineComponent({
           if (!query.filters.type_filters) {
             query.filters.type_filters = { filters: {} };
           }
-          query.filters.type_filters.filters.ilvl = {
+          query.filters.type_filters!.filters.ilvl = {
             min: raw.item.ilvl,
             max: raw.item.ilvl
           };
@@ -376,7 +399,7 @@ export default defineComponent({
           if (!query.filters.misc_filters) {
             query.filters.misc_filters = { filters: {} };
           }
-          query.filters.misc_filters.filters.corrupted = {
+          query.filters.misc_filters!.filters.corrupted = {
             option: String(raw.item.corrupted)
           };
         }
@@ -386,7 +409,7 @@ export default defineComponent({
           if (!query.filters.misc_filters) {
             query.filters.misc_filters = { filters: {} };
           }
-          query.filters.misc_filters.filters.gem_sockets = {
+          query.filters.misc_filters!.filters.gem_sockets = {
             min: raw.item.gemSockets.length
           };
         }
@@ -407,17 +430,17 @@ export default defineComponent({
             const hashes = raw.item.extended.hashes;
             for (const key in hashes) {
               if (Array.isArray(hashes[key])) {
-                const modsArray = (raw.item as any)[`${key}Mods`];
+                const modsArray = (raw.item as unknown as Record<string, unknown>)[`${key}Mods`];
                 const hashList = hashes[key];
                 for (let i = 0; i < hashList.length; i++) {
                   const entry = hashList[i];
                   const statId = entry[0];
                   if (!statId) continue;
 
-                  const filterEntry: any = { id: statId };
+                  const filterEntry: { id: string; value?: { min?: number; max?: number } } = { id: statId };
 
                   if (Array.isArray(modsArray) && modsArray[i]) {
-                    const modText = modsArray[i];
+                    const modText = modsArray[i] as string;
                     const rolls = parseModValues(modText);
                     if (rolls.length === 1) {
                       filterEntry.value = isUnique
@@ -445,7 +468,7 @@ export default defineComponent({
                   if (mod.magnitudes) {
                     for (const mag of mod.magnitudes) {
                       if (mag.hash && !addedIds.has(mag.hash)) {
-                        const filterEntry: any = { id: mag.hash };
+                        const filterEntry: { id: string; value?: { min?: number; max?: number } } = { id: mag.hash };
                         const minVal = parseFloat(mag.min);
                         const maxVal = parseFloat(mag.max);
                         if (!isNaN(minVal) || !isNaN(maxVal)) {

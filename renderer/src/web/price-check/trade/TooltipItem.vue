@@ -120,7 +120,7 @@ export default defineComponent({
           return translated.slice(0, translated.lastIndexOf(" ")) + " ";
         }
         return translated;
-      } catch (e) {
+      } catch {
         // Fallback for when vue-i18n crashes parsing the string as a template (e.g. if it contains '{')
         return key;
       }

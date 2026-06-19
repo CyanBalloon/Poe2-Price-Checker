@@ -13,6 +13,7 @@ import { useTradeData } from "@/web/background/TradeData";
 import { ItemCategory } from "@/parser/meta";
 import { ItemRarity } from "@/parser/ParsedItem";
 import { Host } from "@/web/background/IPC";
+import { reactive } from "vue";
 
 export * from "./interfaces";
 
@@ -112,11 +113,11 @@ function ndjsonFindLines<T>(ndjson: string) {
       const end = ndjson.indexOf("\n", matchPos);
       const jsonLine = ndjson.slice(start, end);
       if (andIncludes.every((str) => jsonLine.includes(str))) {
-        const parsed = JSON.parse(jsonLine) as any;
+        const parsed = JSON.parse(jsonLine) as T & { refName?: string; icon?: string };
         if (parsed.refName && CUSTOM_ICONS[parsed.refName]) {
           parsed.icon = CUSTOM_ICONS[parsed.refName];
         }
-        yield parsed as T;
+        yield parsed;
       }
       start = end + 1;
     }
@@ -319,7 +320,7 @@ async function loadStats(language: string) {
     );
     if (foundIdx === -1) return undefined;
 
-    const matchedStats: { stat: Stat; matcher: any }[] = [];
+    const matchedStats: { stat: Stat; matcher: StatMatcher }[] = [];
 
     const checkIndex = (idx: number) => {
       const start = indexMatcher[idx * INDEX_WIDTH + 1];
@@ -370,7 +371,6 @@ export function stat(text: string) {
   return text;
 }
 
-import { reactive } from "vue";
 export const CUSTOM_ICONS: Record<string, string> = reactive({});
 
 export async function init(lang: string) {

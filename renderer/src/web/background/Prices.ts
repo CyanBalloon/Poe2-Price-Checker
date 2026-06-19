@@ -527,9 +527,12 @@ function splitJsonBlob(jsonBlob: string, schema: NinjaSchema): PriceDatabase {
 
 export function displayRounding(
   value: number,
-  fraction: boolean = false,
+  _fraction: boolean = false,
   truncateLargeNumbers: boolean = false,
 ): string {
+  if (_fraction) {
+    performance.mark("displayRoundingFraction");
+  }
   if (Math.abs(value) < 1) {
     if (value === 0) return "0";
     return Number(value.toFixed(2)).toString().replace(".", "\u200A.\u200A");

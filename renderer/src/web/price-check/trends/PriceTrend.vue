@@ -48,7 +48,6 @@
 import { defineComponent, PropType, computed, watch } from "vue";
 import { useI18nNs } from "@/web/i18n";
 import {
-  CurrencyValue,
   usePoeninja,
 } from "@/web/background/Prices";
 import { isValuableBasetype, getDetailsId } from "./getDetailsId";

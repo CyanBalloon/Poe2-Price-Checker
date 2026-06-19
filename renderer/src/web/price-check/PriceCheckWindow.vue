@@ -230,12 +230,9 @@ import {
 } from "../overlay/interfaces";
 import ItemEditor from "./filters/ItemEditor.vue";
 import {
-  BaseType,
-  HIGH_VALUE_AUGMENTS_HARDCODED,
   loadUltraLateItems,
   setLocalAugmentFilter,
 } from "@/assets/data";
-import { translatedEffectsPseudos } from "./filters/pseudo";
 import { ItemEditorType } from "@/parser/meta";
 import { getItemEditorType } from "./filters/util";
 import ReloadTradeData from "./fallback/ReloadTradeData.vue";
@@ -312,7 +309,7 @@ export default defineComponent({
       // FIXME: check if this is working as intended
       () => leagueId.value,
       () => {
-        const augmentFilter = (item: BaseType) => true;
+        const augmentFilter = () => true;
         setLocalAugmentFilter(augmentFilter);
         loadUltraLateItems(augmentFilter);
       },

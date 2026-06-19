@@ -149,10 +149,7 @@ import {
   ITEM_BY_TRANSLATED,
   CLIENT_STRINGS as _$,
   GEM_NS_NAMES,
-  UNIQUE_NS_NAMES,
-  ITEM_NS_NAMES,
 } from "@/assets/data";
-import { AppConfig } from "@/web/Config";
 import { CurrencyValue } from "@/web/background/Prices";
 import type { WidgetSpec } from "../overlay/interfaces";
 import { ItemSearchWidget } from "./widget.js";
@@ -252,23 +249,19 @@ function fuzzyFindHeistGem(badStr: string) {
 </script>
 
 <script setup lang="ts">
-import { shallowRef, computed, nextTick, inject, onMounted, onUnmounted } from "vue";
+import { shallowRef, computed, nextTick, onMounted, onUnmounted } from "vue";
 import { useI18nNs } from "@/web/i18n";
-import { WidgetManager } from "../overlay/interfaces";
 import { usePoeninja } from "@/web/background/Prices";
 import { Host } from "@/web/background/IPC";
-import { createVirtualItem, ItemRarity } from "@/parser/ParsedItem";
-import { ItemCategory, ParsedItem } from "@/parser";
+import { ItemRarity } from "@/parser/ParsedItem";
+import { ParsedItem } from "@/parser";
 
-import ItemQuickPrice from "@/web/ui/ItemQuickPrice.vue";
-import UiTimeout from "@/web/ui/UiTimeout.vue";
 import UiItemImg from "@/web/ui/UiItemImg.vue";
 
 const props = defineProps<{
   config: ItemSearchWidget;
 }>();
 
-const wm = inject<WidgetManager>("wm")!;
 const { t } = useI18nNs("item_search");
 const { findPriceByQuery, autoCurrency, queuePricesFetch, exaltedRate } = usePoeninja();
 
@@ -365,9 +358,9 @@ const results = computed(() => {
     if (localNs === "SkillGem") localNs = "GEM";
     if (localNs === "UniqueWeapon" || localNs === "UniqueArmour" || localNs === "UniqueAccessory" || localNs === "UniqueFlask" || localNs === "UniqueJewel") localNs = "UNIQUE";
     
-    let localMatches = ITEM_BY_TRANSLATED(localNs as any, res.name);
+    let localMatches = ITEM_BY_TRANSLATED(localNs as BaseType["namespace"], res.name);
     if (!localMatches || localMatches.length === 0) {
-      localMatches = ITEM_BY_TRANSLATED("ITEM" as any, res.name);
+      localMatches = ITEM_BY_TRANSLATED("ITEM", res.name);
     }
     const localItem = localMatches?.[0];
 
@@ -390,11 +383,6 @@ function clearSelectedItems() {
   props.config.wmFlags = ["invisible-on-blur"];
 }
 
-const showSearch = wm.active;
-
-function makeInvisible() {
-  props.config.wmFlags = ["invisible-on-blur"];
-}
 
 function starredItemClick(e: MouseEvent, item: SelectedItem) {
   if (item.ninjaUrl) {
@@ -410,10 +398,6 @@ function formatPrice(price?: CurrencyValue) {
   return `${Math.round(price.min)} ${price.currency}`;
 }
 
-function formatExaltedPrice(divVal: number) {
-  if (!exaltedRate.value) return "";
-  return `${Math.round(divVal * exaltedRate.value)} exalted`;
-}
 
 onMounted(() => {
   const handleAddSearchItem = (e: Event) => {

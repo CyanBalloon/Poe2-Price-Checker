@@ -1757,7 +1757,8 @@ export function parseAffixStrings(clipboard: string | number | object | undefine
   if (typeof clipboard === "string") {
     text = clipboard;
   } else if (typeof clipboard === "object") {
-    text = (clipboard as any).description ?? (clipboard as any).text ?? (clipboard as any).string ?? (clipboard as any).name ?? JSON.stringify(clipboard);
+    const obj = clipboard as Record<string, unknown>;
+    text = (obj.description ?? obj.text ?? obj.string ?? obj.name ?? JSON.stringify(clipboard)) as string;
   } else {
     text = String(clipboard);
   }
