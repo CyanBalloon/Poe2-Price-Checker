@@ -293,7 +293,7 @@ export const usePoeninja = createGlobalState(() => {
       }
       return "league";
     } else {
-      return league.toLowerCase().replace(/\s+/g, '-');
+      return league.toLowerCase().replace(/\s+/g, '');
     }
   }
 
