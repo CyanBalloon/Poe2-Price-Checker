@@ -128,7 +128,7 @@
     </div>
   </div>
 
-  <div v-else-if="noUniqueSelection" class="p-4 layout-column min-h-0">
+  <div v-else-if="noUniqueSelection" class="p-4 layout-column min-h-0 flex-1">
     <filter-name :filters="itemFilters" :item="item" />
     <!-- <price-prediction v-if="showPredictedPrice" class="mb-4" :item="item" /> -->
     <!-- <price-trend v-else :item="item" :filters="itemFilters" /> -->
@@ -508,11 +508,7 @@ export default defineComponent({
     );
 
     const noUniqueSelection = computed(() => {
-      return !(
-        props.item.rarity === ItemRarity.Unique &&
-        props.item.isUnidentified &&
-        props.item.info.unique == null
-      );
+      return true;
     });
 
     function handleSearchMouseenter(e: MouseEvent) {

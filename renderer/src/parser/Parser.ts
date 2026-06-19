@@ -83,6 +83,7 @@ const parsers: Array<ParserFn | { virtual: VirtualParserFn }> = [
   parseCorrupted,
   parseFoil,
   parseInfluence,
+  parseUnidentified,
   parseMap,
   parseWaystone,
   parseSockets,
@@ -1750,8 +1751,21 @@ export function removeLinesEnding(
   );
 }
 
-export function parseAffixStrings(clipboard: string): string {
-  return clipboard.replace(/\[([^\]|]+)\|?([^\]]*)\]/g, (_, part1, part2) => {
+export function parseAffixStrings(clipboard: string | number | object | undefined | null): string {
+  if (clipboard == null) return "";
+  let text = "";
+  if (typeof clipboard === "string") {
+    text = clipboard;
+  } else if (typeof clipboard === "object") {
+    text = (clipboard as any).description ?? (clipboard as any).text ?? (clipboard as any).string ?? (clipboard as any).name ?? JSON.stringify(clipboard);
+  } else {
+    text = String(clipboard);
+  }
+  
+  // Strip advanced mod ranges like (17-20) or (17.5-20.5)
+  text = text.replace(/\([\d.+-]+\)/g, "");
+
+  return text.replace(/\[([^\]|]+)\|?([^\]]*)\]/g, (_, part1, part2) => {
     return part2 || part1;
   });
 }

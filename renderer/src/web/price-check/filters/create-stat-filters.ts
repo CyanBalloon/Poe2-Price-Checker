@@ -25,7 +25,7 @@ import { applyRules as applyMirroredTabletRules } from "./pseudo/reflection-rule
 import { applyRules as applyMissingFracturedRules } from "./pseudo/missing-fractured-rules";
 import { filterItemProp, filterBasePercentile } from "./pseudo/item-property";
 import { decodeOils, applyAnointmentRules } from "./pseudo/anointments";
-import { StatBetter, CLIENT_STRINGS, TRADE_STAT_BY_MATCH_STR } from "@/assets/data";
+import { StatBetter, CLIENT_STRINGS } from "@/assets/data";
 import { explicitModifierCount, maxUsefulItemLevel } from "./common";
 import { getMaxSockets } from "@/parser/Parser";
 
@@ -329,57 +329,85 @@ export function shortRollToFilter(
   return filterRoll;
 }
 
-const LOCAL_STAT_IDS = new Set([
-  "explicit.stat_4052037485",
-  "explicit.stat_53045048",
-  "explicit.stat_691932474",
-  "explicit.stat_124859000",
-  "explicit.stat_3484657501",
-  "explicit.stat_1062208444",
-  "explicit.stat_210067635",
-  "explicit.stat_2481353198",
-  "implicit.stat_1574531783",
-  "fractured.stat_210067635",
-  "fractured.stat_4052037485",
-  "fractured.stat_53045048",
-  "fractured.stat_691932474",
-  "fractured.stat_124859000",
-  "fractured.stat_1062208444",
-  "fractured.stat_3484657501",
-  "fractured.stat_2481353198",
-  "crafted.stat_210067635",
-  "crafted.stat_124859000",
-  "crafted.stat_1062208444",
-  "crafted.stat_691932474",
-  "crafted.stat_2481353198",
-  "enchant.stat_210067635",
-  "enchant.stat_124859000",
-  "enchant.stat_1062208444",
-  "enchant.stat_2481353198",
-  "rune.stat_210067635",
-  "rune.stat_691932474",
-  "rune.stat_53045048",
-  "rune.stat_4052037485",
-  "rune.stat_3484657501",
-  "rune.stat_2481353198",
-  "desecrated.stat_4052037485",
-  "desecrated.stat_53045048",
-  "desecrated.stat_124859000",
-  "desecrated.stat_691932474",
-  "desecrated.stat_210067635",
-  "desecrated.stat_3484657501",
-  "desecrated.stat_1062208444",
-  "desecrated.stat_2481353198"
+/**
+ * Unified variant stat ID map.
+ * Maps each variant trade stat ID to its label (e.g., "Local", "Jewel", "Gold Piles", "Global").
+ * When a stat has multiple trade IDs, IDs found in this map are the "variant" version,
+ * and IDs NOT found are the "base" version.
+ */
+const VARIANT_STAT_IDS = new Map<string, { label: string }>([
+  // === Local variants ===
+  // # to maximum Energy Shield (Local)
+  ["explicit.stat_4052037485", { label: "Local" }],
+  ["fractured.stat_4052037485", { label: "Local" }],
+  ["rune.stat_4052037485", { label: "Local" }],
+  ["desecrated.stat_4052037485", { label: "Local" }],
+  // # to Evasion Rating (Local)
+  ["explicit.stat_53045048", { label: "Local" }],
+  ["fractured.stat_53045048", { label: "Local" }],
+  ["rune.stat_53045048", { label: "Local" }],
+  ["desecrated.stat_53045048", { label: "Local" }],
+  // # to Accuracy Rating (Local)
+  ["explicit.stat_691932474", { label: "Local" }],
+  ["fractured.stat_691932474", { label: "Local" }],
+  ["crafted.stat_691932474", { label: "Local" }],
+  ["rune.stat_691932474", { label: "Local" }],
+  ["desecrated.stat_691932474", { label: "Local" }],
+  // #% increased Evasion Rating (Local)
+  ["explicit.stat_124859000", { label: "Local" }],
+  ["fractured.stat_124859000", { label: "Local" }],
+  ["crafted.stat_124859000", { label: "Local" }],
+  ["enchant.stat_124859000", { label: "Local" }],
+  ["desecrated.stat_124859000", { label: "Local" }],
+  // # to Armour (Local)
+  ["explicit.stat_3484657501", { label: "Local" }],
+  ["fractured.stat_3484657501", { label: "Local" }],
+  ["rune.stat_3484657501", { label: "Local" }],
+  ["desecrated.stat_3484657501", { label: "Local" }],
+  // #% increased Armour (Local)
+  ["explicit.stat_1062208444", { label: "Local" }],
+  ["fractured.stat_1062208444", { label: "Local" }],
+  ["crafted.stat_1062208444", { label: "Local" }],
+  ["enchant.stat_1062208444", { label: "Local" }],
+  ["desecrated.stat_1062208444", { label: "Local" }],
+  // #% increased Attack Speed (Local)
+  ["explicit.stat_210067635", { label: "Local" }],
+  ["fractured.stat_210067635", { label: "Local" }],
+  ["crafted.stat_210067635", { label: "Local" }],
+  ["enchant.stat_210067635", { label: "Local" }],
+  ["rune.stat_210067635", { label: "Local" }],
+  ["desecrated.stat_210067635", { label: "Local" }],
+  // #% increased Block chance (Local)
+  ["explicit.stat_2481353198", { label: "Local" }],
+  ["fractured.stat_2481353198", { label: "Local" }],
+  ["crafted.stat_2481353198", { label: "Local" }],
+  ["enchant.stat_2481353198", { label: "Local" }],
+  ["rune.stat_2481353198", { label: "Local" }],
+  ["desecrated.stat_2481353198", { label: "Local" }],
+  // Implicit local (Movement Speed)
+  ["implicit.stat_1574531783", { label: "Local" }],
+
+  // === Jewel variants ===
+  // Recover #% of maximum Mana on Kill (Jewel)
+  ["explicit.stat_1604736568", { label: "Jewel" }],
+  ["fractured.stat_1604736568", { label: "Jewel" }],
+  ["crafted.stat_1604736568", { label: "Jewel" }],
+  ["desecrated.stat_1604736568", { label: "Jewel" }],
+
+  // === Gold Piles variant ===
+  // #% increased Gold found in this Area (Gold Piles)
+  ["explicit.stat_1276056105", { label: "Gold Piles" }],
+
+  // === Global variant ===
+  // # Charm Slot (Global)
+  ["explicit.stat_554899692", { label: "Global" }],
 ]);
 
-const JEWEL_STAT_IDS = new Set([
-  "explicit.stat_1604736568",
-  "fractured.stat_1604736568",
-  "crafted.stat_1604736568",
-  "desecrated.stat_1604736568"
-]);
-
-function isStatLocalByDefault(statRef: string, item: ParsedItem): boolean {
+/**
+ * Auto-detect whether a stat should default to its "Local" variant
+ * based on the item's category and properties.
+ */
+function shouldUseLocalVariant(statRef: string, item: ParsedItem): boolean {
   const isArmour = item.category && ARMOUR.has(item.category);
   if (statRef.includes("Armour") && (item.armourAR || isArmour)) return true;
   if (statRef.includes("Evasion") && (item.armourEV || isArmour)) return true;
@@ -397,49 +425,60 @@ function isStatLocalByDefault(statRef: string, item: ParsedItem): boolean {
   return false;
 }
 
+/**
+ * Auto-detect whether a stat should default to a non-Local variant
+ * based on the variant label and item context.
+ */
+function shouldUseVariantByDefault(label: string, statRef: string, item: ParsedItem): boolean {
+  switch (label) {
+    case "Local":
+      return shouldUseLocalVariant(statRef, item);
+    case "Jewel":
+      return item.category === ItemCategory.Jewel
+        || item.category === ItemCategory.AbyssJewel
+        || item.category === ItemCategory.ClusterJewel;
+    default:
+      // For unknown variant types (Gold Piles, Global, etc.), don't auto-select
+      return false;
+  }
+}
+
+interface TradeIdsResult {
+  ids: string[];
+  variantId?: string;
+  baseId?: string;
+  variantLabel?: string;
+  useVariant?: boolean;
+}
+
 function getTradeIds(
   stat: StatCalculated,
   type: ModifierType,
   item: ParsedItem
-): { ids: string[]; localId?: string; globalId?: string; isLocal?: boolean } {
-  let ids = stat.stat.trade.ids[
+): TradeIdsResult {
+  const ids = stat.stat.trade.ids[
     type === ModifierType.AddedAugment ? ModifierType.Augment : type
   ] ?? [];
 
-  const isJewel = item.category === ItemCategory.Jewel || item.category === ItemCategory.AbyssJewel || item.category === ItemCategory.ClusterJewel;
-
-  if (isJewel) {
-    const allIds = Object.values(stat.stat.trade.ids).flat() as string[];
-    const jewelIds = allIds.filter(id => JEWEL_STAT_IDS.has(id));
-    if (jewelIds.length > 0) {
-      const bestId = jewelIds.find(id => id.startsWith("explicit.")) || jewelIds.find(id => id.startsWith(type + ".")) || jewelIds[0];
-      return { ids: [bestId] };
-    } else {
-      const rawTradeStat = TRADE_STAT_BY_MATCH_STR(stat.stat.ref + " (Jewel)");
-      if (rawTradeStat && rawTradeStat[type]) {
-        const jewelIdsRaw = rawTradeStat[type].filter(id => JEWEL_STAT_IDS.has(id));
-        if (jewelIdsRaw.length > 0) {
-          const bestId = jewelIdsRaw.find(id => id.startsWith("explicit.")) || jewelIdsRaw.find(id => id.startsWith(type + ".")) || jewelIdsRaw[0];
-          return { ids: [bestId] };
-        }
-      }
-    }
-  }
-
   if (ids.length > 1) {
-    const localId = ids.find(id => LOCAL_STAT_IDS.has(id));
-    const globalId = ids.find(id => !LOCAL_STAT_IDS.has(id));
-    
-    if (localId && globalId) {
-      const isLocal = isStatLocalByDefault(stat.stat.ref, item);
-      if (isLocal) {
-        return { ids: [localId], localId, globalId, isLocal: true };
-      } else {
-        return { ids: [globalId], localId, globalId, isLocal: false };
-      }
+    // Find which ID is the variant and which is the base
+    const variantEntry = ids.find(id => VARIANT_STAT_IDS.has(id));
+    const baseEntry = ids.find(id => !VARIANT_STAT_IDS.has(id));
+
+    if (variantEntry && baseEntry) {
+      const variantInfo = VARIANT_STAT_IDS.get(variantEntry)!;
+      const useVariant = shouldUseVariantByDefault(variantInfo.label, stat.stat.ref, item);
+
+      return {
+        ids: [useVariant ? variantEntry : baseEntry],
+        variantId: variantEntry,
+        baseId: baseEntry,
+        variantLabel: variantInfo.label,
+        useVariant,
+      };
     }
   }
-  
+
   return { ids };
 }
 
@@ -470,14 +509,16 @@ export function calculatedStatToFilter(
   if (stat.trade.option) {
     filter = {
       tradeId: tradeIdsInfo.ids,
-      tradeIdLocal: tradeIdsInfo.localId,
-      tradeIdGlobal: tradeIdsInfo.globalId,
-      isLocal: tradeIdsInfo.isLocal,
+      tradeIdVariant: tradeIdsInfo.variantId,
+      tradeIdBase: tradeIdsInfo.baseId,
+      variantLabel: tradeIdsInfo.variantLabel,
+      useVariant: tradeIdsInfo.useVariant,
       statRef: stat.ref,
       text:
-        roll?.option === roll?.value
+        (roll?.option === roll?.value
           ? sources[0].stat.translation.string
-          : translation.string,
+          : translation.string) +
+        (tradeIdsInfo.variantLabel ? ` (${tradeIdsInfo.useVariant ? tradeIdsInfo.variantLabel : "Base"})` : ""),
       tag:
         type === ModifierType.Enchant ? FilterTag.Enchant : FilterTag.Variant,
       oils: decodeOils(calc),
@@ -491,13 +532,13 @@ export function calculatedStatToFilter(
 
   filter ??= {
     tradeId: tradeIdsInfo.ids,
-    tradeIdLocal: tradeIdsInfo.localId,
-    tradeIdGlobal: tradeIdsInfo.globalId,
-    isLocal: tradeIdsInfo.isLocal,
+    tradeIdVariant: tradeIdsInfo.variantId,
+    tradeIdBase: tradeIdsInfo.baseId,
+    variantLabel: tradeIdsInfo.variantLabel,
+    useVariant: tradeIdsInfo.useVariant,
     statRef: stat.ref,
-    text: tradeIdsInfo.ids.some(id => JEWEL_STAT_IDS.has(id)) 
-      ? translation.string + " (Jewel)" 
-      : translation.string,
+    text: translation.string +
+      (tradeIdsInfo.variantLabel ? ` (${tradeIdsInfo.useVariant ? tradeIdsInfo.variantLabel : "Base"})` : ""),
     tag: type as unknown as FilterTag,
     oils: decodeOils(calc),
     sources,

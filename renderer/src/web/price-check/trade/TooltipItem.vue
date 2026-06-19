@@ -114,11 +114,16 @@ export default defineComponent({
     const { t } = useI18n();
 
     function translateMod(key: string): string {
-      const translated = t(key);
-      if (STRIP_PERCENT_MODS.has(key)) {
-        return translated.slice(0, translated.lastIndexOf(" ")) + " ";
+      try {
+        const translated = t(key);
+        if (STRIP_PERCENT_MODS.has(key)) {
+          return translated.slice(0, translated.lastIndexOf(" ")) + " ";
+        }
+        return translated;
+      } catch (e) {
+        // Fallback for when vue-i18n crashes parsing the string as a template (e.g. if it contains '{')
+        return key;
       }
-      return translated;
     }
 
     const sections = [

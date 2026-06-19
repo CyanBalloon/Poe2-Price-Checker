@@ -315,7 +315,8 @@ export default defineComponent({
         const parsed = parseClipboard(e.clipboard);
         if (parsed.isOk()) {
           const item = parsed.value;
-          const isUnique = item.rarity === ItemRarity.Unique;
+          const isUnidentifiedUnique = item.isUnidentified && item.rarity === ItemRarity.Unique;
+          const isUnique = item.rarity === ItemRarity.Unique && !isUnidentifiedUnique;
           const isLineageSupport = item.category === ItemCategory.Gem && (item.info.icon?.includes('/Lineage') ?? false);
           const isListingsDisabled = 
             item.category === ItemCategory.Currency ||

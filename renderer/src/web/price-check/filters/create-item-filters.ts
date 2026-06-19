@@ -398,6 +398,10 @@ export function createFilters(
     filters.rarity = {
       value: "nonunique",
     };
+  } else if (item.rarity === ItemRarity.Unique) {
+    filters.rarity = {
+      value: "unique",
+    };
   }
 
   if (item.isMirrored) {

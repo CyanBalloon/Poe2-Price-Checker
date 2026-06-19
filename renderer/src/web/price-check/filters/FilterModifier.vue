@@ -45,11 +45,11 @@
             {{ filter.sources.length > 1 ? ` x ${filter.sources.length}` : null }}
           </span>
           <button
-            v-if="filter.tradeIdLocal && filter.tradeIdGlobal"
-            @click.stop="toggleIsLocal"
+            v-if="filter.tradeIdVariant && filter.tradeIdBase"
+            @click.stop="toggleVariant"
             :class="isStandalone ? getStandaloneTagClass('pseudo') + ' hover:bg-[#202336] hover:text-gray-200 cursor-pointer transition-colors' : [$style['tag'], $style['tag-pseudo'], 'cursor-pointer hover:bg-gray-600']"
           >
-            {{ filter.isLocal ? 'Local' : 'Global' }}
+            {{ filter.useVariant ? filter.variantLabel : 'Base' }}
           </button>
           <filter-modifier-tiers :filter="filter" :item="item" />
           <filter-modifier-item-has-empty
@@ -161,11 +161,11 @@
               {{ filter.sources.length > 1 ? ` x ${filter.sources.length}` : null }}
             </span>
             <button
-              v-if="filter.tradeIdLocal && filter.tradeIdGlobal"
-              @click.stop="toggleIsLocal"
+              v-if="filter.tradeIdVariant && filter.tradeIdBase"
+              @click.stop="toggleVariant"
               :class="isStandalone ? getStandaloneTagClass('pseudo') + ' hover:bg-[#202336] hover:text-gray-200 cursor-pointer transition-colors' : [$style['tag'], $style['tag-pseudo'], 'cursor-pointer hover:bg-gray-600']"
             >
-              {{ filter.isLocal ? 'Local' : 'Global' }}
+              {{ filter.useVariant ? filter.variantLabel : 'Base' }}
             </button>
             <filter-modifier-tiers :filter="filter" :item="item" />
             <filter-modifier-item-has-empty
@@ -344,10 +344,10 @@ export default defineComponent({
       }
     }
 
-    function toggleIsLocal() {
-      props.filter.isLocal = !props.filter.isLocal;
-      if (props.filter.tradeIdLocal && props.filter.tradeIdGlobal) {
-        props.filter.tradeId = [props.filter.isLocal ? props.filter.tradeIdLocal : props.filter.tradeIdGlobal];
+    function toggleVariant() {
+      props.filter.useVariant = !props.filter.useVariant;
+      if (props.filter.tradeIdVariant && props.filter.tradeIdBase) {
+        props.filter.tradeId = [props.filter.useVariant ? props.filter.tradeIdVariant : props.filter.tradeIdBase];
       }
       ctx.emit("submit");
     }
@@ -492,7 +492,7 @@ export default defineComponent({
       ),
       inputFocus,
       toggleFilter,
-      toggleIsLocal,
+      toggleVariant,
       adjustRoll,
       showShortText: computed(
         () =>

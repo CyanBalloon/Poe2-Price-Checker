@@ -1,5 +1,5 @@
 <template>
-  <div v-if="show" class="layout-column">
+  <div v-if="show" class="flex flex-col shrink-0">
     <div class="m-4 py-1 px-2 bg-gray-900 rounded">
       {{ t("item.identification", [baseType]) }}
     </div>
@@ -40,7 +40,8 @@ export default defineComponent({
   },
   setup(props, ctx) {
     const identifiedVariants = computed(() => {
-      const baseType = props.item!.info.refName;
+      if (!props.item) return [];
+      const baseType = props.item.info.refName;
       const possible: BaseType[] = [];
       for (const match of ITEMS_ITERATOR(JSON.stringify(baseType))) {
         if (match.namespace === "UNIQUE" && match.unique!.base === baseType) {
@@ -50,10 +51,6 @@ export default defineComponent({
           }
         }
       }
-      if (possible.length === 1) {
-        select(possible[0]);
-      }
-
       return possible;
     });
 
@@ -70,10 +67,12 @@ export default defineComponent({
     function select(info: BaseType) {
       const newItem: ParsedItem = {
         ...props.item!,
+        isUnidentified: false,
         info,
       };
       ctx.emit("identify", newItem);
     }
+
 
     const { t } = useI18n();
 

@@ -267,3 +267,111 @@ It makes us immortal.`;
     expect(parsed.isOk()).toBe(true);
   });
 });
+
+import { parseAffixStrings } from "@/parser/Parser";
+
+describe("parseAffixStrings", () => {
+  it("should handle null and undefined", () => {
+    expect(parseAffixStrings(null)).toBe("");
+    expect(parseAffixStrings(undefined)).toBe("");
+  });
+
+  it("should handle strings directly", () => {
+    expect(parseAffixStrings("simple mod")).toBe("simple mod");
+  });
+
+  it("should handle numbers by converting to string", () => {
+    expect(parseAffixStrings(42)).toBe("42");
+  });
+
+  it("should extract description from objects", () => {
+    const obj = {
+      description: "[Allies|Allies] in your [Presence|Presence] have 15% increased [Attack|Attack] Speed",
+      hash: "stat.explicit.stat_1998951374",
+      mods: []
+    };
+    expect(parseAffixStrings(obj)).toBe("Allies in your Presence have 15% increased Attack Speed");
+  });
+
+  it("should extract text/string/name from objects as fallback", () => {
+    expect(parseAffixStrings({ text: "hello" })).toBe("hello");
+    expect(parseAffixStrings({ string: "world" })).toBe("world");
+    expect(parseAffixStrings({ name: "foo" })).toBe("foo");
+  });
+
+  it("should strip advanced mod ranges", () => {
+    expect(parseAffixStrings("Allies in your Presence have 17(17-20)% increased Cast Speed")).toBe("Allies in your Presence have 17% increased Cast Speed");
+    expect(parseAffixStrings("Grants 1.5(1-2)% Life")).toBe("Grants 1.5% Life");
+  });
+});
+
+import { ItemRarity } from "@/parser/ParsedItem";
+
+describe("Unidentified Unique Parsing", () => {
+  beforeEach(async () => {
+    setupTests();
+    await init("en");
+  });
+
+  it("should parse unidentified unique item successfully", () => {
+    const text = `Item Class: Body Armours
+Rarity: Unique
+Revered Vestments
+--------
+Requires: Level 65, 67 Str, 67 Int
+--------
+Item Level: 80
+--------
+Unidentified`;
+    const parsed = parseClipboard(text);
+    expect(parsed.isOk()).toBe(true);
+    const item = parsed._unsafeUnwrap();
+    expect(item.rarity).toBe(ItemRarity.Unique);
+    expect(item.isUnidentified).toBe(true);
+    expect(item.info.refName).toBe("Revered Vestments");
+    expect(item.info.unique).toBeUndefined();
+  });
+
+  it("should parse unidentified unique Prismatic Ring successfully", () => {
+    const text = `Item Class: Rings
+Rarity: Unique
+Prismatic Ring
+--------
+Item Level: 81
+--------
+{ Implicit Modifier — Elemental, Fire, Cold, Lightning, Resistance }
++9(7-10)% to all Elemental Resistances
+--------
+Unidentified`;
+    const parsed = parseClipboard(text);
+    expect(parsed.isOk()).toBe(true);
+    const item = parsed._unsafeUnwrap();
+    expect(item.rarity).toBe(ItemRarity.Unique);
+    expect(item.isUnidentified).toBe(true);
+    expect(item.info.refName).toBe("Prismatic Ring");
+    expect(item.info.unique).toBeUndefined();
+  });
+
+  it("should parse unidentified unique Wicker Tiara successfully", () => {
+    const text = `Item Class: Helmets
+Rarity: Unique
+Wicker Tiara
+--------
+Energy Shield: 29
+--------
+Requires: 17 Intelligence
+--------
+Sockets: S 
+--------
+Item Level: 79
+--------
+Unidentified`;
+    const parsed = parseClipboard(text);
+    expect(parsed.isOk()).toBe(true);
+    const item = parsed._unsafeUnwrap();
+    expect(item.rarity).toBe(ItemRarity.Unique);
+    expect(item.isUnidentified).toBe(true);
+    expect(item.info.refName).toBe("Wicker Tiara");
+    expect(item.info.unique).toBeUndefined();
+  });
+});

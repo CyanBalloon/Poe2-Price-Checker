@@ -1,0 +1,326 @@
+[
+  {
+    "baseText": "# to maximum Energy Shield",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_4052037485",
+    "baseIds": [
+      "explicit.stat_3489782002"
+    ]
+  },
+  {
+    "baseText": "# to Evasion Rating",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_53045048",
+    "baseIds": [
+      "explicit.stat_2144192055"
+    ]
+  },
+  {
+    "baseText": "# to Accuracy Rating",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_691932474",
+    "baseIds": [
+      "explicit.stat_803737631"
+    ]
+  },
+  {
+    "baseText": "#% increased Evasion Rating",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_124859000",
+    "baseIds": [
+      "explicit.stat_2106365538"
+    ]
+  },
+  {
+    "baseText": "# to Armour",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_3484657501",
+    "baseIds": [
+      "explicit.stat_809229260"
+    ]
+  },
+  {
+    "baseText": "#% increased Armour",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_1062208444",
+    "baseIds": [
+      "explicit.stat_2866361420"
+    ]
+  },
+  {
+    "baseText": "#% increased Attack Speed",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_210067635",
+    "baseIds": [
+      "explicit.stat_681332047"
+    ]
+  },
+  {
+    "baseText": "#% increased Gold found in this Area",
+    "variant": "Gold Piles",
+    "type": "explicit",
+    "variantId": "explicit.stat_1276056105",
+    "baseIds": [
+      "explicit.stat_1133965702"
+    ]
+  },
+  {
+    "baseText": "#% increased Block chance",
+    "variant": "Local",
+    "type": "explicit",
+    "variantId": "explicit.stat_2481353198",
+    "baseIds": [
+      "explicit.stat_4147897060"
+    ]
+  },
+  {
+    "baseText": "Recover #% of maximum Mana on Kill",
+    "variant": "Jewel",
+    "type": "explicit",
+    "variantId": "explicit.stat_1604736568",
+    "baseIds": [
+      "explicit.stat_1030153674"
+    ]
+  },
+  {
+    "baseText": "# Charm Slot",
+    "variant": "Global",
+    "type": "explicit",
+    "variantId": "explicit.stat_554899692",
+    "baseIds": [
+      "explicit.stat_2582079000"
+    ]
+  },
+  {
+    "baseText": "#% increased Attack Speed",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_210067635",
+    "baseIds": [
+      "fractured.stat_681332047"
+    ]
+  },
+  {
+    "baseText": "# to maximum Energy Shield",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_4052037485",
+    "baseIds": [
+      "fractured.stat_3489782002"
+    ]
+  },
+  {
+    "baseText": "# to Accuracy Rating",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_691932474",
+    "baseIds": [
+      "fractured.stat_803737631"
+    ]
+  },
+  {
+    "baseText": "# to Evasion Rating",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_53045048",
+    "baseIds": [
+      "fractured.stat_2144192055"
+    ]
+  },
+  {
+    "baseText": "#% increased Evasion Rating",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_124859000",
+    "baseIds": [
+      "fractured.stat_2106365538"
+    ]
+  },
+  {
+    "baseText": "#% increased Armour",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_1062208444",
+    "baseIds": [
+      "fractured.stat_2866361420"
+    ]
+  },
+  {
+    "baseText": "# to Armour",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_3484657501",
+    "baseIds": [
+      "fractured.stat_809229260"
+    ]
+  },
+  {
+    "baseText": "#% increased Block chance",
+    "variant": "Local",
+    "type": "fractured",
+    "variantId": "fractured.stat_2481353198",
+    "baseIds": [
+      "fractured.stat_4147897060"
+    ]
+  },
+  {
+    "baseText": "#% increased Attack Speed",
+    "variant": "Local",
+    "type": "crafted",
+    "variantId": "crafted.stat_210067635",
+    "baseIds": [
+      "crafted.stat_681332047"
+    ]
+  },
+  {
+    "baseText": "#% increased Evasion Rating",
+    "variant": "Local",
+    "type": "crafted",
+    "variantId": "crafted.stat_124859000",
+    "baseIds": [
+      "crafted.stat_2106365538"
+    ]
+  },
+  {
+    "baseText": "#% increased Armour",
+    "variant": "Local",
+    "type": "crafted",
+    "variantId": "crafted.stat_1062208444",
+    "baseIds": [
+      "crafted.stat_2866361420"
+    ]
+  },
+  {
+    "baseText": "# to Accuracy Rating",
+    "variant": "Local",
+    "type": "crafted",
+    "variantId": "crafted.stat_691932474",
+    "baseIds": [
+      "crafted.stat_803737631"
+    ]
+  },
+  {
+    "baseText": "#% increased Evasion Rating",
+    "variant": "Local",
+    "type": "enchant",
+    "variantId": "enchant.stat_124859000",
+    "baseIds": [
+      "enchant.stat_2106365538"
+    ]
+  },
+  {
+    "baseText": "#% increased Armour",
+    "variant": "Local",
+    "type": "enchant",
+    "variantId": "enchant.stat_1062208444",
+    "baseIds": [
+      "enchant.stat_2866361420"
+    ]
+  },
+  {
+    "baseText": "#% increased Attack Speed",
+    "variant": "Local",
+    "type": "augment",
+    "variantId": "rune.stat_210067635",
+    "baseIds": [
+      "rune.stat_681332047"
+    ]
+  },
+  {
+    "baseText": "# to Accuracy Rating",
+    "variant": "Local",
+    "type": "augment",
+    "variantId": "rune.stat_691932474",
+    "baseIds": [
+      "rune.stat_803737631"
+    ]
+  },
+  {
+    "baseText": "# to maximum Energy Shield",
+    "variant": "Local",
+    "type": "augment",
+    "variantId": "rune.stat_4052037485",
+    "baseIds": [
+      "rune.stat_3489782002"
+    ]
+  },
+  {
+    "baseText": "# to maximum Energy Shield",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_4052037485",
+    "baseIds": [
+      "desecrated.stat_3489782002"
+    ]
+  },
+  {
+    "baseText": "# to Evasion Rating",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_53045048",
+    "baseIds": [
+      "desecrated.stat_2144192055"
+    ]
+  },
+  {
+    "baseText": "#% increased Evasion Rating",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_124859000",
+    "baseIds": [
+      "desecrated.stat_2106365538"
+    ]
+  },
+  {
+    "baseText": "#% increased Attack Speed",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_210067635",
+    "baseIds": [
+      "desecrated.stat_681332047"
+    ]
+  },
+  {
+    "baseText": "# to Accuracy Rating",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_691932474",
+    "baseIds": [
+      "desecrated.stat_803737631"
+    ]
+  },
+  {
+    "baseText": "# to Armour",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_3484657501",
+    "baseIds": [
+      "desecrated.stat_809229260"
+    ]
+  },
+  {
+    "baseText": "#% increased Armour",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_1062208444",
+    "baseIds": [
+      "desecrated.stat_2866361420"
+    ]
+  },
+  {
+    "baseText": "#% increased Block chance",
+    "variant": "Local",
+    "type": "desecrated",
+    "variantId": "desecrated.stat_2481353198",
+    "baseIds": [
+      "desecrated.stat_4147897060"
+    ]
+  }
+]

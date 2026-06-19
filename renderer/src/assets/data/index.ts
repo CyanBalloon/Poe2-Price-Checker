@@ -306,25 +306,54 @@ async function loadStats(language: string) {
   };
 
   STAT_BY_MATCH_STR = function (matchStr: string) {
-    let start = dataBinarySearch(
+    const hash = Number(fnv1a(matchStr, { size: 32 }));
+    const foundIdx = dataBinarySearch(
       indexMatcher,
-      Number(fnv1a(matchStr, { size: 32 })),
+      hash,
       0,
       INDEX_WIDTH,
     );
-    if (start === -1) return undefined;
-    start = indexMatcher[start * INDEX_WIDTH + 1];
-    const end = ndjson.indexOf("\n", start);
-    const stat = JSON.parse(ndjson.slice(start, end)) as Stat;
+    if (foundIdx === -1) return undefined;
 
-    const matcher = stat.matchers.find(
-      (m) => m.string === matchStr || m.advanced === matchStr,
-    );
-    if (!matcher) {
+    const matchedStats: { stat: Stat; matcher: any }[] = [];
+
+    const checkIndex = (idx: number) => {
+      const start = indexMatcher[idx * INDEX_WIDTH + 1];
+      const end = ndjson.indexOf("\n", start);
+      const stat = JSON.parse(ndjson.slice(start, end)) as Stat;
+
+      const matcher = stat.matchers.find(
+        (m) => m.string === matchStr || m.advanced === matchStr,
+      );
+      if (matcher) {
+        matchedStats.push({ stat, matcher });
+      }
+    };
+
+    checkIndex(foundIdx);
+
+    let l = foundIdx - 1;
+    while (l >= 0 && indexMatcher[l * INDEX_WIDTH] === hash) {
+      checkIndex(l);
+      l--;
+    }
+
+    let r = foundIdx + 1;
+    while (
+      r < indexMatcher.length / INDEX_WIDTH &&
+      indexMatcher[r * INDEX_WIDTH] === hash
+    ) {
+      checkIndex(r);
+      r++;
+    }
+
+    if (matchedStats.length === 0) {
       // console.log('fnv1a32 collision')
       return undefined;
     }
-    return { stat, matcher };
+
+    const mergedStat = mergeStats(matchedStats.map((m) => m.stat));
+    return { stat: mergedStat, matcher: matchedStats[0].matcher };
   };
 
   STATS_ITERATOR = ndjsonFindLines<Stat>(ndjson);

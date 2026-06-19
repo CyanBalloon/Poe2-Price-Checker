@@ -78,7 +78,7 @@ export function createPresets(
       stats: initUiModFilters(item, opts),
     };
 
-    if (likelyFinishedItem(item) || !hasCraftingValue(item)) {
+    if ((likelyFinishedItem(item) || !hasCraftingValue(item)) && item.rarity !== ItemRarity.Magic) {
       return { active: pseudoPreset.id, presets: [pseudoPreset] };
     }
 

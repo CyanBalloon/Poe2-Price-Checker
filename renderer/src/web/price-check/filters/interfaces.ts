@@ -132,9 +132,10 @@ export interface StatFilterRoll {
 
 export interface StatFilter {
   tradeId: string[];
-  tradeIdLocal?: string;
-  tradeIdGlobal?: string;
-  isLocal?: boolean;
+  tradeIdVariant?: string;
+  tradeIdBase?: string;
+  variantLabel?: string;    // "Local", "Jewel", "Gold Piles", "Global"
+  useVariant?: boolean;     // true = use variant ID, false = use base ID
   statRef: string;
   text: string;
   tag: FilterTag;
