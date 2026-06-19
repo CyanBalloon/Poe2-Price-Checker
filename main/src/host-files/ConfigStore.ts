@@ -8,7 +8,7 @@ export class ConfigStore {
   private cfgPath = path.join(
     app.getPath("userData"),
     "apt-data",
-    "config.json",
+    process.env.VITE_DEV_SERVER_URL ? "config-dev.json" : "config.json",
   );
 
   constructor(server: ServerEvents) {
@@ -25,13 +25,22 @@ export class ConfigStore {
     let contents: string | null = null;
     try {
       contents = await fs.readFile(this.cfgPath, "utf8");
-    } catch {}
+    } catch {
+      if (process.env.VITE_DEV_SERVER_URL) {
+        try {
+          const prodPath = path.join(
+            app.getPath("userData"),
+            "apt-data",
+            "config.json",
+          );
+          contents = await fs.readFile(prodPath, "utf8");
+        } catch {}
+      }
+    }
     return contents;
   }
 
   private async save(contents: string, tmp: boolean) {
-    if (process.env.VITE_DEV_SERVER_URL) return;
-
     if (tmp && !this.isTmpFile) {
       this.cfgPath += ".tmp";
       this.isTmpFile = true;
