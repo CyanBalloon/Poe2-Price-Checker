@@ -266,9 +266,9 @@ class Clicker {
             if (isTargetActive && (isCtrlPressed || isShiftPressed) && isRButtonPressed && !isAltPressed) {
                 // Send distinct Left Down and Left Up events with a short hold delay to ensure the game registers the click sequence
                 mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-                Thread.Sleep(20); // Hold for 20ms
+                Thread.Sleep(10); // Hold for 10ms
                 mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-                Thread.Sleep(46); // Sleep remaining time to maintain ~15 CPS (66ms total)
+                Thread.Sleep(23); // Sleep remaining time to maintain ~30 CPS (33ms total)
             } else {
                 Thread.Sleep(10);
             }
