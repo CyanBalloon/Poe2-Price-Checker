@@ -281,16 +281,20 @@ export const usePoeninja = createGlobalState(() => {
 
   function selectedLeagueToUrl(proxy: boolean): string {
     const league = leagues.selectedId.value!;
-    switch (league) {
-      case "Standard":
-        return "standard";
-      case "Hardcore":
-        return "hardcore";
+    if (proxy) {
+      switch (league) {
+        case "Standard":
+          return "standard";
+        case "Hardcore":
+          return "hardcore";
+      }
+      if (league.startsWith("HC ")) {
+        return "leaguehc";
+      }
+      return "league";
+    } else {
+      return league.toLowerCase().replace(/\s+/g, '-');
     }
-    if (league.startsWith("HC ")) {
-      return proxy ? "leaguehc" : "vaalhc";
-    }
-    return proxy ? "league" : "vaal";
   }
 
   function findPriceByQuery(query: DbQuery) {
