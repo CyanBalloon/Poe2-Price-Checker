@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Text;
+using System.Diagnostics;
 
 class Clicker {
     [DllImport("user32.dll")]
@@ -28,32 +29,6 @@ class Clicker {
     [return: MarshalAs(UnmanagedType.Bool)]
     private static extern bool GetWindowRect(IntPtr hWnd, out RECT lpRect);
 
-    private const uint MOUSEEVENTF_LEFTDOWN = 0x02;
-    private const uint MOUSEEVENTF_LEFTUP = 0x04;
-
-    private static bool active = false;
-
-    static void Main() {
-        // Start clicking thread
-        Thread thread = new Thread(ClickLoop);
-        thread.IsBackground = true;
-        thread.Start();
-
-        string line;
-        while ((line = Console.ReadLine()) != null) {
-            line = line.Trim();
-            if (line == "active 1") {
-                active = true;
-            } else if (line == "active 0") {
-                active = false;
-            } else if (line == "focus-overlay") {
-                FocusOverlayWindow();
-            } else if (line == "exit") {
-                break;
-            }
-        }
-    }
-
     [DllImport("user32.dll")]
     private static extern uint GetWindowThreadProcessId(IntPtr hWnd, IntPtr ProcessId);
 
@@ -75,7 +50,138 @@ class Clicker {
     [DllImport("user32.dll")]
     private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
+    // Mouse hook P/Invoke
+    private delegate IntPtr LowLevelMouseProc(int nCode, IntPtr wParam, IntPtr lParam);
+
+    [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern IntPtr SetWindowsHookEx(int idHook, LowLevelMouseProc lpfn, IntPtr hMod, uint dwThreadId);
+
+    [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    private static extern bool UnhookWindowsHookEx(IntPtr hhk);
+
+    [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode, IntPtr wParam, IntPtr lParam);
+
+    [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern IntPtr GetModuleHandle(string lpModuleName);
+
+    // Message loop P/Invoke
+    [StructLayout(LayoutKind.Sequential)]
+    private struct MSG {
+        public IntPtr hwnd;
+        public uint message;
+        public IntPtr wParam;
+        public IntPtr lParam;
+        public uint time;
+        public int ptX;
+        public int ptY;
+    }
+
+    [DllImport("user32.dll")]
+    private static extern int GetMessage(out MSG lpMsg, IntPtr hWnd, uint wMsgFilterMin, uint wMsgFilterMax);
+
+    [DllImport("user32.dll")]
+    private static extern bool TranslateMessage(ref MSG lpMsg);
+
+    [DllImport("user32.dll")]
+    private static extern IntPtr DispatchMessage(ref MSG lpMsg);
+
+    [DllImport("user32.dll")]
+    private static extern bool PostThreadMessage(uint idThread, uint Msg, IntPtr wParam, IntPtr lParam);
+
+    private const int WH_MOUSE_LL = 14;
+    private const int WM_RBUTTONDOWN = 0x0204;
+    private const int WM_RBUTTONUP = 0x0205;
+    private const int WM_RBUTTONDBLCLK = 0x0206;
+
+    private const uint WM_QUIT = 0x0012;
+
+    private const uint MOUSEEVENTF_LEFTDOWN = 0x02;
+    private const uint MOUSEEVENTF_LEFTUP = 0x04;
     private const int SW_SHOW = 5;
+
+    private static bool active = false;
+    private static IntPtr _hookID = IntPtr.Zero;
+    private static LowLevelMouseProc _proc = HookCallback;
+    private static uint mainThreadId;
+    private static bool shouldExit = false;
+
+    static void Main() {
+        mainThreadId = GetCurrentThreadId();
+
+        // Start clicking thread
+        Thread thread = new Thread(ClickLoop);
+        thread.IsBackground = true;
+        thread.Start();
+
+        // Start input reader thread
+        Thread inputThread = new Thread(InputLoop);
+        inputThread.IsBackground = true;
+        inputThread.Start();
+
+        // Set global low-level mouse hook to intercept right clicks
+        _hookID = SetHook(_proc);
+
+        // Run message loop to process hook events
+        MSG msg;
+        while (GetMessage(out msg, IntPtr.Zero, 0, 0) > 0) {
+            TranslateMessage(ref msg);
+            DispatchMessage(ref msg);
+        }
+
+        // Clean up hook on exit
+        if (_hookID != IntPtr.Zero) {
+            UnhookWindowsHookEx(_hookID);
+        }
+    }
+
+    private static IntPtr SetHook(LowLevelMouseProc proc) {
+        using (Process curProcess = Process.GetCurrentProcess())
+        using (ProcessModule curModule = curProcess.MainModule) {
+            return SetWindowsHookEx(WH_MOUSE_LL, proc, GetModuleHandle(curModule.ModuleName), 0);
+        }
+    }
+
+    private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam) {
+        if (nCode >= 0) {
+            int msg = (int)wParam;
+            if (msg == WM_RBUTTONDOWN || msg == WM_RBUTTONUP || msg == WM_RBUTTONDBLCLK) {
+                bool isCtrlPressed = (GetAsyncKeyState(0x11) & 0x8000) != 0; // VK_CONTROL
+                bool isShiftPressed = (GetAsyncKeyState(0x10) & 0x8000) != 0; // VK_SHIFT
+                bool isAltPressed = (GetAsyncKeyState(0x12) & 0x8000) != 0; // VK_MENU (Alt)
+
+                RECT rect;
+                rect.Left = 0; rect.Top = 0; rect.Right = 0; rect.Bottom = 0;
+                bool isGameActive = IsTargetWindowActive(ref rect);
+                bool isTargetActive = active || isGameActive;
+
+                if (isTargetActive && (isCtrlPressed || isShiftPressed) && !isAltPressed) {
+                    // Block the right click message from passing to the target window
+                    return new IntPtr(1);
+                }
+            }
+        }
+        return CallNextHookEx(_hookID, nCode, wParam, lParam);
+    }
+
+    static void InputLoop() {
+        string line;
+        while ((line = Console.ReadLine()) != null) {
+            line = line.Trim();
+            if (line == "active 1") {
+                active = true;
+            } else if (line == "active 0") {
+                active = false;
+            } else if (line == "focus-overlay") {
+                FocusOverlayWindow();
+            } else if (line == "exit") {
+                shouldExit = true;
+                PostThreadMessage(mainThreadId, WM_QUIT, IntPtr.Zero, IntPtr.Zero);
+                break;
+            }
+        }
+    }
 
     static void FocusOverlayWindow() {
         IntPtr targetWindow = FindWindow(null, "Poe2 Price Checker");
@@ -119,7 +225,7 @@ class Clicker {
         bool lastForegroundState = false;
         RECT lastRect;
         lastRect.Left = 0; lastRect.Top = 0; lastRect.Right = 0; lastRect.Bottom = 0;
-        while (true) {
+        while (!shouldExit) {
             bool isCtrlPressed = (GetAsyncKeyState(0x11) & 0x8000) != 0; // VK_CONTROL
             bool isShiftPressed = (GetAsyncKeyState(0x10) & 0x8000) != 0; // VK_SHIFT
             bool isRButtonPressed = (GetAsyncKeyState(0x02) & 0x8000) != 0; // VK_RBUTTON
