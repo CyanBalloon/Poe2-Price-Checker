@@ -17,7 +17,7 @@
           @identify="handleIdentification($event)"
         />
         <checked-item
-          v-if="isLeagueSelected"
+          v-if="isLeagueSelected && !showUnidentifiedResolver"
           :item="item.value"
           :advanced-check="advancedCheck"
           :rebuild-key="rebuildKey"
@@ -151,7 +151,7 @@
             @identify="handleIdentification($event)"
           />
           <checked-item
-            v-if="isLeagueSelected"
+            v-if="isLeagueSelected && !showUnidentifiedResolver"
             :item="item.value"
             :advanced-check="advancedCheck"
             :rebuild-key="rebuildKey"
@@ -559,6 +559,11 @@ export default defineComponent({
       isLeagueSelected,
       openLeagueSelection,
       rebuildKey,
+      showUnidentifiedResolver: computed(() => {
+        if (!item.value?.isOk()) return false;
+        const parsed = item.value.value;
+        return parsed.rarity === ItemRarity.Unique && parsed.isUnidentified && !parsed.info.unique;
+      }),
       itemEditorAvailable: computed(() => {
         if (!item.value?.isOk()) return false;
         return getItemEditorType(item.value.value) !== ItemEditorType.None;

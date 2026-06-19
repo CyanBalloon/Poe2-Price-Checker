@@ -67,7 +67,7 @@ export default defineComponent({
     function select(info: BaseType) {
       const newItem: ParsedItem = {
         ...props.item!,
-        isUnidentified: false,
+        isUnidentified: true, // Keep it unidentified so the trade search filters appropriately
         info,
       };
       ctx.emit("identify", newItem);
