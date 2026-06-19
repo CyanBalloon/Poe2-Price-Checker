@@ -10,6 +10,8 @@ files:
     filter: ["main.js", "vision.js", "clicker.exe"]
   - from: "../renderer/dist"
     to: "."
+  - "!node_modules/uiohook-napi/build${/*}"
+  - "!node_modules/electron-overlay-window/build${/*}"
 asarUnpack:
   - "**/clicker.exe"
 extraMetadata:
