@@ -23,7 +23,8 @@ if (!process.env.VITE_DEV_SERVER_URL) {
     if (
       req.url?.startsWith("/config") ||
       req.url?.startsWith("/uploads") ||
-      req.url?.startsWith("/proxy")
+      req.url?.startsWith("/proxy") ||
+      req.url?.startsWith("/custom-icons")
     )
       return;
 
