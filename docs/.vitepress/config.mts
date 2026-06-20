@@ -3,11 +3,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Path of Exile 2 Price Checker",
   description: "A fast, standalone desktop trade macro and price checking tool for Path of Exile 2 (PoE 2).",
-  base: "/",
+  base: "/Poe2-Price-Checker/",
   cleanUrls: true,
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://poe2pricechecker.com/'
+    hostname: 'https://cyanballoon.github.io/Poe2-Price-Checker/'
   },
   transformHead: async ({ pageData }) => {
     if (pageData.relativePath === 'index.md') {
