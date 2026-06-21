@@ -46,7 +46,9 @@ features:
 <p>Browse the complete compendium of Wraeclast items. Search for any base item type, inspect league-specific unique variants, check live price conversions, and easily pull up reference requirements without overlay lags.</p>
 </div>
 <div class="showcase-image-wrapper">
+<a href="/images/search.png" target="_blank" title="Click to view full size">
 <img src="/images/search.png" alt="Base Types and Uniques Search Screen" class="showcase-img" />
+</a>
 </div>
 </div>
 <div class="showcase-card reverse">
@@ -56,7 +58,9 @@ features:
 <p>Analyze live trade listings directly inside the application. View detailed mod breakdowns, adjust exact stat ranges/filters on the fly, and see immediate price statistics with absolute zero impact on your game FPS.</p>
 </div>
 <div class="showcase-image-wrapper">
+<a href="/images/price-check.png" target="_blank" title="Click to view full size">
 <img src="/images/price-check.png" alt="Advanced Affixes and Live Listings Screen" class="showcase-img" />
+</a>
 </div>
 </div>
 </div>
