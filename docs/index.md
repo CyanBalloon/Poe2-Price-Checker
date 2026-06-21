@@ -28,6 +28,11 @@ features:
     icon: 🧠
 ---
 
+<script setup>
+import { ref } from 'vue'
+const activeImage = ref(null)
+</script>
+
 <br>
 
 ::: tip 🚀 ZERO FPS IMPACT & NO OVERLAYS
@@ -46,7 +51,7 @@ features:
 <p>Browse the complete compendium of Wraeclast items. Search for any base item type, inspect league-specific unique variants, check live price conversions, and easily pull up reference requirements without overlay lags.</p>
 </div>
 <div class="showcase-image-wrapper">
-<a href="/images/search.png" target="_blank" title="Click to view full size">
+<a href="/images/search.png" @click.prevent="activeImage = '/images/search.png'" title="Click to view full size">
 <img src="/images/search.png" alt="Base Types and Uniques Search Screen" class="showcase-img" />
 </a>
 </div>
@@ -58,13 +63,19 @@ features:
 <p>Analyze live trade listings directly inside the application. View detailed mod breakdowns, adjust exact stat ranges/filters on the fly, and see immediate price statistics with absolute zero impact on your game FPS.</p>
 </div>
 <div class="showcase-image-wrapper">
-<a href="/images/price-check.png" target="_blank" title="Click to view full size">
+<a href="/images/price-check.png" @click.prevent="activeImage = '/images/price-check.png'" title="Click to view full size">
 <img src="/images/price-check.png" alt="Advanced Affixes and Live Listings Screen" class="showcase-img" />
 </a>
 </div>
 </div>
 </div>
 </div>
+
+<Transition name="lightbox">
+  <div v-if="activeImage" class="lightbox-overlay" @click="activeImage = null">
+    <img :src="activeImage" class="lightbox-img" />
+  </div>
+</Transition>
 
 <style>
 :root {
@@ -98,6 +109,7 @@ features:
   max-width: 600px;
   margin: 0 auto 48px auto;
   line-height: 1.6;
+  text-align: center !important;
 }
 
 .showcase-grid {
@@ -193,6 +205,65 @@ features:
     flex-direction: column;
     padding: 24px;
     gap: 24px;
+  }
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: scale(1);
+}
+
+.lightbox-enter-active,
+.lightbox-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-enter-from,
+.lightbox-leave-to {
+  opacity: 0;
+}
+
+.lightbox-enter-active .lightbox-img {
+  animation: zoom-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lightbox-leave-active .lightbox-img {
+  animation: zoom-out 0.3s ease;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
   }
 }
 </style>
