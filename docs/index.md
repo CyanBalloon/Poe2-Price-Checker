@@ -40,7 +40,7 @@ const activeImage = ref(null)
 :::
 
 <div class="showcase-section">
-<h2 class="showcase-title">Interactive Showcase</h2>
+<h2 class="showcase-title">Showcase</h2>
 <p class="showcase-subtitle">Take a closer look at the key interface modes designed for optimal second-monitor usage or fast overlay toggling.</p>
 
 <div class="showcase-grid">
