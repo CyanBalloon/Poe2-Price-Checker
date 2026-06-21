@@ -1,4 +1,6 @@
 {
+  "Login": "Log in",
+  "Logout": "Log out",
   "please_wait": "Please wait…",
   "choose_file": "Choose File",
   "app_is_ready": "Is ready and running in background",

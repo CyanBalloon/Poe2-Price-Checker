@@ -4,7 +4,7 @@ import { createServer } from "http";
 import { EventEmitter } from "events";
 import * as fs from "fs";
 import * as path from "path";
-import { app } from "electron";
+import { app, session, net } from "electron";
 import { IpcEvent, IpcEventPayload, HostState } from "../../ipc/types";
 import { ConfigStore } from "./host-files/ConfigStore";
 import { CustomIconsStore } from "./host-files/CustomIconsStore";
@@ -15,6 +15,32 @@ import type { Logger } from "./RemoteLogger";
 export const server = createServer();
 const websocketServer = new WebSocketServer({ noServer: true });
 let lastActiveClient: WebSocket;
+
+export async function checkLoginStatus(): Promise<boolean> {
+  return new Promise((resolve) => {
+    session.defaultSession.cookies.get({ name: "POESESSID" }).then((cookies) => {
+      if (cookies.length === 0) {
+        resolve(false);
+        return;
+      }
+      const req = net.request({
+        url: "https://www.pathofexile.com/api/profile",
+        method: "GET",
+        useSessionCookies: true,
+      });
+      req.setHeader("user-agent", app.userAgentFallback);
+      req.on("response", (res) => {
+        resolve(res.statusCode === 200);
+      });
+      req.on("error", () => {
+        resolve(false);
+      });
+      req.end();
+    }).catch(() => {
+      resolve(false);
+    });
+  });
+}
 
 addFileUploadRoutes(server);
 
@@ -125,10 +151,12 @@ export async function startServer(
   server.addListener("request", async (req, res) => {
     if (req.url === "/config") {
       res.setHeader("content-type", "application/json");
+      const loggedIn = await checkLoginStatus();
       const resBody: HostState = {
         version: app.getVersion(),
         updater: appUpdater.info,
         contents: await configStore.load(),
+        isLoggedIn: loggedIn,
       };
       res.end(JSON.stringify(resBody));
     } else if (req.url === "/custom-icons") {

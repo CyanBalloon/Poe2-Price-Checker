@@ -1,4 +1,6 @@
 {
+  "Login": "Se connecter",
+  "Logout": "Se déconnecter",
   "please_wait": "Veuillez patienter…",
   "choose_file": "Choisir un fichier",
   "app_is_ready": "Est prêt et fonctionne en arrière-plan",

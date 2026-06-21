@@ -291,6 +291,16 @@
         </button>
 
         <button
+          v-if="hasConvertibleResistances || originalStats"
+          type="button"
+          @click="toggleResistancesConversion"
+          class="flex items-center gap-1.5 px-3 py-1.5 bg-[#171924]/60 hover:bg-[#202336] border border-[#272a3b]/40 hover:border-violet-500/40 rounded-xl text-[10px] font-semibold text-gray-400 hover:text-white transition-all shadow-sm cursor-pointer shrink-0"
+        >
+          <i class="fas fa-exchange-alt text-[9px] text-violet-400"></i>
+          <span>{{ originalStats ? 'Use exact resistances' : 'Convert Resistances' }}</span>
+        </button>
+
+        <button
           type="button"
           @click="showFilterSources = !showFilterSources"
           class="ml-auto flex items-center gap-1.5 px-3 py-1.5 border rounded-xl text-[10px] font-semibold transition-all shadow-sm cursor-pointer shrink-0"
@@ -321,12 +331,14 @@ import FilterModifier from "./FilterModifier.vue";
 import FilterBtnNumeric from "./FilterBtnNumeric.vue";
 import FilterBtnLogical from "./FilterBtnLogical.vue";
 import UnknownModifier from "./UnknownModifier.vue";
-import { ItemFilters, StatFilter } from "./interfaces";
+import { ItemFilters, StatFilter, FilterTag } from "./interfaces";
 import { ParsedItem, ItemRarity, ItemCategory } from "@/parser";
 import FilterBtnDropdown from "./FilterBtnDropdown.vue";
-import { AUGMENT_DATA_BY_AUGMENT } from "@/assets/data";
+import { AUGMENT_DATA_BY_AUGMENT, STAT_BY_REF } from "@/assets/data";
 import { ARMOUR, MARTIAL_WEAPON } from "@/parser/meta";
 import { ModifierType } from "@/parser/modifiers";
+import { AppConfig } from "@/web/Config";
+import { PriceCheckWidget } from "@/web/overlay/widgets";
 
 export default defineComponent({
   name: "FiltersBlock",
@@ -366,11 +378,21 @@ export default defineComponent({
       return params.get("mode") === "standalone";
     });
 
+    const originalStats = shallowRef<StatFilter[] | null>(null);
+
+    watch(
+      () => props.stats,
+      () => {
+        originalStats.value = null;
+      }
+    );
+
     watch(
       () => props.item,
       () => {
         showHidden.value = false;
         statsVisibility.disabled = false;
+        originalStats.value = null;
       },
     );
 
@@ -418,12 +440,166 @@ export default defineComponent({
 
     const { t } = useI18n();
 
+    const RESISTANCES_MAP: Record<string, { eleMultiplier?: number; chaosMultiplier?: number }> = {
+      "#% to Fire Resistance": { eleMultiplier: 1 },
+      "#% to Cold Resistance": { eleMultiplier: 1 },
+      "#% to Lightning Resistance": { eleMultiplier: 1 },
+      "#% to Chaos Resistance": { chaosMultiplier: 1 },
+      "#% to all Elemental Resistances": { eleMultiplier: 3 },
+      "#% to All Resistances": { eleMultiplier: 3, chaosMultiplier: 1 },
+      "#% to Fire and Lightning Resistances": { eleMultiplier: 2 },
+      "#% to Fire and Cold Resistances": { eleMultiplier: 2 },
+      "#% to Cold and Lightning Resistances": { eleMultiplier: 2 },
+      "#% to Fire and Chaos Resistances": { eleMultiplier: 1, chaosMultiplier: 1 },
+      "#% to Cold and Chaos Resistances": { eleMultiplier: 1, chaosMultiplier: 1 },
+      "#% to Lightning and Chaos Resistances": { eleMultiplier: 1, chaosMultiplier: 1 },
+      "#% total Elemental Resistance": { eleMultiplier: 1 },
+      "#% total to Chaos Resistance": { chaosMultiplier: 1 }
+    };
+
+    const hasConvertibleResistances = computed(() => {
+      return props.stats.some(
+        (stat) =>
+          stat.statRef in RESISTANCES_MAP &&
+          stat.statRef !== "#% total Elemental Resistance" &&
+          stat.statRef !== "#% total to Chaos Resistance" &&
+          stat.tag !== FilterTag.Augment &&
+          stat.tag !== FilterTag.AddedAugment
+      );
+    });
+
+    const convertResistances = () => {
+      let totalEleVal = 0;
+      let totalChaosVal = 0;
+      const range = AppConfig<PriceCheckWidget>("price-check")?.searchStatRange ?? 10;
+
+      const nextStats: StatFilter[] = [];
+      const sourcesForEle: StatFilter["sources"] = [];
+      const sourcesForChaos: StatFilter["sources"] = [];
+      const processedModifiers = new Set<unknown>();
+
+      for (const stat of props.stats) {
+        if (stat.tag === FilterTag.Augment || stat.tag === FilterTag.AddedAugment) {
+          nextStats.push(stat);
+          continue;
+        }
+
+        const mapping = RESISTANCES_MAP[stat.statRef];
+        if (mapping) {
+          const hasAlreadyProcessedSource = stat.sources && stat.sources.some(source => processedModifiers.has(source.modifier));
+          if (hasAlreadyProcessedSource) {
+            continue;
+          }
+
+          if (stat.sources) {
+            for (const source of stat.sources) {
+              processedModifiers.add(source.modifier);
+            }
+          }
+
+          const val = stat.roll ? stat.roll.value : 0;
+          if (mapping.eleMultiplier) {
+            totalEleVal += val * mapping.eleMultiplier;
+            if (stat.sources) {
+              sourcesForEle.push(...stat.sources);
+            }
+          }
+          if (mapping.chaosMultiplier) {
+            totalChaosVal += val * mapping.chaosMultiplier;
+            if (stat.sources) {
+              sourcesForChaos.push(...stat.sources);
+            }
+          }
+        } else {
+          nextStats.push(stat);
+        }
+      }
+
+      if (totalEleVal !== 0) {
+        const eleMin = Math.max(0, Math.floor(totalEleVal * (1 - range / 100)));
+        const eleMax = Math.max(0, Math.ceil(totalEleVal * (1 + range / 100)));
+
+        const totalEleStat = STAT_BY_REF("#% total Elemental Resistance");
+        const eleText = totalEleStat
+          ? totalEleStat.matchers[0].string
+          : "#% total Elemental Resistance";
+
+        const eleFilter: StatFilter = {
+          tradeId: ["pseudo.custom_weighted_elemental_resistance"],
+          statRef: "#% total Elemental Resistance",
+          text: eleText.trim() + " (Weighted)",
+          tag: FilterTag.Pseudo,
+          sources: sourcesForEle,
+          roll: {
+            value: totalEleVal,
+            min: eleMin,
+            max: undefined,
+            default: {
+              min: eleMin,
+              max: eleMax
+            },
+            dp: false,
+            isNegated: false
+          },
+          disabled: false
+        };
+        nextStats.push(eleFilter);
+      }
+
+      if (totalChaosVal !== 0) {
+        const chaosMin = Math.max(0, Math.floor(totalChaosVal * (1 - range / 100)));
+        const chaosMax = Math.max(0, Math.ceil(totalChaosVal * (1 + range / 100)));
+
+        const totalChaosStat = STAT_BY_REF("#% total to Chaos Resistance");
+        const chaosText = totalChaosStat
+          ? totalChaosStat.matchers[0].string
+          : "#% total to Chaos Resistance";
+
+        const chaosFilter: StatFilter = {
+          tradeId: ["pseudo.custom_weighted_chaos_resistance"],
+          statRef: "#% total to Chaos Resistance",
+          text: chaosText.trim() + " (Weighted)",
+          tag: FilterTag.Pseudo,
+          sources: sourcesForChaos,
+          roll: {
+            value: totalChaosVal,
+            min: chaosMin,
+            max: undefined,
+            default: {
+              min: chaosMin,
+              max: chaosMax
+            },
+            dp: false,
+            isNegated: false
+          },
+          disabled: false
+        };
+        nextStats.push(chaosFilter);
+      }
+
+      originalStats.value = [...props.stats];
+      props.stats.splice(0, props.stats.length, ...nextStats);
+    };
+
+    const toggleResistancesConversion = () => {
+      if (originalStats.value) {
+        props.stats.splice(0, props.stats.length, ...originalStats.value);
+        originalStats.value = null;
+      } else {
+        convertResistances();
+      }
+    };
+
     return {
       t,
       isStandalone,
       statsVisibility,
       showHidden,
       showFilterSources,
+      hasConvertibleResistances,
+      convertResistances,
+      originalStats,
+      toggleResistancesConversion,
       totalSelectedMods: computed(() => {
         return props.stats.filter((stat) => !stat.disabled).length;
       }),

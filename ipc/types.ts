@@ -70,6 +70,7 @@ export interface HostState {
   contents: string | null;
   version: string;
   updater: UpdateInfo;
+  isLoggedIn: boolean;
 }
 
 export type IpcEvent =
@@ -95,7 +96,8 @@ export type IpcEvent =
   | IpcWriteToFile
   | IpcReparseLog
   | IpcSaveCustomIcon
-  | IpcCustomIconAdded;
+  | IpcCustomIconAdded
+  | IpcAuthStatus;
 
 export type IpcEventPayload<
   Name extends IpcEvent["name"],
@@ -211,7 +213,7 @@ type IpcUpdaterState = Event<"MAIN->CLIENT::updater-state", UpdateInfo>;
 type IpcUserAction = Event<
   "CLIENT->MAIN::user-action",
   | {
-    action: "check-for-update" | "update-and-restart" | "quit";
+    action: "check-for-update" | "update-and-restart" | "quit" | "poe-login" | "poe-logout";
   }
   | {
     action: "stash-search";
@@ -358,6 +360,13 @@ type IpcCustomIconAdded = Event<
   {
     refName: string;
     iconUrl: string;
+  }
+>;
+
+type IpcAuthStatus = Event<
+  "MAIN->CLIENT::auth-state",
+  {
+    isLoggedIn: boolean;
   }
 >;
 

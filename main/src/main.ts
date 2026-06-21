@@ -1,6 +1,6 @@
 "use strict";
 
-import { app, systemPreferences } from "electron";
+import { app, systemPreferences, BrowserWindow, session } from "electron";
 import { uIOhook } from "uiohook-napi";
 import os from "node:os";
 import { startServer, eventPipe, server } from "./server";
@@ -122,6 +122,69 @@ let tray: AppTray;
             fileWriter.restart(cfg.libraryAlpha, cfg.libraryOutputPath);
           },
         );
+
+        let loginWindow: BrowserWindow | null = null;
+
+        session.defaultSession.cookies.on("changed", async (event, cookie, cause, removed) => {
+          if (cookie.name === "POESESSID") {
+            const cookies = await session.defaultSession.cookies.get({ name: "POESESSID" });
+            if (cookies.length === 0) {
+              eventPipe.sendEventTo("broadcast", {
+                name: "MAIN->CLIENT::auth-state",
+                payload: { isLoggedIn: false },
+              } as any);
+            }
+          }
+        });
+
+        eventPipe.onEventAnyClient("CLIENT->MAIN::user-action", async (e) => {
+          if (e.action === "poe-login") {
+            if (loginWindow && !loginWindow.isDestroyed()) {
+              loginWindow.focus();
+              return;
+            }
+            loginWindow = new BrowserWindow({
+              width: 700,
+              height: 750,
+              title: "Log in to Path of Exile",
+              autoHideMenuBar: true,
+              webPreferences: {
+                nodeIntegration: false,
+                contextIsolation: true,
+              },
+            });
+            loginWindow.webContents.on("did-finish-load", async () => {
+              try {
+                if (!loginWindow) return;
+                const loggedIn = await loginWindow.webContents.executeJavaScript(`
+                  (() => {
+                    const hasLogoutLink = !!Array.from(document.querySelectorAll('a')).find(a => a.href.includes('/login/logout') || a.href.includes('/logout'));
+                    const hasAccountLink = !!Array.from(document.querySelectorAll('a')).find(a => a.href.includes('/my-account') || a.href.includes('/account/view-profile'));
+                    return hasLogoutLink || hasAccountLink;
+                  })()
+                `);
+                if (loggedIn) {
+                  eventPipe.sendEventTo("broadcast", {
+                    name: "MAIN->CLIENT::auth-state",
+                    payload: { isLoggedIn: true },
+                  } as any);
+                  loginWindow.close();
+                }
+              } catch (err) {
+                console.error("Error executing JS check:", err);
+              }
+            });
+            loginWindow.loadURL("https://www.pathofexile.com/login");
+            loginWindow.on("closed", () => {
+              loginWindow = null;
+            });
+          } else if (e.action === "poe-logout") {
+            await session.defaultSession.cookies.remove("https://www.pathofexile.com", "POESESSID");
+            if (loginWindow && !loginWindow.isDestroyed()) {
+              loginWindow.close();
+            }
+          }
+        });
         uIOhook.start();
         console.log("uIOhook started");
         const port = await startServer(appUpdater, logger);

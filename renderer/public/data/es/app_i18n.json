@@ -1,4 +1,6 @@
 {
+  "Login": "Iniciar sesión",
+  "Logout": "Cerrar sesión",
   "please_wait": "Por favor, espera…",
   "choose_file": "Seleccionar archivo",
   "app_is_ready": "Listo y funcionando en segundo plano",

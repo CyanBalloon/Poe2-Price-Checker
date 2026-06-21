@@ -133,6 +133,17 @@
             <span>{{ updateButton.text }}</span>
           </button>
 
+          <!-- Login Button -->
+          <button
+            v-if="isElectron"
+            @click="handleLoginClick"
+            class="px-3 py-1.5 bg-[#0e1017] hover:bg-[#151822] border border-[#202334] rounded-xl text-xs flex items-center gap-2 transition-all duration-200 shadow-sm z-50 relative font-medium"
+            :class="isLoggedIn ? 'text-green-400 hover:text-green-300' : 'text-gray-300'"
+          >
+            <i :class="isLoggedIn ? 'fas fa-user-check' : 'fas fa-sign-in-alt'"></i>
+            <span>{{ isLoggedIn ? 'Logged In' : 'Log in' }}</span>
+          </button>
+
           <!-- League Dropdown Select -->
           <div class="relative">
             <button 
@@ -574,6 +585,23 @@ export default defineComponent({
       }
     }
 
+    const isLoggedIn = computed(() => Host.isLoggedIn.value);
+    const isElectron = computed(() => Host.isElectron);
+
+    function handleLoginClick() {
+      if (Host.isLoggedIn.value) {
+        Host.sendEvent({
+          name: "CLIENT->MAIN::user-action",
+          payload: { action: "poe-logout" }
+        });
+      } else {
+        Host.sendEvent({
+          name: "CLIENT->MAIN::user-action",
+          payload: { action: "poe-login" }
+        });
+      }
+    }
+
     const priceCheckHotkey = computed(() => {
       const pc = priceCheckWidgetConfig.value;
       if (!pc) return "Ctrl + D";
@@ -624,6 +652,9 @@ export default defineComponent({
       updateButton,
       handleUpdateButtonClick,
       priceCheckHotkey,
+      isLoggedIn,
+      isElectron,
+      handleLoginClick,
     };
   },
 });

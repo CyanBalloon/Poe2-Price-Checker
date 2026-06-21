@@ -104,7 +104,7 @@ export function useTradeApi() {
           (res) => res.rawResult?.item?.icon && res.rawResult.item.icon !== "%NOT_FOUND%",
         );
         if (firstWithIcon) {
-          const iconUrl = firstWithIcon.rawResult.item.icon;
+          const iconUrl = firstWithIcon.rawResult!.item.icon;
           item.info.icon = iconUrl;
           Host.sendEvent({
             name: "CLIENT->MAIN::save-custom-icon",

@@ -268,7 +268,7 @@ interface TradeRequest {
     name?: string | { discriminator: string; option: string };
     type?: string | { discriminator: string; option: string };
     stats: Array<{
-      type: "and" | "if" | "count" | "not";
+      type: "and" | "if" | "count" | "not" | "weight";
       value?: FilterRange;
       filters: Array<{
         id: string;
@@ -276,6 +276,7 @@ interface TradeRequest {
           min?: number;
           max?: number;
           option?: number | string;
+          weight?: number;
         };
         disabled?: boolean;
       }>;
@@ -561,7 +562,7 @@ export interface PricingResult {
   inDemand?: boolean;
   gone?: boolean;
   whisper?: string;
-  rawResult?: RawTradeResult;
+  rawResult?: FetchResult;
 }
 
 export function createTradeRequest(
@@ -1173,6 +1174,60 @@ export function createTradeRequest(
 
   const qAnd = query.stats[0];
   for (const stat of stats) {
+    if (stat.tradeId[0] === "pseudo.custom_weighted_elemental_resistance") {
+      const eleFilters = [
+        // Fire Resistance
+        { id: "explicit.stat_3372524247", value: { weight: 1 } },
+        // Cold Resistance
+        { id: "explicit.stat_4220027924", value: { weight: 1 } },
+        // Lightning Resistance
+        { id: "explicit.stat_1671376347", value: { weight: 1 } },
+        // all Elemental Resistances
+        { id: "explicit.stat_2901986750", value: { weight: 3 } },
+        // Fire and Chaos Resistances
+        { id: "explicit.stat_378817135", value: { weight: 1 } },
+        // Cold and Chaos Resistances
+        { id: "explicit.stat_3393628375", value: { weight: 1 } },
+        // Lightning and Chaos Resistances
+        { id: "explicit.stat_3465022881", value: { weight: 1 } }
+      ];
+
+      query.stats.push({
+        type: "weight",
+        value: {
+          min: typeof stat.roll?.min === "number" ? stat.roll.min : undefined,
+          max: typeof stat.roll?.max === "number" ? stat.roll.max : undefined
+        },
+        disabled: stat.disabled,
+        filters: eleFilters
+      });
+      continue;
+    }
+
+    if (stat.tradeId[0] === "pseudo.custom_weighted_chaos_resistance") {
+      const chaosFilters = [
+        // Chaos Resistance
+        { id: "explicit.stat_2923486259", value: { weight: 1 } },
+        // Fire and Chaos Resistances
+        { id: "explicit.stat_378817135", value: { weight: 1 } },
+        // Cold and Chaos Resistances
+        { id: "explicit.stat_3393628375", value: { weight: 1 } },
+        // Lightning and Chaos Resistances
+        { id: "explicit.stat_3465022881", value: { weight: 1 } }
+      ];
+
+      query.stats.push({
+        type: "weight",
+        value: {
+          min: typeof stat.roll?.min === "number" ? stat.roll.min : undefined,
+          max: typeof stat.roll?.max === "number" ? stat.roll.max : undefined
+        },
+        disabled: stat.disabled,
+        filters: chaosFilters
+      });
+      continue;
+    }
+
     if (stat.statRef === "Only affects Passives in # Ring") {
       const metaSource = stat.roll!;
       const metamorphosisCount = metaSource.bounds!.max;

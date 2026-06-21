@@ -161,6 +161,7 @@
       {{ errorFix }}
     </div>
     <template #actions>
+      <button v-if="!isLoggedIn && isComplexQueryError" class="btn text-green-400 border border-green-500/20 hover:bg-green-500/10" @click="handleLoginClick">{{ t("Login") }}</button>
       <button class="btn" @click="execSearch">{{ t("Retry") }}</button>
       <button class="btn" @click="openTradeLink">{{ t("Browser") }}</button>
     </template>
@@ -179,6 +180,7 @@ import {
   onUnmounted,
 } from "vue";
 import { useI18nNs } from "@/web/i18n";
+import { Host } from "@/web/background/IPC";
 import UiPopover from "@/web/ui/Popover.vue";
 import UiErrorBox from "@/web/ui/UiErrorBox.vue";
 import { createTradeRequest } from "./pathofexile-trade";
@@ -317,6 +319,14 @@ export default defineComponent({
         return undefined;
       }),
       showSeller: computed(() => widget.value.showSeller),
+      isLoggedIn: computed(() => Host.isLoggedIn.value),
+      isComplexQueryError: computed(() => Boolean(error.value?.startsWith("Query is too complex."))),
+      handleLoginClick() {
+        Host.sendEvent({
+          name: "CLIENT->MAIN::user-action",
+          payload: { action: "poe-login" }
+        });
+      },
       makeTradeLink,
       getCurrencyImg,
       openTradeLink() {
