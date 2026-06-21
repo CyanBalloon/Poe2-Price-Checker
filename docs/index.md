@@ -34,6 +34,35 @@ features:
 **This application is NOT an overlay.** It operates entirely as an independent desktop window, guaranteeing that it will **NEVER affect your in-game FPS** or violate Terms of Service.
 :::
 
+<div class="showcase-section">
+  <h2 class="showcase-title">Interactive Showcase</h2>
+  <p class="showcase-subtitle">Take a closer look at the key interface modes designed for optimal second-monitor usage or fast overlay toggling.</p>
+
+  <div class="showcase-grid">
+    <div class="showcase-card">
+      <div class="showcase-text">
+        <span class="showcase-tag">Search & Reference</span>
+        <h3>Base Types & Uniques Search</h3>
+        <p>Browse the complete compendium of Wraeclast items. Search for any base item type, inspect league-specific unique variants, check live price conversions, and easily pull up reference requirements without overlay lags.</p>
+      </div>
+      <div class="showcase-image-wrapper">
+        <img src="/images/search.png" alt="Base Types and Uniques Search Screen" class="showcase-img" />
+      </div>
+    </div>
+
+    <div class="showcase-card reverse">
+      <div class="showcase-text">
+        <span class="showcase-tag">Price check</span>
+        <h3>Advanced Affixes & Live Listings</h3>
+        <p>Analyze live trade listings directly inside the application. View detailed mod breakdowns, adjust exact stat ranges/filters on the fly, and see immediate price statistics with absolute zero impact on your game FPS.</p>
+      </div>
+      <div class="showcase-image-wrapper">
+        <img src="/images/price-check.png" alt="Advanced Affixes and Live Listings Screen" class="showcase-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
 <style>
 :root {
   --vp-home-hero-name-color: transparent;
@@ -44,5 +73,123 @@ features:
   border-radius: 20px;
   box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.showcase-section {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.showcase-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: var(--vp-c-text-1);
+}
+
+.showcase-subtitle {
+  font-size: 16px;
+  color: var(--vp-c-text-2);
+  max-width: 600px;
+  margin: 0 auto 48px auto;
+  line-height: 1.6;
+}
+
+.showcase-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.showcase-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(189, 52, 254, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.showcase-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.showcase-text {
+  flex: 1;
+}
+
+.showcase-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(189, 52, 254, 0.1);
+  color: #bd34fe;
+  margin-bottom: 16px;
+}
+
+.showcase-card.reverse .showcase-tag {
+  background: rgba(65, 209, 255, 0.1);
+  color: #41d1ff;
+}
+
+.showcase-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--vp-c-text-1);
+}
+
+.showcase-text p {
+  font-size: 15px;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.showcase-image-wrapper {
+  flex: 1.3;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.showcase-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.showcase-card:hover .showcase-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .showcase-card, .showcase-card.reverse {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
 }
 </style>

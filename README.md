@@ -19,7 +19,7 @@ The application monitors window focus in the background. Hover over an item in P
 
 | Base Types & Search | Item Pricing & Filters |
 | :---: | :---: |
-| ![Search](./docs/images/search.png) | ![Price Check](./docs/images/price-check.png) |
+| ![Search](./docs/public/images/search.png) | ![Price Check](./docs/public/images/price-check.png) |
 
 ## Installation
 
