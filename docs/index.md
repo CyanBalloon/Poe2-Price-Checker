@@ -35,32 +35,31 @@ features:
 :::
 
 <div class="showcase-section">
-  <h2 class="showcase-title">Interactive Showcase</h2>
-  <p class="showcase-subtitle">Take a closer look at the key interface modes designed for optimal second-monitor usage or fast overlay toggling.</p>
+<h2 class="showcase-title">Interactive Showcase</h2>
+<p class="showcase-subtitle">Take a closer look at the key interface modes designed for optimal second-monitor usage or fast overlay toggling.</p>
 
-  <div class="showcase-grid">
-    <div class="showcase-card">
-      <div class="showcase-text">
-        <span class="showcase-tag">Search & Reference</span>
-        <h3>Base Types & Uniques Search</h3>
-        <p>Browse the complete compendium of Wraeclast items. Search for any base item type, inspect league-specific unique variants, check live price conversions, and easily pull up reference requirements without overlay lags.</p>
-      </div>
-      <div class="showcase-image-wrapper">
-        <img src="/images/search.png" alt="Base Types and Uniques Search Screen" class="showcase-img" />
-      </div>
-    </div>
-
-    <div class="showcase-card reverse">
-      <div class="showcase-text">
-        <span class="showcase-tag">Price check</span>
-        <h3>Advanced Affixes & Live Listings</h3>
-        <p>Analyze live trade listings directly inside the application. View detailed mod breakdowns, adjust exact stat ranges/filters on the fly, and see immediate price statistics with absolute zero impact on your game FPS.</p>
-      </div>
-      <div class="showcase-image-wrapper">
-        <img src="/images/price-check.png" alt="Advanced Affixes and Live Listings Screen" class="showcase-img" />
-      </div>
-    </div>
-  </div>
+<div class="showcase-grid">
+<div class="showcase-card">
+<div class="showcase-text">
+<span class="showcase-tag">Search & Reference</span>
+<h3>Base Types & Uniques Search</h3>
+<p>Browse the complete compendium of Wraeclast items. Search for any base item type, inspect league-specific unique variants, check live price conversions, and easily pull up reference requirements without overlay lags.</p>
+</div>
+<div class="showcase-image-wrapper">
+<img src="/images/search.png" alt="Base Types and Uniques Search Screen" class="showcase-img" />
+</div>
+</div>
+<div class="showcase-card reverse">
+<div class="showcase-text">
+<span class="showcase-tag">Price Check</span>
+<h3>Advanced Affixes & Live Listings</h3>
+<p>Analyze live trade listings directly inside the application. View detailed mod breakdowns, adjust exact stat ranges/filters on the fly, and see immediate price statistics with absolute zero impact on your game FPS.</p>
+</div>
+<div class="showcase-image-wrapper">
+<img src="/images/price-check.png" alt="Advanced Affixes and Live Listings Screen" class="showcase-img" />
+</div>
+</div>
+</div>
 </div>
 
 <style>
