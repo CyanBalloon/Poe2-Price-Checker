@@ -356,6 +356,22 @@ function trySecondaryParseTranslation(stat: string): ParsedStat | undefined {
   const tradeStat = TRADE_STAT_BY_MATCH_STR(stat);
   if (!tradeStat) return;
 
+  let optionValue: number | undefined;
+  for (const type in tradeStat) {
+    const ids = tradeStat[type];
+    for (const id of ids) {
+      if (id.includes("|")) {
+        const parts = id.split("|");
+        const val = parseInt(parts[1], 10);
+        if (!isNaN(val)) {
+          optionValue = val;
+          break;
+        }
+      }
+    }
+    if (optionValue !== undefined) break;
+  }
+
   // use naive stat
   const statLine: Stat = {
     ref: stat,
@@ -363,10 +379,12 @@ function trySecondaryParseTranslation(stat: string): ParsedStat | undefined {
     matchers: [
       {
         string: stat,
+        value: optionValue,
       },
     ],
     trade: {
       ids: tradeStat,
+      option: optionValue !== undefined ? true : undefined,
     },
   };
 

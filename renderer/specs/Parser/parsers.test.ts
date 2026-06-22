@@ -15,6 +15,7 @@ import {
   WandRareItem,
 } from "./items";
 import { ParsedItem, parseClipboard } from "@/parser";
+import { createExactStatFilters } from "../../src/web/price-check/filters/create-stat-filters";
 
 describe("itemTextToSections", () => {
   beforeEach(async () => {
@@ -373,5 +374,39 @@ Unidentified`;
     expect(item.isUnidentified).toBe(true);
     expect(item.info.refName).toBe("Wicker Tiara");
     expect(item.info.unique).toBeUndefined();
+  });
+
+  it("should parse user's Dragon Charm Amulet", () => {
+    const text = `Item Class: Amulets
+Rarity: Rare
+Dragon Charm
+Lapis Amulet
+--------
+Requires: Level 64
+--------
+Item Level: 81
+--------
+Allocates The Wild Cat (enchant)
+--------
++11 to Intelligence (implicit)
+--------
++140 to maximum Life
+5% increased maximum Life
++18% to all Elemental Resistances
++38% to Lightning Resistance
++26% to Chaos Resistance
+50% increased Evasion Rating (desecrated)`;
+    const parsed = parseClipboard(text);
+    expect(parsed.isOk()).toBe(true);
+    const item = parsed._unsafeUnwrap();
+    const filters = createExactStatFilters(item, item.statsByType, { searchStatRange: 10, defaultAllSelected: true });
+    
+    expect(filters.length).toBe(8);
+    expect(filters[0].text).toBe("Allocates The Wild Cat");
+    expect(filters[0].tag).toBe("enchant");
+    expect(filters[1].text).toBe("# to Intelligence");
+    expect(filters[1].tag).toBe("implicit");
+    expect(filters[7].text).toBe("#% increased Evasion Rating (Base)");
+    expect(filters[7].tag).toBe("desecrated");
   });
 });

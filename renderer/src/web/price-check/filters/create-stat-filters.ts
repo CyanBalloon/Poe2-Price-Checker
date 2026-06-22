@@ -524,7 +524,7 @@ export function calculatedStatToFilter(
       oils: decodeOils(calc),
       sources,
       option: {
-        value: sources[0].contributes!.option!,
+        value: sources[0]?.contributes?.option ?? sources[0]?.stat?.roll?.option ?? 0,
       },
       disabled: false,
     };
