@@ -24,7 +24,7 @@ export default defineConfig({
         },
         "description": "A standalone, ultra-fast, and safe desktop trade macro and price checking tool for Path of Exile 2.",
         "downloadUrl": "https://github.com/CyanBalloon/Poe2-Price-Checker/releases/latest",
-        "softwareVersion": "1.0.5",
+        "softwareVersion": "1.0.6",
         "author": {
           "@type": "Organization",
           "name": "CyanBalloon"
