@@ -12,6 +12,7 @@ export interface HostConfig {
   libraryAlpha: boolean;
   libraryOutputPath: string | null;
   autoUpdater: boolean;
+  destroyHotkeyEnabled: boolean;
 }
 
 export interface ShortcutAction {
@@ -97,7 +98,10 @@ export type IpcEvent =
   | IpcReparseLog
   | IpcSaveCustomIcon
   | IpcCustomIconAdded
-  | IpcAuthStatus;
+  | IpcAuthStatus
+  | IpcConfirmDestroyAction
+  | IpcConfirmDestroyResponse
+  | IpcShowDestroyWarning;
 
 export type IpcEventPayload<
   Name extends IpcEvent["name"],
@@ -368,5 +372,20 @@ type IpcAuthStatus = Event<
   {
     isLoggedIn: boolean;
   }
+>;
+
+type IpcConfirmDestroyAction = Event<
+  "MAIN->CLIENT::confirm-destroy-action"
+>;
+
+type IpcConfirmDestroyResponse = Event<
+  "CLIENT->MAIN::confirm-destroy-response",
+  {
+    activate: boolean;
+  }
+>;
+
+type IpcShowDestroyWarning = Event<
+  "MAIN->CLIENT::show-destroy-warning"
 >;
 

@@ -54,6 +54,36 @@
           </button>
         </div>
       </div>
+
+      <!-- Auto-Destroy Item Section -->
+      <div class="mt-6 max-w-xl bg-[#0d0e12]/60 border border-[#191b22] hover:border-violet-500/20 rounded-2xl p-6 shadow-lg transition-all duration-300">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-violet-600/10 flex items-center justify-center border border-violet-500/10 text-violet-400">
+              <i class="fas fa-trash-alt text-sm"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-semibold text-gray-200">Auto-Destroy Item</span>
+              <span class="text-xs text-gray-500 mt-0.5">Enable Auto-Destroy item hotkey (Ctrl + Alt + MMB).</span>
+            </div>
+          </div>
+          
+          <button 
+            @click="destroyHotkeyEnabled = !destroyHotkeyEnabled"
+            class="relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full items-center transition-colors duration-250 ease-in-out focus:outline-none"
+            :class="destroyHotkeyEnabled ? 'bg-violet-600 shadow-[0_0_12px_rgba(139,92,246,0.35)]' : 'bg-[#181a25] border border-[#252839]'"
+          >
+            <span 
+              class="pointer-events-none inline-block transform rounded-full shadow transition-all duration-250 ease-in-out flex items-center justify-center"
+              :class="destroyHotkeyEnabled 
+                ? 'h-6 w-6 translate-x-6 bg-[#07080a] text-teal-400' 
+                : 'h-4 w-4 translate-x-2 bg-[#8084a3]'"
+            >
+              <i v-if="destroyHotkeyEnabled" class="fas fa-check text-[9px]" />
+            </span>
+          </button>
+        </div>
+      </div>
       
       <!-- Hotkeys Section -->
       <div class="mt-6 max-w-xl bg-[#0d0e12]/60 border border-[#191b22] rounded-2xl p-6 shadow-lg">
@@ -171,6 +201,18 @@ export default defineComponent({
       },
     });
 
+    const destroyHotkeyEnabled = computed<boolean>({
+      get() {
+        return configClone.value?.destroyHotkeyEnabled ?? false;
+      },
+      set(value) {
+        if (configClone.value) {
+          configClone.value.destroyHotkeyEnabled = value;
+        }
+        AppConfig().destroyHotkeyEnabled = value;
+      },
+    });
+
     const hotkeys = computed(() => {
       if (!configClone.value) return [];
       const hideoutCmd = configClone.value.commands.find((c: { text: string }) => c.text === '/hideout');
@@ -207,6 +249,7 @@ export default defineComponent({
       theme,
       hotkeys,
       autoUpdater,
+      destroyHotkeyEnabled,
       close() {
         wm.hide(props.config.wmId);
       },

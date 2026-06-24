@@ -17,6 +17,17 @@
         }}</ui-radio>
       </div>
     </div>
+    <div class="mb-8 flex">
+      <label class="flex-1">{{ t("settings.destroy_hotkey") }}</label>
+      <div class="flex gap-x-4">
+        <ui-radio v-model="destroyHotkeyEnabled" :value="true" class="font-poe"
+          >{{ t("Enabled") || "Enabled" }}</ui-radio
+        >
+        <ui-radio v-model="destroyHotkeyEnabled" :value="false">{{
+          t("Disabled")
+        }}</ui-radio>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -94,6 +105,7 @@ const hotkeys = computed<HotkeySchema[]>(() => {
 });
 
 const stashScroll = configModelValue(() => props.config, "stashScroll");
+const destroyHotkeyEnabled = configModelValue(() => props.config, "destroyHotkeyEnabled");
 
 const { t } = useI18n();
 </script>

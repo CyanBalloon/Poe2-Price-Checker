@@ -19,6 +19,10 @@ export function typeInChat(
   clipboard: HostClipboard,
 ) {
   clipboard.restoreShortly((clipboard) => {
+    uIOhook.keyToggle(Key.Ctrl, "up");
+    uIOhook.keyToggle(Key.Alt, "up");
+    uIOhook.keyToggle(Key.Shift, "up");
+
     const modifiers = process.platform === "darwin" ? [Key.Meta] : [Key.Ctrl];
 
     if (text.startsWith(PLACEHOLDER_LAST)) {
@@ -43,6 +47,10 @@ export function typeInChat(
 
     // Wait 50ms to allow the chat window time to open and focus in game
     setTimeout(() => {
+      uIOhook.keyToggle(Key.Ctrl, "up");
+      uIOhook.keyToggle(Key.Alt, "up");
+      uIOhook.keyToggle(Key.Shift, "up");
+
       uIOhook.keyTap(Key.V, modifiers);
 
       if (send) {

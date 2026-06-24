@@ -258,6 +258,82 @@
       </main>
     </div>
   </div>
+
+  <!-- Beautiful In-App Activation Confirmation Modal -->
+  <transition name="fade">
+    <div 
+      v-if="showDestroyConfirm" 
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm select-none"
+    >
+      <div 
+        class="bg-[#0c0d12] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full mx-4 shadow-2xl animate__animated animate__fadeInUp animate__faster flex flex-col items-center text-center"
+        style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px 2px rgba(139, 92, 246, 0.15);"
+      >
+        <div class="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4 text-orange-400">
+          <i class="fas fa-exclamation-triangle text-lg"></i>
+        </div>
+        
+        <h3 class="text-sm font-semibold text-gray-200 uppercase tracking-wider">Activate Destroy Hotkey</h3>
+        
+        <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+          Do you want to activate the Auto-Destroy item hotkey (<span class="text-violet-400 font-mono">Ctrl + Alt + MMB</span>) for this session?
+        </p>
+        <p class="text-[10px] text-gray-500 mt-1">
+          This will automatically destroy the item under your cursor when you press Ctrl + Alt + MMB.
+        </p>
+        
+        <div class="flex gap-3 w-full mt-6">
+          <button 
+            @click="respondDestroyConfirm(true)"
+            class="flex-1 px-4 py-2 bg-violet-600 hover:bg-violet-500 active:bg-violet-700 text-xs font-semibold text-white rounded-xl shadow-md transition-all duration-200 cursor-pointer"
+          >
+            Yes
+          </button>
+          <button 
+            @click="respondDestroyConfirm(false)"
+            class="flex-1 px-4 py-2 bg-[#181a25] hover:bg-[#202334] border border-[#252839] text-xs font-semibold text-gray-300 rounded-xl transition-all duration-200 cursor-pointer"
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </transition>
+
+  <!-- Beautiful In-App Activation Warning Modal -->
+  <transition name="fade">
+    <div 
+      v-if="showDestroyWarning" 
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm select-none"
+    >
+      <div 
+        class="bg-[#0c0d12] border border-red-500/30 rounded-2xl p-6 max-w-sm w-full mx-4 shadow-2xl animate__animated animate__fadeInUp animate__faster flex flex-col items-center text-center"
+        style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px 2px rgba(239, 68, 68, 0.15);"
+      >
+        <div class="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-4 text-red-400">
+          <i class="fas fa-ban text-lg"></i>
+        </div>
+        
+        <h3 class="text-sm font-semibold text-gray-200 uppercase tracking-wider">Cannot Destroy Equipped Gear</h3>
+        
+        <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+          The item you are hovering over appears to be currently equipped.
+        </p>
+        <p class="text-[10px] text-gray-500 mt-1">
+          To prevent losing active gear, please unequip the item into your inventory before auto-destroying it.
+        </p>
+        
+        <div class="w-full mt-6">
+          <button 
+            @click="showDestroyWarning = false"
+            class="w-full px-4 py-2 bg-[#181a25] hover:bg-[#202334] border border-[#252839] text-xs font-semibold text-gray-300 rounded-xl transition-all duration-200 cursor-pointer"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -319,6 +395,26 @@ export default defineComponent({
       }
       processing = false;
     }
+
+    const showDestroyConfirm = ref(false);
+
+    Host.onEvent("MAIN->CLIENT::confirm-destroy-action" as any, () => {
+      showDestroyConfirm.value = true;
+    });
+
+    function respondDestroyConfirm(activate: boolean) {
+      Host.sendEvent({
+        name: "CLIENT->MAIN::confirm-destroy-response" as any,
+        payload: { activate },
+      });
+      showDestroyConfirm.value = false;
+    }
+
+    const showDestroyWarning = ref(false);
+
+    Host.onEvent("MAIN->CLIENT::show-destroy-warning" as any, () => {
+      showDestroyWarning.value = true;
+    });
 
     Host.onEvent("MAIN->CLIENT::item-text", (e) => {
       if (e.isManual) return;
@@ -655,6 +751,9 @@ export default defineComponent({
       isLoggedIn,
       isElectron,
       handleLoginClick,
+      showDestroyConfirm,
+      respondDestroyConfirm,
+      showDestroyWarning,
     };
   },
 });
@@ -682,5 +781,14 @@ textarea::placeholder {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #2b2e45;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -350,6 +350,7 @@
   },
   "settings": {
     "title": "Settings - Poe2 Price Checker",
+    "destroy_hotkey": "Auto-Destroy Item (Ctrl + Alt + MMB)",
     "language": "Language",
     "private_league": "or Private League",
     "account_name": "Account name",

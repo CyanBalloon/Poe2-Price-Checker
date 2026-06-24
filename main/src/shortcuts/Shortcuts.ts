@@ -1,4 +1,4 @@
-import { screen, globalShortcut, clipboard, app } from "electron";
+import { screen, globalShortcut, clipboard, app, dialog } from "electron";
 import path from "path";
 import child_process from "child_process";
 import { uIOhook, UiohookKey, UiohookWheelEvent } from "uiohook-napi";
@@ -35,6 +35,7 @@ export class Shortcuts {
   private isCtrlPressed = false;
   private isGameWindowActive = false;
   private gameBounds: { x: number; y: number; width: number; height: number } | null = null;
+  private isDestroyHotkeyActivated = false;
 
   static async create(
     logger: Logger,
@@ -104,6 +105,8 @@ export class Shortcuts {
                 this.unregister();
               }
               updateActiveState();
+            } else if (trimmed === "destroy-item") {
+              this.handleDestroyItem();
             }
           }
         });
@@ -156,6 +159,18 @@ export class Shortcuts {
     this.server.onEventAnyClient("CLIENT->MAIN::user-action", (e) => {
       if (e.action === "stash-search") {
         stashSearch(e.text, this.clipboard, this.overlay);
+      }
+    });
+
+    this.server.onEventAnyClient("CLIENT->MAIN::confirm-destroy-response", (e) => {
+      if (e.activate) {
+        this.isDestroyHotkeyActivated = true;
+        this.overlay.assertGameActive();
+        setTimeout(() => {
+          this.destroyItem();
+        }, 100);
+      } else {
+        this.overlay.assertGameActive();
       }
     });
 
@@ -216,12 +231,17 @@ export class Shortcuts {
     logKeys: boolean,
     restoreClipboard: boolean,
     language: string,
+    destroyHotkeyEnabled: boolean,
   ) {
 
     this.stashScroll = stashScroll;
     this.logKeys = logKeys;
     this.clipboard.updateOptions(restoreClipboard);
     this.ocrWorker.updateOptions(language);
+
+    if (this.clickerProcess && this.clickerProcess.stdin.writable) {
+      this.clickerProcess.stdin.write(destroyHotkeyEnabled ? "destroy-key-active 1\n" : "destroy-key-active 0\n");
+    }
 
     const copyItemShortcut = mergeTwoHotkeys(
       "Ctrl + C",
@@ -423,6 +443,51 @@ export class Shortcuts {
   private unregister() {
     this.logger.write("info [Shortcuts] Unregistering hotkeys");
     globalShortcut.unregisterAll();
+  }
+
+  private isCursorOverEquippedGear(): boolean {
+    const bounds = this.getGameBounds();
+    if (!bounds) return false;
+
+    const cursor = screen.getCursorScreenPoint();
+    const relX = (cursor.x - bounds.x) / bounds.width;
+    const relY = (cursor.y - bounds.y) / bounds.height;
+
+    return relX > 0.60 && relY < 0.57;
+  }
+
+  private handleDestroyItem() {
+    if (this.isCursorOverEquippedGear()) {
+      this.logger.write("warn [Shortcuts] Auto-Destroy blocked: cursor is hovering over equipped gear region.");
+      this.overlay.showWindow();
+      this.server.sendEventTo("broadcast", {
+        name: "MAIN->CLIENT::show-destroy-warning",
+        payload: undefined,
+      });
+      return;
+    }
+
+    if (!this.isDestroyHotkeyActivated) {
+      this.overlay.showWindow();
+      this.server.sendEventTo("broadcast", {
+        name: "MAIN->CLIENT::confirm-destroy-action",
+        payload: undefined,
+      });
+    } else {
+      this.destroyItem();
+    }
+  }
+
+  private destroyItem() {
+    if (this.clickerProcess && this.clickerProcess.stdin.writable) {
+      uIOhook.keyToggle(UiohookKey.Ctrl, "up");
+      uIOhook.keyToggle(UiohookKey.Alt, "up");
+
+      this.clickerProcess.stdin.write("click-left\n");
+      setTimeout(() => {
+        typeInChat("/destroy", true, this.clipboard);
+      }, 100);
+    }
   }
 }
 

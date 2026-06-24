@@ -94,6 +94,9 @@ class Clicker {
     private const int WM_RBUTTONDOWN = 0x0204;
     private const int WM_RBUTTONUP = 0x0205;
     private const int WM_RBUTTONDBLCLK = 0x0206;
+    private const int WM_MBUTTONDOWN = 0x0207;
+    private const int WM_MBUTTONUP = 0x0208;
+    private const int WM_MBUTTONDBLCLK = 0x0209;
 
     private const uint WM_QUIT = 0x0012;
 
@@ -106,6 +109,7 @@ class Clicker {
     private static LowLevelMouseProc _proc = HookCallback;
     private static uint mainThreadId;
     private static bool shouldExit = false;
+    private static bool destroyKeyActive = false;
 
     // Track the physical state of Right Mouse Button since we block its events from the OS key/mouse state cache
     private static bool isRButtonHeld = false;
@@ -157,7 +161,10 @@ class Clicker {
                 isRButtonHeld = false;
             }
 
-            if (msg == WM_RBUTTONDOWN || msg == WM_RBUTTONUP || msg == WM_RBUTTONDBLCLK) {
+            bool isRButtonMsg = (msg == WM_RBUTTONDOWN || msg == WM_RBUTTONUP || msg == WM_RBUTTONDBLCLK);
+            bool isMButtonMsg = (msg == WM_MBUTTONDOWN || msg == WM_MBUTTONUP || msg == WM_MBUTTONDBLCLK);
+
+            if (isRButtonMsg || isMButtonMsg) {
                 bool isCtrlPressed = (GetAsyncKeyState(0x11) & 0x8000) != 0; // VK_CONTROL
                 bool isShiftPressed = (GetAsyncKeyState(0x10) & 0x8000) != 0; // VK_SHIFT
                 bool isAltPressed = (GetAsyncKeyState(0x12) & 0x8000) != 0; // VK_MENU (Alt)
@@ -167,9 +174,18 @@ class Clicker {
                 bool isGameActive = IsTargetWindowActive(ref rect);
                 bool isTargetActive = active || isGameActive;
 
-                if (isTargetActive && (isCtrlPressed || isShiftPressed) && !isAltPressed) {
-                    // Block the right click message from passing to the target window
-                    return new IntPtr(1);
+                if (isTargetActive) {
+                    if (isRButtonMsg && (isCtrlPressed || isShiftPressed) && !isAltPressed) {
+                        // Block the right click message from passing to the target window
+                        return new IntPtr(1);
+                    }
+                    if (isMButtonMsg && destroyKeyActive && isCtrlPressed && isAltPressed && !isShiftPressed) {
+                        if (msg == WM_MBUTTONDOWN) {
+                            Console.WriteLine("destroy-item");
+                            Console.Out.Flush();
+                        }
+                        return new IntPtr(1);
+                    }
                 }
             }
         }
@@ -186,6 +202,14 @@ class Clicker {
                 active = false;
             } else if (line == "focus-overlay") {
                 FocusOverlayWindow();
+            } else if (line == "destroy-key-active 1") {
+                destroyKeyActive = true;
+            } else if (line == "destroy-key-active 0") {
+                destroyKeyActive = false;
+            } else if (line == "click-left") {
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                Thread.Sleep(20);
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
             } else if (line == "exit") {
                 shouldExit = true;
                 PostThreadMessage(mainThreadId, WM_QUIT, IntPtr.Zero, IntPtr.Zero);

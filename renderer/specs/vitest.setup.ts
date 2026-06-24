@@ -144,6 +144,7 @@ export const defaultConfigMock = (overrides: Partial<Config> = {}) => {
     tipsFrequency: TipsFrequency.Always,
     readClientLog: false,
     autoUpdater: true,
+    destroyHotkeyEnabled: false,
   };
 
   mockConfig = { ...defaultConfig, ...overrides };

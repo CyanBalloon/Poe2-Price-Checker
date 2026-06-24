@@ -155,10 +155,11 @@ export interface Config {
   tipsFrequency: TipsFrequency;
   readClientLog: boolean; // default to false, opt-in only
   autoUpdater: boolean;
+  destroyHotkeyEnabled: boolean;
 }
 
 export const defaultConfig = (): Config => ({
-  configVersion: 31,
+  configVersion: 32,
   overlayKey: "Shift + Space",
   overlayBackground: "rgba(129, 139, 149, 0.15)",
   overlayBackgroundClose: true,
@@ -232,6 +233,7 @@ export const defaultConfig = (): Config => ({
   alphas: [],
   tipsFrequency: TipsFrequency.Normal,
   readClientLog: false, // default to false, opt-in only
+  destroyHotkeyEnabled: false,
 });
 
 function upgradeConfig(_config: Config): Config {
@@ -629,6 +631,11 @@ function upgradeConfig(_config: Config): Config {
 
     config.configVersion = 31;
   }
+
+  if (config.configVersion < 32) {
+    config.destroyHotkeyEnabled = false;
+    config.configVersion = 32;
+  }
   
   if ((config as any).theme === "pastel") {
     config.theme = "default";
@@ -786,5 +793,6 @@ function getConfigForHost(): HostConfig {
     libraryAlpha: config.enableAlphas && config.alphas.includes("library"),
     libraryOutputPath: library.libraryOutputPath,
     autoUpdater: config.autoUpdater,
+    destroyHotkeyEnabled: config.destroyHotkeyEnabled,
   };
 }
